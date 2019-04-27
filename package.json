@@ -1,0 +1,29 @@
+{
+  "name": "@starpeace/starpeace-assets-types",
+  "version": "0.1.0",
+  "description": "STARPEACE common type library for asset and gameplay configurations",
+  "keywords": [],
+  "author": "starpeace-project",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/starpeace-project/starpeace-assets-types.git"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "prepare": "grunt build",
+    "test": "grunt"
+  },
+  "devDependencies": {
+    "fs-extra": "^7.0.1",
+    "grunt": "^1.0.4",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-coffee": "^2.1.0",
+    "lodash": "^4.17.11",
+    "matchdep": "*",
+    "promise": "^8.0.3",
+    "readline-sync": "^1.4.9",
+    "yargs": "^13.2.2"
+  },
+  "dependencies": {}
+}
