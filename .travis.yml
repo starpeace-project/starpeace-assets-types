@@ -21,4 +21,4 @@ cache:
     - node_modules
 
 script:
-  - grunt build
+  - grunt documentation
