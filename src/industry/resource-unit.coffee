@@ -1,6 +1,10 @@
 _ = require('lodash')
 
-exports = module.exports = class ResourceUnit
+###*
+# Class representing the unit of quantities of a resource
+# @memberof module:STARPEACE
+###
+class ResourceUnit
 
   toJSON: () ->
     {
@@ -19,3 +23,5 @@ exports = module.exports = class ResourceUnit
     unit.id = json.id
     unit.label_plural = json.label_plural
     unit
+
+exports = module.exports = ResourceUnit

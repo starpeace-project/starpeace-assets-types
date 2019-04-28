@@ -1,4 +1,8 @@
 
+###*
+# @module STARPEACE
+###
+
 BuildingDefinition = require('./building/building-definition')
 BuildingImageDefinition = require('./building/building-image-definition')
 CoordinateList = require('./building/coordinate-list')

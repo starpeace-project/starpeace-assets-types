@@ -16,9 +16,17 @@ module.exports = function(grunt) {
         dest: 'lib',
         ext: '.js'
       }
+    },
+
+    jsdoc2md: {
+      documentation: {
+        src: 'lib/**/*.js',
+        dest: 'docs/documentation.md'
+      }
     }
   });
 
   grunt.registerTask('build', ['coffee:compile']);
-  grunt.registerTask('default', ['clean', 'build']);
+  grunt.registerTask('documentation', ['build', 'jsdoc2md']);
+  grunt.registerTask('default', ['clean', 'build', 'documentation']);
 }

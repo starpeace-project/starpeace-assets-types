@@ -11,7 +11,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "grunt build",
+    "prepare": "grunt documentation",
     "test": "grunt"
   },
   "devDependencies": {
@@ -19,6 +19,7 @@
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-coffee": "^2.1.0",
+    "grunt-jsdoc-to-markdown": "^4.0.0",
     "lodash": "^4.17.11",
     "matchdep": "*",
     "promise": "^8.0.3",

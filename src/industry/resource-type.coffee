@@ -1,6 +1,10 @@
 _ = require('lodash')
 
-exports = module.exports = class ResourceType
+###*
+# Class representing resource type metadata
+# @memberof module:STARPEACE
+###
+class ResourceType
 
   toJSON: () ->
     {
@@ -25,3 +29,5 @@ exports = module.exports = class ResourceType
     type.unit_id = json.unit_id
     type.price = json.price
     type
+
+exports = module.exports = ResourceType

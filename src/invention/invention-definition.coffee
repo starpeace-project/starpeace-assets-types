@@ -1,6 +1,10 @@
 _ = require('lodash')
 
-exports = module.exports = class InventionDefinition
+###*
+# Class representing metadata definition of an invention
+# @memberof module:STARPEACE
+###
+class InventionDefinition
   constructor: (@id) ->
 
   is_valid: () ->
@@ -25,3 +29,5 @@ exports = module.exports = class InventionDefinition
     definition.properties = json.properties || {}
 
     definition
+
+exports = module.exports = InventionDefinition

@@ -1,7 +1,15 @@
 _ = require('lodash')
 
-exports = module.exports = class CompanySeal
+###*
+# Class representing company seal, with metadata and buildings allowed defined.
+# @memberof module:STARPEACE
+###
+class CompanySeal
 
+  ###*
+  # Retrieve JSON representation of object
+  # @return {object} JSON representation of object
+  ###
   toJSON: () ->
     {
       id: @id
@@ -9,13 +17,21 @@ exports = module.exports = class CompanySeal
       name_long: @name_long
     }
 
+  ###*
+  # Determine whether object and game configuration has valid attributes.
+  # @return {boolean} true if object has valid configuration, false otherwise
+  ###
   is_valid: () ->
     return false unless _.isString(@id) && @id.length > 0
     return false unless @name_short?
     return false unless @name_long?
     true
 
-
+  ###*
+  # Parse raw JSON into a CompanySeal object
+  # @params {json} raw JSON object to parse into CompanySeal
+  # @return {CompanySeal} CompanySeal representation of parsed JSON
+  ###
   @from_json = (json) ->
     seal = new CompanySeal()
     seal.id = json.id
