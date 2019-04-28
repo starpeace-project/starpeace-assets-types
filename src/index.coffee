@@ -3,6 +3,7 @@ BuildingDefinition = require('./building/building-definition')
 BuildingImageDefinition = require('./building/building-image-definition')
 CoordinateList = require('./building/coordinate-list')
 Coordinate = require('./building/coordinate')
+ImageEffect = require('./building/image-effect')
 
 BuildingSimulationDefinition = require('./building/simulation/simulation-definition')
 BuildingSimulationDefinitionParser = require('./building/simulation/simulation-definition-parser')
@@ -46,6 +47,7 @@ exports = module.exports = {
   BuildingImageDefinition
   CoordinateList
   Coordinate
+  ImageEffect
 
   BuildingSimulationDefinition
   BuildingSimulationDefinitionParser

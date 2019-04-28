@@ -1,6 +1,7 @@
 _ = require('lodash')
 
 CoordinateList = require('./coordinate-list')
+ImageEffect = require('./coordinate-list')
 
 exports = module.exports = class BuildingImageDefinition
   constructor: (@id) ->
@@ -21,6 +22,7 @@ exports = module.exports = class BuildingImageDefinition
       tile_width: @tile_width
       tile_height: @tile_height
       hit_area: @hit_area
+      effects: @effects
     }
 
   @from_json: (json) ->
@@ -29,4 +31,5 @@ exports = module.exports = class BuildingImageDefinition
     definition.tile_width = json.tile_width
     definition.tile_height = json.tile_height
     definition.hit_area = _.map(json.hit_area, CoordinateList.from_json)
+    definition.effects = _.map(json.effects, ImageEffect.from_json)
     definition

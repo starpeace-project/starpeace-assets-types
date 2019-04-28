@@ -33,10 +33,6 @@ exports = module.exports = class BuildingDefinition
     json.zone = @zone if @zone?.length
     json.restricted = true if @restricted
     json.required_invention_ids = @required_invention_ids if @required_invention_ids?.length
-
-    json.industry = @industry if @industry?
-    json.warehouse = @warehouse if @warehouse?
-
     json
 
   @from_json: (json) ->
@@ -50,5 +46,4 @@ exports = module.exports = class BuildingDefinition
     definition.seal_id = json.seal_id
     definition.restricted = json.restricted || false
     definition.required_invention_ids = json.required_inventions
-
     definition
