@@ -1,7 +1,7 @@
 _ = require('lodash')
 
 CoordinateList = require('./coordinate-list')
-ImageEffect = require('./coordinate-list')
+ImageEffect = require('./image-effect')
 
 exports = module.exports = class BuildingImageDefinition
   constructor: (@id) ->
