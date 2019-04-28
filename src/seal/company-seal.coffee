@@ -39,3 +39,5 @@ class CompanySeal
     seal.name_long = json.name_long
     seal.buildings = json.buildings || []
     seal
+
+exports = module.exports = CompanySeal

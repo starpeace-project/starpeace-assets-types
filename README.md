@@ -7,6 +7,10 @@
 
 Common type library [STARPEACE](https://www.starpeace.io), including types to interact with gameplay images, sounds, definitions, and baseline simulation configurations.
 
+## Documentation
+
+Auto-generated documentation of type library can be [found in docs/ sub-directory](./docs/documentation.md).
+
 ## Contributing
 
 Please [join Discord chatroom](https://discord.gg/TF9Bmsj) and [read the development guide](./DEVELOPMENT.md) to learn more.
