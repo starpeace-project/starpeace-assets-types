@@ -3,21 +3,21 @@
 
 ## STARPEACE
 
-* [STARPEACE](#STARPEACE) : <code>object</code>
-    * [.building](#STARPEACE.building) : <code>object</code>
-        * [.simulation](#STARPEACE.building.simulation) : <code>object</code>
-            * [.bank](#STARPEACE.building.simulation.bank) : <code>object</code>
-            * [.civic](#STARPEACE.building.simulation.civic) : <code>object</code>
-            * [.factory](#STARPEACE.building.simulation.factory) : <code>object</code>
-            * [.headquarters](#STARPEACE.building.simulation.headquarters) : <code>object</code>
-            * [.media](#STARPEACE.building.simulation.media) : <code>object</code>
-            * [.office](#STARPEACE.building.simulation.office) : <code>object</code>
-            * [.park](#STARPEACE.building.simulation.park) : <code>object</code>
-            * [.residence](#STARPEACE.building.simulation.residence) : <code>object</code>
-            * [.service](#STARPEACE.building.simulation.service) : <code>object</code>
-            * [.storage](#STARPEACE.building.simulation.storage) : <code>object</code>
-            * [.store](#STARPEACE.building.simulation.store) : <code>object</code>
-    * [.industry](#STARPEACE.industry) : <code>object</code>
+* STARPEACE
+    * .building
+        * .simulation
+            * .bank
+            * .civic
+            * .factory
+            * .headquarters
+            * .media
+            * .office
+            * .park
+            * .residence
+            * .service
+            * .storage
+            * .store
+    * .industry
         * [.CityZone](#STARPEACE.industry.CityZone)
             * _instance_
                 * [.toJSON()](#STARPEACE.industry.CityZone+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.industry.CityZone..JSON)
@@ -74,7 +74,7 @@
                 * [.from_json()](#STARPEACE.industry.ResourceUnit.from_json) ⇒ [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)
             * _inner_
                 * [~JSON](#STARPEACE.industry.ResourceUnit..JSON) : <code>object</code>
-    * [.invention](#STARPEACE.invention) : <code>object</code>
+    * .invention
         * [.InventionDefinition](#STARPEACE.invention.InventionDefinition)
             * [new InventionDefinition(id)](#new_STARPEACE.invention.InventionDefinition_new)
             * _instance_
@@ -83,7 +83,7 @@
                 * [.from_json()](#STARPEACE.invention.InventionDefinition.from_json) ⇒ [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)
             * _inner_
                 * [~JSON](#STARPEACE.invention.InventionDefinition..JSON) : <code>object</code>
-    * [.language](#STARPEACE.language) : <code>object</code>
+    * .language
         * [.Translation](#STARPEACE.language.Translation)
             * _instance_
                 * [.toJSON()](#STARPEACE.language.Translation+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.language.Translation..JSON)
@@ -92,7 +92,7 @@
                 * [.from_json()](#STARPEACE.language.Translation.from_json) ⇒ [<code>Translation</code>](#STARPEACE.language.Translation)
             * _inner_
                 * [~JSON](#STARPEACE.language.Translation..JSON) : <code>object</code>
-    * [.seal](#STARPEACE.seal) : <code>object</code>
+    * .seal
         * [.CompanySeal](#STARPEACE.seal.CompanySeal)
             * _instance_
                 * [.toJSON()](#STARPEACE.seal.CompanySeal+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.seal.CompanySeal..JSON)
