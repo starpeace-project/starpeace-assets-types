@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         src: 'lib/**/*.js',
         dest: 'docs/documentation.md',
         options: {
-          partial: ['jsdoc2md/docs.hbs', 'jsdoc2md/header.hbs', 'jsdoc2md/sig-link.hbs']
+          partial: ['jsdoc2md/docs.hbs', 'jsdoc2md/header.hbs', 'jsdoc2md/scope.hbs', 'jsdoc2md/sig-link.hbs']
         }
       },
     }

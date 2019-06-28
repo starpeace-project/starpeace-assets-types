@@ -108,7 +108,6 @@
 #### STARPEACE.industry.CityZone
 Class representing a city zone
 
-**Kind**: static class of [<code>industry</code>](#STARPEACE.industry)  
 **Properties**
 
 | Name | Type | Description |
@@ -133,7 +132,7 @@ Class representing a city zone
 ##### STARPEACE.industry.CityZone#toJSON
 Retrieve JSON representation of object
 
-**Kind**: instance method of [<code>CityZone</code>](#STARPEACE.industry.CityZone)  
+**Kind**: instance method of [<code>CityZone</code>](#STARPEACE.industry.CityZone)
 **Returns**: [<code>JSON</code>](#STARPEACE.industry.CityZone..JSON) - JSON representation of CityZone  
 
 <a name="STARPEACE.industry.CityZone+is_valid"></a>
@@ -141,7 +140,7 @@ Retrieve JSON representation of object
 ##### STARPEACE.industry.CityZone#is_valid
 Determine whether object and game configuration has valid attributes.
 
-**Kind**: instance method of [<code>CityZone</code>](#STARPEACE.industry.CityZone)  
+**Kind**: instance method of [<code>CityZone</code>](#STARPEACE.industry.CityZone)
 **Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
 
 <a name="STARPEACE.industry.CityZone.from_json"></a>
@@ -149,14 +148,14 @@ Determine whether object and game configuration has valid attributes.
 ##### STARPEACE.industry.CityZone.from_json
 Parse raw JSON into a CityZone object
 
-**Kind**: static method of [<code>CityZone</code>](#STARPEACE.industry.CityZone)  
+**Kind**: static method of [<code>CityZone</code>](#STARPEACE.industry.CityZone)
 **Returns**: [<code>CityZone</code>](#STARPEACE.industry.CityZone) - CityZone representation of parsed JSON  
 **Params**: [<code>JSON</code>](#STARPEACE.industry.CityZone..JSON) json - raw JSON object to parse into CityZone  
 
 <a name="STARPEACE.industry.CityZone..JSON"></a>
 
 ##### STARPEACE.industry.CityZone~JSON
-**Kind**: inner typedef of [<code>CityZone</code>](#STARPEACE.industry.CityZone)  
+**Kind**: inner typedef of [<code>CityZone</code>](#STARPEACE.industry.CityZone)
 **Properties**
 
 | Name | Type | Description |
@@ -171,7 +170,6 @@ Parse raw JSON into a CityZone object
 #### STARPEACE.industry.IndustryCategory
 Class representing an industry category
 
-**Kind**: static class of [<code>industry</code>](#STARPEACE.industry)  
 **Properties**
 
 | Name | Type | Description |
@@ -195,7 +193,7 @@ Class representing an industry category
 ##### STARPEACE.industry.IndustryCategory#toJSON
 Retrieve JSON representation of object
 
-**Kind**: instance method of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)  
+**Kind**: instance method of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)
 **Returns**: [<code>JSON</code>](#STARPEACE.industry.IndustryCategory..JSON) - JSON representation of IndustryCategory  
 
 <a name="STARPEACE.industry.IndustryCategory+is_valid"></a>
@@ -203,7 +201,7 @@ Retrieve JSON representation of object
 ##### STARPEACE.industry.IndustryCategory#is_valid
 Determine whether object and game configuration has valid attributes.
 
-**Kind**: instance method of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)  
+**Kind**: instance method of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)
 **Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
 
 <a name="STARPEACE.industry.IndustryCategory.from_json"></a>
@@ -211,14 +209,14 @@ Determine whether object and game configuration has valid attributes.
 ##### STARPEACE.industry.IndustryCategory.from_json
 Parse raw JSON into a IndustryCategory object
 
-**Kind**: static method of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)  
+**Kind**: static method of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)
 **Returns**: [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory) - IndustryCategory representation of parsed JSON  
 **Params**: [<code>JSON</code>](#STARPEACE.industry.IndustryCategory..JSON) json - raw JSON object to parse into IndustryCategory  
 
 <a name="STARPEACE.industry.IndustryCategory..JSON"></a>
 
 ##### STARPEACE.industry.IndustryCategory~JSON
-**Kind**: inner typedef of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)  
+**Kind**: inner typedef of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)
 **Properties**
 
 | Name | Type | Description |
@@ -232,7 +230,6 @@ Parse raw JSON into a IndustryCategory object
 #### STARPEACE.industry.IndustryType
 Class representing an industry type
 
-**Kind**: static class of [<code>industry</code>](#STARPEACE.industry)  
 **Properties**
 
 | Name | Type | Description |
@@ -256,7 +253,7 @@ Class representing an industry type
 ##### STARPEACE.industry.IndustryType#toJSON
 Retrieve JSON representation of object
 
-**Kind**: instance method of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)  
+**Kind**: instance method of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)
 **Returns**: [<code>JSON</code>](#STARPEACE.industry.IndustryType..JSON) - JSON representation of IndustryType  
 
 <a name="STARPEACE.industry.IndustryType+is_valid"></a>
@@ -264,7 +261,7 @@ Retrieve JSON representation of object
 ##### STARPEACE.industry.IndustryType#is_valid
 Determine whether object and game configuration has valid attributes.
 
-**Kind**: instance method of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)  
+**Kind**: instance method of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)
 **Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
 
 <a name="STARPEACE.industry.IndustryType.from_json"></a>
@@ -272,14 +269,14 @@ Determine whether object and game configuration has valid attributes.
 ##### STARPEACE.industry.IndustryType.from_json
 Parse raw JSON into a IndustryType object
 
-**Kind**: static method of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)  
+**Kind**: static method of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)
 **Returns**: [<code>IndustryType</code>](#STARPEACE.industry.IndustryType) - Level representation of parsed JSON  
 **Params**: [<code>JSON</code>](#STARPEACE.industry.IndustryType..JSON) json - raw JSON object to parse into IndustryType  
 
 <a name="STARPEACE.industry.IndustryType..JSON"></a>
 
 ##### STARPEACE.industry.IndustryType~JSON
-**Kind**: inner typedef of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)  
+**Kind**: inner typedef of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)
 **Properties**
 
 | Name | Type | Description |
@@ -293,7 +290,6 @@ Parse raw JSON into a IndustryType object
 #### STARPEACE.industry.Level
 Class representing a tycoon level
 
-**Kind**: static class of [<code>industry</code>](#STARPEACE.industry)  
 **Properties**
 
 | Name | Type | Description |
@@ -318,7 +314,7 @@ Class representing a tycoon level
 ##### STARPEACE.industry.Level#toJSON
 Retrieve JSON representation of object
 
-**Kind**: instance method of [<code>Level</code>](#STARPEACE.industry.Level)  
+**Kind**: instance method of [<code>Level</code>](#STARPEACE.industry.Level)
 **Returns**: [<code>JSON</code>](#STARPEACE.industry.Level..JSON) - JSON representation of Level  
 
 <a name="STARPEACE.industry.Level+is_valid"></a>
@@ -326,7 +322,7 @@ Retrieve JSON representation of object
 ##### STARPEACE.industry.Level#is_valid
 Determine whether object and game configuration has valid attributes.
 
-**Kind**: instance method of [<code>Level</code>](#STARPEACE.industry.Level)  
+**Kind**: instance method of [<code>Level</code>](#STARPEACE.industry.Level)
 **Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
 
 <a name="STARPEACE.industry.Level.from_json"></a>
@@ -334,14 +330,14 @@ Determine whether object and game configuration has valid attributes.
 ##### STARPEACE.industry.Level.from_json
 Parse raw JSON into a Level object
 
-**Kind**: static method of [<code>Level</code>](#STARPEACE.industry.Level)  
+**Kind**: static method of [<code>Level</code>](#STARPEACE.industry.Level)
 **Returns**: [<code>Level</code>](#STARPEACE.industry.Level) - Level representation of parsed JSON  
 **Params**: [<code>JSON</code>](#STARPEACE.industry.Level..JSON) json - raw JSON object to parse into Level  
 
 <a name="STARPEACE.industry.Level..JSON"></a>
 
 ##### STARPEACE.industry.Level~JSON
-**Kind**: inner typedef of [<code>Level</code>](#STARPEACE.industry.Level)  
+**Kind**: inner typedef of [<code>Level</code>](#STARPEACE.industry.Level)
 **Properties**
 
 | Name | Type | Description |
@@ -356,7 +352,6 @@ Parse raw JSON into a Level object
 #### STARPEACE.industry.ResourceQuantity
 Class representing a resource quantity and metadata
 
-**Kind**: static class of [<code>industry</code>](#STARPEACE.industry)  
 **Properties**
 
 | Name | Type | Description |
@@ -382,7 +377,7 @@ Class representing a resource quantity and metadata
 ##### STARPEACE.industry.ResourceQuantity#toJSON
 Retrieve JSON representation of object
 
-**Kind**: instance method of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)  
+**Kind**: instance method of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)
 **Returns**: [<code>JSON</code>](#STARPEACE.industry.ResourceQuantity..JSON) - JSON representation of ResourceQuantity  
 
 <a name="STARPEACE.industry.ResourceQuantity+is_valid"></a>
@@ -390,7 +385,7 @@ Retrieve JSON representation of object
 ##### STARPEACE.industry.ResourceQuantity#is_valid
 Determine whether object and game configuration has valid attributes.
 
-**Kind**: instance method of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)  
+**Kind**: instance method of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)
 **Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
 
 <a name="STARPEACE.industry.ResourceQuantity.from_json"></a>
@@ -398,14 +393,14 @@ Determine whether object and game configuration has valid attributes.
 ##### STARPEACE.industry.ResourceQuantity.from_json
 Parse raw JSON into a ResourceQuantity object
 
-**Kind**: static method of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)  
+**Kind**: static method of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)
 **Returns**: [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity) - ResourceQuantity representation of parsed JSON  
 **Params**: [<code>JSON</code>](#STARPEACE.industry.ResourceQuantity..JSON) json - raw JSON object to parse into ResourceQuantity  
 
 <a name="STARPEACE.industry.ResourceQuantity..JSON"></a>
 
 ##### STARPEACE.industry.ResourceQuantity~JSON
-**Kind**: inner typedef of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)  
+**Kind**: inner typedef of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)
 **Properties**
 
 | Name | Type | Description |
@@ -421,7 +416,6 @@ Parse raw JSON into a ResourceQuantity object
 #### STARPEACE.industry.ResourceType
 Class representing resource type metadata
 
-**Kind**: static class of [<code>industry</code>](#STARPEACE.industry)  
 **Properties**
 
 | Name | Type | Description |
@@ -447,7 +441,7 @@ Class representing resource type metadata
 ##### STARPEACE.industry.ResourceType#toJSON
 Retrieve JSON representation of object
 
-**Kind**: instance method of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)  
+**Kind**: instance method of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)
 **Returns**: [<code>JSON</code>](#STARPEACE.industry.ResourceType..JSON) - JSON representation of ResourceType  
 
 <a name="STARPEACE.industry.ResourceType+is_valid"></a>
@@ -455,7 +449,7 @@ Retrieve JSON representation of object
 ##### STARPEACE.industry.ResourceType#is_valid
 Determine whether object and game configuration has valid attributes.
 
-**Kind**: instance method of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)  
+**Kind**: instance method of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)
 **Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
 
 <a name="STARPEACE.industry.ResourceType.from_json"></a>
@@ -463,14 +457,14 @@ Determine whether object and game configuration has valid attributes.
 ##### STARPEACE.industry.ResourceType.from_json
 Parse raw JSON into a ResourceType object
 
-**Kind**: static method of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)  
+**Kind**: static method of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)
 **Returns**: [<code>ResourceType</code>](#STARPEACE.industry.ResourceType) - ResourceType representation of parsed JSON  
 **Params**: [<code>JSON</code>](#STARPEACE.industry.ResourceType..JSON) json - raw JSON object to parse into ResourceType  
 
 <a name="STARPEACE.industry.ResourceType..JSON"></a>
 
 ##### STARPEACE.industry.ResourceType~JSON
-**Kind**: inner typedef of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)  
+**Kind**: inner typedef of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)
 **Properties**
 
 | Name | Type | Description |
@@ -486,7 +480,6 @@ Parse raw JSON into a ResourceType object
 #### STARPEACE.industry.ResourceUnit
 Class representing the unit of quantities of a resource
 
-**Kind**: static class of [<code>industry</code>](#STARPEACE.industry)  
 **Properties**
 
 | Name | Type | Description |
@@ -510,7 +503,7 @@ Class representing the unit of quantities of a resource
 ##### STARPEACE.industry.ResourceUnit#toJSON
 Retrieve JSON representation of object
 
-**Kind**: instance method of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)  
+**Kind**: instance method of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)
 **Returns**: [<code>JSON</code>](#STARPEACE.industry.ResourceUnit..JSON) - JSON representation of ResourceUnit  
 
 <a name="STARPEACE.industry.ResourceUnit+is_valid"></a>
@@ -518,7 +511,7 @@ Retrieve JSON representation of object
 ##### STARPEACE.industry.ResourceUnit#is_valid
 Determine whether object and game configuration has valid attributes.
 
-**Kind**: instance method of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)  
+**Kind**: instance method of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)
 **Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
 
 <a name="STARPEACE.industry.ResourceUnit.from_json"></a>
@@ -526,14 +519,14 @@ Determine whether object and game configuration has valid attributes.
 ##### STARPEACE.industry.ResourceUnit.from_json
 Parse raw JSON into a ResourceUnit object
 
-**Kind**: static method of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)  
+**Kind**: static method of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)
 **Returns**: [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit) - ResourceUnit representation of parsed JSON  
 **Params**: [<code>JSON</code>](#STARPEACE.industry.ResourceUnit..JSON) json - raw JSON object to parse into ResourceUnit  
 
 <a name="STARPEACE.industry.ResourceUnit..JSON"></a>
 
 ##### STARPEACE.industry.ResourceUnit~JSON
-**Kind**: inner typedef of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)  
+**Kind**: inner typedef of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)
 **Properties**
 
 | Name | Type | Description |
@@ -547,7 +540,6 @@ Parse raw JSON into a ResourceUnit object
 #### STARPEACE.invention.InventionDefinition
 Class representing metadata definition of an invention
 
-**Kind**: static class of [<code>invention</code>](#STARPEACE.invention)  
 **Properties**
 
 | Name | Type | Description |
@@ -587,7 +579,7 @@ Create an InventionDefinition object
 ##### STARPEACE.invention.InventionDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
-**Kind**: instance method of [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)  
+**Kind**: instance method of [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)
 **Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
 
 <a name="STARPEACE.invention.InventionDefinition.from_json"></a>
@@ -595,14 +587,14 @@ Determine whether object and game configuration has valid attributes.
 ##### STARPEACE.invention.InventionDefinition.from_json
 Parse raw JSON into a InventionDefinition object
 
-**Kind**: static method of [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)  
+**Kind**: static method of [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)
 **Returns**: [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition) - InventionDefinition representation of parsed JSON  
 **Params**: [<code>JSON</code>](#STARPEACE.invention.InventionDefinition..JSON) json - raw JSON object to parse into InventionDefinition  
 
 <a name="STARPEACE.invention.InventionDefinition..JSON"></a>
 
 ##### STARPEACE.invention.InventionDefinition~JSON
-**Kind**: inner typedef of [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)  
+**Kind**: inner typedef of [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)
 **Properties**
 
 | Name | Type | Description |
@@ -621,7 +613,6 @@ Parse raw JSON into a InventionDefinition object
 #### STARPEACE.language.Translation
 Class representing a multi-language translation
 
-**Kind**: static class of [<code>language</code>](#STARPEACE.language)  
 **Properties**
 
 | Name | Type | Description |
@@ -649,7 +640,7 @@ Class representing a multi-language translation
 ##### STARPEACE.language.Translation#toJSON
 Retrieve JSON representation of object
 
-**Kind**: instance method of [<code>Translation</code>](#STARPEACE.language.Translation)  
+**Kind**: instance method of [<code>Translation</code>](#STARPEACE.language.Translation)
 **Returns**: [<code>JSON</code>](#STARPEACE.language.Translation..JSON) - JSON representation of Translation  
 
 <a name="STARPEACE.language.Translation+is_valid"></a>
@@ -657,7 +648,7 @@ Retrieve JSON representation of object
 ##### STARPEACE.language.Translation#is_valid
 Determine whether object and game configuration has valid attributes.
 
-**Kind**: instance method of [<code>Translation</code>](#STARPEACE.language.Translation)  
+**Kind**: instance method of [<code>Translation</code>](#STARPEACE.language.Translation)
 **Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
 
 <a name="STARPEACE.language.Translation.from_json"></a>
@@ -665,14 +656,14 @@ Determine whether object and game configuration has valid attributes.
 ##### STARPEACE.language.Translation.from_json
 Parse raw JSON into a Translation object
 
-**Kind**: static method of [<code>Translation</code>](#STARPEACE.language.Translation)  
+**Kind**: static method of [<code>Translation</code>](#STARPEACE.language.Translation)
 **Returns**: [<code>Translation</code>](#STARPEACE.language.Translation) - Translation representation of parsed JSON  
 **Params**: [<code>JSON</code>](#STARPEACE.language.Translation..JSON) json - raw JSON object to parse into Translation  
 
 <a name="STARPEACE.language.Translation..JSON"></a>
 
 ##### STARPEACE.language.Translation~JSON
-**Kind**: inner typedef of [<code>Translation</code>](#STARPEACE.language.Translation)  
+**Kind**: inner typedef of [<code>Translation</code>](#STARPEACE.language.Translation)
 **Properties**
 
 | Name | Type | Description |
@@ -690,7 +681,6 @@ Parse raw JSON into a Translation object
 #### STARPEACE.seal.CompanySeal
 Class representing company seal, with metadata and buildings allowed defined.
 
-**Kind**: static class of [<code>seal</code>](#STARPEACE.seal)  
 **Properties**
 
 | Name | Type | Description |
@@ -716,7 +706,7 @@ Class representing company seal, with metadata and buildings allowed defined.
 ##### STARPEACE.seal.CompanySeal#toJSON
 Retrieve JSON representation of object
 
-**Kind**: instance method of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)  
+**Kind**: instance method of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)
 **Returns**: [<code>JSON</code>](#STARPEACE.seal.CompanySeal..JSON) - JSON representation of CompanySeal  
 
 <a name="STARPEACE.seal.CompanySeal+is_valid"></a>
@@ -724,7 +714,7 @@ Retrieve JSON representation of object
 ##### STARPEACE.seal.CompanySeal#is_valid
 Determine whether object and game configuration has valid attributes.
 
-**Kind**: instance method of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)  
+**Kind**: instance method of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)
 **Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
 
 <a name="STARPEACE.seal.CompanySeal.from_json"></a>
@@ -732,14 +722,14 @@ Determine whether object and game configuration has valid attributes.
 ##### STARPEACE.seal.CompanySeal.from_json
 Parse raw JSON into a CompanySeal object
 
-**Kind**: static method of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)  
+**Kind**: static method of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)
 **Returns**: [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal) - CompanySeal representation of parsed JSON  
 **Params**: [<code>JSON</code>](#STARPEACE.seal.CompanySeal..JSON) json - raw JSON object to parse into CompanySeal  
 
 <a name="STARPEACE.seal.CompanySeal..JSON"></a>
 
 ##### STARPEACE.seal.CompanySeal~JSON
-**Kind**: inner typedef of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)  
+**Kind**: inner typedef of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)
 **Properties**
 
 | Name | Type | Description |
