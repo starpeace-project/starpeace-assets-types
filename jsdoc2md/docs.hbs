@@ -1,0 +1,19 @@
+{{#if (equal kind "namespace")}}
+{{#if (equal (depth) 0)}}
+
+{{>header~}}
+{{>member-index~}}
+{{>separator~}}
+
+{{/if~}}
+
+{{else}}
+
+{{>header~}}
+{{>body}}
+{{>member-index~}}
+{{>separator~}}
+
+{{/if~}}
+
+{{>members~}}
