@@ -1,6 +1,6 @@
 {
   "name": "@starpeace/starpeace-assets-types",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "STARPEACE common type library for asset and gameplay configurations",
   "keywords": [],
   "author": "starpeace-project",
@@ -12,19 +12,21 @@
   "main": "lib/index.js",
   "scripts": {
     "prepare": "grunt documentation",
-    "test": "grunt"
+    "test": "grunt test"
   },
   "devDependencies": {
-    "fs-extra": "^7.0.1",
+    "fs-extra": "^8.0.1",
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-coffee": "^2.1.0",
     "grunt-jsdoc-to-markdown": "^4.0.0",
+    "grunt-mocha-test": "^0.13.3",
     "lodash": "^4.17.11",
     "matchdep": "*",
+    "mocha": "^6.1.4",
     "promise": "^8.0.3",
     "readline-sync": "^1.4.9",
-    "yargs": "^13.2.2"
+    "yargs": "^13.2.4"
   },
   "dependencies": {}
 }

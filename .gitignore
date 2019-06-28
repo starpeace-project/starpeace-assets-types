@@ -2,4 +2,5 @@
 .project
 build
 lib
+test
 node_modules/

@@ -1,92 +1,137 @@
 
 ###*
-# @module STARPEACE
+# @namespace STARPEACE
 ###
 
-BuildingDefinition = require('./building/building-definition')
-BuildingImageDefinition = require('./building/building-image-definition')
-CoordinateList = require('./building/coordinate-list')
-Coordinate = require('./building/coordinate')
-ImageEffect = require('./building/image-effect')
-
-BuildingSimulationDefinition = require('./building/simulation/simulation-definition')
-BuildingSimulationDefinitionParser = require('./building/simulation/simulation-definition-parser')
-ConstructionQuantity = require('./building/simulation/construction-quantity')
-
-BankDefinition = require('./building/simulation/bank/bank-definition')
-CapitolDefinition = require('./building/simulation/civic/capitol-definition')
-MausoleumDefinition = require('./building/simulation/civic/mausoleum-definition')
-PortalDefinition = require('./building/simulation/civic/portal-definition')
-TownhallDefinition = require('./building/simulation/civic/townhall-definition')
-TradecenterDefinition = require('./building/simulation/civic/tradecenter-definition')
-FactoryDefinition = require('./building/simulation/factory/factory-definition')
-FactoryStage = require('./building/simulation/factory/factory-stage')
-HeadquartersDefinition = require('./building/simulation/headquarters/headquarters-definition')
-AntennaDefinition = require('./building/simulation/media/antenna-definition')
-MediaStationDefinition = require('./building/simulation/media/media-station-definition')
-OfficeDefinition = require('./building/simulation/office/office-definition')
-ParkDefinition = require('./building/simulation/park/park-definition')
-ResidenceDefinition = require('./building/simulation/residence/residence-definition')
-ServiceDefinition = require('./building/simulation/service/service-definition')
-StorageDefinition = require('./building/simulation/storage/storage-definition')
-StoreDefinition = require('./building/simulation/store/store-definition')
-StoreProductCustomer = require('./building/simulation/store/store-product-customer')
-StoreProductOutput = require('./building/simulation/store/store-product-output')
-StoreProduct = require('./building/simulation/store/store-product')
-
-CityZone = require('./industry/city-zone')
-IndustryCategory = require('./industry/industry-category')
-IndustryType = require('./industry/industry-type')
-Level = require('./industry/level')
-ResourceQuantity = require('./industry/resource-quantity')
-ResourceType = require('./industry/resource-type')
-ResourceUnit = require('./industry/resource-unit')
-
-InventionDefinition = require('./invention/invention-definition')
-
-CompanySeal = require('./seal/company-seal')
+###*
+# @namespace STARPEACE.building
+###
+###*
+# @namespace STARPEACE.building.simulation
+###
+###*
+# @namespace STARPEACE.building.simulation.bank
+###
+###*
+# @namespace STARPEACE.building.simulation.civic
+###
+###*
+# @namespace STARPEACE.building.simulation.factory
+###
+###*
+# @namespace STARPEACE.building.simulation.headquarters
+###
+###*
+# @namespace STARPEACE.building.simulation.media
+###
+###*
+# @namespace STARPEACE.building.simulation.office
+###
+###*
+# @namespace STARPEACE.building.simulation.park
+###
+###*
+# @namespace STARPEACE.building.simulation.residence
+###
+###*
+# @namespace STARPEACE.building.simulation.service
+###
+###*
+# @namespace STARPEACE.building.simulation.storage
+###
+###*
+# @namespace STARPEACE.building.simulation.store
+###
+###*
+# @namespace STARPEACE.industry
+###
+###*
+# @namespace STARPEACE.invention
+###
+###*
+# @namespace STARPEACE.language
+###
+###*
+# @namespace STARPEACE.seal
+###
 
 exports = module.exports = {
-  BuildingDefinition
-  BuildingImageDefinition
-  CoordinateList
-  Coordinate
-  ImageEffect
+  building: {
+    simulation: {
+      bank: {
+        BankDefinition: require('./building/simulation/bank/bank-definition')
+      }
+      civic: {
+        CapitolDefinition: require('./building/simulation/civic/capitol-definition')
+        MausoleumDefinition: require('./building/simulation/civic/mausoleum-definition')
+        PortalDefinition: require('./building/simulation/civic/portal-definition')
+        TownhallDefinition: require('./building/simulation/civic/townhall-definition')
+        TradecenterDefinition: require('./building/simulation/civic/tradecenter-definition')
+      }
+      factory: {
+        FactoryDefinition: require('./building/simulation/factory/factory-definition')
+        FactoryStage: require('./building/simulation/factory/factory-stage')
+      }
+      headquarters: {
+        HeadquartersDefinition: require('./building/simulation/headquarters/headquarters-definition')
+      }
+      media: {
+        AntennaDefinition: require('./building/simulation/media/antenna-definition')
+        MediaStationDefinition: require('./building/simulation/media/media-station-definition')
+      }
+      office: {
+        OfficeDefinition: require('./building/simulation/office/office-definition')
+      }
+      park: {
+        ParkDefinition: require('./building/simulation/park/park-definition')
+      }
+      residence: {
+        ResidenceDefinition: require('./building/simulation/residence/residence-definition')
+      }
+      service: {
+        ServiceDefinition: require('./building/simulation/service/service-definition')
+      }
+      storage: {
+        StorageDefinition: require('./building/simulation/storage/storage-definition')
+      }
+      store: {
+        StoreDefinition: require('./building/simulation/store/store-definition')
+        StoreProductCustomer: require('./building/simulation/store/store-product-customer')
+        StoreProductOutput: require('./building/simulation/store/store-product-output')
+        StoreProduct: require('./building/simulation/store/store-product')
+      }
 
-  BuildingSimulationDefinition
-  BuildingSimulationDefinitionParser
-  ConstructionQuantity
+      BuildingSimulationDefinition: require('./building/simulation/simulation-definition')
+      BuildingSimulationDefinitionParser: require('./building/simulation/simulation-definition-parser')
+      ConstructionQuantity: require('./building/simulation/construction-quantity')
+    }
 
-  BankDefinition
-  CapitolDefinition
-  MausoleumDefinition
-  PortalDefinition
-  TownhallDefinition
-  TradecenterDefinition
-  FactoryDefinition
-  FactoryStage
-  HeadquartersDefinition
-  AntennaDefinition
-  MediaStationDefinition
-  OfficeDefinition
-  ParkDefinition
-  ResidenceDefinition
-  ServiceDefinition
-  StorageDefinition
-  StoreDefinition
-  StoreProductCustomer
-  StoreProductOutput
-  StoreProduct
+    BuildingDefinition: require('./building/building-definition')
+    BuildingImageDefinition: require('./building/building-image-definition')
+    CoordinateList: require('./building/coordinate-list')
+    Coordinate: require('./building/coordinate')
+    ImageEffect: require('./building/image-effect')
+  }
 
-  CityZone
-  IndustryCategory
-  IndustryType
-  Level
-  ResourceQuantity
-  ResourceType
-  ResourceUnit
+  industry: {
+    CityZone: require('./industry/city-zone')
+    IndustryCategory: require('./industry/industry-category')
+    IndustryType: require('./industry/industry-type')
+    Level: require('./industry/level')
+    ResourceQuantity: require('./industry/resource-quantity')
+    ResourceType: require('./industry/resource-type')
+    ResourceUnit: require('./industry/resource-unit')
+  }
 
-  InventionDefinition
+  invention: {
+    InventionDefinition: require('./invention/invention-definition')
+  }
 
-  CompanySeal
+  language: {
+    Translation: require('./language/translation')
+  }
+  seal: {
+    CompanySeal: require('./seal/company-seal')
+  }
+
 }
