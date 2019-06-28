@@ -14,14 +14,14 @@ Translation = require('../language/translation')
 # @memberof STARPEACE.industry
 #
 # @property {string} id - unique identifier of level
-# @property {STARPEACE.invention.Translation} label - translation with label of level
+# @property {STARPEACE.language.Translation} label - translation with label of level
 # @property {number} level - unique number of this level starting at one and incrementing
 ###
 class Level
 
   ###*
   # Retrieve JSON representation of object
-  # @return {Level~JSON} JSON representation of Level
+  # @return {STARPEACE.industry.Level~JSON} JSON representation of Level
   ###
   toJSON: () ->
     {
@@ -42,8 +42,8 @@ class Level
 
   ###*
   # Parse raw JSON into a Level object
-  # @params {Level~JSON} json - raw JSON object to parse into Level
-  # @return {Level} Level representation of parsed JSON
+  # @params {STARPEACE.industry.Level~JSON} json - raw JSON object to parse into Level
+  # @return {STARPEACE.industry.Level} Level representation of parsed JSON
   ###
   @from_json = (json) ->
     level = new Level()

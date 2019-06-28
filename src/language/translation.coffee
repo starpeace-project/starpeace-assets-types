@@ -25,7 +25,7 @@ class Translation
 
   ###*
   # Retrieve JSON representation of object
-  # @return {Translation~JSON} JSON representation of Translation
+  # @return {STARPEACE.language.Translation~JSON} JSON representation of Translation
   ###
   toJSON: () ->
     {
@@ -52,8 +52,8 @@ class Translation
 
   ###*
   # Parse raw JSON into a Translation object
-  # @params {Translation~JSON} json - raw JSON object to parse into Translation
-  # @return {Translation} Translation representation of parsed JSON
+  # @params {STARPEACE.language.Translation~JSON} json - raw JSON object to parse into Translation
+  # @return {STARPEACE.language.Translation} Translation representation of parsed JSON
   ###
   @from_json = (json) ->
     translation = new Translation()

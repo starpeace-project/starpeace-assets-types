@@ -19,7 +19,7 @@ class CityZone
 
   ###*
   # Retrieve JSON representation of object
-  # @return {CityZone~JSON} JSON representation of CityZone
+  # @return {STARPEACE.industry.CityZone~JSON} JSON representation of CityZone
   ###
   toJSON: () ->
     {
@@ -40,8 +40,8 @@ class CityZone
 
   ###*
   # Parse raw JSON into a CityZone object
-  # @params {CityZone~JSON} json - raw JSON object to parse into CityZone
-  # @return {CityZone} CityZone representation of parsed JSON
+  # @params {STARPEACE.industry.CityZone~JSON} json - raw JSON object to parse into CityZone
+  # @return {STARPEACE.industry.CityZone} CityZone representation of parsed JSON
   ###
   @from_json = (json) ->
     zone = new CityZone()

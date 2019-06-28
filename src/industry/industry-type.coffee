@@ -13,13 +13,13 @@ Translation = require('../language/translation')
 # @memberof STARPEACE.industry
 #
 # @property {string} id - unique identifier of industry type
-# @property {STARPEACE.invention.Translation} label - translation with label of industry
+# @property {STARPEACE.language.Translation} label - translation with label of industry
 ###
 class IndustryType
 
   ###*
   # Retrieve JSON representation of object
-  # @return {IndustryType~JSON} JSON representation of IndustryType
+  # @return {STARPEACE.industry.IndustryType~JSON} JSON representation of IndustryType
   ###
   toJSON: () ->
     {
@@ -38,8 +38,8 @@ class IndustryType
 
   ###*
   # Parse raw JSON into a IndustryType object
-  # @params {IndustryType~JSON} json - raw JSON object to parse into IndustryType
-  # @return {IndustryType} Level representation of parsed JSON
+  # @params {STARPEACE.industry.IndustryType~JSON} json - raw JSON object to parse into IndustryType
+  # @return {STARPEACE.industry.IndustryType} Level representation of parsed JSON
   ###
   @from_json = (json) ->
     type = new IndustryType()

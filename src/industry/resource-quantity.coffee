@@ -21,7 +21,7 @@ class ResourceQuantity
 
   ###*
   # Retrieve JSON representation of object
-  # @return {ResourceQuantity~JSON} JSON representation of ResourceQuantity
+  # @return {STARPEACE.industry.ResourceQuantity~JSON} JSON representation of ResourceQuantity
   ###
   toJSON: () ->
     {
@@ -44,8 +44,8 @@ class ResourceQuantity
 
   ###*
   # Parse raw JSON into a ResourceQuantity object
-  # @params {ResourceQuantity~JSON} json - raw JSON object to parse into ResourceQuantity
-  # @return {ResourceQuantity} ResourceQuantity representation of parsed JSON
+  # @params {STARPEACE.industry.ResourceQuantity~JSON} json - raw JSON object to parse into ResourceQuantity
+  # @return {STARPEACE.industry.ResourceQuantity} ResourceQuantity representation of parsed JSON
   ###
   @from_json = (json) ->
     quantity = new ResourceQuantity()

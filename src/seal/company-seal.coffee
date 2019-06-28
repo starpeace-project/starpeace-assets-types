@@ -20,7 +20,7 @@ _ = require('lodash')
 class CompanySeal
   ###*
   # Retrieve JSON representation of object
-  # @return {CompanySeal~JSON} JSON representation of CompanySeal
+  # @return {STARPEACE.seal.CompanySeal~JSON} JSON representation of CompanySeal
   ###
   toJSON: () ->
     {
@@ -42,8 +42,8 @@ class CompanySeal
 
   ###*
   # Parse raw JSON into a CompanySeal object
-  # @params {CompanySeal~JSON} json - raw JSON object to parse into CompanySeal
-  # @return {CompanySeal} CompanySeal representation of parsed JSON
+  # @params {STARPEACE.seal.CompanySeal~JSON} json - raw JSON object to parse into CompanySeal
+  # @return {STARPEACE.seal.CompanySeal} CompanySeal representation of parsed JSON
   ###
   @from_json = (json) ->
     seal = new CompanySeal()

@@ -15,7 +15,7 @@ Translation = require('../language/translation')
 # @memberof STARPEACE.industry
 #
 # @property {string} id - Unique identifier of resource
-# @property {STARPEACE.invention.Translation} label_plural - Translation with plural label of resource
+# @property {STARPEACE.language.Translation} label_plural - Translation with plural label of resource
 # @property {string} unit_id - Unique identifier of resource unit for this resource
 # @property {number} price - Base price of this resource in dollars
 ###
@@ -23,7 +23,7 @@ class ResourceType
 
   ###*
   # Retrieve JSON representation of object
-  # @return {ResourceType~JSON} JSON representation of ResourceType
+  # @return {STARPEACE.industry.ResourceType~JSON} JSON representation of ResourceType
   ###
   toJSON: () ->
     {
@@ -46,8 +46,8 @@ class ResourceType
 
   ###*
   # Parse raw JSON into a ResourceType object
-  # @params {ResourceType~JSON} json - raw JSON object to parse into ResourceType
-  # @return {ResourceType} ResourceType representation of parsed JSON
+  # @params {STARPEACE.industry.ResourceType~JSON} json - raw JSON object to parse into ResourceType
+  # @return {STARPEACE.industry.ResourceType} ResourceType representation of parsed JSON
   ###
   @from_json = (json) ->
     type = new ResourceType()

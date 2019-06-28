@@ -20,8 +20,8 @@ Translation = require('../language/translation')
 # @property {string} id - Unique identifier of invention definition metadata
 # @property {string} category - Category of invention
 # @property {string} industry_type - Industry type of invention
-# @property {STARPEACE.invention.Translation} name - Translation object with name of invention
-# @property {STARPEACE.invention.Translation} description - Translation with description of invention
+# @property {STARPEACE.language.Translation} name - Translation object with name of invention
+# @property {STARPEACE.language.Translation} description - Translation with description of invention
 # @property {string[]} depends_on - Array of other invention definition identifiers this depends on
 # @property {object} properties - Properties of invention
 ###
@@ -50,8 +50,8 @@ class InventionDefinition
 
   ###*
   # Parse raw JSON into a InventionDefinition object
-  # @params {InventionDefinition~JSON} json - raw JSON object to parse into InventionDefinition
-  # @return {InventionDefinition} InventionDefinition representation of parsed JSON
+  # @params {STARPEACE.invention.InventionDefinition~JSON} json - raw JSON object to parse into InventionDefinition
+  # @return {STARPEACE.invention.InventionDefinition} InventionDefinition representation of parsed JSON
   ###
   @from_json: (json) ->
     definition = new InventionDefinition(json.id)
