@@ -18,7 +18,7 @@ DEFINITIONS = [
   require('./storage/storage-definition'),
   require('./store/store-definition')
 ]
-DEFINITIONS_BY_TYPE = _.keyBy(DEFINITIONS, (def) -> def.TYPE)
+DEFINITIONS_BY_TYPE = _.keyBy(DEFINITIONS, (def) -> def.TYPE())
 
 ###*
 # Class used to parse simulation definition json into simulation definitions

@@ -26,6 +26,13 @@ class ServiceDefinition extends SimulationDefinition
   @TYPE: () -> 'SERVICE'
 
   ###*
+  # Create a ServiceDefinition object
+  # @param {STARPEACE.building.simulation.SimulationDefinition~JSON} json - raw JSON object to populate into simulation definition
+  ###
+  constructor: (json) ->
+    super(json)
+
+  ###*
   # Retrieve JSON representation of object
   # @return {STARPEACE.building.simulation.service.ServiceDefinition~JSON} JSON representation of ServiceDefinition
   ###

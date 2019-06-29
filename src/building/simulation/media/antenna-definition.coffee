@@ -26,6 +26,13 @@ class AntennaDefinition extends SimulationDefinition
   @TYPE: () -> 'ANTENNA'
 
   ###*
+  # Create a AntennaDefinition object
+  # @param {STARPEACE.building.simulation.SimulationDefinition~JSON} json - raw JSON object to populate into simulation definition
+  ###
+  constructor: (json) ->
+    super(json)
+
+  ###*
   # Retrieve JSON representation of object
   # @return {STARPEACE.building.simulation.media.AntennaDefinition~JSON} JSON representation of AntennaDefinition
   ###
@@ -52,7 +59,7 @@ class AntennaDefinition extends SimulationDefinition
   # @return {STARPEACE.building.simulation.media.AntennaDefinition} AntennaDefinition representation of parsed JSON
   ###
   @from_json: (json) ->
-    definition = new AntennaDefinition()
+    definition = new AntennaDefinition(json)
     definition.labor = _.map(json.labor, ResourceQuantity.from_json)
     definition.range = json.range
     definition

@@ -24,6 +24,13 @@ class MediaStationDefinition extends SimulationDefinition
   @TYPE: () -> 'MEDIA_STATION'
 
   ###*
+  # Create a MediaStationDefinition object
+  # @param {STARPEACE.building.simulation.SimulationDefinition~JSON} json - raw JSON object to populate into simulation definition
+  ###
+  constructor: (json) ->
+    super(json)
+
+  ###*
   # Retrieve JSON representation of object
   # @return {STARPEACE.building.simulation.media.MediaStationDefinition~JSON} JSON representation of MediaStationDefinition
   ###
@@ -48,7 +55,7 @@ class MediaStationDefinition extends SimulationDefinition
   # @return {STARPEACE.building.simulation.media.MediaStationDefinition} MediaStationDefinition representation of parsed JSON
   ###
   @from_json: (json) ->
-    definition = new MediaStationDefinition()
+    definition = new MediaStationDefinition(json)
     definition.labor = _.map(json.labor, ResourceQuantity.from_json)
     definition
 

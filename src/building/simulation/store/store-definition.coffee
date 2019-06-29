@@ -30,6 +30,13 @@ class StoreDefinition extends SimulationDefinition
   @TYPE: () -> 'STORE'
 
   ###*
+  # Create a StoreDefinition object
+  # @param {STARPEACE.building.simulation.SimulationDefinition~JSON} json - raw JSON object to populate into simulation definition
+  ###
+  constructor: (json) ->
+    super(json)
+
+  ###*
   # Retrieve JSON representation of object
   # @return {STARPEACE.building.simulation.store.StoreDefinition~JSON} JSON representation of StoreDefinition
   ###

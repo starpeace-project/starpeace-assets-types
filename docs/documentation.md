@@ -68,6 +68,7 @@
                     * [~JSON](#STARPEACE.building.simulation.SimulationDefinition..JSON) : <code>object</code>
             * .bank
                 * [.BankDefinition](#STARPEACE.building.simulation.bank.BankDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new BankDefinition(json)](#new_STARPEACE.building.simulation.bank.BankDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.bank.BankDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.bank.BankDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.bank.BankDefinition+is_valid) ⇒ <code>boolean</code>
@@ -78,6 +79,7 @@
                         * [~JSON](#STARPEACE.building.simulation.bank.BankDefinition..JSON) : <code>object</code>
             * .civic
                 * [.CapitolDefinition](#STARPEACE.building.simulation.civic.CapitolDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new CapitolDefinition(json)](#new_STARPEACE.building.simulation.civic.CapitolDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.civic.CapitolDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.civic.CapitolDefinition+is_valid) ⇒ <code>boolean</code>
@@ -87,6 +89,7 @@
                     * _inner_
                         * [~JSON](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON) : <code>object</code>
                 * [.MausoleumDefinition](#STARPEACE.building.simulation.civic.MausoleumDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new MausoleumDefinition(json)](#new_STARPEACE.building.simulation.civic.MausoleumDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.civic.MausoleumDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.civic.MausoleumDefinition+is_valid) ⇒ <code>boolean</code>
@@ -96,6 +99,7 @@
                     * _inner_
                         * [~JSON](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON) : <code>object</code>
                 * [.PortalDefinition](#STARPEACE.building.simulation.civic.PortalDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new PortalDefinition(json)](#new_STARPEACE.building.simulation.civic.PortalDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.civic.PortalDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.PortalDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.civic.PortalDefinition+is_valid) ⇒ <code>boolean</code>
@@ -105,6 +109,7 @@
                     * _inner_
                         * [~JSON](#STARPEACE.building.simulation.civic.PortalDefinition..JSON) : <code>object</code>
                 * [.TownhallDefinition](#STARPEACE.building.simulation.civic.TownhallDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new TownhallDefinition(json)](#new_STARPEACE.building.simulation.civic.TownhallDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.civic.TownhallDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.civic.TownhallDefinition+is_valid) ⇒ <code>boolean</code>
@@ -114,6 +119,7 @@
                     * _inner_
                         * [~JSON](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON) : <code>object</code>
                 * [.TradecenterDefinition](#STARPEACE.building.simulation.civic.TradecenterDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new TradecenterDefinition(json)](#new_STARPEACE.building.simulation.civic.TradecenterDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.civic.TradecenterDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.civic.TradecenterDefinition+is_valid) ⇒ <code>boolean</code>
@@ -124,6 +130,7 @@
                         * [~JSON](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON) : <code>object</code>
             * .factory
                 * [.FactoryDefinition](#STARPEACE.building.simulation.factory.FactoryDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new FactoryDefinition(json)](#new_STARPEACE.building.simulation.factory.FactoryDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.factory.FactoryDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.factory.FactoryDefinition+is_valid) ⇒ <code>boolean</code>
@@ -142,6 +149,7 @@
                         * [~JSON](#STARPEACE.building.simulation.factory.FactoryStage..JSON) : <code>object</code>
             * .headquarters
                 * [.HeadquartersDefinition](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new HeadquartersDefinition(json)](#new_STARPEACE.building.simulation.headquarters.HeadquartersDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+is_valid) ⇒ <code>boolean</code>
@@ -152,6 +160,7 @@
                         * [~JSON](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON) : <code>object</code>
             * .media
                 * [.AntennaDefinition](#STARPEACE.building.simulation.media.AntennaDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new AntennaDefinition(json)](#new_STARPEACE.building.simulation.media.AntennaDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.media.AntennaDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.media.AntennaDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.media.AntennaDefinition+is_valid) ⇒ <code>boolean</code>
@@ -161,6 +170,7 @@
                     * _inner_
                         * [~JSON](#STARPEACE.building.simulation.media.AntennaDefinition..JSON) : <code>object</code>
                 * [.MediaStationDefinition](#STARPEACE.building.simulation.media.MediaStationDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new MediaStationDefinition(json)](#new_STARPEACE.building.simulation.media.MediaStationDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.media.MediaStationDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.media.MediaStationDefinition+is_valid) ⇒ <code>boolean</code>
@@ -171,6 +181,7 @@
                         * [~JSON](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON) : <code>object</code>
             * .office
                 * [.OfficeDefinition](#STARPEACE.building.simulation.office.OfficeDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new OfficeDefinition(json)](#new_STARPEACE.building.simulation.office.OfficeDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.office.OfficeDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.office.OfficeDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.office.OfficeDefinition+is_valid) ⇒ <code>boolean</code>
@@ -181,6 +192,7 @@
                         * [~JSON](#STARPEACE.building.simulation.office.OfficeDefinition..JSON) : <code>object</code>
             * .park
                 * [.ParkDefinition](#STARPEACE.building.simulation.park.ParkDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new ParkDefinition(json)](#new_STARPEACE.building.simulation.park.ParkDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.park.ParkDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.park.ParkDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.park.ParkDefinition+is_valid) ⇒ <code>boolean</code>
@@ -191,6 +203,7 @@
                         * [~JSON](#STARPEACE.building.simulation.park.ParkDefinition..JSON) : <code>object</code>
             * .residence
                 * [.ResidenceDefinition](#STARPEACE.building.simulation.residence.ResidenceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new ResidenceDefinition(json)](#new_STARPEACE.building.simulation.residence.ResidenceDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.residence.ResidenceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.residence.ResidenceDefinition+is_valid) ⇒ <code>boolean</code>
@@ -201,6 +214,7 @@
                         * [~JSON](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON) : <code>object</code>
             * .service
                 * [.ServiceDefinition](#STARPEACE.building.simulation.service.ServiceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new ServiceDefinition(json)](#new_STARPEACE.building.simulation.service.ServiceDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.service.ServiceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.service.ServiceDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.service.ServiceDefinition+is_valid) ⇒ <code>boolean</code>
@@ -211,6 +225,7 @@
                         * [~JSON](#STARPEACE.building.simulation.service.ServiceDefinition..JSON) : <code>object</code>
             * .storage
                 * [.StorageDefinition](#STARPEACE.building.simulation.storage.StorageDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new StorageDefinition(json)](#new_STARPEACE.building.simulation.storage.StorageDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.storage.StorageDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.storage.StorageDefinition+is_valid) ⇒ <code>boolean</code>
@@ -221,6 +236,7 @@
                         * [~JSON](#STARPEACE.building.simulation.storage.StorageDefinition..JSON) : <code>object</code>
             * .store
                 * [.StoreDefinition](#STARPEACE.building.simulation.store.StoreDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                    * [new StoreDefinition(json)](#new_STARPEACE.building.simulation.store.StoreDefinition_new)
                     * _instance_
                         * [.toJSON()](#STARPEACE.building.simulation.store.StoreDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.store.StoreDefinition+is_valid) ⇒ <code>boolean</code>
@@ -891,6 +907,7 @@ Class representing bank building simulation definition
 
 
 * [.BankDefinition](#STARPEACE.building.simulation.bank.BankDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new BankDefinition(json)](#new_STARPEACE.building.simulation.bank.BankDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.bank.BankDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.bank.BankDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.bank.BankDefinition+is_valid) ⇒ <code>boolean</code>
@@ -899,6 +916,17 @@ Class representing bank building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.bank.BankDefinition.from_json) ⇒ [<code>BankDefinition</code>](#STARPEACE.building.simulation.bank.BankDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.bank.BankDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.bank.BankDefinition_new"></a>
+
+###### STARPEACE.building.simulation.bank.BankDefinition()
+Create a BankDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.bank.BankDefinition+toJSON"></a>
@@ -965,6 +993,7 @@ Class representing capitol building simulation definition
 
 
 * [.CapitolDefinition](#STARPEACE.building.simulation.civic.CapitolDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new CapitolDefinition(json)](#new_STARPEACE.building.simulation.civic.CapitolDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.civic.CapitolDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.civic.CapitolDefinition+is_valid) ⇒ <code>boolean</code>
@@ -973,6 +1002,17 @@ Class representing capitol building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.civic.CapitolDefinition.from_json) ⇒ [<code>CapitolDefinition</code>](#STARPEACE.building.simulation.civic.CapitolDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.civic.CapitolDefinition_new"></a>
+
+###### STARPEACE.building.simulation.civic.CapitolDefinition()
+Create a CapitolDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.civic.CapitolDefinition+toJSON"></a>
@@ -1039,6 +1079,7 @@ Class representing mausoleum building simulation definition
 
 
 * [.MausoleumDefinition](#STARPEACE.building.simulation.civic.MausoleumDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new MausoleumDefinition(json)](#new_STARPEACE.building.simulation.civic.MausoleumDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.civic.MausoleumDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.civic.MausoleumDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1047,6 +1088,17 @@ Class representing mausoleum building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.civic.MausoleumDefinition.from_json) ⇒ [<code>MausoleumDefinition</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.civic.MausoleumDefinition_new"></a>
+
+###### STARPEACE.building.simulation.civic.MausoleumDefinition()
+Create a MausoleumDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.civic.MausoleumDefinition+toJSON"></a>
@@ -1113,6 +1165,7 @@ Class representing portal building simulation definition
 
 
 * [.PortalDefinition](#STARPEACE.building.simulation.civic.PortalDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new PortalDefinition(json)](#new_STARPEACE.building.simulation.civic.PortalDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.civic.PortalDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.PortalDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.civic.PortalDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1121,6 +1174,17 @@ Class representing portal building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.civic.PortalDefinition.from_json) ⇒ [<code>PortalDefinition</code>](#STARPEACE.building.simulation.civic.PortalDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.civic.PortalDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.civic.PortalDefinition_new"></a>
+
+###### STARPEACE.building.simulation.civic.PortalDefinition()
+Create a PortalDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.civic.PortalDefinition+toJSON"></a>
@@ -1187,6 +1251,7 @@ Class representing townhall building simulation definition
 
 
 * [.TownhallDefinition](#STARPEACE.building.simulation.civic.TownhallDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new TownhallDefinition(json)](#new_STARPEACE.building.simulation.civic.TownhallDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.civic.TownhallDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.civic.TownhallDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1195,6 +1260,17 @@ Class representing townhall building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.civic.TownhallDefinition.from_json) ⇒ [<code>TownhallDefinition</code>](#STARPEACE.building.simulation.civic.TownhallDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.civic.TownhallDefinition_new"></a>
+
+###### STARPEACE.building.simulation.civic.TownhallDefinition()
+Create a TownhallDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.civic.TownhallDefinition+toJSON"></a>
@@ -1261,6 +1337,7 @@ Class representing tradecenter building simulation definition
 
 
 * [.TradecenterDefinition](#STARPEACE.building.simulation.civic.TradecenterDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new TradecenterDefinition(json)](#new_STARPEACE.building.simulation.civic.TradecenterDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.civic.TradecenterDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.civic.TradecenterDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1269,6 +1346,17 @@ Class representing tradecenter building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.civic.TradecenterDefinition.from_json) ⇒ [<code>TradecenterDefinition</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.civic.TradecenterDefinition_new"></a>
+
+###### STARPEACE.building.simulation.civic.TradecenterDefinition()
+Create a TradecenterDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.civic.TradecenterDefinition+toJSON"></a>
@@ -1335,6 +1423,7 @@ Class representing tradecenter building simulation definition
 
 
 * [.FactoryDefinition](#STARPEACE.building.simulation.factory.FactoryDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new FactoryDefinition(json)](#new_STARPEACE.building.simulation.factory.FactoryDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.factory.FactoryDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.factory.FactoryDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1343,6 +1432,17 @@ Class representing tradecenter building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.factory.FactoryDefinition.from_json) ⇒ [<code>FactoryDefinition</code>](#STARPEACE.building.simulation.factory.FactoryDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.factory.FactoryDefinition_new"></a>
+
+###### STARPEACE.building.simulation.factory.FactoryDefinition()
+Create a FactoryDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.factory.FactoryDefinition+toJSON"></a>
@@ -1487,6 +1587,7 @@ Class representing headquarters building simulation definition
 
 
 * [.HeadquartersDefinition](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new HeadquartersDefinition(json)](#new_STARPEACE.building.simulation.headquarters.HeadquartersDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1495,6 +1596,17 @@ Class representing headquarters building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition.from_json) ⇒ [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.headquarters.HeadquartersDefinition_new"></a>
+
+###### STARPEACE.building.simulation.headquarters.HeadquartersDefinition()
+Create a HeadquartersDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.headquarters.HeadquartersDefinition+toJSON"></a>
@@ -1564,6 +1676,7 @@ Class representing antenna building simulation definition
 
 
 * [.AntennaDefinition](#STARPEACE.building.simulation.media.AntennaDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new AntennaDefinition(json)](#new_STARPEACE.building.simulation.media.AntennaDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.media.AntennaDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.media.AntennaDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.media.AntennaDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1572,6 +1685,17 @@ Class representing antenna building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.media.AntennaDefinition.from_json) ⇒ [<code>AntennaDefinition</code>](#STARPEACE.building.simulation.media.AntennaDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.media.AntennaDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.media.AntennaDefinition_new"></a>
+
+###### STARPEACE.building.simulation.media.AntennaDefinition()
+Create a AntennaDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.media.AntennaDefinition+toJSON"></a>
@@ -1639,6 +1763,7 @@ Class representing media station building simulation definition
 
 
 * [.MediaStationDefinition](#STARPEACE.building.simulation.media.MediaStationDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new MediaStationDefinition(json)](#new_STARPEACE.building.simulation.media.MediaStationDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.media.MediaStationDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.media.MediaStationDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1647,6 +1772,17 @@ Class representing media station building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.media.MediaStationDefinition.from_json) ⇒ [<code>MediaStationDefinition</code>](#STARPEACE.building.simulation.media.MediaStationDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.media.MediaStationDefinition_new"></a>
+
+###### STARPEACE.building.simulation.media.MediaStationDefinition()
+Create a MediaStationDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.media.MediaStationDefinition+toJSON"></a>
@@ -1715,6 +1851,7 @@ Class representing office building simulation definition
 
 
 * [.OfficeDefinition](#STARPEACE.building.simulation.office.OfficeDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new OfficeDefinition(json)](#new_STARPEACE.building.simulation.office.OfficeDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.office.OfficeDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.office.OfficeDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.office.OfficeDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1723,6 +1860,17 @@ Class representing office building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.office.OfficeDefinition.from_json) ⇒ [<code>OfficeDefinition</code>](#STARPEACE.building.simulation.office.OfficeDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.office.OfficeDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.office.OfficeDefinition_new"></a>
+
+###### STARPEACE.building.simulation.office.OfficeDefinition()
+Create a OfficeDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.office.OfficeDefinition+toJSON"></a>
@@ -1792,6 +1940,7 @@ Class representing park building simulation definition
 
 
 * [.ParkDefinition](#STARPEACE.building.simulation.park.ParkDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new ParkDefinition(json)](#new_STARPEACE.building.simulation.park.ParkDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.park.ParkDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.park.ParkDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.park.ParkDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1800,6 +1949,17 @@ Class representing park building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.park.ParkDefinition.from_json) ⇒ [<code>ParkDefinition</code>](#STARPEACE.building.simulation.park.ParkDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.park.ParkDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.park.ParkDefinition_new"></a>
+
+###### STARPEACE.building.simulation.park.ParkDefinition()
+Create a ParkDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.park.ParkDefinition+toJSON"></a>
@@ -1871,6 +2031,7 @@ Class representing residence building simulation definition
 
 
 * [.ResidenceDefinition](#STARPEACE.building.simulation.residence.ResidenceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new ResidenceDefinition(json)](#new_STARPEACE.building.simulation.residence.ResidenceDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.residence.ResidenceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.residence.ResidenceDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1879,6 +2040,17 @@ Class representing residence building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.residence.ResidenceDefinition.from_json) ⇒ [<code>ResidenceDefinition</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.residence.ResidenceDefinition_new"></a>
+
+###### STARPEACE.building.simulation.residence.ResidenceDefinition()
+Create a ResidenceDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.residence.ResidenceDefinition+toJSON"></a>
@@ -1950,6 +2122,7 @@ Class representing service building simulation definition
 
 
 * [.ServiceDefinition](#STARPEACE.building.simulation.service.ServiceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new ServiceDefinition(json)](#new_STARPEACE.building.simulation.service.ServiceDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.service.ServiceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.service.ServiceDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.service.ServiceDefinition+is_valid) ⇒ <code>boolean</code>
@@ -1958,6 +2131,17 @@ Class representing service building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.service.ServiceDefinition.from_json) ⇒ [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.service.ServiceDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.service.ServiceDefinition_new"></a>
+
+###### STARPEACE.building.simulation.service.ServiceDefinition()
+Create a ServiceDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.service.ServiceDefinition+toJSON"></a>
@@ -2027,6 +2211,7 @@ Class representing storage building simulation definition
 
 
 * [.StorageDefinition](#STARPEACE.building.simulation.storage.StorageDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new StorageDefinition(json)](#new_STARPEACE.building.simulation.storage.StorageDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.storage.StorageDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.storage.StorageDefinition+is_valid) ⇒ <code>boolean</code>
@@ -2035,6 +2220,17 @@ Class representing storage building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.storage.StorageDefinition.from_json) ⇒ [<code>StorageDefinition</code>](#STARPEACE.building.simulation.storage.StorageDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.storage.StorageDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.storage.StorageDefinition_new"></a>
+
+###### STARPEACE.building.simulation.storage.StorageDefinition()
+Create a StorageDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.storage.StorageDefinition+toJSON"></a>
@@ -2105,6 +2301,7 @@ Class representing store building simulation definition
 
 
 * [.StoreDefinition](#STARPEACE.building.simulation.store.StoreDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new StoreDefinition(json)](#new_STARPEACE.building.simulation.store.StoreDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.store.StoreDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.store.StoreDefinition+is_valid) ⇒ <code>boolean</code>
@@ -2113,6 +2310,17 @@ Class representing store building simulation definition
         * [.from_json(json)](#STARPEACE.building.simulation.store.StoreDefinition.from_json) ⇒ [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
     * _inner_
         * [~JSON](#STARPEACE.building.simulation.store.StoreDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.store.StoreDefinition_new"></a>
+
+###### STARPEACE.building.simulation.store.StoreDefinition()
+Create a StoreDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.store.StoreDefinition+toJSON"></a>

@@ -24,6 +24,13 @@ class MausoleumDefinition extends SimulationDefinition
   @TYPE: () -> 'MAUSOLEUM'
 
   ###*
+  # Create a MausoleumDefinition object
+  # @param {STARPEACE.building.simulation.SimulationDefinition~JSON} json - raw JSON object to populate into simulation definition
+  ###
+  constructor: (json) ->
+    super(json)
+
+  ###*
   # Retrieve JSON representation of object
   # @return {STARPEACE.building.simulation.civic.MausoleumDefinition~JSON} JSON representation of MausoleumDefinition
   ###
