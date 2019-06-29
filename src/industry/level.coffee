@@ -5,7 +5,7 @@ Translation = require('../language/translation')
 ###*
 # @typedef {object} STARPEACE.industry.Level~JSON
 # @property {string} id - unique identifier of level
-# @property {object} label - translation object with label of level
+# @property {STARPEACE.language.Translation~JSON} label - translation object with label of level
 # @property {number} level - unique number of this level starting at one and incrementing
 ###
 

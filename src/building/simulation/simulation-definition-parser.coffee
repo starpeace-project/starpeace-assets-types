@@ -1,53 +1,72 @@
 _ = require('lodash')
 
-BankDefinition = require('./bank/bank-definition')
-CapitolDefinition = require('./civic/capitol-definition')
-MausoleumDefinition = require('./civic/mausoleum-definition')
-PortalDefinition = require('./civic/portal-definition')
-TownhallDefinition = require('./civic/townhall-definition')
-TradecenterDefinition = require('./civic/tradecenter-definition')
-FactoryDefinition = require('./factory/factory-definition')
-HeadquartersDefinition = require('./headquarters/headquarters-definition')
-AntennaDefinition = require('./media/antenna-definition')
-MediaStationDefinition = require('./media/media-station-definition')
-OfficeDefinition = require('./office/office-definition')
-ParkDefinition = require('./park/park-definition')
-ResidenceDefinition = require('./residence/residence-definition')
-ServiceDefinition = require('./service/service-definition')
-StorageDefinition = require('./storage/storage-definition')
-StoreDefinition = require('./store/store-definition')
+DEFINITIONS = [
+  require('./bank/bank-definition'),
+  require('./civic/capitol-definition'),
+  require('./civic/mausoleum-definition'),
+  require('./civic/portal-definition'),
+  require('./civic/townhall-definition'),
+  require('./civic/tradecenter-definition'),
+  require('./factory/factory-definition'),
+  require('./headquarters/headquarters-definition'),
+  require('./media/antenna-definition'),
+  require('./media/media-station-definition'),
+  require('./office/office-definition'),
+  require('./park/park-definition'),
+  require('./residence/residence-definition'),
+  require('./service/service-definition'),
+  require('./storage/storage-definition'),
+  require('./store/store-definition')
+]
+DEFINITIONS_BY_TYPE = _.keyBy(DEFINITIONS, (def) -> def.TYPE)
 
-ConstructionQuantity = require('./construction-quantity')
+###*
+# Class used to parse simulation definition json into simulation definitions
+# @memberof STARPEACE.building.simulation
+###
+class SimulationDefinitionParser
 
-exports = module.exports = class SimulationDefinitionParser
-
-  @definition_from_type: (json) ->
-    return AntennaDefinition.from_json(json) if json.type == 'ANTENNA'
-    return BankDefinition.from_json(json) if json.type == 'BANK'
-    return CapitolDefinition.from_json(json) if json.type == 'CAPITOL'
-    return FactoryDefinition.from_json(json) if json.type == 'FACTORY'
-    return HeadquartersDefinition.from_json(json) if json.type == 'HEADQUARTERS'
-    return MediaStationDefinition.from_json(json) if json.type == 'MEDIA_STATION'
-    return MausoleumDefinition.from_json(json) if json.type == 'MAUSOLEUM'
-    return OfficeDefinition.from_json(json) if json.type == 'OFFICE'
-    return ParkDefinition.from_json(json) if json.type == 'PARK'
-    return PortalDefinition.from_json(json) if json.type == 'PORTAL'
-    return ResidenceDefinition.from_json(json) if json.type == 'RESIDENCE'
-    return ServiceDefinition.from_json(json) if json.type == 'SERVICE'
-    return StorageDefinition.from_json(json) if json.type == 'STORAGE'
-    return StoreDefinition.from_json(json) if json.type == 'STORE'
-    return TownhallDefinition.from_json(json) if json.type == 'TOWNHALL'
-    return TradecenterDefinition.from_json(json) if json.type == 'TRADECENTER'
+  ###*
+  # Parse raw JSON into a simulation definition object
+  # @param {
+    STARPEACE.building.simulation.bank.BankDefinition~JSON|
+    STARPEACE.building.simulation.civic.CapitolDefinition~JSON|
+    STARPEACE.building.simulation.civic.MausoleumDefinition~JSON|
+    STARPEACE.building.simulation.civic.PortalDefinition~JSON|
+    STARPEACE.building.simulation.civic.TownhallDefinition~JSON|
+    STARPEACE.building.simulation.civic.TradecenterDefinition~JSON|
+    STARPEACE.building.simulation.factory.FactoryDefinition~JSON|
+    STARPEACE.building.simulation.headquarters.HeadquartersDefinition~JSON|
+    STARPEACE.building.simulation.media.AntennaDefinition~JSON|
+    STARPEACE.building.simulation.media.MediaStationDefinition~JSON|
+    STARPEACE.building.simulation.office.OfficeDefinition~JSON|
+    STARPEACE.building.simulation.park.ParkDefinition~JSON|
+    STARPEACE.building.simulation.residence.ResidenceDefinition~JSON|
+    STARPEACE.building.simulation.service.ServiceDefinition~JSON|
+    STARPEACE.building.simulation.storage.StorageDefinition~JSON|
+    STARPEACE.building.simulation.store.StoreDefinition~JSON
+  } json - raw JSON object to parse into simulation definition
+  # @return {
+    STARPEACE.building.simulation.bank.BankDefinition|
+    STARPEACE.building.simulation.civic.CapitolDefinition|
+    STARPEACE.building.simulation.civic.MausoleumDefinition|
+    STARPEACE.building.simulation.civic.PortalDefinition|
+    STARPEACE.building.simulation.civic.TownhallDefinition|
+    STARPEACE.building.simulation.civic.TradecenterDefinition|
+    STARPEACE.building.simulation.factory.FactoryDefinition|
+    STARPEACE.building.simulation.headquarters.HeadquartersDefinition|
+    STARPEACE.building.simulation.media.AntennaDefinition|
+    STARPEACE.building.simulation.media.MediaStationDefinition|
+    STARPEACE.building.simulation.office.OfficeDefinition|
+    STARPEACE.building.simulation.park.ParkDefinition|
+    STARPEACE.building.simulation.residence.ResidenceDefinition|
+    STARPEACE.building.simulation.service.ServiceDefinition|
+    STARPEACE.building.simulation.storage.StorageDefinition|
+    STARPEACE.building.simulation.store.StoreDefinition
+  } simulation definition representation of parsed JSON
+  ###
+  @from_json: (json) ->
+    return DEFINITIONS_BY_TYPE[json.type].from_json(json) if DEFINITIONS_BY_TYPE[json.type]?
     throw "unknown simulation type #{json.type}"
 
-  @from_json: (json) ->
-    definition = SimulationDefinitionParser.definition_from_type(json)
-    definition.id = json.id
-    definition.type = json.type
-    definition.max_level = json.max_level
-    definition.construction_inputs = _.map(json.construction_inputs, ConstructionQuantity.from_json)
-    definition.prestige = json.prestige || 0
-    definition.maintainance = json.maintainance || 0
-    definition.beauty = json.beauty || 0
-    definition.pollution = json.pollution || 0
-    definition
+exports = module.exports = SimulationDefinitionParser

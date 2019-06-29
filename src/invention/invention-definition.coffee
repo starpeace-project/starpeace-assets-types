@@ -7,8 +7,8 @@ Translation = require('../language/translation')
 # @property {string} id - identifier of invention
 # @property {string} category - category of invention
 # @property {string} industry_type - industry type of invention
-# @property {object} name - translation object with name of invention
-# @property {object} description - translation object with description of invention
+# @property {STARPEACE.language.Translation~JSON} name - translation object with name of invention
+# @property {STARPEACE.language.Translation~JSON} description - translation object with description of invention
 # @property {string[]} depends_on - array of other invention definition identifiers this depends on
 # @property {object} properties - properties of invention
 ###

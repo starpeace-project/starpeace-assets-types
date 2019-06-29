@@ -5,7 +5,7 @@ Translation = require('../language/translation')
 ###*
 # @typedef {object} STARPEACE.industry.ResourceType~JSON
 # @property {string} id - unique identifier of resource
-# @property {object} label_plural - translation object with plural label of resource
+# @property {STARPEACE.language.Translation~JSON} label_plural - translation object with plural label of resource
 # @property {string} unit_id - identifier of resource unit for this resource
 # @property {number} price - base price of this resource in dollars
 ###

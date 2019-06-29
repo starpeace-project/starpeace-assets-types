@@ -1,19 +1,67 @@
 _ = require('lodash')
 
-exports = module.exports = class SimulationDefinition
+ConstructionQuantity = require('./construction-quantity')
 
+###*
+# @typedef {object} STARPEACE.building.simulation.SimulationDefinition~JSON
+# @property {string} id - unique identifier of building simulation
+# @property {string} type - type identifier of building simulation, mapping to child subclass simulation definitions
+# @property {number} max_level - maximum upgrade level of building
+# @property {STARPEACE.building.simulation.ConstructionQuantity~JSON[]} construction_inputs - array of input quantities required for construction
+# @property {number} prestige - prestige earned or lost per level of this building simulation
+# @property {number} maintainance - maintainance required per level of this building simulation per hour
+# @property {number} beauty - beauty earned or lost per level of this building simulation per hour
+# @property {number} pollution - pollution earned or lost per level of this building simulation per hour
+###
+
+###*
+# Base class representing building simulation with common properties for all building simulations
+# @memberof STARPEACE.building.simulation
+#
+# @property {string} id - unique identifier of building simulation
+# @property {string} type - type identifier of building simulation, mapping to child subclass simulation definitions
+# @property {number} max_level - maximum upgrade level of building
+# @property {STARPEACE.building.simulation.ConstructionQuantity[]} construction_inputs - array of input quantities required for construction
+# @property {number} prestige - prestige earned or lost per level of this building simulation
+# @property {number} maintainance - maintainance required per level of this building simulation per hour
+# @property {number} beauty - beauty earned or lost per level of this building simulation per hour
+# @property {number} pollution - pollution earned or lost per level of this building simulation per hour
+###
+class SimulationDefinition
+  ###*
+  # Create a SimulationDefinition object
+  # @param {STARPEACE.building.simulation.SimulationDefinition~JSON} json - raw JSON object to populate into simulation definition
+  ###
+  constructor: (json) ->
+    @id = json.id
+    @type = json.type
+    @max_level = json.max_level
+    @construction_inputs = _.map(json.construction_inputs, ConstructionQuantity.from_json)
+    @prestige = json.prestige || 0
+    @maintainance = json.maintainance || 0
+    @beauty = json.beauty || 0
+    @pollution = json.pollution || 0
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.building.simulation.SimulationDefinition~JSON} JSON representation of SimulationDefinition
+  ###
   toJSON: () ->
     {
       id: @id
       type: @type
       max_level: @max_level
-      construction_inputs: @construction_inputs
+      construction_inputs: _.map(@construction_inputs, (ci) -> ci.toJSON())
       prestige: @prestige
       maintainance: @maintainance
       beauty: @beauty
       pollution: @pollution
     }
 
+  ###*
+  # Determine whether object and game configuration has valid attributes.
+  # @return {boolean} true if object has valid configuration, false otherwise
+  ###
   is_valid: () ->
     return false unless _.isString(@id) && @id.length > 0
     return false unless _.isString(@type) && @type.length > 0
@@ -23,3 +71,5 @@ exports = module.exports = class SimulationDefinition
     return false unless _.isNumber(@beauty)
     return false unless _.isNumber(@pollution)
     true
+
+exports = module.exports = SimulationDefinition
