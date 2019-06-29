@@ -4,7 +4,7 @@ SimulationDefinition = require('../simulation-definition')
 ResourceQuantity = require('../../../industry/resource-quantity')
 
 ###*
-# @typedef {object} STARPEACE.building.simulation.service.FactoryStage~JSON
+# @typedef {object} STARPEACE.building.simulation.service.ServiceDefinition~JSON
 # @extends STARPEACE.building.simulation.SimulationDefinition~JSON
 # @property {STARPEACE.industry.ResourceQuantity~JSON[]} labor - labor requirements for building
 # @property {STARPEACE.industry.ResourceQuantity~JSON[]} service - array of output service resource quantities provided by building

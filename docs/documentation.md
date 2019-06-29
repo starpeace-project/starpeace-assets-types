@@ -1,7 +1,7 @@
 
 <a name="STARPEACE"></a>
 
-## STARPEACE
+# STARPEACE
 
 * STARPEACE
     * .building
@@ -143,11 +143,13 @@
             * .headquarters
                 * [.HeadquartersDefinition](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
                     * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+toJSON) ⇒ <code>STARPEACE.building.simulation.headquarters.HeadquartersDefinition~JSON</code>
+                        * [.toJSON()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+is_valid) ⇒ <code>boolean</code>
                     * _static_
                         * [.TYPE()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition.TYPE)
                         * [.from_json(json)](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition.from_json) ⇒ [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition)
+                    * _inner_
+                        * [~JSON](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON) : <code>object</code>
             * .media
                 * [.AntennaDefinition](#STARPEACE.building.simulation.media.AntennaDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
                     * _instance_
@@ -200,11 +202,13 @@
             * .service
                 * [.ServiceDefinition](#STARPEACE.building.simulation.service.ServiceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
                     * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.service.ServiceDefinition+toJSON) ⇒ <code>STARPEACE.building.simulation.service.ServiceDefinition~JSON</code>
+                        * [.toJSON()](#STARPEACE.building.simulation.service.ServiceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.service.ServiceDefinition..JSON)
                         * [.is_valid()](#STARPEACE.building.simulation.service.ServiceDefinition+is_valid) ⇒ <code>boolean</code>
                     * _static_
                         * [.TYPE()](#STARPEACE.building.simulation.service.ServiceDefinition.TYPE)
                         * [.from_json(json)](#STARPEACE.building.simulation.service.ServiceDefinition.from_json) ⇒ [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition)
+                    * _inner_
+                        * [~JSON](#STARPEACE.building.simulation.service.ServiceDefinition..JSON) : <code>object</code>
             * .storage
                 * [.StorageDefinition](#STARPEACE.building.simulation.storage.StorageDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
                     * _instance_
@@ -337,7 +341,7 @@
 
 <a name="STARPEACE.building.BuildingDefinition"></a>
 
-#### STARPEACE.building.BuildingDefinition
+### STARPEACE.building.BuildingDefinition
 Class representing building definition metadata
 
 **Properties**
@@ -369,7 +373,7 @@ Class representing building definition metadata
 
 <a name="new_STARPEACE.building.BuildingDefinition_new"></a>
 
-##### STARPEACE.building.BuildingDefinition()
+#### STARPEACE.building.BuildingDefinition()
 Create a BuildingDefinition object
 
 
@@ -380,7 +384,7 @@ Create a BuildingDefinition object
 
 <a name="STARPEACE.building.BuildingDefinition+is_valid"></a>
 
-##### STARPEACE.building.BuildingDefinition#is_valid
+#### STARPEACE.building.BuildingDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
@@ -388,7 +392,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.BuildingDefinition+toJSON"></a>
 
-##### STARPEACE.building.BuildingDefinition#toJSON
+#### STARPEACE.building.BuildingDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
@@ -396,7 +400,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.BuildingDefinition.from_json"></a>
 
-##### STARPEACE.building.BuildingDefinition.from_json
+#### STARPEACE.building.BuildingDefinition.from_json
 Parse raw JSON into a BuildingDefinition object
 
 **Kind**: static method of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
@@ -409,7 +413,7 @@ Parse raw JSON into a BuildingDefinition object
 
 <a name="STARPEACE.building.BuildingDefinition..JSON"></a>
 
-##### STARPEACE.building.BuildingDefinition~JSON
+#### STARPEACE.building.BuildingDefinition~JSON
 **Kind**: inner typedef of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
 **Properties**
 
@@ -428,7 +432,7 @@ Parse raw JSON into a BuildingDefinition object
 
 <a name="STARPEACE.building.BuildingImageDefinition"></a>
 
-#### STARPEACE.building.BuildingImageDefinition
+### STARPEACE.building.BuildingImageDefinition
 Class representing image metadata for a building definition
 
 **Properties**
@@ -456,7 +460,7 @@ Class representing image metadata for a building definition
 
 <a name="new_STARPEACE.building.BuildingImageDefinition_new"></a>
 
-##### STARPEACE.building.BuildingImageDefinition()
+#### STARPEACE.building.BuildingImageDefinition()
 Create a BuildingImageDefinition object
 
 
@@ -467,7 +471,7 @@ Create a BuildingImageDefinition object
 
 <a name="STARPEACE.building.BuildingImageDefinition+is_valid"></a>
 
-##### STARPEACE.building.BuildingImageDefinition#is_valid
+#### STARPEACE.building.BuildingImageDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
@@ -475,7 +479,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.BuildingImageDefinition+toJSON"></a>
 
-##### STARPEACE.building.BuildingImageDefinition#toJSON
+#### STARPEACE.building.BuildingImageDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
@@ -483,7 +487,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.BuildingImageDefinition.from_json"></a>
 
-##### STARPEACE.building.BuildingImageDefinition.from_json
+#### STARPEACE.building.BuildingImageDefinition.from_json
 Parse raw JSON into a BuildingImageDefinition object
 
 **Kind**: static method of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
@@ -496,7 +500,7 @@ Parse raw JSON into a BuildingImageDefinition object
 
 <a name="STARPEACE.building.BuildingImageDefinition..JSON"></a>
 
-##### STARPEACE.building.BuildingImageDefinition~JSON
+#### STARPEACE.building.BuildingImageDefinition~JSON
 **Kind**: inner typedef of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
 **Properties**
 
@@ -512,7 +516,7 @@ Parse raw JSON into a BuildingImageDefinition object
 
 <a name="STARPEACE.building.CoordinateList"></a>
 
-#### STARPEACE.building.CoordinateList
+### STARPEACE.building.CoordinateList
 Class representing an array of coordinates
 
 **Properties**
@@ -534,7 +538,7 @@ Class representing an array of coordinates
 
 <a name="STARPEACE.building.CoordinateList+is_valid"></a>
 
-##### STARPEACE.building.CoordinateList#is_valid
+#### STARPEACE.building.CoordinateList#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
@@ -542,7 +546,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.CoordinateList+toJSON"></a>
 
-##### STARPEACE.building.CoordinateList#toJSON
+#### STARPEACE.building.CoordinateList#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
@@ -550,7 +554,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.CoordinateList.from_json"></a>
 
-##### STARPEACE.building.CoordinateList.from_json
+#### STARPEACE.building.CoordinateList.from_json
 Parse raw JSON into a CoordinateList object
 
 **Kind**: static method of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
@@ -563,7 +567,7 @@ Parse raw JSON into a CoordinateList object
 
 <a name="STARPEACE.building.CoordinateList..JSON"></a>
 
-##### STARPEACE.building.CoordinateList~JSON
+#### STARPEACE.building.CoordinateList~JSON
 **Kind**: inner typedef of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
 **Properties**
 
@@ -574,7 +578,7 @@ Parse raw JSON into a CoordinateList object
 
 <a name="STARPEACE.building.Coordinate"></a>
 
-#### STARPEACE.building.Coordinate
+### STARPEACE.building.Coordinate
 Class representing an x and y coordinate
 
 **Properties**
@@ -598,7 +602,7 @@ Class representing an x and y coordinate
 
 <a name="new_STARPEACE.building.Coordinate_new"></a>
 
-##### STARPEACE.building.Coordinate()
+#### STARPEACE.building.Coordinate()
 Create a Coordinate object
 
 
@@ -610,7 +614,7 @@ Create a Coordinate object
 
 <a name="STARPEACE.building.Coordinate+is_valid"></a>
 
-##### STARPEACE.building.Coordinate#is_valid
+#### STARPEACE.building.Coordinate#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
@@ -618,7 +622,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.Coordinate+toJSON"></a>
 
-##### STARPEACE.building.Coordinate#toJSON
+#### STARPEACE.building.Coordinate#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
@@ -626,7 +630,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.Coordinate.from_json"></a>
 
-##### STARPEACE.building.Coordinate.from_json
+#### STARPEACE.building.Coordinate.from_json
 Parse raw JSON into a Coordinate object
 
 **Kind**: static method of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
@@ -639,7 +643,7 @@ Parse raw JSON into a Coordinate object
 
 <a name="STARPEACE.building.Coordinate..JSON"></a>
 
-##### STARPEACE.building.Coordinate~JSON
+#### STARPEACE.building.Coordinate~JSON
 **Kind**: inner typedef of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
 **Properties**
 
@@ -651,7 +655,7 @@ Parse raw JSON into a Coordinate object
 
 <a name="STARPEACE.building.ImageEffect"></a>
 
-#### STARPEACE.building.ImageEffect
+### STARPEACE.building.ImageEffect
 Class representing an image effect applied to a building
 
 **Properties**
@@ -675,7 +679,7 @@ Class representing an image effect applied to a building
 
 <a name="STARPEACE.building.ImageEffect+is_valid"></a>
 
-##### STARPEACE.building.ImageEffect#is_valid
+#### STARPEACE.building.ImageEffect#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>ImageEffect</code>](#STARPEACE.building.ImageEffect)
@@ -683,7 +687,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.ImageEffect+toJSON"></a>
 
-##### STARPEACE.building.ImageEffect#toJSON
+#### STARPEACE.building.ImageEffect#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>ImageEffect</code>](#STARPEACE.building.ImageEffect)
@@ -691,7 +695,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.ImageEffect.from_json"></a>
 
-##### STARPEACE.building.ImageEffect.from_json
+#### STARPEACE.building.ImageEffect.from_json
 Parse raw JSON into a ImageEffect object
 
 **Kind**: static method of [<code>ImageEffect</code>](#STARPEACE.building.ImageEffect)
@@ -704,7 +708,7 @@ Parse raw JSON into a ImageEffect object
 
 <a name="STARPEACE.building.ImageEffect..JSON"></a>
 
-##### STARPEACE.building.ImageEffect~JSON
+#### STARPEACE.building.ImageEffect~JSON
 **Kind**: inner typedef of [<code>ImageEffect</code>](#STARPEACE.building.ImageEffect)
 **Properties**
 
@@ -717,7 +721,7 @@ Parse raw JSON into a ImageEffect object
 
 <a name="STARPEACE.building.simulation.ConstructionQuantity"></a>
 
-##### STARPEACE.building.simulation.ConstructionQuantity
+#### STARPEACE.building.simulation.ConstructionQuantity
 Class representing building construction quantities
 
 **Properties**
@@ -741,7 +745,7 @@ Class representing building construction quantities
 
 <a name="STARPEACE.building.simulation.ConstructionQuantity+toJSON"></a>
 
-###### STARPEACE.building.simulation.ConstructionQuantity#toJSON
+##### STARPEACE.building.simulation.ConstructionQuantity#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>ConstructionQuantity</code>](#STARPEACE.building.simulation.ConstructionQuantity)
@@ -749,7 +753,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.ConstructionQuantity+is_valid"></a>
 
-###### STARPEACE.building.simulation.ConstructionQuantity#is_valid
+##### STARPEACE.building.simulation.ConstructionQuantity#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>ConstructionQuantity</code>](#STARPEACE.building.simulation.ConstructionQuantity)
@@ -757,7 +761,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.ConstructionQuantity.from_json"></a>
 
-###### STARPEACE.building.simulation.ConstructionQuantity.from_json
+##### STARPEACE.building.simulation.ConstructionQuantity.from_json
 Parse raw JSON into a ConstructionQuantity object
 
 **Kind**: static method of [<code>ConstructionQuantity</code>](#STARPEACE.building.simulation.ConstructionQuantity)
@@ -770,7 +774,7 @@ Parse raw JSON into a ConstructionQuantity object
 
 <a name="STARPEACE.building.simulation.ConstructionQuantity..JSON"></a>
 
-###### STARPEACE.building.simulation.ConstructionQuantity~JSON
+##### STARPEACE.building.simulation.ConstructionQuantity~JSON
 **Kind**: inner typedef of [<code>ConstructionQuantity</code>](#STARPEACE.building.simulation.ConstructionQuantity)
 **Properties**
 
@@ -783,13 +787,13 @@ Parse raw JSON into a ConstructionQuantity object
 
 <a name="STARPEACE.building.simulation.SimulationDefinitionParser"></a>
 
-##### STARPEACE.building.simulation.SimulationDefinitionParser
+#### STARPEACE.building.simulation.SimulationDefinitionParser
 Class used to parse simulation definition json into simulation definitions
 
 
 <a name="STARPEACE.building.simulation.SimulationDefinitionParser.from_json"></a>
 
-###### STARPEACE.building.simulation.SimulationDefinitionParser.from_json
+##### STARPEACE.building.simulation.SimulationDefinitionParser.from_json
 Parse raw JSON into a simulation definition object
 
 **Kind**: static method of [<code>SimulationDefinitionParser</code>](#STARPEACE.building.simulation.SimulationDefinitionParser)
@@ -797,12 +801,12 @@ Parse raw JSON into a simulation definition object
 
 | Param | Type | Description |
 | --- | --- | --- |
-| json | [<code>JSON</code>](#STARPEACE.building.simulation.bank.BankDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.PortalDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON) \| <code>STARPEACE.building.simulation.headquarters.HeadquartersDefinition~JSON</code> \| [<code>JSON</code>](#STARPEACE.building.simulation.media.AntennaDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.office.OfficeDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.park.ParkDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON) \| <code>STARPEACE.building.simulation.service.ServiceDefinition~JSON</code> \| [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON) | raw JSON object to parse into simulation definition |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.bank.BankDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.PortalDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.media.AntennaDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.office.OfficeDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.park.ParkDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.service.ServiceDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON) | raw JSON object to parse into simulation definition |
 
 
 <a name="STARPEACE.building.simulation.SimulationDefinition"></a>
 
-##### STARPEACE.building.simulation.SimulationDefinition
+#### STARPEACE.building.simulation.SimulationDefinition
 Base class representing building simulation with common properties for all building simulations
 
 **Properties**
@@ -830,7 +834,7 @@ Base class representing building simulation with common properties for all build
 
 <a name="new_STARPEACE.building.simulation.SimulationDefinition_new"></a>
 
-###### STARPEACE.building.simulation.SimulationDefinition()
+##### STARPEACE.building.simulation.SimulationDefinition()
 Create a SimulationDefinition object
 
 
@@ -841,7 +845,7 @@ Create a SimulationDefinition object
 
 <a name="STARPEACE.building.simulation.SimulationDefinition+toJSON"></a>
 
-###### STARPEACE.building.simulation.SimulationDefinition#toJSON
+##### STARPEACE.building.simulation.SimulationDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
@@ -849,7 +853,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.SimulationDefinition+is_valid"></a>
 
-###### STARPEACE.building.simulation.SimulationDefinition#is_valid
+##### STARPEACE.building.simulation.SimulationDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
@@ -857,7 +861,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.SimulationDefinition..JSON"></a>
 
-###### STARPEACE.building.simulation.SimulationDefinition~JSON
+##### STARPEACE.building.simulation.SimulationDefinition~JSON
 **Kind**: inner typedef of [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
 **Properties**
 
@@ -875,7 +879,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.bank.BankDefinition"></a>
 
-###### STARPEACE.building.simulation.bank.BankDefinition
+##### STARPEACE.building.simulation.bank.BankDefinition
 Class representing bank building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -899,7 +903,7 @@ Class representing bank building simulation definition
 
 <a name="STARPEACE.building.simulation.bank.BankDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.bank.BankDefinition#toJSON
+###### STARPEACE.building.simulation.bank.BankDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>BankDefinition</code>](#STARPEACE.building.simulation.bank.BankDefinition)
@@ -908,7 +912,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.bank.BankDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.bank.BankDefinition#is_valid
+###### STARPEACE.building.simulation.bank.BankDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>BankDefinition</code>](#STARPEACE.building.simulation.bank.BankDefinition)
@@ -917,14 +921,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.bank.BankDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.bank.BankDefinition.TYPE
+###### STARPEACE.building.simulation.bank.BankDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>BankDefinition</code>](#STARPEACE.building.simulation.bank.BankDefinition)
 
 <a name="STARPEACE.building.simulation.bank.BankDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.bank.BankDefinition.from_json
+###### STARPEACE.building.simulation.bank.BankDefinition.from_json
 Parse raw JSON into a BankDefinition object
 
 **Kind**: static method of [<code>BankDefinition</code>](#STARPEACE.building.simulation.bank.BankDefinition)
@@ -937,7 +941,7 @@ Parse raw JSON into a BankDefinition object
 
 <a name="STARPEACE.building.simulation.bank.BankDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.bank.BankDefinition~JSON
+###### STARPEACE.building.simulation.bank.BankDefinition~JSON
 **Kind**: inner typedef of [<code>BankDefinition</code>](#STARPEACE.building.simulation.bank.BankDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -949,7 +953,7 @@ Parse raw JSON into a BankDefinition object
 
 <a name="STARPEACE.building.simulation.civic.CapitolDefinition"></a>
 
-###### STARPEACE.building.simulation.civic.CapitolDefinition
+##### STARPEACE.building.simulation.civic.CapitolDefinition
 Class representing capitol building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -973,7 +977,7 @@ Class representing capitol building simulation definition
 
 <a name="STARPEACE.building.simulation.civic.CapitolDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.civic.CapitolDefinition#toJSON
+###### STARPEACE.building.simulation.civic.CapitolDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>CapitolDefinition</code>](#STARPEACE.building.simulation.civic.CapitolDefinition)
@@ -982,7 +986,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.civic.CapitolDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.civic.CapitolDefinition#is_valid
+###### STARPEACE.building.simulation.civic.CapitolDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>CapitolDefinition</code>](#STARPEACE.building.simulation.civic.CapitolDefinition)
@@ -991,14 +995,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.civic.CapitolDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.civic.CapitolDefinition.TYPE
+###### STARPEACE.building.simulation.civic.CapitolDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>CapitolDefinition</code>](#STARPEACE.building.simulation.civic.CapitolDefinition)
 
 <a name="STARPEACE.building.simulation.civic.CapitolDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.civic.CapitolDefinition.from_json
+###### STARPEACE.building.simulation.civic.CapitolDefinition.from_json
 Parse raw JSON into a CapitolDefinition object
 
 **Kind**: static method of [<code>CapitolDefinition</code>](#STARPEACE.building.simulation.civic.CapitolDefinition)
@@ -1011,7 +1015,7 @@ Parse raw JSON into a CapitolDefinition object
 
 <a name="STARPEACE.building.simulation.civic.CapitolDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.civic.CapitolDefinition~JSON
+###### STARPEACE.building.simulation.civic.CapitolDefinition~JSON
 **Kind**: inner typedef of [<code>CapitolDefinition</code>](#STARPEACE.building.simulation.civic.CapitolDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1023,7 +1027,7 @@ Parse raw JSON into a CapitolDefinition object
 
 <a name="STARPEACE.building.simulation.civic.MausoleumDefinition"></a>
 
-###### STARPEACE.building.simulation.civic.MausoleumDefinition
+##### STARPEACE.building.simulation.civic.MausoleumDefinition
 Class representing mausoleum building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1047,7 +1051,7 @@ Class representing mausoleum building simulation definition
 
 <a name="STARPEACE.building.simulation.civic.MausoleumDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.civic.MausoleumDefinition#toJSON
+###### STARPEACE.building.simulation.civic.MausoleumDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>MausoleumDefinition</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition)
@@ -1056,7 +1060,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.civic.MausoleumDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.civic.MausoleumDefinition#is_valid
+###### STARPEACE.building.simulation.civic.MausoleumDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>MausoleumDefinition</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition)
@@ -1065,14 +1069,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.civic.MausoleumDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.civic.MausoleumDefinition.TYPE
+###### STARPEACE.building.simulation.civic.MausoleumDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>MausoleumDefinition</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition)
 
 <a name="STARPEACE.building.simulation.civic.MausoleumDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.civic.MausoleumDefinition.from_json
+###### STARPEACE.building.simulation.civic.MausoleumDefinition.from_json
 Parse raw JSON into a MausoleumDefinition object
 
 **Kind**: static method of [<code>MausoleumDefinition</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition)
@@ -1085,7 +1089,7 @@ Parse raw JSON into a MausoleumDefinition object
 
 <a name="STARPEACE.building.simulation.civic.MausoleumDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.civic.MausoleumDefinition~JSON
+###### STARPEACE.building.simulation.civic.MausoleumDefinition~JSON
 **Kind**: inner typedef of [<code>MausoleumDefinition</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1097,7 +1101,7 @@ Parse raw JSON into a MausoleumDefinition object
 
 <a name="STARPEACE.building.simulation.civic.PortalDefinition"></a>
 
-###### STARPEACE.building.simulation.civic.PortalDefinition
+##### STARPEACE.building.simulation.civic.PortalDefinition
 Class representing portal building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1121,7 +1125,7 @@ Class representing portal building simulation definition
 
 <a name="STARPEACE.building.simulation.civic.PortalDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.civic.PortalDefinition#toJSON
+###### STARPEACE.building.simulation.civic.PortalDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>PortalDefinition</code>](#STARPEACE.building.simulation.civic.PortalDefinition)
@@ -1130,7 +1134,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.civic.PortalDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.civic.PortalDefinition#is_valid
+###### STARPEACE.building.simulation.civic.PortalDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>PortalDefinition</code>](#STARPEACE.building.simulation.civic.PortalDefinition)
@@ -1139,14 +1143,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.civic.PortalDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.civic.PortalDefinition.TYPE
+###### STARPEACE.building.simulation.civic.PortalDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>PortalDefinition</code>](#STARPEACE.building.simulation.civic.PortalDefinition)
 
 <a name="STARPEACE.building.simulation.civic.PortalDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.civic.PortalDefinition.from_json
+###### STARPEACE.building.simulation.civic.PortalDefinition.from_json
 Parse raw JSON into a PortalDefinition object
 
 **Kind**: static method of [<code>PortalDefinition</code>](#STARPEACE.building.simulation.civic.PortalDefinition)
@@ -1159,7 +1163,7 @@ Parse raw JSON into a PortalDefinition object
 
 <a name="STARPEACE.building.simulation.civic.PortalDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.civic.PortalDefinition~JSON
+###### STARPEACE.building.simulation.civic.PortalDefinition~JSON
 **Kind**: inner typedef of [<code>PortalDefinition</code>](#STARPEACE.building.simulation.civic.PortalDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1171,7 +1175,7 @@ Parse raw JSON into a PortalDefinition object
 
 <a name="STARPEACE.building.simulation.civic.TownhallDefinition"></a>
 
-###### STARPEACE.building.simulation.civic.TownhallDefinition
+##### STARPEACE.building.simulation.civic.TownhallDefinition
 Class representing townhall building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1195,7 +1199,7 @@ Class representing townhall building simulation definition
 
 <a name="STARPEACE.building.simulation.civic.TownhallDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.civic.TownhallDefinition#toJSON
+###### STARPEACE.building.simulation.civic.TownhallDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>TownhallDefinition</code>](#STARPEACE.building.simulation.civic.TownhallDefinition)
@@ -1204,7 +1208,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.civic.TownhallDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.civic.TownhallDefinition#is_valid
+###### STARPEACE.building.simulation.civic.TownhallDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>TownhallDefinition</code>](#STARPEACE.building.simulation.civic.TownhallDefinition)
@@ -1213,14 +1217,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.civic.TownhallDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.civic.TownhallDefinition.TYPE
+###### STARPEACE.building.simulation.civic.TownhallDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>TownhallDefinition</code>](#STARPEACE.building.simulation.civic.TownhallDefinition)
 
 <a name="STARPEACE.building.simulation.civic.TownhallDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.civic.TownhallDefinition.from_json
+###### STARPEACE.building.simulation.civic.TownhallDefinition.from_json
 Parse raw JSON into a TownhallDefinition object
 
 **Kind**: static method of [<code>TownhallDefinition</code>](#STARPEACE.building.simulation.civic.TownhallDefinition)
@@ -1233,7 +1237,7 @@ Parse raw JSON into a TownhallDefinition object
 
 <a name="STARPEACE.building.simulation.civic.TownhallDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.civic.TownhallDefinition~JSON
+###### STARPEACE.building.simulation.civic.TownhallDefinition~JSON
 **Kind**: inner typedef of [<code>TownhallDefinition</code>](#STARPEACE.building.simulation.civic.TownhallDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1245,7 +1249,7 @@ Parse raw JSON into a TownhallDefinition object
 
 <a name="STARPEACE.building.simulation.civic.TradecenterDefinition"></a>
 
-###### STARPEACE.building.simulation.civic.TradecenterDefinition
+##### STARPEACE.building.simulation.civic.TradecenterDefinition
 Class representing tradecenter building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1269,7 +1273,7 @@ Class representing tradecenter building simulation definition
 
 <a name="STARPEACE.building.simulation.civic.TradecenterDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.civic.TradecenterDefinition#toJSON
+###### STARPEACE.building.simulation.civic.TradecenterDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>TradecenterDefinition</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition)
@@ -1278,7 +1282,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.civic.TradecenterDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.civic.TradecenterDefinition#is_valid
+###### STARPEACE.building.simulation.civic.TradecenterDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>TradecenterDefinition</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition)
@@ -1287,14 +1291,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.civic.TradecenterDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.civic.TradecenterDefinition.TYPE
+###### STARPEACE.building.simulation.civic.TradecenterDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>TradecenterDefinition</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition)
 
 <a name="STARPEACE.building.simulation.civic.TradecenterDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.civic.TradecenterDefinition.from_json
+###### STARPEACE.building.simulation.civic.TradecenterDefinition.from_json
 Parse raw JSON into a TradecenterDefinition object
 
 **Kind**: static method of [<code>TradecenterDefinition</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition)
@@ -1307,7 +1311,7 @@ Parse raw JSON into a TradecenterDefinition object
 
 <a name="STARPEACE.building.simulation.civic.TradecenterDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.civic.TradecenterDefinition~JSON
+###### STARPEACE.building.simulation.civic.TradecenterDefinition~JSON
 **Kind**: inner typedef of [<code>TradecenterDefinition</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1319,7 +1323,7 @@ Parse raw JSON into a TradecenterDefinition object
 
 <a name="STARPEACE.building.simulation.factory.FactoryDefinition"></a>
 
-###### STARPEACE.building.simulation.factory.FactoryDefinition
+##### STARPEACE.building.simulation.factory.FactoryDefinition
 Class representing tradecenter building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1343,7 +1347,7 @@ Class representing tradecenter building simulation definition
 
 <a name="STARPEACE.building.simulation.factory.FactoryDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.factory.FactoryDefinition#toJSON
+###### STARPEACE.building.simulation.factory.FactoryDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>FactoryDefinition</code>](#STARPEACE.building.simulation.factory.FactoryDefinition)
@@ -1352,7 +1356,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.factory.FactoryDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.factory.FactoryDefinition#is_valid
+###### STARPEACE.building.simulation.factory.FactoryDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>FactoryDefinition</code>](#STARPEACE.building.simulation.factory.FactoryDefinition)
@@ -1361,14 +1365,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.factory.FactoryDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.factory.FactoryDefinition.TYPE
+###### STARPEACE.building.simulation.factory.FactoryDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>FactoryDefinition</code>](#STARPEACE.building.simulation.factory.FactoryDefinition)
 
 <a name="STARPEACE.building.simulation.factory.FactoryDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.factory.FactoryDefinition.from_json
+###### STARPEACE.building.simulation.factory.FactoryDefinition.from_json
 Parse raw JSON into a FactoryDefinition object
 
 **Kind**: static method of [<code>FactoryDefinition</code>](#STARPEACE.building.simulation.factory.FactoryDefinition)
@@ -1381,7 +1385,7 @@ Parse raw JSON into a FactoryDefinition object
 
 <a name="STARPEACE.building.simulation.factory.FactoryDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.factory.FactoryDefinition~JSON
+###### STARPEACE.building.simulation.factory.FactoryDefinition~JSON
 **Kind**: inner typedef of [<code>FactoryDefinition</code>](#STARPEACE.building.simulation.factory.FactoryDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1393,7 +1397,7 @@ Parse raw JSON into a FactoryDefinition object
 
 <a name="STARPEACE.building.simulation.factory.FactoryStage"></a>
 
-###### STARPEACE.building.simulation.factory.FactoryStage
+##### STARPEACE.building.simulation.factory.FactoryStage
 Class representing factory building simulation stage metadata
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1421,7 +1425,7 @@ Class representing factory building simulation stage metadata
 
 <a name="STARPEACE.building.simulation.factory.FactoryStage+toJSON"></a>
 
-####### STARPEACE.building.simulation.factory.FactoryStage#toJSON
+###### STARPEACE.building.simulation.factory.FactoryStage#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
@@ -1430,7 +1434,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.factory.FactoryStage+is_valid"></a>
 
-####### STARPEACE.building.simulation.factory.FactoryStage#is_valid
+###### STARPEACE.building.simulation.factory.FactoryStage#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
@@ -1439,7 +1443,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.factory.FactoryStage.from_json"></a>
 
-####### STARPEACE.building.simulation.factory.FactoryStage.from_json
+###### STARPEACE.building.simulation.factory.FactoryStage.from_json
 Parse raw JSON into a FactoryStage object
 
 **Kind**: static method of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
@@ -1452,7 +1456,7 @@ Parse raw JSON into a FactoryStage object
 
 <a name="STARPEACE.building.simulation.factory.FactoryStage..JSON"></a>
 
-####### STARPEACE.building.simulation.factory.FactoryStage~JSON
+###### STARPEACE.building.simulation.factory.FactoryStage~JSON
 **Kind**: inner typedef of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1469,7 +1473,7 @@ Parse raw JSON into a FactoryStage object
 
 <a name="STARPEACE.building.simulation.headquarters.HeadquartersDefinition"></a>
 
-###### STARPEACE.building.simulation.headquarters.HeadquartersDefinition
+##### STARPEACE.building.simulation.headquarters.HeadquartersDefinition
 Class representing headquarters building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1484,25 +1488,27 @@ Class representing headquarters building simulation definition
 
 * [.HeadquartersDefinition](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * _instance_
-        * [.toJSON()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+toJSON) ⇒ <code>STARPEACE.building.simulation.headquarters.HeadquartersDefinition~JSON</code>
+        * [.toJSON()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+is_valid) ⇒ <code>boolean</code>
     * _static_
         * [.TYPE()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition.TYPE)
         * [.from_json(json)](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition.from_json) ⇒ [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition)
+    * _inner_
+        * [~JSON](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON) : <code>object</code>
 
 
 <a name="STARPEACE.building.simulation.headquarters.HeadquartersDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.headquarters.HeadquartersDefinition#toJSON
+###### STARPEACE.building.simulation.headquarters.HeadquartersDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition)
 **Overrides**: [<code>toJSON</code>](#STARPEACE.building.simulation.SimulationDefinition+toJSON)  
-**Returns**: <code>STARPEACE.building.simulation.headquarters.HeadquartersDefinition~JSON</code> - JSON representation of HeadquartersDefinition  
+**Returns**: [<code>JSON</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON) - JSON representation of HeadquartersDefinition  
 
 <a name="STARPEACE.building.simulation.headquarters.HeadquartersDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.headquarters.HeadquartersDefinition#is_valid
+###### STARPEACE.building.simulation.headquarters.HeadquartersDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition)
@@ -1511,14 +1517,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.headquarters.HeadquartersDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.headquarters.HeadquartersDefinition.TYPE
+###### STARPEACE.building.simulation.headquarters.HeadquartersDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition)
 
 <a name="STARPEACE.building.simulation.headquarters.HeadquartersDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.headquarters.HeadquartersDefinition.from_json
+###### STARPEACE.building.simulation.headquarters.HeadquartersDefinition.from_json
 Parse raw JSON into a HeadquartersDefinition object
 
 **Kind**: static method of [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition)
@@ -1526,12 +1532,26 @@ Parse raw JSON into a HeadquartersDefinition object
 
 | Param | Type | Description |
 | --- | --- | --- |
-| json | <code>STARPEACE.building.simulation.headquarters.HeadquartersDefinition~JSON</code> | raw JSON object to parse into HeadquartersDefinition |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON) | raw JSON object to parse into HeadquartersDefinition |
+
+
+<a name="STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON"></a>
+
+###### STARPEACE.building.simulation.headquarters.HeadquartersDefinition~JSON
+**Kind**: inner typedef of [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition)
+**Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| labor | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | labor requirements for building |
+| satellite | <code>boolean</code> | flag indicating whether building is satellite headquarters |
+| satellite_category | <code>string</code> | satellite category if building is flagged as satellite |
 
 
 <a name="STARPEACE.building.simulation.media.AntennaDefinition"></a>
 
-###### STARPEACE.building.simulation.media.AntennaDefinition
+##### STARPEACE.building.simulation.media.AntennaDefinition
 Class representing antenna building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1556,7 +1576,7 @@ Class representing antenna building simulation definition
 
 <a name="STARPEACE.building.simulation.media.AntennaDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.media.AntennaDefinition#toJSON
+###### STARPEACE.building.simulation.media.AntennaDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>AntennaDefinition</code>](#STARPEACE.building.simulation.media.AntennaDefinition)
@@ -1565,7 +1585,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.media.AntennaDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.media.AntennaDefinition#is_valid
+###### STARPEACE.building.simulation.media.AntennaDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>AntennaDefinition</code>](#STARPEACE.building.simulation.media.AntennaDefinition)
@@ -1574,14 +1594,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.media.AntennaDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.media.AntennaDefinition.TYPE
+###### STARPEACE.building.simulation.media.AntennaDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>AntennaDefinition</code>](#STARPEACE.building.simulation.media.AntennaDefinition)
 
 <a name="STARPEACE.building.simulation.media.AntennaDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.media.AntennaDefinition.from_json
+###### STARPEACE.building.simulation.media.AntennaDefinition.from_json
 Parse raw JSON into a AntennaDefinition object
 
 **Kind**: static method of [<code>AntennaDefinition</code>](#STARPEACE.building.simulation.media.AntennaDefinition)
@@ -1594,7 +1614,7 @@ Parse raw JSON into a AntennaDefinition object
 
 <a name="STARPEACE.building.simulation.media.AntennaDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.media.AntennaDefinition~JSON
+###### STARPEACE.building.simulation.media.AntennaDefinition~JSON
 **Kind**: inner typedef of [<code>AntennaDefinition</code>](#STARPEACE.building.simulation.media.AntennaDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1607,7 +1627,7 @@ Parse raw JSON into a AntennaDefinition object
 
 <a name="STARPEACE.building.simulation.media.MediaStationDefinition"></a>
 
-###### STARPEACE.building.simulation.media.MediaStationDefinition
+##### STARPEACE.building.simulation.media.MediaStationDefinition
 Class representing media station building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1631,7 +1651,7 @@ Class representing media station building simulation definition
 
 <a name="STARPEACE.building.simulation.media.MediaStationDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.media.MediaStationDefinition#toJSON
+###### STARPEACE.building.simulation.media.MediaStationDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>MediaStationDefinition</code>](#STARPEACE.building.simulation.media.MediaStationDefinition)
@@ -1640,7 +1660,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.media.MediaStationDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.media.MediaStationDefinition#is_valid
+###### STARPEACE.building.simulation.media.MediaStationDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>MediaStationDefinition</code>](#STARPEACE.building.simulation.media.MediaStationDefinition)
@@ -1649,14 +1669,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.media.MediaStationDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.media.MediaStationDefinition.TYPE
+###### STARPEACE.building.simulation.media.MediaStationDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>MediaStationDefinition</code>](#STARPEACE.building.simulation.media.MediaStationDefinition)
 
 <a name="STARPEACE.building.simulation.media.MediaStationDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.media.MediaStationDefinition.from_json
+###### STARPEACE.building.simulation.media.MediaStationDefinition.from_json
 Parse raw JSON into a MediaStationDefinition object
 
 **Kind**: static method of [<code>MediaStationDefinition</code>](#STARPEACE.building.simulation.media.MediaStationDefinition)
@@ -1669,7 +1689,7 @@ Parse raw JSON into a MediaStationDefinition object
 
 <a name="STARPEACE.building.simulation.media.MediaStationDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.media.MediaStationDefinition~JSON
+###### STARPEACE.building.simulation.media.MediaStationDefinition~JSON
 **Kind**: inner typedef of [<code>MediaStationDefinition</code>](#STARPEACE.building.simulation.media.MediaStationDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1681,7 +1701,7 @@ Parse raw JSON into a MediaStationDefinition object
 
 <a name="STARPEACE.building.simulation.office.OfficeDefinition"></a>
 
-###### STARPEACE.building.simulation.office.OfficeDefinition
+##### STARPEACE.building.simulation.office.OfficeDefinition
 Class representing office building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1707,7 +1727,7 @@ Class representing office building simulation definition
 
 <a name="STARPEACE.building.simulation.office.OfficeDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.office.OfficeDefinition#toJSON
+###### STARPEACE.building.simulation.office.OfficeDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>OfficeDefinition</code>](#STARPEACE.building.simulation.office.OfficeDefinition)
@@ -1716,7 +1736,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.office.OfficeDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.office.OfficeDefinition#is_valid
+###### STARPEACE.building.simulation.office.OfficeDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>OfficeDefinition</code>](#STARPEACE.building.simulation.office.OfficeDefinition)
@@ -1725,14 +1745,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.office.OfficeDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.office.OfficeDefinition.TYPE
+###### STARPEACE.building.simulation.office.OfficeDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>OfficeDefinition</code>](#STARPEACE.building.simulation.office.OfficeDefinition)
 
 <a name="STARPEACE.building.simulation.office.OfficeDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.office.OfficeDefinition.from_json
+###### STARPEACE.building.simulation.office.OfficeDefinition.from_json
 Parse raw JSON into a OfficeDefinition object
 
 **Kind**: static method of [<code>OfficeDefinition</code>](#STARPEACE.building.simulation.office.OfficeDefinition)
@@ -1745,7 +1765,7 @@ Parse raw JSON into a OfficeDefinition object
 
 <a name="STARPEACE.building.simulation.office.OfficeDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.office.OfficeDefinition~JSON
+###### STARPEACE.building.simulation.office.OfficeDefinition~JSON
 **Kind**: inner typedef of [<code>OfficeDefinition</code>](#STARPEACE.building.simulation.office.OfficeDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1759,7 +1779,7 @@ Parse raw JSON into a OfficeDefinition object
 
 <a name="STARPEACE.building.simulation.park.ParkDefinition"></a>
 
-###### STARPEACE.building.simulation.park.ParkDefinition
+##### STARPEACE.building.simulation.park.ParkDefinition
 Class representing park building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1784,7 +1804,7 @@ Class representing park building simulation definition
 
 <a name="STARPEACE.building.simulation.park.ParkDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.park.ParkDefinition#toJSON
+###### STARPEACE.building.simulation.park.ParkDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>ParkDefinition</code>](#STARPEACE.building.simulation.park.ParkDefinition)
@@ -1793,7 +1813,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.park.ParkDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.park.ParkDefinition#is_valid
+###### STARPEACE.building.simulation.park.ParkDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>ParkDefinition</code>](#STARPEACE.building.simulation.park.ParkDefinition)
@@ -1802,14 +1822,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.park.ParkDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.park.ParkDefinition.TYPE
+###### STARPEACE.building.simulation.park.ParkDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>ParkDefinition</code>](#STARPEACE.building.simulation.park.ParkDefinition)
 
 <a name="STARPEACE.building.simulation.park.ParkDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.park.ParkDefinition.from_json
+###### STARPEACE.building.simulation.park.ParkDefinition.from_json
 Parse raw JSON into a ParkDefinition object
 
 **Kind**: static method of [<code>ParkDefinition</code>](#STARPEACE.building.simulation.park.ParkDefinition)
@@ -1822,7 +1842,7 @@ Parse raw JSON into a ParkDefinition object
 
 <a name="STARPEACE.building.simulation.park.ParkDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.park.ParkDefinition~JSON
+###### STARPEACE.building.simulation.park.ParkDefinition~JSON
 **Kind**: inner typedef of [<code>ParkDefinition</code>](#STARPEACE.building.simulation.park.ParkDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1835,7 +1855,7 @@ Parse raw JSON into a ParkDefinition object
 
 <a name="STARPEACE.building.simulation.residence.ResidenceDefinition"></a>
 
-###### STARPEACE.building.simulation.residence.ResidenceDefinition
+##### STARPEACE.building.simulation.residence.ResidenceDefinition
 Class representing residence building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1863,7 +1883,7 @@ Class representing residence building simulation definition
 
 <a name="STARPEACE.building.simulation.residence.ResidenceDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.residence.ResidenceDefinition#toJSON
+###### STARPEACE.building.simulation.residence.ResidenceDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>ResidenceDefinition</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition)
@@ -1872,7 +1892,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.residence.ResidenceDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.residence.ResidenceDefinition#is_valid
+###### STARPEACE.building.simulation.residence.ResidenceDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>ResidenceDefinition</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition)
@@ -1881,14 +1901,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.residence.ResidenceDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.residence.ResidenceDefinition.TYPE
+###### STARPEACE.building.simulation.residence.ResidenceDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>ResidenceDefinition</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition)
 
 <a name="STARPEACE.building.simulation.residence.ResidenceDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.residence.ResidenceDefinition.from_json
+###### STARPEACE.building.simulation.residence.ResidenceDefinition.from_json
 Parse raw JSON into a ResidenceDefinition object
 
 **Kind**: static method of [<code>ResidenceDefinition</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition)
@@ -1901,7 +1921,7 @@ Parse raw JSON into a ResidenceDefinition object
 
 <a name="STARPEACE.building.simulation.residence.ResidenceDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.residence.ResidenceDefinition~JSON
+###### STARPEACE.building.simulation.residence.ResidenceDefinition~JSON
 **Kind**: inner typedef of [<code>ResidenceDefinition</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -1917,7 +1937,7 @@ Parse raw JSON into a ResidenceDefinition object
 
 <a name="STARPEACE.building.simulation.service.ServiceDefinition"></a>
 
-###### STARPEACE.building.simulation.service.ServiceDefinition
+##### STARPEACE.building.simulation.service.ServiceDefinition
 Class representing service building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -1931,25 +1951,27 @@ Class representing service building simulation definition
 
 * [.ServiceDefinition](#STARPEACE.building.simulation.service.ServiceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * _instance_
-        * [.toJSON()](#STARPEACE.building.simulation.service.ServiceDefinition+toJSON) ⇒ <code>STARPEACE.building.simulation.service.ServiceDefinition~JSON</code>
+        * [.toJSON()](#STARPEACE.building.simulation.service.ServiceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.service.ServiceDefinition..JSON)
         * [.is_valid()](#STARPEACE.building.simulation.service.ServiceDefinition+is_valid) ⇒ <code>boolean</code>
     * _static_
         * [.TYPE()](#STARPEACE.building.simulation.service.ServiceDefinition.TYPE)
         * [.from_json(json)](#STARPEACE.building.simulation.service.ServiceDefinition.from_json) ⇒ [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition)
+    * _inner_
+        * [~JSON](#STARPEACE.building.simulation.service.ServiceDefinition..JSON) : <code>object</code>
 
 
 <a name="STARPEACE.building.simulation.service.ServiceDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.service.ServiceDefinition#toJSON
+###### STARPEACE.building.simulation.service.ServiceDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition)
 **Overrides**: [<code>toJSON</code>](#STARPEACE.building.simulation.SimulationDefinition+toJSON)  
-**Returns**: <code>STARPEACE.building.simulation.service.ServiceDefinition~JSON</code> - JSON representation of ServiceDefinition  
+**Returns**: [<code>JSON</code>](#STARPEACE.building.simulation.service.ServiceDefinition..JSON) - JSON representation of ServiceDefinition  
 
 <a name="STARPEACE.building.simulation.service.ServiceDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.service.ServiceDefinition#is_valid
+###### STARPEACE.building.simulation.service.ServiceDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition)
@@ -1958,14 +1980,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.service.ServiceDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.service.ServiceDefinition.TYPE
+###### STARPEACE.building.simulation.service.ServiceDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition)
 
 <a name="STARPEACE.building.simulation.service.ServiceDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.service.ServiceDefinition.from_json
+###### STARPEACE.building.simulation.service.ServiceDefinition.from_json
 Parse raw JSON into a ServiceDefinition object
 
 **Kind**: static method of [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition)
@@ -1973,12 +1995,25 @@ Parse raw JSON into a ServiceDefinition object
 
 | Param | Type | Description |
 | --- | --- | --- |
-| json | <code>STARPEACE.building.simulation.service.ServiceDefinition~JSON</code> | raw JSON object to parse into ServiceDefinition |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.service.ServiceDefinition..JSON) | raw JSON object to parse into ServiceDefinition |
+
+
+<a name="STARPEACE.building.simulation.service.ServiceDefinition..JSON"></a>
+
+###### STARPEACE.building.simulation.service.ServiceDefinition~JSON
+**Kind**: inner typedef of [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition)
+**Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| labor | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | labor requirements for building |
+| service | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of output service resource quantities provided by building |
 
 
 <a name="STARPEACE.building.simulation.storage.StorageDefinition"></a>
 
-###### STARPEACE.building.simulation.storage.StorageDefinition
+##### STARPEACE.building.simulation.storage.StorageDefinition
 Class representing storage building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -2004,7 +2039,7 @@ Class representing storage building simulation definition
 
 <a name="STARPEACE.building.simulation.storage.StorageDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.storage.StorageDefinition#toJSON
+###### STARPEACE.building.simulation.storage.StorageDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>StorageDefinition</code>](#STARPEACE.building.simulation.storage.StorageDefinition)
@@ -2013,7 +2048,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.storage.StorageDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.storage.StorageDefinition#is_valid
+###### STARPEACE.building.simulation.storage.StorageDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>StorageDefinition</code>](#STARPEACE.building.simulation.storage.StorageDefinition)
@@ -2022,14 +2057,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.storage.StorageDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.storage.StorageDefinition.TYPE
+###### STARPEACE.building.simulation.storage.StorageDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>StorageDefinition</code>](#STARPEACE.building.simulation.storage.StorageDefinition)
 
 <a name="STARPEACE.building.simulation.storage.StorageDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.storage.StorageDefinition.from_json
+###### STARPEACE.building.simulation.storage.StorageDefinition.from_json
 Parse raw JSON into a StorageDefinition object
 
 **Kind**: static method of [<code>StorageDefinition</code>](#STARPEACE.building.simulation.storage.StorageDefinition)
@@ -2042,7 +2077,7 @@ Parse raw JSON into a StorageDefinition object
 
 <a name="STARPEACE.building.simulation.storage.StorageDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.storage.StorageDefinition~JSON
+###### STARPEACE.building.simulation.storage.StorageDefinition~JSON
 **Kind**: inner typedef of [<code>StorageDefinition</code>](#STARPEACE.building.simulation.storage.StorageDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -2056,7 +2091,7 @@ Parse raw JSON into a StorageDefinition object
 
 <a name="STARPEACE.building.simulation.store.StoreDefinition"></a>
 
-###### STARPEACE.building.simulation.store.StoreDefinition
+##### STARPEACE.building.simulation.store.StoreDefinition
 Class representing store building simulation definition
 
 **Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
@@ -2082,7 +2117,7 @@ Class representing store building simulation definition
 
 <a name="STARPEACE.building.simulation.store.StoreDefinition+toJSON"></a>
 
-####### STARPEACE.building.simulation.store.StoreDefinition#toJSON
+###### STARPEACE.building.simulation.store.StoreDefinition#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
@@ -2091,7 +2126,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.store.StoreDefinition+is_valid"></a>
 
-####### STARPEACE.building.simulation.store.StoreDefinition#is_valid
+###### STARPEACE.building.simulation.store.StoreDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
@@ -2100,14 +2135,14 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.store.StoreDefinition.TYPE"></a>
 
-####### STARPEACE.building.simulation.store.StoreDefinition.TYPE
+###### STARPEACE.building.simulation.store.StoreDefinition.TYPE
 Type identifier for simulation definition
 
 **Kind**: static method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
 
 <a name="STARPEACE.building.simulation.store.StoreDefinition.from_json"></a>
 
-####### STARPEACE.building.simulation.store.StoreDefinition.from_json
+###### STARPEACE.building.simulation.store.StoreDefinition.from_json
 Parse raw JSON into a StoreDefinition object
 
 **Kind**: static method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
@@ -2120,7 +2155,7 @@ Parse raw JSON into a StoreDefinition object
 
 <a name="STARPEACE.building.simulation.store.StoreDefinition..JSON"></a>
 
-####### STARPEACE.building.simulation.store.StoreDefinition~JSON
+###### STARPEACE.building.simulation.store.StoreDefinition~JSON
 **Kind**: inner typedef of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
 **Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
 **Properties**
@@ -2134,7 +2169,7 @@ Parse raw JSON into a StoreDefinition object
 
 <a name="STARPEACE.building.simulation.store.StoreProductCustomer"></a>
 
-###### STARPEACE.building.simulation.store.StoreProductCustomer
+##### STARPEACE.building.simulation.store.StoreProductCustomer
 Class representing store building customer metadata
 
 **Properties**
@@ -2158,7 +2193,7 @@ Class representing store building customer metadata
 
 <a name="STARPEACE.building.simulation.store.StoreProductCustomer+toJSON"></a>
 
-####### STARPEACE.building.simulation.store.StoreProductCustomer#toJSON
+###### STARPEACE.building.simulation.store.StoreProductCustomer#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>StoreProductCustomer</code>](#STARPEACE.building.simulation.store.StoreProductCustomer)
@@ -2166,7 +2201,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.store.StoreProductCustomer+is_valid"></a>
 
-####### STARPEACE.building.simulation.store.StoreProductCustomer#is_valid
+###### STARPEACE.building.simulation.store.StoreProductCustomer#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>StoreProductCustomer</code>](#STARPEACE.building.simulation.store.StoreProductCustomer)
@@ -2174,7 +2209,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.store.StoreProductCustomer.from_json"></a>
 
-####### STARPEACE.building.simulation.store.StoreProductCustomer.from_json
+###### STARPEACE.building.simulation.store.StoreProductCustomer.from_json
 Parse raw JSON into a StoreProductCustomer object
 
 **Kind**: static method of [<code>StoreProductCustomer</code>](#STARPEACE.building.simulation.store.StoreProductCustomer)
@@ -2187,7 +2222,7 @@ Parse raw JSON into a StoreProductCustomer object
 
 <a name="STARPEACE.building.simulation.store.StoreProductCustomer..JSON"></a>
 
-####### STARPEACE.building.simulation.store.StoreProductCustomer~JSON
+###### STARPEACE.building.simulation.store.StoreProductCustomer~JSON
 **Kind**: inner typedef of [<code>StoreProductCustomer</code>](#STARPEACE.building.simulation.store.StoreProductCustomer)
 **Properties**
 
@@ -2200,7 +2235,7 @@ Parse raw JSON into a StoreProductCustomer object
 
 <a name="STARPEACE.building.simulation.store.StoreProductOutput"></a>
 
-###### STARPEACE.building.simulation.store.StoreProductOutput
+##### STARPEACE.building.simulation.store.StoreProductOutput
 Class representing store building product output
 
 **Properties**
@@ -2224,7 +2259,7 @@ Class representing store building product output
 
 <a name="STARPEACE.building.simulation.store.StoreProductOutput+toJSON"></a>
 
-####### STARPEACE.building.simulation.store.StoreProductOutput#toJSON
+###### STARPEACE.building.simulation.store.StoreProductOutput#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>StoreProductOutput</code>](#STARPEACE.building.simulation.store.StoreProductOutput)
@@ -2232,7 +2267,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.store.StoreProductOutput+is_valid"></a>
 
-####### STARPEACE.building.simulation.store.StoreProductOutput#is_valid
+###### STARPEACE.building.simulation.store.StoreProductOutput#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>StoreProductOutput</code>](#STARPEACE.building.simulation.store.StoreProductOutput)
@@ -2240,7 +2275,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.store.StoreProductOutput.from_json"></a>
 
-####### STARPEACE.building.simulation.store.StoreProductOutput.from_json
+###### STARPEACE.building.simulation.store.StoreProductOutput.from_json
 Parse raw JSON into a StoreProductOutput object
 
 **Kind**: static method of [<code>StoreProductOutput</code>](#STARPEACE.building.simulation.store.StoreProductOutput)
@@ -2253,7 +2288,7 @@ Parse raw JSON into a StoreProductOutput object
 
 <a name="STARPEACE.building.simulation.store.StoreProductOutput..JSON"></a>
 
-####### STARPEACE.building.simulation.store.StoreProductOutput~JSON
+###### STARPEACE.building.simulation.store.StoreProductOutput~JSON
 **Kind**: inner typedef of [<code>StoreProductOutput</code>](#STARPEACE.building.simulation.store.StoreProductOutput)
 **Properties**
 
@@ -2266,7 +2301,7 @@ Parse raw JSON into a StoreProductOutput object
 
 <a name="STARPEACE.building.simulation.store.StoreProduct"></a>
 
-###### STARPEACE.building.simulation.store.StoreProduct
+##### STARPEACE.building.simulation.store.StoreProduct
 Class representing store building simulation product outputs
 
 **Properties**
@@ -2289,7 +2324,7 @@ Class representing store building simulation product outputs
 
 <a name="STARPEACE.building.simulation.store.StoreProduct+toJSON"></a>
 
-####### STARPEACE.building.simulation.store.StoreProduct#toJSON
+###### STARPEACE.building.simulation.store.StoreProduct#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>StoreProduct</code>](#STARPEACE.building.simulation.store.StoreProduct)
@@ -2297,7 +2332,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.building.simulation.store.StoreProduct+is_valid"></a>
 
-####### STARPEACE.building.simulation.store.StoreProduct#is_valid
+###### STARPEACE.building.simulation.store.StoreProduct#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>StoreProduct</code>](#STARPEACE.building.simulation.store.StoreProduct)
@@ -2305,7 +2340,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.building.simulation.store.StoreProduct.from_json"></a>
 
-####### STARPEACE.building.simulation.store.StoreProduct.from_json
+###### STARPEACE.building.simulation.store.StoreProduct.from_json
 Parse raw JSON into a StoreProduct object
 
 **Kind**: static method of [<code>StoreProduct</code>](#STARPEACE.building.simulation.store.StoreProduct)
@@ -2318,7 +2353,7 @@ Parse raw JSON into a StoreProduct object
 
 <a name="STARPEACE.building.simulation.store.StoreProduct..JSON"></a>
 
-####### STARPEACE.building.simulation.store.StoreProduct~JSON
+###### STARPEACE.building.simulation.store.StoreProduct~JSON
 **Kind**: inner typedef of [<code>StoreProduct</code>](#STARPEACE.building.simulation.store.StoreProduct)
 **Properties**
 
@@ -2330,7 +2365,7 @@ Parse raw JSON into a StoreProduct object
 
 <a name="STARPEACE.industry.CityZone"></a>
 
-#### STARPEACE.industry.CityZone
+### STARPEACE.industry.CityZone
 Class representing a city zone
 
 **Properties**
@@ -2354,7 +2389,7 @@ Class representing a city zone
 
 <a name="STARPEACE.industry.CityZone+toJSON"></a>
 
-##### STARPEACE.industry.CityZone#toJSON
+#### STARPEACE.industry.CityZone#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>CityZone</code>](#STARPEACE.industry.CityZone)
@@ -2362,7 +2397,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.industry.CityZone+is_valid"></a>
 
-##### STARPEACE.industry.CityZone#is_valid
+#### STARPEACE.industry.CityZone#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>CityZone</code>](#STARPEACE.industry.CityZone)
@@ -2370,7 +2405,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.industry.CityZone.from_json"></a>
 
-##### STARPEACE.industry.CityZone.from_json
+#### STARPEACE.industry.CityZone.from_json
 Parse raw JSON into a CityZone object
 
 **Kind**: static method of [<code>CityZone</code>](#STARPEACE.industry.CityZone)
@@ -2379,7 +2414,7 @@ Parse raw JSON into a CityZone object
 
 <a name="STARPEACE.industry.CityZone..JSON"></a>
 
-##### STARPEACE.industry.CityZone~JSON
+#### STARPEACE.industry.CityZone~JSON
 **Kind**: inner typedef of [<code>CityZone</code>](#STARPEACE.industry.CityZone)
 **Properties**
 
@@ -2392,7 +2427,7 @@ Parse raw JSON into a CityZone object
 
 <a name="STARPEACE.industry.IndustryCategory"></a>
 
-#### STARPEACE.industry.IndustryCategory
+### STARPEACE.industry.IndustryCategory
 Class representing an industry category
 
 **Properties**
@@ -2415,7 +2450,7 @@ Class representing an industry category
 
 <a name="STARPEACE.industry.IndustryCategory+toJSON"></a>
 
-##### STARPEACE.industry.IndustryCategory#toJSON
+#### STARPEACE.industry.IndustryCategory#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)
@@ -2423,7 +2458,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.industry.IndustryCategory+is_valid"></a>
 
-##### STARPEACE.industry.IndustryCategory#is_valid
+#### STARPEACE.industry.IndustryCategory#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)
@@ -2431,7 +2466,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.industry.IndustryCategory.from_json"></a>
 
-##### STARPEACE.industry.IndustryCategory.from_json
+#### STARPEACE.industry.IndustryCategory.from_json
 Parse raw JSON into a IndustryCategory object
 
 **Kind**: static method of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)
@@ -2440,7 +2475,7 @@ Parse raw JSON into a IndustryCategory object
 
 <a name="STARPEACE.industry.IndustryCategory..JSON"></a>
 
-##### STARPEACE.industry.IndustryCategory~JSON
+#### STARPEACE.industry.IndustryCategory~JSON
 **Kind**: inner typedef of [<code>IndustryCategory</code>](#STARPEACE.industry.IndustryCategory)
 **Properties**
 
@@ -2452,7 +2487,7 @@ Parse raw JSON into a IndustryCategory object
 
 <a name="STARPEACE.industry.IndustryType"></a>
 
-#### STARPEACE.industry.IndustryType
+### STARPEACE.industry.IndustryType
 Class representing an industry type
 
 **Properties**
@@ -2475,7 +2510,7 @@ Class representing an industry type
 
 <a name="STARPEACE.industry.IndustryType+toJSON"></a>
 
-##### STARPEACE.industry.IndustryType#toJSON
+#### STARPEACE.industry.IndustryType#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)
@@ -2483,7 +2518,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.industry.IndustryType+is_valid"></a>
 
-##### STARPEACE.industry.IndustryType#is_valid
+#### STARPEACE.industry.IndustryType#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)
@@ -2491,7 +2526,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.industry.IndustryType.from_json"></a>
 
-##### STARPEACE.industry.IndustryType.from_json
+#### STARPEACE.industry.IndustryType.from_json
 Parse raw JSON into a IndustryType object
 
 **Kind**: static method of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)
@@ -2500,7 +2535,7 @@ Parse raw JSON into a IndustryType object
 
 <a name="STARPEACE.industry.IndustryType..JSON"></a>
 
-##### STARPEACE.industry.IndustryType~JSON
+#### STARPEACE.industry.IndustryType~JSON
 **Kind**: inner typedef of [<code>IndustryType</code>](#STARPEACE.industry.IndustryType)
 **Properties**
 
@@ -2512,7 +2547,7 @@ Parse raw JSON into a IndustryType object
 
 <a name="STARPEACE.industry.Level"></a>
 
-#### STARPEACE.industry.Level
+### STARPEACE.industry.Level
 Class representing a tycoon level
 
 **Properties**
@@ -2536,7 +2571,7 @@ Class representing a tycoon level
 
 <a name="STARPEACE.industry.Level+toJSON"></a>
 
-##### STARPEACE.industry.Level#toJSON
+#### STARPEACE.industry.Level#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>Level</code>](#STARPEACE.industry.Level)
@@ -2544,7 +2579,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.industry.Level+is_valid"></a>
 
-##### STARPEACE.industry.Level#is_valid
+#### STARPEACE.industry.Level#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>Level</code>](#STARPEACE.industry.Level)
@@ -2552,7 +2587,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.industry.Level.from_json"></a>
 
-##### STARPEACE.industry.Level.from_json
+#### STARPEACE.industry.Level.from_json
 Parse raw JSON into a Level object
 
 **Kind**: static method of [<code>Level</code>](#STARPEACE.industry.Level)
@@ -2561,7 +2596,7 @@ Parse raw JSON into a Level object
 
 <a name="STARPEACE.industry.Level..JSON"></a>
 
-##### STARPEACE.industry.Level~JSON
+#### STARPEACE.industry.Level~JSON
 **Kind**: inner typedef of [<code>Level</code>](#STARPEACE.industry.Level)
 **Properties**
 
@@ -2574,7 +2609,7 @@ Parse raw JSON into a Level object
 
 <a name="STARPEACE.industry.ResourceQuantity"></a>
 
-#### STARPEACE.industry.ResourceQuantity
+### STARPEACE.industry.ResourceQuantity
 Class representing a resource quantity and metadata
 
 **Properties**
@@ -2599,7 +2634,7 @@ Class representing a resource quantity and metadata
 
 <a name="STARPEACE.industry.ResourceQuantity+toJSON"></a>
 
-##### STARPEACE.industry.ResourceQuantity#toJSON
+#### STARPEACE.industry.ResourceQuantity#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)
@@ -2607,7 +2642,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.industry.ResourceQuantity+is_valid"></a>
 
-##### STARPEACE.industry.ResourceQuantity#is_valid
+#### STARPEACE.industry.ResourceQuantity#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)
@@ -2615,7 +2650,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.industry.ResourceQuantity.from_json"></a>
 
-##### STARPEACE.industry.ResourceQuantity.from_json
+#### STARPEACE.industry.ResourceQuantity.from_json
 Parse raw JSON into a ResourceQuantity object
 
 **Kind**: static method of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)
@@ -2624,7 +2659,7 @@ Parse raw JSON into a ResourceQuantity object
 
 <a name="STARPEACE.industry.ResourceQuantity..JSON"></a>
 
-##### STARPEACE.industry.ResourceQuantity~JSON
+#### STARPEACE.industry.ResourceQuantity~JSON
 **Kind**: inner typedef of [<code>ResourceQuantity</code>](#STARPEACE.industry.ResourceQuantity)
 **Properties**
 
@@ -2638,7 +2673,7 @@ Parse raw JSON into a ResourceQuantity object
 
 <a name="STARPEACE.industry.ResourceType"></a>
 
-#### STARPEACE.industry.ResourceType
+### STARPEACE.industry.ResourceType
 Class representing resource type metadata
 
 **Properties**
@@ -2663,7 +2698,7 @@ Class representing resource type metadata
 
 <a name="STARPEACE.industry.ResourceType+toJSON"></a>
 
-##### STARPEACE.industry.ResourceType#toJSON
+#### STARPEACE.industry.ResourceType#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)
@@ -2671,7 +2706,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.industry.ResourceType+is_valid"></a>
 
-##### STARPEACE.industry.ResourceType#is_valid
+#### STARPEACE.industry.ResourceType#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)
@@ -2679,7 +2714,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.industry.ResourceType.from_json"></a>
 
-##### STARPEACE.industry.ResourceType.from_json
+#### STARPEACE.industry.ResourceType.from_json
 Parse raw JSON into a ResourceType object
 
 **Kind**: static method of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)
@@ -2688,7 +2723,7 @@ Parse raw JSON into a ResourceType object
 
 <a name="STARPEACE.industry.ResourceType..JSON"></a>
 
-##### STARPEACE.industry.ResourceType~JSON
+#### STARPEACE.industry.ResourceType~JSON
 **Kind**: inner typedef of [<code>ResourceType</code>](#STARPEACE.industry.ResourceType)
 **Properties**
 
@@ -2702,7 +2737,7 @@ Parse raw JSON into a ResourceType object
 
 <a name="STARPEACE.industry.ResourceUnit"></a>
 
-#### STARPEACE.industry.ResourceUnit
+### STARPEACE.industry.ResourceUnit
 Class representing the unit of quantities of a resource
 
 **Properties**
@@ -2725,7 +2760,7 @@ Class representing the unit of quantities of a resource
 
 <a name="STARPEACE.industry.ResourceUnit+toJSON"></a>
 
-##### STARPEACE.industry.ResourceUnit#toJSON
+#### STARPEACE.industry.ResourceUnit#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)
@@ -2733,7 +2768,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.industry.ResourceUnit+is_valid"></a>
 
-##### STARPEACE.industry.ResourceUnit#is_valid
+#### STARPEACE.industry.ResourceUnit#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)
@@ -2741,7 +2776,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.industry.ResourceUnit.from_json"></a>
 
-##### STARPEACE.industry.ResourceUnit.from_json
+#### STARPEACE.industry.ResourceUnit.from_json
 Parse raw JSON into a ResourceUnit object
 
 **Kind**: static method of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)
@@ -2750,7 +2785,7 @@ Parse raw JSON into a ResourceUnit object
 
 <a name="STARPEACE.industry.ResourceUnit..JSON"></a>
 
-##### STARPEACE.industry.ResourceUnit~JSON
+#### STARPEACE.industry.ResourceUnit~JSON
 **Kind**: inner typedef of [<code>ResourceUnit</code>](#STARPEACE.industry.ResourceUnit)
 **Properties**
 
@@ -2762,7 +2797,7 @@ Parse raw JSON into a ResourceUnit object
 
 <a name="STARPEACE.invention.InventionDefinition"></a>
 
-#### STARPEACE.invention.InventionDefinition
+### STARPEACE.invention.InventionDefinition
 Class representing metadata definition of an invention
 
 **Properties**
@@ -2790,7 +2825,7 @@ Class representing metadata definition of an invention
 
 <a name="new_STARPEACE.invention.InventionDefinition_new"></a>
 
-##### STARPEACE.invention.InventionDefinition()
+#### STARPEACE.invention.InventionDefinition()
 Create an InventionDefinition object
 
 
@@ -2801,7 +2836,7 @@ Create an InventionDefinition object
 
 <a name="STARPEACE.invention.InventionDefinition+is_valid"></a>
 
-##### STARPEACE.invention.InventionDefinition#is_valid
+#### STARPEACE.invention.InventionDefinition#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)
@@ -2809,7 +2844,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.invention.InventionDefinition.from_json"></a>
 
-##### STARPEACE.invention.InventionDefinition.from_json
+#### STARPEACE.invention.InventionDefinition.from_json
 Parse raw JSON into a InventionDefinition object
 
 **Kind**: static method of [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)
@@ -2818,7 +2853,7 @@ Parse raw JSON into a InventionDefinition object
 
 <a name="STARPEACE.invention.InventionDefinition..JSON"></a>
 
-##### STARPEACE.invention.InventionDefinition~JSON
+#### STARPEACE.invention.InventionDefinition~JSON
 **Kind**: inner typedef of [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)
 **Properties**
 
@@ -2835,7 +2870,7 @@ Parse raw JSON into a InventionDefinition object
 
 <a name="STARPEACE.language.Translation"></a>
 
-#### STARPEACE.language.Translation
+### STARPEACE.language.Translation
 Class representing a multi-language translation
 
 **Properties**
@@ -2862,7 +2897,7 @@ Class representing a multi-language translation
 
 <a name="STARPEACE.language.Translation+toJSON"></a>
 
-##### STARPEACE.language.Translation#toJSON
+#### STARPEACE.language.Translation#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>Translation</code>](#STARPEACE.language.Translation)
@@ -2870,7 +2905,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.language.Translation+is_valid"></a>
 
-##### STARPEACE.language.Translation#is_valid
+#### STARPEACE.language.Translation#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>Translation</code>](#STARPEACE.language.Translation)
@@ -2878,7 +2913,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.language.Translation.from_json"></a>
 
-##### STARPEACE.language.Translation.from_json
+#### STARPEACE.language.Translation.from_json
 Parse raw JSON into a Translation object
 
 **Kind**: static method of [<code>Translation</code>](#STARPEACE.language.Translation)
@@ -2887,7 +2922,7 @@ Parse raw JSON into a Translation object
 
 <a name="STARPEACE.language.Translation..JSON"></a>
 
-##### STARPEACE.language.Translation~JSON
+#### STARPEACE.language.Translation~JSON
 **Kind**: inner typedef of [<code>Translation</code>](#STARPEACE.language.Translation)
 **Properties**
 
@@ -2903,7 +2938,7 @@ Parse raw JSON into a Translation object
 
 <a name="STARPEACE.seal.CompanySeal"></a>
 
-#### STARPEACE.seal.CompanySeal
+### STARPEACE.seal.CompanySeal
 Class representing company seal, with metadata and buildings allowed defined.
 
 **Properties**
@@ -2928,7 +2963,7 @@ Class representing company seal, with metadata and buildings allowed defined.
 
 <a name="STARPEACE.seal.CompanySeal+toJSON"></a>
 
-##### STARPEACE.seal.CompanySeal#toJSON
+#### STARPEACE.seal.CompanySeal#toJSON
 Retrieve JSON representation of object
 
 **Kind**: instance method of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)
@@ -2936,7 +2971,7 @@ Retrieve JSON representation of object
 
 <a name="STARPEACE.seal.CompanySeal+is_valid"></a>
 
-##### STARPEACE.seal.CompanySeal#is_valid
+#### STARPEACE.seal.CompanySeal#is_valid
 Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)
@@ -2944,7 +2979,7 @@ Determine whether object and game configuration has valid attributes.
 
 <a name="STARPEACE.seal.CompanySeal.from_json"></a>
 
-##### STARPEACE.seal.CompanySeal.from_json
+#### STARPEACE.seal.CompanySeal.from_json
 Parse raw JSON into a CompanySeal object
 
 **Kind**: static method of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)
@@ -2953,7 +2988,7 @@ Parse raw JSON into a CompanySeal object
 
 <a name="STARPEACE.seal.CompanySeal..JSON"></a>
 
-##### STARPEACE.seal.CompanySeal~JSON
+#### STARPEACE.seal.CompanySeal~JSON
 **Kind**: inner typedef of [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)
 **Properties**
 
