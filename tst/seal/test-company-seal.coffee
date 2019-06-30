@@ -24,7 +24,7 @@ describe('STARPEACE.seal.CompanySeal', ->
       assert.strictEqual(seal.id, 'id')
       assert.strictEqual(seal.name_short, 'name')
       assert.strictEqual(seal.name_long, 'long name')
-      assert.deepStrictEqual(seal.buildings, ['bid1', 'bid2'])
+      assert.deepStrictEqual(seal.building_ids, ['bid1', 'bid2'])
       assert.ok(seal.is_valid())
       assert.deepStrictEqual(seal.toJSON(), JSON)
     )

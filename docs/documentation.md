@@ -234,6 +234,14 @@
                         * [.from_json(json)](#STARPEACE.building.simulation.storage.StorageDefinition.from_json) ⇒ [<code>StorageDefinition</code>](#STARPEACE.building.simulation.storage.StorageDefinition)
                     * _inner_
                         * [~JSON](#STARPEACE.building.simulation.storage.StorageDefinition..JSON) : <code>object</code>
+                * [.StorageQuantity](#STARPEACE.building.simulation.storage.StorageQuantity)
+                    * _instance_
+                        * [.toJSON()](#STARPEACE.building.simulation.storage.StorageQuantity+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON)
+                        * [.is_valid()](#STARPEACE.building.simulation.storage.StorageQuantity+is_valid) ⇒ <code>boolean</code>
+                    * _static_
+                        * [.from_json(json)](#STARPEACE.building.simulation.storage.StorageQuantity.from_json) ⇒ [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+                    * _inner_
+                        * [~JSON](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) : <code>object</code>
             * .store
                 * [.StoreDefinition](#STARPEACE.building.simulation.store.StoreDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
                     * [new StoreDefinition(json)](#new_STARPEACE.building.simulation.store.StoreDefinition_new)
@@ -2207,7 +2215,7 @@ Class representing storage building simulation definition
 | --- | --- | --- |
 | labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
 | operations | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | array of resource quantities required for building operations |
-| storage | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | array of resource quantities stored by building |
+| storage | [<code>Array.&lt;StorageQuantity&gt;</code>](#STARPEACE.building.simulation.storage.StorageQuantity) | array of resource quantities stored by building |
 
 
 * [.StorageDefinition](#STARPEACE.building.simulation.storage.StorageDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
@@ -2282,7 +2290,71 @@ Parse raw JSON into a StorageDefinition object
 | --- | --- | --- |
 | labor | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | labor requirements for building |
 | operations | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of resource quantities required for building operations |
-| storage | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of resource quantities stored by building |
+| storage | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) | array of resource quantities stored by building |
+
+
+<a name="STARPEACE.building.simulation.storage.StorageQuantity"></a>
+
+##### STARPEACE.building.simulation.storage.StorageQuantity
+Class representing a storage quantity of a resource
+
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| resource_id | <code>string</code> | identifier of resource type of storage |
+| max | <code>number</code> | maximum amount of resource that can be stored |
+
+
+* [.StorageQuantity](#STARPEACE.building.simulation.storage.StorageQuantity)
+    * _instance_
+        * [.toJSON()](#STARPEACE.building.simulation.storage.StorageQuantity+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON)
+        * [.is_valid()](#STARPEACE.building.simulation.storage.StorageQuantity+is_valid) ⇒ <code>boolean</code>
+    * _static_
+        * [.from_json(json)](#STARPEACE.building.simulation.storage.StorageQuantity.from_json) ⇒ [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+    * _inner_
+        * [~JSON](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) : <code>object</code>
+
+
+<a name="STARPEACE.building.simulation.storage.StorageQuantity+toJSON"></a>
+
+###### STARPEACE.building.simulation.storage.StorageQuantity#toJSON
+Retrieve JSON representation of object
+
+**Kind**: instance method of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+**Returns**: [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) - JSON representation of StorageQuantity  
+
+<a name="STARPEACE.building.simulation.storage.StorageQuantity+is_valid"></a>
+
+###### STARPEACE.building.simulation.storage.StorageQuantity#is_valid
+Determine whether object and game configuration has valid attributes.
+
+**Kind**: instance method of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
+
+<a name="STARPEACE.building.simulation.storage.StorageQuantity.from_json"></a>
+
+###### STARPEACE.building.simulation.storage.StorageQuantity.from_json
+Parse raw JSON into a StorageQuantity object
+
+**Kind**: static method of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+**Returns**: [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity) - StorageQuantity representation of parsed JSON  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) | raw JSON object to parse into StorageQuantity |
+
+
+<a name="STARPEACE.building.simulation.storage.StorageQuantity..JSON"></a>
+
+###### STARPEACE.building.simulation.storage.StorageQuantity~JSON
+**Kind**: inner typedef of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| resource_id | <code>string</code> | identifier of resource type of storage |
+| max | <code>number</code> | maximum amount of resource that can be stored |
 
 
 <a name="STARPEACE.building.simulation.store.StoreDefinition"></a>

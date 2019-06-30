@@ -27,7 +27,7 @@ class CompanySeal
       id: @id
       name_short: @name_short
       name_long: @name_long
-      buildings: @buildings if @buildings?.length
+      buildings: @building_ids if @building_ids?.length
     }
 
   ###*
@@ -50,7 +50,7 @@ class CompanySeal
     seal.id = json.id
     seal.name_short = json.name_short
     seal.name_long = json.name_long
-    seal.buildings = json.buildings || []
+    seal.building_ids = json.buildings || []
     seal
 
 exports = module.exports = CompanySeal
