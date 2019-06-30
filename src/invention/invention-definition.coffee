@@ -18,11 +18,11 @@ Translation = require('../language/translation')
 # @memberof STARPEACE.invention
 #
 # @property {string} id - Unique identifier of invention definition metadata
-# @property {string} category - Category of invention
-# @property {string} industry_type - Industry type of invention
+# @property {string} category_id - Category of invention
+# @property {string} industry_type_id - Industry type of invention
 # @property {STARPEACE.language.Translation} name - Translation object with name of invention
 # @property {STARPEACE.language.Translation} description - Translation with description of invention
-# @property {string[]} depends_on - Array of other invention definition identifiers this depends on
+# @property {string[]} depends_on_ids - Array of other invention definition identifiers this depends on
 # @property {object} properties - Properties of invention
 ###
 class InventionDefinition
@@ -39,8 +39,8 @@ class InventionDefinition
   is_valid: () ->
     return false unless @id?.length > 0
 
-    return false unless @category?.length > 0
-    return false unless @industry_type?.length > 0
+    return false unless @category_id?.length > 0
+    return false unless @industry_type_id?.length > 0
 
     return false unless @name?.is_valid()
     return false unless @description?.is_valid()
@@ -49,17 +49,32 @@ class InventionDefinition
     true
 
   ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.invention.InventionDefinition~JSON} JSON representation of InventionDefinition
+  ###
+  toJSON: () ->
+    {
+      id: @id
+      category: @category_id
+      industry_type: @industry_type_id
+      name: @name.toJSON()
+      description: @description.toJSON()
+      depends_on: @depends_on_ids
+      properties: @properties
+    }
+
+  ###*
   # Parse raw JSON into a InventionDefinition object
   # @params {STARPEACE.invention.InventionDefinition~JSON} json - raw JSON object to parse into InventionDefinition
   # @return {STARPEACE.invention.InventionDefinition} InventionDefinition representation of parsed JSON
   ###
   @from_json: (json) ->
     definition = new InventionDefinition(json.id)
-    definition.category = json.category
-    definition.industry_type = json.industry_type
+    definition.category_id = json.category
+    definition.industry_type_id = json.industry_type
     definition.name = Translation.from_json(json.name)
     definition.description = Translation.from_json(json.description)
-    definition.depends_on = json.depends_on || []
+    definition.depends_on_ids = json.depends_on || []
     definition.properties = json.properties || {}
 
     definition

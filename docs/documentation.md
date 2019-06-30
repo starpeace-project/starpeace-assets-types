@@ -339,6 +339,7 @@
             * [new InventionDefinition(id)](#new_STARPEACE.invention.InventionDefinition_new)
             * _instance_
                 * [.is_valid()](#STARPEACE.invention.InventionDefinition+is_valid) ⇒ <code>boolean</code>
+                * [.toJSON()](#STARPEACE.invention.InventionDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.invention.InventionDefinition..JSON)
             * _static_
                 * [.from_json()](#STARPEACE.invention.InventionDefinition.from_json) ⇒ [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)
             * _inner_
@@ -3085,11 +3086,11 @@ Class representing metadata definition of an invention
 | Name | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | Unique identifier of invention definition metadata |
-| category | <code>string</code> | Category of invention |
-| industry_type | <code>string</code> | Industry type of invention |
+| category_id | <code>string</code> | Category of invention |
+| industry_type_id | <code>string</code> | Industry type of invention |
 | name | [<code>Translation</code>](#STARPEACE.language.Translation) | Translation object with name of invention |
 | description | [<code>Translation</code>](#STARPEACE.language.Translation) | Translation with description of invention |
-| depends_on | <code>Array.&lt;string&gt;</code> | Array of other invention definition identifiers this depends on |
+| depends_on_ids | <code>Array.&lt;string&gt;</code> | Array of other invention definition identifiers this depends on |
 | properties | <code>object</code> | Properties of invention |
 
 
@@ -3097,6 +3098,7 @@ Class representing metadata definition of an invention
     * [new InventionDefinition(id)](#new_STARPEACE.invention.InventionDefinition_new)
     * _instance_
         * [.is_valid()](#STARPEACE.invention.InventionDefinition+is_valid) ⇒ <code>boolean</code>
+        * [.toJSON()](#STARPEACE.invention.InventionDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.invention.InventionDefinition..JSON)
     * _static_
         * [.from_json()](#STARPEACE.invention.InventionDefinition.from_json) ⇒ [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)
     * _inner_
@@ -3121,6 +3123,14 @@ Determine whether object and game configuration has valid attributes.
 
 **Kind**: instance method of [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)
 **Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
+
+<a name="STARPEACE.invention.InventionDefinition+toJSON"></a>
+
+#### STARPEACE.invention.InventionDefinition#toJSON
+Retrieve JSON representation of object
+
+**Kind**: instance method of [<code>InventionDefinition</code>](#STARPEACE.invention.InventionDefinition)
+**Returns**: [<code>JSON</code>](#STARPEACE.invention.InventionDefinition..JSON) - JSON representation of InventionDefinition  
 
 <a name="STARPEACE.invention.InventionDefinition.from_json"></a>
 
