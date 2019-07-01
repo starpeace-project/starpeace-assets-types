@@ -93,6 +93,7 @@ exports = module.exports = {
       }
       storage: {
         StorageDefinition: require('./building/simulation/storage/storage-definition')
+        StorageQuantity: require('./building/simulation/storage/storage-quantity')
       }
       store: {
         StoreDefinition: require('./building/simulation/store/store-definition')
