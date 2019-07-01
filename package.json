@@ -1,6 +1,6 @@
 {
   "name": "@starpeace/starpeace-assets-types",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "STARPEACE common type library for asset and gameplay configurations",
   "keywords": [],
   "author": "starpeace-project",
@@ -21,6 +21,8 @@
     "grunt-contrib-coffee": "^2.1.0",
     "grunt-jsdoc-to-markdown": "^4.0.0",
     "grunt-mocha-test": "^0.13.3",
+    "jsdoc": "^3.6.2",
+    "jsdoc-to-markdown": "^5.0.0",
     "lodash": "^4.17.11",
     "matchdep": "*",
     "mocha": "^6.1.4",
