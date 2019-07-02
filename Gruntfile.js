@@ -47,15 +47,10 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('cwd', 'get cwd', function() {
-    console.log("cwd: " + process.cwd());
-    console.log("lib: " + grunt.file.expand({}, 'lib/**/*.js'));
-  });
-
   grunt.registerTask('build', ['coffee:compile']);
   grunt.registerTask('build_test', ['coffee:compile_test']);
 
-  grunt.registerTask('documentation', ['cwd', 'build', 'cwd', 'jsdoc2md']);
+  grunt.registerTask('documentation', ['build', 'jsdoc2md']);
   grunt.registerTask('test', ['clean:test', 'build', 'build_test', 'mochaTest']);
 
   grunt.registerTask('default', ['clean', 'build', 'documentation', 'test']);

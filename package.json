@@ -1,6 +1,6 @@
 {
   "name": "@starpeace/starpeace-assets-types",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "STARPEACE common type library for asset and gameplay configurations",
   "keywords": [],
   "author": "starpeace-project",
@@ -11,7 +11,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "grunt documentation",
+    "prepare": "grunt build",
     "test": "grunt test"
   },
   "devDependencies": {
