@@ -4,7 +4,7 @@ Translation = require('../language/translation')
 
 ###*
 # @typedef {object} STARPEACE.building.BuildingDefinition~JSON
-# @property {string} id - unique identifier for building image definition
+# @property {string} id - unique identifier for building definition
 # @property {string} image_id - default building image definition identifier for this building
 # @property {string} construction_image_id - building image definition identifier to use during construction of this building
 # @property {STARPEACE.language.Translation~JSON} name - translation object with name of building
@@ -19,7 +19,7 @@ Translation = require('../language/translation')
 # Class representing building definition metadata
 # @memberof STARPEACE.building
 #
-# @property {string} id - unique identifier for building image definition
+# @property {string} id - unique identifier for building definition
 # @property {string} image_id - default building image definition identifier for this building
 # @property {string} construction_image_id - building image definition identifier to use during construction of this building
 # @property {STARPEACE.language.Translation} name - translation object with name of building

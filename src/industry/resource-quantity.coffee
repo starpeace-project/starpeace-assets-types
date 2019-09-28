@@ -3,9 +3,9 @@ _ = require('lodash')
 ###*
 # @typedef {object} STARPEACE.industry.ResourceQuantity~JSON
 # @property {string} resource - identifier of resource
-# @property {number} max_velocity - maximum quantity of resource per day
+# @property {number} max_velocity - maximum quantity of resource per hour
 # @property {number} weight_efficiency - importance weight of efficiency on this quantity
-# @property {number} weight_quality - importance weight of qualityy on this quantity
+# @property {number} weight_quality - importance weight of quality on this quantity
 ###
 
 ###*
@@ -13,7 +13,7 @@ _ = require('lodash')
 # @memberof STARPEACE.industry
 #
 # @property {string} resource_id - identifier of resource
-# @property {number} max_velocity - maximum quantity of resource per day
+# @property {number} max_velocity - maximum quantity of resource per hour
 # @property {number} weight_efficiency - importance weight of efficiency on this quantity
 # @property {number} weight_quality - importance weight of qualityy on this quantity
 ###

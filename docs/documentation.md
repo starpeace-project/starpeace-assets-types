@@ -5,278 +5,288 @@
 
 * STARPEACE
     * .building
-        * [.BuildingDefinition](#STARPEACE.building.BuildingDefinition)
-            * [new BuildingDefinition(id)](#new_STARPEACE.building.BuildingDefinition_new)
-            * _instance_
-                * [.is_valid()](#STARPEACE.building.BuildingDefinition+is_valid) ⇒ <code>boolean</code>
-                * [.toJSON()](#STARPEACE.building.BuildingDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.BuildingDefinition..JSON)
-            * _static_
-                * [.from_json(json)](#STARPEACE.building.BuildingDefinition.from_json) ⇒ [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
-            * _inner_
-                * [~JSON](#STARPEACE.building.BuildingDefinition..JSON) : <code>object</code>
-        * [.BuildingImageDefinition](#STARPEACE.building.BuildingImageDefinition)
-            * [new BuildingImageDefinition(id)](#new_STARPEACE.building.BuildingImageDefinition_new)
-            * _instance_
-                * [.is_valid()](#STARPEACE.building.BuildingImageDefinition+is_valid) ⇒ <code>boolean</code>
-                * [.toJSON()](#STARPEACE.building.BuildingImageDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.BuildingImageDefinition..JSON)
-            * _static_
-                * [.from_json(json)](#STARPEACE.building.BuildingImageDefinition.from_json) ⇒ [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
-            * _inner_
-                * [~JSON](#STARPEACE.building.BuildingImageDefinition..JSON) : <code>object</code>
-        * [.CoordinateList](#STARPEACE.building.CoordinateList)
-            * _instance_
-                * [.is_valid()](#STARPEACE.building.CoordinateList+is_valid) ⇒ <code>boolean</code>
-                * [.toJSON()](#STARPEACE.building.CoordinateList+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.CoordinateList..JSON)
-            * _static_
-                * [.from_json(json)](#STARPEACE.building.CoordinateList.from_json) ⇒ [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
-            * _inner_
-                * [~JSON](#STARPEACE.building.CoordinateList..JSON) : <code>object</code>
-        * [.Coordinate](#STARPEACE.building.Coordinate)
-            * [new Coordinate(x, y)](#new_STARPEACE.building.Coordinate_new)
-            * _instance_
-                * [.is_valid()](#STARPEACE.building.Coordinate+is_valid) ⇒ <code>boolean</code>
-                * [.toJSON()](#STARPEACE.building.Coordinate+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.Coordinate..JSON)
-            * _static_
-                * [.from_json(json)](#STARPEACE.building.Coordinate.from_json) ⇒ [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
-            * _inner_
-                * [~JSON](#STARPEACE.building.Coordinate..JSON) : <code>object</code>
-        * [.ImageEffect](#STARPEACE.building.ImageEffect)
-            * _instance_
-                * [.is_valid()](#STARPEACE.building.ImageEffect+is_valid) ⇒ <code>boolean</code>
-                * [.toJSON()](#STARPEACE.building.ImageEffect+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.ImageEffect..JSON)
-            * _static_
-                * [.from_json(json)](#STARPEACE.building.ImageEffect.from_json) ⇒ [<code>ImageEffect</code>](#STARPEACE.building.ImageEffect)
-            * _inner_
-                * [~JSON](#STARPEACE.building.ImageEffect..JSON) : <code>object</code>
-        * .simulation
-            * [.ConstructionQuantity](#STARPEACE.building.simulation.ConstructionQuantity)
+        * _static_
+            * [.ImageEffect](#STARPEACE.building.ImageEffect)
                 * _instance_
-                    * [.toJSON()](#STARPEACE.building.simulation.ConstructionQuantity+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.ConstructionQuantity..JSON)
-                    * [.is_valid()](#STARPEACE.building.simulation.ConstructionQuantity+is_valid) ⇒ <code>boolean</code>
+                    * [.is_valid()](#STARPEACE.building.ImageEffect+is_valid) ⇒ <code>boolean</code>
+                    * [.toJSON()](#STARPEACE.building.ImageEffect+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.ImageEffect..JSON)
                 * _static_
-                    * [.from_json(json)](#STARPEACE.building.simulation.ConstructionQuantity.from_json) ⇒ [<code>ConstructionQuantity</code>](#STARPEACE.building.simulation.ConstructionQuantity)
+                    * [.from_json(json)](#STARPEACE.building.ImageEffect.from_json) ⇒ [<code>ImageEffect</code>](#STARPEACE.building.ImageEffect)
                 * _inner_
-                    * [~JSON](#STARPEACE.building.simulation.ConstructionQuantity..JSON) : <code>object</code>
-            * [.SimulationDefinitionParser](#STARPEACE.building.simulation.SimulationDefinitionParser)
-                * [.from_json(json)](#STARPEACE.building.simulation.SimulationDefinitionParser.from_json) ⇒ [<code>BankDefinition</code>](#STARPEACE.building.simulation.bank.BankDefinition) \| [<code>CapitolDefinition</code>](#STARPEACE.building.simulation.civic.CapitolDefinition) \| [<code>MausoleumDefinition</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition) \| [<code>PortalDefinition</code>](#STARPEACE.building.simulation.civic.PortalDefinition) \| [<code>TownhallDefinition</code>](#STARPEACE.building.simulation.civic.TownhallDefinition) \| [<code>TradecenterDefinition</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition) \| [<code>FactoryDefinition</code>](#STARPEACE.building.simulation.factory.FactoryDefinition) \| [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition) \| [<code>AntennaDefinition</code>](#STARPEACE.building.simulation.media.AntennaDefinition) \| [<code>MediaStationDefinition</code>](#STARPEACE.building.simulation.media.MediaStationDefinition) \| [<code>OfficeDefinition</code>](#STARPEACE.building.simulation.office.OfficeDefinition) \| [<code>ParkDefinition</code>](#STARPEACE.building.simulation.park.ParkDefinition) \| [<code>ResidenceDefinition</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition) \| [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition) \| [<code>StorageDefinition</code>](#STARPEACE.building.simulation.storage.StorageDefinition) \| [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
-            * [.SimulationDefinition](#STARPEACE.building.simulation.SimulationDefinition)
-                * [new SimulationDefinition(json)](#new_STARPEACE.building.simulation.SimulationDefinition_new)
+                    * [~JSON](#STARPEACE.building.ImageEffect..JSON) : <code>object</code>
+            * .simulation
+                * _static_
+                    * [.ConstructionQuantity](#STARPEACE.building.simulation.ConstructionQuantity)
+                        * _instance_
+                            * [.toJSON()](#STARPEACE.building.simulation.ConstructionQuantity+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.ConstructionQuantity..JSON)
+                            * [.is_valid()](#STARPEACE.building.simulation.ConstructionQuantity+is_valid) ⇒ <code>boolean</code>
+                        * _static_
+                            * [.from_json(json)](#STARPEACE.building.simulation.ConstructionQuantity.from_json) ⇒ [<code>ConstructionQuantity</code>](#STARPEACE.building.simulation.ConstructionQuantity)
+                        * _inner_
+                            * [~JSON](#STARPEACE.building.simulation.ConstructionQuantity..JSON) : <code>object</code>
+                    * [.SimulationDefinitionParser](#STARPEACE.building.simulation.SimulationDefinitionParser)
+                        * [.from_json(json)](#STARPEACE.building.simulation.SimulationDefinitionParser.from_json) ⇒ [<code>BankDefinition</code>](#STARPEACE.building.simulation.bank.BankDefinition) \| [<code>CapitolDefinition</code>](#STARPEACE.building.simulation.civic.CapitolDefinition) \| [<code>MausoleumDefinition</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition) \| [<code>PortalDefinition</code>](#STARPEACE.building.simulation.civic.PortalDefinition) \| [<code>TownhallDefinition</code>](#STARPEACE.building.simulation.civic.TownhallDefinition) \| [<code>TradecenterDefinition</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition) \| [<code>FactoryDefinition</code>](#STARPEACE.building.simulation.factory.FactoryDefinition) \| [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition) \| [<code>AntennaDefinition</code>](#STARPEACE.building.simulation.media.AntennaDefinition) \| [<code>MediaStationDefinition</code>](#STARPEACE.building.simulation.media.MediaStationDefinition) \| [<code>OfficeDefinition</code>](#STARPEACE.building.simulation.office.OfficeDefinition) \| [<code>ParkDefinition</code>](#STARPEACE.building.simulation.park.ParkDefinition) \| [<code>ResidenceDefinition</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition) \| [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition) \| [<code>StorageDefinition</code>](#STARPEACE.building.simulation.storage.StorageDefinition) \| [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
+                    * .bank
+                        * [~BankDefinition](#STARPEACE.building.simulation.bank.BankDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new BankDefinition(json)](#new_STARPEACE.building.simulation.bank.BankDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.bank.BankDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.bank.BankDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.bank.BankDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.bank.BankDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.bank.BankDefinition.from_json) ⇒ [<code>BankDefinition</code>](#STARPEACE.building.simulation.bank.BankDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.bank.BankDefinition..JSON) : <code>object</code>
+                    * .civic
+                        * [~CapitolDefinition](#STARPEACE.building.simulation.civic.CapitolDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new CapitolDefinition(json)](#new_STARPEACE.building.simulation.civic.CapitolDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.civic.CapitolDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.civic.CapitolDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.civic.CapitolDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.civic.CapitolDefinition.from_json) ⇒ [<code>CapitolDefinition</code>](#STARPEACE.building.simulation.civic.CapitolDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON) : <code>object</code>
+                        * [~MausoleumDefinition](#STARPEACE.building.simulation.civic.MausoleumDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new MausoleumDefinition(json)](#new_STARPEACE.building.simulation.civic.MausoleumDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.civic.MausoleumDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.civic.MausoleumDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.civic.MausoleumDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.civic.MausoleumDefinition.from_json) ⇒ [<code>MausoleumDefinition</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON) : <code>object</code>
+                        * [~PortalDefinition](#STARPEACE.building.simulation.civic.PortalDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new PortalDefinition(json)](#new_STARPEACE.building.simulation.civic.PortalDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.civic.PortalDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.PortalDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.civic.PortalDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.civic.PortalDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.civic.PortalDefinition.from_json) ⇒ [<code>PortalDefinition</code>](#STARPEACE.building.simulation.civic.PortalDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.civic.PortalDefinition..JSON) : <code>object</code>
+                        * [~TownhallDefinition](#STARPEACE.building.simulation.civic.TownhallDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new TownhallDefinition(json)](#new_STARPEACE.building.simulation.civic.TownhallDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.civic.TownhallDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.civic.TownhallDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.civic.TownhallDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.civic.TownhallDefinition.from_json) ⇒ [<code>TownhallDefinition</code>](#STARPEACE.building.simulation.civic.TownhallDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON) : <code>object</code>
+                        * [~TradecenterDefinition](#STARPEACE.building.simulation.civic.TradecenterDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new TradecenterDefinition(json)](#new_STARPEACE.building.simulation.civic.TradecenterDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.civic.TradecenterDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.civic.TradecenterDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.civic.TradecenterDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.civic.TradecenterDefinition.from_json) ⇒ [<code>TradecenterDefinition</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON) : <code>object</code>
+                    * .factory
+                        * _static_
+                            * [.FactoryStage](#STARPEACE.building.simulation.factory.FactoryStage)
+                                * _instance_
+                                    * [.toJSON()](#STARPEACE.building.simulation.factory.FactoryStage+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryStage..JSON)
+                                    * [.is_valid()](#STARPEACE.building.simulation.factory.FactoryStage+is_valid) ⇒ <code>boolean</code>
+                                * _static_
+                                    * [.from_json(json)](#STARPEACE.building.simulation.factory.FactoryStage.from_json) ⇒ [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
+                                * _inner_
+                                    * [~JSON](#STARPEACE.building.simulation.factory.FactoryStage..JSON) : <code>object</code>
+                        * _inner_
+                            * [~FactoryDefinition](#STARPEACE.building.simulation.factory.FactoryDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                                * [new FactoryDefinition(json)](#new_STARPEACE.building.simulation.factory.FactoryDefinition_new)
+                                * _instance_
+                                    * [.toJSON()](#STARPEACE.building.simulation.factory.FactoryDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON)
+                                    * [.is_valid()](#STARPEACE.building.simulation.factory.FactoryDefinition+is_valid) ⇒ <code>boolean</code>
+                                * _static_
+                                    * [.TYPE()](#STARPEACE.building.simulation.factory.FactoryDefinition.TYPE)
+                                    * [.from_json(json)](#STARPEACE.building.simulation.factory.FactoryDefinition.from_json) ⇒ [<code>FactoryDefinition</code>](#STARPEACE.building.simulation.factory.FactoryDefinition)
+                                * _inner_
+                                    * [~JSON](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON) : <code>object</code>
+                    * .headquarters
+                        * [~HeadquartersDefinition](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new HeadquartersDefinition(json)](#new_STARPEACE.building.simulation.headquarters.HeadquartersDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition.from_json) ⇒ [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON) : <code>object</code>
+                    * .media
+                        * [~AntennaDefinition](#STARPEACE.building.simulation.media.AntennaDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new AntennaDefinition(json)](#new_STARPEACE.building.simulation.media.AntennaDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.media.AntennaDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.media.AntennaDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.media.AntennaDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.media.AntennaDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.media.AntennaDefinition.from_json) ⇒ [<code>AntennaDefinition</code>](#STARPEACE.building.simulation.media.AntennaDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.media.AntennaDefinition..JSON) : <code>object</code>
+                        * [~MediaStationDefinition](#STARPEACE.building.simulation.media.MediaStationDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new MediaStationDefinition(json)](#new_STARPEACE.building.simulation.media.MediaStationDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.media.MediaStationDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.media.MediaStationDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.media.MediaStationDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.media.MediaStationDefinition.from_json) ⇒ [<code>MediaStationDefinition</code>](#STARPEACE.building.simulation.media.MediaStationDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON) : <code>object</code>
+                    * .office
+                        * [~OfficeDefinition](#STARPEACE.building.simulation.office.OfficeDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new OfficeDefinition(json)](#new_STARPEACE.building.simulation.office.OfficeDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.office.OfficeDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.office.OfficeDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.office.OfficeDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.office.OfficeDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.office.OfficeDefinition.from_json) ⇒ [<code>OfficeDefinition</code>](#STARPEACE.building.simulation.office.OfficeDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.office.OfficeDefinition..JSON) : <code>object</code>
+                    * .park
+                        * [~ParkDefinition](#STARPEACE.building.simulation.park.ParkDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new ParkDefinition(json)](#new_STARPEACE.building.simulation.park.ParkDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.park.ParkDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.park.ParkDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.park.ParkDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.park.ParkDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.park.ParkDefinition.from_json) ⇒ [<code>ParkDefinition</code>](#STARPEACE.building.simulation.park.ParkDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.park.ParkDefinition..JSON) : <code>object</code>
+                    * .residence
+                        * [~ResidenceDefinition](#STARPEACE.building.simulation.residence.ResidenceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new ResidenceDefinition(json)](#new_STARPEACE.building.simulation.residence.ResidenceDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.residence.ResidenceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.residence.ResidenceDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.residence.ResidenceDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.residence.ResidenceDefinition.from_json) ⇒ [<code>ResidenceDefinition</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON) : <code>object</code>
+                    * .service
+                        * [~ServiceDefinition](#STARPEACE.building.simulation.service.ServiceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                            * [new ServiceDefinition(json)](#new_STARPEACE.building.simulation.service.ServiceDefinition_new)
+                            * _instance_
+                                * [.toJSON()](#STARPEACE.building.simulation.service.ServiceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.service.ServiceDefinition..JSON)
+                                * [.is_valid()](#STARPEACE.building.simulation.service.ServiceDefinition+is_valid) ⇒ <code>boolean</code>
+                            * _static_
+                                * [.TYPE()](#STARPEACE.building.simulation.service.ServiceDefinition.TYPE)
+                                * [.from_json(json)](#STARPEACE.building.simulation.service.ServiceDefinition.from_json) ⇒ [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition)
+                            * _inner_
+                                * [~JSON](#STARPEACE.building.simulation.service.ServiceDefinition..JSON) : <code>object</code>
+                    * .storage
+                        * _static_
+                            * [.StorageQuantity](#STARPEACE.building.simulation.storage.StorageQuantity)
+                                * _instance_
+                                    * [.toJSON()](#STARPEACE.building.simulation.storage.StorageQuantity+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON)
+                                    * [.is_valid()](#STARPEACE.building.simulation.storage.StorageQuantity+is_valid) ⇒ <code>boolean</code>
+                                * _static_
+                                    * [.from_json(json)](#STARPEACE.building.simulation.storage.StorageQuantity.from_json) ⇒ [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+                                * _inner_
+                                    * [~JSON](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) : <code>object</code>
+                        * _inner_
+                            * [~StorageDefinition](#STARPEACE.building.simulation.storage.StorageDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                                * [new StorageDefinition(json)](#new_STARPEACE.building.simulation.storage.StorageDefinition_new)
+                                * _instance_
+                                    * [.toJSON()](#STARPEACE.building.simulation.storage.StorageDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageDefinition..JSON)
+                                    * [.is_valid()](#STARPEACE.building.simulation.storage.StorageDefinition+is_valid) ⇒ <code>boolean</code>
+                                * _static_
+                                    * [.TYPE()](#STARPEACE.building.simulation.storage.StorageDefinition.TYPE)
+                                    * [.from_json(json)](#STARPEACE.building.simulation.storage.StorageDefinition.from_json) ⇒ [<code>StorageDefinition</code>](#STARPEACE.building.simulation.storage.StorageDefinition)
+                                * _inner_
+                                    * [~JSON](#STARPEACE.building.simulation.storage.StorageDefinition..JSON) : <code>object</code>
+                    * .store
+                        * _static_
+                            * [.StoreProductCustomer](#STARPEACE.building.simulation.store.StoreProductCustomer)
+                                * _instance_
+                                    * [.toJSON()](#STARPEACE.building.simulation.store.StoreProductCustomer+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreProductCustomer..JSON)
+                                    * [.is_valid()](#STARPEACE.building.simulation.store.StoreProductCustomer+is_valid) ⇒ <code>boolean</code>
+                                * _static_
+                                    * [.from_json(json)](#STARPEACE.building.simulation.store.StoreProductCustomer.from_json) ⇒ [<code>StoreProductCustomer</code>](#STARPEACE.building.simulation.store.StoreProductCustomer)
+                                * _inner_
+                                    * [~JSON](#STARPEACE.building.simulation.store.StoreProductCustomer..JSON) : <code>object</code>
+                            * [.StoreProductOutput](#STARPEACE.building.simulation.store.StoreProductOutput)
+                                * _instance_
+                                    * [.toJSON()](#STARPEACE.building.simulation.store.StoreProductOutput+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreProductOutput..JSON)
+                                    * [.is_valid()](#STARPEACE.building.simulation.store.StoreProductOutput+is_valid) ⇒ <code>boolean</code>
+                                * _static_
+                                    * [.from_json(json)](#STARPEACE.building.simulation.store.StoreProductOutput.from_json) ⇒ [<code>StoreProductOutput</code>](#STARPEACE.building.simulation.store.StoreProductOutput)
+                                * _inner_
+                                    * [~JSON](#STARPEACE.building.simulation.store.StoreProductOutput..JSON) : <code>object</code>
+                            * [.StoreProduct](#STARPEACE.building.simulation.store.StoreProduct)
+                                * _instance_
+                                    * [.toJSON()](#STARPEACE.building.simulation.store.StoreProduct+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreProduct..JSON)
+                                    * [.is_valid()](#STARPEACE.building.simulation.store.StoreProduct+is_valid) ⇒ <code>boolean</code>
+                                * _static_
+                                    * [.from_json(json)](#STARPEACE.building.simulation.store.StoreProduct.from_json) ⇒ [<code>StoreProduct</code>](#STARPEACE.building.simulation.store.StoreProduct)
+                                * _inner_
+                                    * [~JSON](#STARPEACE.building.simulation.store.StoreProduct..JSON) : <code>object</code>
+                        * _inner_
+                            * [~StoreDefinition](#STARPEACE.building.simulation.store.StoreDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+                                * [new StoreDefinition(json)](#new_STARPEACE.building.simulation.store.StoreDefinition_new)
+                                * _instance_
+                                    * [.toJSON()](#STARPEACE.building.simulation.store.StoreDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON)
+                                    * [.is_valid()](#STARPEACE.building.simulation.store.StoreDefinition+is_valid) ⇒ <code>boolean</code>
+                                * _static_
+                                    * [.TYPE()](#STARPEACE.building.simulation.store.StoreDefinition.TYPE)
+                                    * [.from_json(json)](#STARPEACE.building.simulation.store.StoreDefinition.from_json) ⇒ [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
+                                * _inner_
+                                    * [~JSON](#STARPEACE.building.simulation.store.StoreDefinition..JSON) : <code>object</code>
+                * _inner_
+                    * [~SimulationDefinition](#STARPEACE.building.simulation.SimulationDefinition)
+                        * [new SimulationDefinition(json)](#new_STARPEACE.building.simulation.SimulationDefinition_new)
+                        * _instance_
+                            * [.toJSON()](#STARPEACE.building.simulation.SimulationDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)
+                            * [.is_valid()](#STARPEACE.building.simulation.SimulationDefinition+is_valid) ⇒ <code>boolean</code>
+                        * _inner_
+                            * [~JSON](#STARPEACE.building.simulation.SimulationDefinition..JSON) : <code>object</code>
+        * _inner_
+            * [~BuildingDefinition](#STARPEACE.building.BuildingDefinition)
+                * [new BuildingDefinition(id)](#new_STARPEACE.building.BuildingDefinition_new)
                 * _instance_
-                    * [.toJSON()](#STARPEACE.building.simulation.SimulationDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)
-                    * [.is_valid()](#STARPEACE.building.simulation.SimulationDefinition+is_valid) ⇒ <code>boolean</code>
+                    * [.is_valid()](#STARPEACE.building.BuildingDefinition+is_valid) ⇒ <code>boolean</code>
+                    * [.toJSON()](#STARPEACE.building.BuildingDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.BuildingDefinition..JSON)
+                * _static_
+                    * [.from_json(json)](#STARPEACE.building.BuildingDefinition.from_json) ⇒ [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
                 * _inner_
-                    * [~JSON](#STARPEACE.building.simulation.SimulationDefinition..JSON) : <code>object</code>
-            * .bank
-                * [.BankDefinition](#STARPEACE.building.simulation.bank.BankDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new BankDefinition(json)](#new_STARPEACE.building.simulation.bank.BankDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.bank.BankDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.bank.BankDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.bank.BankDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.bank.BankDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.bank.BankDefinition.from_json) ⇒ [<code>BankDefinition</code>](#STARPEACE.building.simulation.bank.BankDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.bank.BankDefinition..JSON) : <code>object</code>
-            * .civic
-                * [.CapitolDefinition](#STARPEACE.building.simulation.civic.CapitolDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new CapitolDefinition(json)](#new_STARPEACE.building.simulation.civic.CapitolDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.civic.CapitolDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.civic.CapitolDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.civic.CapitolDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.civic.CapitolDefinition.from_json) ⇒ [<code>CapitolDefinition</code>](#STARPEACE.building.simulation.civic.CapitolDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON) : <code>object</code>
-                * [.MausoleumDefinition](#STARPEACE.building.simulation.civic.MausoleumDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new MausoleumDefinition(json)](#new_STARPEACE.building.simulation.civic.MausoleumDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.civic.MausoleumDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.civic.MausoleumDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.civic.MausoleumDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.civic.MausoleumDefinition.from_json) ⇒ [<code>MausoleumDefinition</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON) : <code>object</code>
-                * [.PortalDefinition](#STARPEACE.building.simulation.civic.PortalDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new PortalDefinition(json)](#new_STARPEACE.building.simulation.civic.PortalDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.civic.PortalDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.PortalDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.civic.PortalDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.civic.PortalDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.civic.PortalDefinition.from_json) ⇒ [<code>PortalDefinition</code>](#STARPEACE.building.simulation.civic.PortalDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.civic.PortalDefinition..JSON) : <code>object</code>
-                * [.TownhallDefinition](#STARPEACE.building.simulation.civic.TownhallDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new TownhallDefinition(json)](#new_STARPEACE.building.simulation.civic.TownhallDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.civic.TownhallDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.civic.TownhallDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.civic.TownhallDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.civic.TownhallDefinition.from_json) ⇒ [<code>TownhallDefinition</code>](#STARPEACE.building.simulation.civic.TownhallDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON) : <code>object</code>
-                * [.TradecenterDefinition](#STARPEACE.building.simulation.civic.TradecenterDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new TradecenterDefinition(json)](#new_STARPEACE.building.simulation.civic.TradecenterDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.civic.TradecenterDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.civic.TradecenterDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.civic.TradecenterDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.civic.TradecenterDefinition.from_json) ⇒ [<code>TradecenterDefinition</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON) : <code>object</code>
-            * .factory
-                * [.FactoryDefinition](#STARPEACE.building.simulation.factory.FactoryDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new FactoryDefinition(json)](#new_STARPEACE.building.simulation.factory.FactoryDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.factory.FactoryDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.factory.FactoryDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.factory.FactoryDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.factory.FactoryDefinition.from_json) ⇒ [<code>FactoryDefinition</code>](#STARPEACE.building.simulation.factory.FactoryDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON) : <code>object</code>
-                * [.FactoryStage](#STARPEACE.building.simulation.factory.FactoryStage) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.factory.FactoryStage+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryStage..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.factory.FactoryStage+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.from_json(json)](#STARPEACE.building.simulation.factory.FactoryStage.from_json) ⇒ [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.factory.FactoryStage..JSON) : <code>object</code>
-            * .headquarters
-                * [.HeadquartersDefinition](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new HeadquartersDefinition(json)](#new_STARPEACE.building.simulation.headquarters.HeadquartersDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition.from_json) ⇒ [<code>HeadquartersDefinition</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON) : <code>object</code>
-            * .media
-                * [.AntennaDefinition](#STARPEACE.building.simulation.media.AntennaDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new AntennaDefinition(json)](#new_STARPEACE.building.simulation.media.AntennaDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.media.AntennaDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.media.AntennaDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.media.AntennaDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.media.AntennaDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.media.AntennaDefinition.from_json) ⇒ [<code>AntennaDefinition</code>](#STARPEACE.building.simulation.media.AntennaDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.media.AntennaDefinition..JSON) : <code>object</code>
-                * [.MediaStationDefinition](#STARPEACE.building.simulation.media.MediaStationDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new MediaStationDefinition(json)](#new_STARPEACE.building.simulation.media.MediaStationDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.media.MediaStationDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.media.MediaStationDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.media.MediaStationDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.media.MediaStationDefinition.from_json) ⇒ [<code>MediaStationDefinition</code>](#STARPEACE.building.simulation.media.MediaStationDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON) : <code>object</code>
-            * .office
-                * [.OfficeDefinition](#STARPEACE.building.simulation.office.OfficeDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new OfficeDefinition(json)](#new_STARPEACE.building.simulation.office.OfficeDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.office.OfficeDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.office.OfficeDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.office.OfficeDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.office.OfficeDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.office.OfficeDefinition.from_json) ⇒ [<code>OfficeDefinition</code>](#STARPEACE.building.simulation.office.OfficeDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.office.OfficeDefinition..JSON) : <code>object</code>
-            * .park
-                * [.ParkDefinition](#STARPEACE.building.simulation.park.ParkDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new ParkDefinition(json)](#new_STARPEACE.building.simulation.park.ParkDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.park.ParkDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.park.ParkDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.park.ParkDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.park.ParkDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.park.ParkDefinition.from_json) ⇒ [<code>ParkDefinition</code>](#STARPEACE.building.simulation.park.ParkDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.park.ParkDefinition..JSON) : <code>object</code>
-            * .residence
-                * [.ResidenceDefinition](#STARPEACE.building.simulation.residence.ResidenceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new ResidenceDefinition(json)](#new_STARPEACE.building.simulation.residence.ResidenceDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.residence.ResidenceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.residence.ResidenceDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.residence.ResidenceDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.residence.ResidenceDefinition.from_json) ⇒ [<code>ResidenceDefinition</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON) : <code>object</code>
-            * .service
-                * [.ServiceDefinition](#STARPEACE.building.simulation.service.ServiceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new ServiceDefinition(json)](#new_STARPEACE.building.simulation.service.ServiceDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.service.ServiceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.service.ServiceDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.service.ServiceDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.service.ServiceDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.service.ServiceDefinition.from_json) ⇒ [<code>ServiceDefinition</code>](#STARPEACE.building.simulation.service.ServiceDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.service.ServiceDefinition..JSON) : <code>object</code>
-            * .storage
-                * [.StorageDefinition](#STARPEACE.building.simulation.storage.StorageDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new StorageDefinition(json)](#new_STARPEACE.building.simulation.storage.StorageDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.storage.StorageDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.storage.StorageDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.storage.StorageDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.storage.StorageDefinition.from_json) ⇒ [<code>StorageDefinition</code>](#STARPEACE.building.simulation.storage.StorageDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.storage.StorageDefinition..JSON) : <code>object</code>
-                * [.StorageQuantity](#STARPEACE.building.simulation.storage.StorageQuantity)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.storage.StorageQuantity+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.storage.StorageQuantity+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.from_json(json)](#STARPEACE.building.simulation.storage.StorageQuantity.from_json) ⇒ [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) : <code>object</code>
-            * .store
-                * [.StoreDefinition](#STARPEACE.building.simulation.store.StoreDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-                    * [new StoreDefinition(json)](#new_STARPEACE.building.simulation.store.StoreDefinition_new)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.store.StoreDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.store.StoreDefinition+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.TYPE()](#STARPEACE.building.simulation.store.StoreDefinition.TYPE)
-                        * [.from_json(json)](#STARPEACE.building.simulation.store.StoreDefinition.from_json) ⇒ [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.store.StoreDefinition..JSON) : <code>object</code>
-                * [.StoreProductCustomer](#STARPEACE.building.simulation.store.StoreProductCustomer)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.store.StoreProductCustomer+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreProductCustomer..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.store.StoreProductCustomer+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.from_json(json)](#STARPEACE.building.simulation.store.StoreProductCustomer.from_json) ⇒ [<code>StoreProductCustomer</code>](#STARPEACE.building.simulation.store.StoreProductCustomer)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.store.StoreProductCustomer..JSON) : <code>object</code>
-                * [.StoreProductOutput](#STARPEACE.building.simulation.store.StoreProductOutput)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.store.StoreProductOutput+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreProductOutput..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.store.StoreProductOutput+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.from_json(json)](#STARPEACE.building.simulation.store.StoreProductOutput.from_json) ⇒ [<code>StoreProductOutput</code>](#STARPEACE.building.simulation.store.StoreProductOutput)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.store.StoreProductOutput..JSON) : <code>object</code>
-                * [.StoreProduct](#STARPEACE.building.simulation.store.StoreProduct)
-                    * _instance_
-                        * [.toJSON()](#STARPEACE.building.simulation.store.StoreProduct+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreProduct..JSON)
-                        * [.is_valid()](#STARPEACE.building.simulation.store.StoreProduct+is_valid) ⇒ <code>boolean</code>
-                    * _static_
-                        * [.from_json(json)](#STARPEACE.building.simulation.store.StoreProduct.from_json) ⇒ [<code>StoreProduct</code>](#STARPEACE.building.simulation.store.StoreProduct)
-                    * _inner_
-                        * [~JSON](#STARPEACE.building.simulation.store.StoreProduct..JSON) : <code>object</code>
+                    * [~JSON](#STARPEACE.building.BuildingDefinition..JSON) : <code>object</code>
+            * [~BuildingImageDefinition](#STARPEACE.building.BuildingImageDefinition)
+                * [new BuildingImageDefinition(id)](#new_STARPEACE.building.BuildingImageDefinition_new)
+                * _instance_
+                    * [.is_valid()](#STARPEACE.building.BuildingImageDefinition+is_valid) ⇒ <code>boolean</code>
+                    * [.toJSON()](#STARPEACE.building.BuildingImageDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.BuildingImageDefinition..JSON)
+                * _static_
+                    * [.from_json(json)](#STARPEACE.building.BuildingImageDefinition.from_json) ⇒ [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
+                * _inner_
+                    * [~JSON](#STARPEACE.building.BuildingImageDefinition..JSON) : <code>object</code>
+            * [~CoordinateList](#STARPEACE.building.CoordinateList)
+                * _instance_
+                    * [.is_valid()](#STARPEACE.building.CoordinateList+is_valid) ⇒ <code>boolean</code>
+                    * [.toJSON()](#STARPEACE.building.CoordinateList+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.CoordinateList..JSON)
+                * _static_
+                    * [.from_json(json)](#STARPEACE.building.CoordinateList.from_json) ⇒ [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
+                * _inner_
+                    * [~JSON](#STARPEACE.building.CoordinateList..JSON) : <code>object</code>
+            * [~Coordinate](#STARPEACE.building.Coordinate)
+                * [new Coordinate(x, y)](#new_STARPEACE.building.Coordinate_new)
+                * _instance_
+                    * [.is_valid()](#STARPEACE.building.Coordinate+is_valid) ⇒ <code>boolean</code>
+                    * [.toJSON()](#STARPEACE.building.Coordinate+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.Coordinate..JSON)
+                * _static_
+                    * [.from_json(json)](#STARPEACE.building.Coordinate.from_json) ⇒ [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
+                * _inner_
+                    * [~JSON](#STARPEACE.building.Coordinate..JSON) : <code>object</code>
     * .industry
         * [.CityZone](#STARPEACE.industry.CityZone)
             * _instance_
@@ -335,7 +345,7 @@
             * _inner_
                 * [~JSON](#STARPEACE.industry.ResourceUnit..JSON) : <code>object</code>
     * .invention
-        * [.InventionDefinition](#STARPEACE.invention.InventionDefinition)
+        * [~InventionDefinition](#STARPEACE.invention.InventionDefinition)
             * [new InventionDefinition(id)](#new_STARPEACE.invention.InventionDefinition_new)
             * _instance_
                 * [.is_valid()](#STARPEACE.invention.InventionDefinition+is_valid) ⇒ <code>boolean</code>
@@ -362,320 +372,6 @@
                 * [.from_json()](#STARPEACE.seal.CompanySeal.from_json) ⇒ [<code>CompanySeal</code>](#STARPEACE.seal.CompanySeal)
             * _inner_
                 * [~JSON](#STARPEACE.seal.CompanySeal..JSON) : <code>object</code>
-
-
-<a name="STARPEACE.building.BuildingDefinition"></a>
-
-### STARPEACE.building.BuildingDefinition
-Class representing building definition metadata
-
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | unique identifier for building image definition |
-| image_id | <code>string</code> | default building image definition identifier for this building |
-| construction_image_id | <code>string</code> | building image definition identifier to use during construction of this building |
-| name | [<code>Translation</code>](#STARPEACE.language.Translation) | translation object with name of building |
-| zone_id | <code>string</code> | identifier for city zone of this building |
-| category_id | <code>string</code> | identifier for category of this building |
-| industry_type_id | <code>string</code> | identifier for industry type of this building |
-| seal_id | <code>string</code> | identifier for seal of this building |
-| restricted | <code>boolean</code> | flag indicating whether this building is restricted from tycoon construction |
-| required_invention_ids | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that must be researched before construction of this building |
-
-
-* [.BuildingDefinition](#STARPEACE.building.BuildingDefinition)
-    * [new BuildingDefinition(id)](#new_STARPEACE.building.BuildingDefinition_new)
-    * _instance_
-        * [.is_valid()](#STARPEACE.building.BuildingDefinition+is_valid) ⇒ <code>boolean</code>
-        * [.toJSON()](#STARPEACE.building.BuildingDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.BuildingDefinition..JSON)
-    * _static_
-        * [.from_json(json)](#STARPEACE.building.BuildingDefinition.from_json) ⇒ [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
-    * _inner_
-        * [~JSON](#STARPEACE.building.BuildingDefinition..JSON) : <code>object</code>
-
-
-<a name="new_STARPEACE.building.BuildingDefinition_new"></a>
-
-#### STARPEACE.building.BuildingDefinition()
-Create a BuildingDefinition object
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | unique identifier for building definition |
-
-
-<a name="STARPEACE.building.BuildingDefinition+is_valid"></a>
-
-#### STARPEACE.building.BuildingDefinition#is_valid
-Determine whether object and game configuration has valid attributes.
-
-**Kind**: instance method of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
-**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
-
-<a name="STARPEACE.building.BuildingDefinition+toJSON"></a>
-
-#### STARPEACE.building.BuildingDefinition#toJSON
-Retrieve JSON representation of object
-
-**Kind**: instance method of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
-**Returns**: [<code>JSON</code>](#STARPEACE.building.BuildingDefinition..JSON) - JSON representation of BuildingDefinition  
-
-<a name="STARPEACE.building.BuildingDefinition.from_json"></a>
-
-#### STARPEACE.building.BuildingDefinition.from_json
-Parse raw JSON into a BuildingDefinition object
-
-**Kind**: static method of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
-**Returns**: [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition) - BuildingDefinition representation of parsed JSON  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| json | [<code>JSON</code>](#STARPEACE.building.BuildingDefinition..JSON) | raw JSON object to parse into BuildingDefinition |
-
-
-<a name="STARPEACE.building.BuildingDefinition..JSON"></a>
-
-#### STARPEACE.building.BuildingDefinition~JSON
-**Kind**: inner typedef of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | unique identifier for building image definition |
-| image_id | <code>string</code> | default building image definition identifier for this building |
-| construction_image_id | <code>string</code> | building image definition identifier to use during construction of this building |
-| name | [<code>JSON</code>](#STARPEACE.language.Translation..JSON) | translation object with name of building |
-| zone | <code>string</code> | identifier for city zone of this building |
-| industry_type | <code>string</code> | identifier for category of this building |
-| seal_id | <code>string</code> | identifier for seal of this building |
-| restricted | <code>boolean</code> | flag indicating whether this building is restricted from tycoon construction |
-| required_inventions | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that must be researched before construction of this building |
-
-
-<a name="STARPEACE.building.BuildingImageDefinition"></a>
-
-### STARPEACE.building.BuildingImageDefinition
-Class representing image metadata for a building definition
-
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | unique identifier for building image definition |
-| image_path | <code>string</code> | path to image file for building |
-| tile_width | <code>number</code> | width of building in game tiles |
-| tile_height | <code>number</code> | height of building in game tiles |
-| hit_area | [<code>Array.&lt;CoordinateList&gt;</code>](#STARPEACE.building.CoordinateList) | array of coordinate lists representing vertices of each polygon making up building hit area |
-| effects | [<code>Array.&lt;ImageEffect&gt;</code>](#STARPEACE.building.ImageEffect) | array of image effects for building |
-
-
-* [.BuildingImageDefinition](#STARPEACE.building.BuildingImageDefinition)
-    * [new BuildingImageDefinition(id)](#new_STARPEACE.building.BuildingImageDefinition_new)
-    * _instance_
-        * [.is_valid()](#STARPEACE.building.BuildingImageDefinition+is_valid) ⇒ <code>boolean</code>
-        * [.toJSON()](#STARPEACE.building.BuildingImageDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.BuildingImageDefinition..JSON)
-    * _static_
-        * [.from_json(json)](#STARPEACE.building.BuildingImageDefinition.from_json) ⇒ [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
-    * _inner_
-        * [~JSON](#STARPEACE.building.BuildingImageDefinition..JSON) : <code>object</code>
-
-
-<a name="new_STARPEACE.building.BuildingImageDefinition_new"></a>
-
-#### STARPEACE.building.BuildingImageDefinition()
-Create a BuildingImageDefinition object
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | unique identifier for building image definition |
-
-
-<a name="STARPEACE.building.BuildingImageDefinition+is_valid"></a>
-
-#### STARPEACE.building.BuildingImageDefinition#is_valid
-Determine whether object and game configuration has valid attributes.
-
-**Kind**: instance method of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
-**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
-
-<a name="STARPEACE.building.BuildingImageDefinition+toJSON"></a>
-
-#### STARPEACE.building.BuildingImageDefinition#toJSON
-Retrieve JSON representation of object
-
-**Kind**: instance method of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
-**Returns**: [<code>JSON</code>](#STARPEACE.building.BuildingImageDefinition..JSON) - JSON representation of BuildingImageDefinition  
-
-<a name="STARPEACE.building.BuildingImageDefinition.from_json"></a>
-
-#### STARPEACE.building.BuildingImageDefinition.from_json
-Parse raw JSON into a BuildingImageDefinition object
-
-**Kind**: static method of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
-**Returns**: [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition) - BuildingImageDefinition representation of parsed JSON  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| json | [<code>JSON</code>](#STARPEACE.building.BuildingImageDefinition..JSON) | raw JSON object to parse into BuildingImageDefinition |
-
-
-<a name="STARPEACE.building.BuildingImageDefinition..JSON"></a>
-
-#### STARPEACE.building.BuildingImageDefinition~JSON
-**Kind**: inner typedef of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | unique identifier for building image definition |
-| image_path | <code>string</code> | path to image file for building |
-| tile_width | <code>number</code> | width of building in game tiles |
-| tile_height | <code>number</code> | height of building in game tiles |
-| hit_area | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.CoordinateList..JSON) | array of coordinate lists representing vertices of each polygon making up building hit area |
-| effects | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.ImageEffect..JSON) | array of image effects for building |
-
-
-<a name="STARPEACE.building.CoordinateList"></a>
-
-### STARPEACE.building.CoordinateList
-Class representing an array of coordinates
-
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| coordinates | [<code>Array.&lt;Coordinate&gt;</code>](#STARPEACE.building.Coordinate) | array of coordinate values |
-
-
-* [.CoordinateList](#STARPEACE.building.CoordinateList)
-    * _instance_
-        * [.is_valid()](#STARPEACE.building.CoordinateList+is_valid) ⇒ <code>boolean</code>
-        * [.toJSON()](#STARPEACE.building.CoordinateList+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.CoordinateList..JSON)
-    * _static_
-        * [.from_json(json)](#STARPEACE.building.CoordinateList.from_json) ⇒ [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
-    * _inner_
-        * [~JSON](#STARPEACE.building.CoordinateList..JSON) : <code>object</code>
-
-
-<a name="STARPEACE.building.CoordinateList+is_valid"></a>
-
-#### STARPEACE.building.CoordinateList#is_valid
-Determine whether object and game configuration has valid attributes.
-
-**Kind**: instance method of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
-**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
-
-<a name="STARPEACE.building.CoordinateList+toJSON"></a>
-
-#### STARPEACE.building.CoordinateList#toJSON
-Retrieve JSON representation of object
-
-**Kind**: instance method of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
-**Returns**: [<code>JSON</code>](#STARPEACE.building.CoordinateList..JSON) - JSON representation of CoordinateList  
-
-<a name="STARPEACE.building.CoordinateList.from_json"></a>
-
-#### STARPEACE.building.CoordinateList.from_json
-Parse raw JSON into a CoordinateList object
-
-**Kind**: static method of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
-**Returns**: [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList) - CoordinateList representation of parsed JSON  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| json | [<code>JSON</code>](#STARPEACE.building.CoordinateList..JSON) | raw JSON object to parse into CoordinateList |
-
-
-<a name="STARPEACE.building.CoordinateList..JSON"></a>
-
-#### STARPEACE.building.CoordinateList~JSON
-**Kind**: inner typedef of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| coordinates | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.Coordinate..JSON) | array of coordinate JSON objects |
-
-
-<a name="STARPEACE.building.Coordinate"></a>
-
-### STARPEACE.building.Coordinate
-Class representing an x and y coordinate
-
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| x | <code>number</code> | coordinate value along x axis |
-| y | <code>number</code> | coordinate value along y axis |
-
-
-* [.Coordinate](#STARPEACE.building.Coordinate)
-    * [new Coordinate(x, y)](#new_STARPEACE.building.Coordinate_new)
-    * _instance_
-        * [.is_valid()](#STARPEACE.building.Coordinate+is_valid) ⇒ <code>boolean</code>
-        * [.toJSON()](#STARPEACE.building.Coordinate+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.Coordinate..JSON)
-    * _static_
-        * [.from_json(json)](#STARPEACE.building.Coordinate.from_json) ⇒ [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
-    * _inner_
-        * [~JSON](#STARPEACE.building.Coordinate..JSON) : <code>object</code>
-
-
-<a name="new_STARPEACE.building.Coordinate_new"></a>
-
-#### STARPEACE.building.Coordinate()
-Create a Coordinate object
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| x | <code>number</code> | coordinate value along x axis |
-| y | <code>number</code> | coordinate value along y axis |
-
-
-<a name="STARPEACE.building.Coordinate+is_valid"></a>
-
-#### STARPEACE.building.Coordinate#is_valid
-Determine whether object and game configuration has valid attributes.
-
-**Kind**: instance method of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
-**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
-
-<a name="STARPEACE.building.Coordinate+toJSON"></a>
-
-#### STARPEACE.building.Coordinate#toJSON
-Retrieve JSON representation of object
-
-**Kind**: instance method of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
-**Returns**: [<code>JSON</code>](#STARPEACE.building.Coordinate..JSON) - JSON representation of Coordinate  
-
-<a name="STARPEACE.building.Coordinate.from_json"></a>
-
-#### STARPEACE.building.Coordinate.from_json
-Parse raw JSON into a Coordinate object
-
-**Kind**: static method of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
-**Returns**: [<code>Coordinate</code>](#STARPEACE.building.Coordinate) - Coordinate representation of parsed JSON  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| json | [<code>JSON</code>](#STARPEACE.building.Coordinate..JSON) | raw JSON object to parse into Coordinate |
-
-
-<a name="STARPEACE.building.Coordinate..JSON"></a>
-
-#### STARPEACE.building.Coordinate~JSON
-**Kind**: inner typedef of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| x | <code>number</code> | coordinate value along x axis |
-| y | <code>number</code> | coordinate value along y axis |
 
 
 <a name="STARPEACE.building.ImageEffect"></a>
@@ -829,79 +525,6 @@ Parse raw JSON into a simulation definition object
 | json | [<code>JSON</code>](#STARPEACE.building.simulation.bank.BankDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.PortalDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.media.AntennaDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.office.OfficeDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.park.ParkDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.service.ServiceDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageDefinition..JSON) \| [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON) | raw JSON object to parse into simulation definition |
 
 
-<a name="STARPEACE.building.simulation.SimulationDefinition"></a>
-
-#### STARPEACE.building.simulation.SimulationDefinition
-Base class representing building simulation with common properties for all building simulations
-
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | unique identifier of building simulation |
-| type | <code>string</code> | type identifier of building simulation, mapping to child subclass simulation definitions |
-| max_level | <code>number</code> | maximum upgrade level of building |
-| construction_inputs | [<code>Array.&lt;ConstructionQuantity&gt;</code>](#STARPEACE.building.simulation.ConstructionQuantity) | array of input quantities required for construction |
-| prestige | <code>number</code> | prestige earned or lost per level of this building simulation |
-| maintainance | <code>number</code> | maintainance required per level of this building simulation per hour |
-| beauty | <code>number</code> | beauty earned or lost per level of this building simulation per hour |
-| pollution | <code>number</code> | pollution earned or lost per level of this building simulation per hour |
-
-
-* [.SimulationDefinition](#STARPEACE.building.simulation.SimulationDefinition)
-    * [new SimulationDefinition(json)](#new_STARPEACE.building.simulation.SimulationDefinition_new)
-    * _instance_
-        * [.toJSON()](#STARPEACE.building.simulation.SimulationDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)
-        * [.is_valid()](#STARPEACE.building.simulation.SimulationDefinition+is_valid) ⇒ <code>boolean</code>
-    * _inner_
-        * [~JSON](#STARPEACE.building.simulation.SimulationDefinition..JSON) : <code>object</code>
-
-
-<a name="new_STARPEACE.building.simulation.SimulationDefinition_new"></a>
-
-##### STARPEACE.building.simulation.SimulationDefinition()
-Create a SimulationDefinition object
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
-
-
-<a name="STARPEACE.building.simulation.SimulationDefinition+toJSON"></a>
-
-##### STARPEACE.building.simulation.SimulationDefinition#toJSON
-Retrieve JSON representation of object
-
-**Kind**: instance method of [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-**Returns**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) - JSON representation of SimulationDefinition  
-
-<a name="STARPEACE.building.simulation.SimulationDefinition+is_valid"></a>
-
-##### STARPEACE.building.simulation.SimulationDefinition#is_valid
-Determine whether object and game configuration has valid attributes.
-
-**Kind**: instance method of [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
-
-<a name="STARPEACE.building.simulation.SimulationDefinition..JSON"></a>
-
-##### STARPEACE.building.simulation.SimulationDefinition~JSON
-**Kind**: inner typedef of [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | unique identifier of building simulation |
-| type | <code>string</code> | type identifier of building simulation, mapping to child subclass simulation definitions |
-| max_level | <code>number</code> | maximum upgrade level of building |
-| construction_inputs | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.simulation.ConstructionQuantity..JSON) | array of input quantities required for construction |
-| prestige | <code>number</code> | prestige earned or lost per level of this building simulation |
-| maintainance | <code>number</code> | maintainance required per level of this building simulation per hour |
-| beauty | <code>number</code> | beauty earned or lost per level of this building simulation per hour |
-| pollution | <code>number</code> | pollution earned or lost per level of this building simulation per hour |
-
-
 <a name="STARPEACE.building.simulation.bank.BankDefinition"></a>
 
 ##### STARPEACE.building.simulation.bank.BankDefinition
@@ -915,7 +538,7 @@ Class representing bank building simulation definition
 | labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
 
 
-* [.BankDefinition](#STARPEACE.building.simulation.bank.BankDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~BankDefinition](#STARPEACE.building.simulation.bank.BankDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new BankDefinition(json)](#new_STARPEACE.building.simulation.bank.BankDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.bank.BankDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.bank.BankDefinition..JSON)
@@ -1001,7 +624,7 @@ Class representing capitol building simulation definition
 | labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
 
 
-* [.CapitolDefinition](#STARPEACE.building.simulation.civic.CapitolDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~CapitolDefinition](#STARPEACE.building.simulation.civic.CapitolDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new CapitolDefinition(json)](#new_STARPEACE.building.simulation.civic.CapitolDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.civic.CapitolDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.CapitolDefinition..JSON)
@@ -1087,7 +710,7 @@ Class representing mausoleum building simulation definition
 | labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
 
 
-* [.MausoleumDefinition](#STARPEACE.building.simulation.civic.MausoleumDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~MausoleumDefinition](#STARPEACE.building.simulation.civic.MausoleumDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new MausoleumDefinition(json)](#new_STARPEACE.building.simulation.civic.MausoleumDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.civic.MausoleumDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.MausoleumDefinition..JSON)
@@ -1173,7 +796,7 @@ Class representing portal building simulation definition
 | labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
 
 
-* [.PortalDefinition](#STARPEACE.building.simulation.civic.PortalDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~PortalDefinition](#STARPEACE.building.simulation.civic.PortalDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new PortalDefinition(json)](#new_STARPEACE.building.simulation.civic.PortalDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.civic.PortalDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.PortalDefinition..JSON)
@@ -1259,7 +882,7 @@ Class representing townhall building simulation definition
 | labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
 
 
-* [.TownhallDefinition](#STARPEACE.building.simulation.civic.TownhallDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~TownhallDefinition](#STARPEACE.building.simulation.civic.TownhallDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new TownhallDefinition(json)](#new_STARPEACE.building.simulation.civic.TownhallDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.civic.TownhallDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.TownhallDefinition..JSON)
@@ -1345,7 +968,7 @@ Class representing tradecenter building simulation definition
 | labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
 
 
-* [.TradecenterDefinition](#STARPEACE.building.simulation.civic.TradecenterDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~TradecenterDefinition](#STARPEACE.building.simulation.civic.TradecenterDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new TradecenterDefinition(json)](#new_STARPEACE.building.simulation.civic.TradecenterDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.civic.TradecenterDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.civic.TradecenterDefinition..JSON)
@@ -1418,6 +1041,78 @@ Parse raw JSON into a TradecenterDefinition object
 | labor | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | labor requirements for building |
 
 
+<a name="STARPEACE.building.simulation.factory.FactoryStage"></a>
+
+##### STARPEACE.building.simulation.factory.FactoryStage
+Class representing factory building simulation stage metadata
+
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| index | <code>number</code> | number index of stage, starting at one and increasing |
+| duration | <code>number</code> | length of stage duration in calendar hours |
+| labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
+| operations | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | array of resource quantities required for building operations |
+| inputs | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | array of input resource quantities |
+| outputs | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | array of output resource quantities |
+
+
+* [.FactoryStage](#STARPEACE.building.simulation.factory.FactoryStage)
+    * _instance_
+        * [.toJSON()](#STARPEACE.building.simulation.factory.FactoryStage+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryStage..JSON)
+        * [.is_valid()](#STARPEACE.building.simulation.factory.FactoryStage+is_valid) ⇒ <code>boolean</code>
+    * _static_
+        * [.from_json(json)](#STARPEACE.building.simulation.factory.FactoryStage.from_json) ⇒ [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
+    * _inner_
+        * [~JSON](#STARPEACE.building.simulation.factory.FactoryStage..JSON) : <code>object</code>
+
+
+<a name="STARPEACE.building.simulation.factory.FactoryStage+toJSON"></a>
+
+###### STARPEACE.building.simulation.factory.FactoryStage#toJSON
+Retrieve JSON representation of object
+
+**Kind**: instance method of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
+**Returns**: [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryStage..JSON) - JSON representation of FactoryStage  
+
+<a name="STARPEACE.building.simulation.factory.FactoryStage+is_valid"></a>
+
+###### STARPEACE.building.simulation.factory.FactoryStage#is_valid
+Determine whether object and game configuration has valid attributes.
+
+**Kind**: instance method of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
+**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
+
+<a name="STARPEACE.building.simulation.factory.FactoryStage.from_json"></a>
+
+###### STARPEACE.building.simulation.factory.FactoryStage.from_json
+Parse raw JSON into a FactoryStage object
+
+**Kind**: static method of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
+**Returns**: [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage) - FactoryStage representation of parsed JSON  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryStage..JSON) | raw JSON object to parse into FactoryStage |
+
+
+<a name="STARPEACE.building.simulation.factory.FactoryStage..JSON"></a>
+
+###### STARPEACE.building.simulation.factory.FactoryStage~JSON
+**Kind**: inner typedef of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| index | <code>number</code> | number index of stage, starting at one and increasing |
+| duration | <code>number</code> | length of stage duration in calendar hours |
+| labor | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | labor requirements for building |
+| operations | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of resource quantities required for building operations |
+| inputs | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of input resource quantities |
+| outputs | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of output resource quantities |
+
+
 <a name="STARPEACE.building.simulation.factory.FactoryDefinition"></a>
 
 ##### STARPEACE.building.simulation.factory.FactoryDefinition
@@ -1431,7 +1126,7 @@ Class representing tradecenter building simulation definition
 | stages | [<code>Array.&lt;FactoryStage&gt;</code>](#STARPEACE.building.simulation.factory.FactoryStage) | each stage of factory production |
 
 
-* [.FactoryDefinition](#STARPEACE.building.simulation.factory.FactoryDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~FactoryDefinition](#STARPEACE.building.simulation.factory.FactoryDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new FactoryDefinition(json)](#new_STARPEACE.building.simulation.factory.FactoryDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.factory.FactoryDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON)
@@ -1504,82 +1199,6 @@ Parse raw JSON into a FactoryDefinition object
 | stages | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.simulation.factory.FactoryStage..JSON) | each stage of factory production |
 
 
-<a name="STARPEACE.building.simulation.factory.FactoryStage"></a>
-
-##### STARPEACE.building.simulation.factory.FactoryStage
-Class representing factory building simulation stage metadata
-
-**Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| index | <code>number</code> | number index of stage, starting at one and increasing |
-| duration | <code>number</code> | length of stage duration in calendar hours |
-| labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
-| operations | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | array of resource quantities required for building operations |
-| inputs | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | array of input resource quantities |
-| outputs | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | array of output resource quantities |
-
-
-* [.FactoryStage](#STARPEACE.building.simulation.factory.FactoryStage) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-    * _instance_
-        * [.toJSON()](#STARPEACE.building.simulation.factory.FactoryStage+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryStage..JSON)
-        * [.is_valid()](#STARPEACE.building.simulation.factory.FactoryStage+is_valid) ⇒ <code>boolean</code>
-    * _static_
-        * [.from_json(json)](#STARPEACE.building.simulation.factory.FactoryStage.from_json) ⇒ [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
-    * _inner_
-        * [~JSON](#STARPEACE.building.simulation.factory.FactoryStage..JSON) : <code>object</code>
-
-
-<a name="STARPEACE.building.simulation.factory.FactoryStage+toJSON"></a>
-
-###### STARPEACE.building.simulation.factory.FactoryStage#toJSON
-Retrieve JSON representation of object
-
-**Kind**: instance method of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
-**Overrides**: [<code>toJSON</code>](#STARPEACE.building.simulation.SimulationDefinition+toJSON)  
-**Returns**: [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryStage..JSON) - JSON representation of FactoryStage  
-
-<a name="STARPEACE.building.simulation.factory.FactoryStage+is_valid"></a>
-
-###### STARPEACE.building.simulation.factory.FactoryStage#is_valid
-Determine whether object and game configuration has valid attributes.
-
-**Kind**: instance method of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
-**Overrides**: [<code>is\_valid</code>](#STARPEACE.building.simulation.SimulationDefinition+is_valid)  
-**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
-
-<a name="STARPEACE.building.simulation.factory.FactoryStage.from_json"></a>
-
-###### STARPEACE.building.simulation.factory.FactoryStage.from_json
-Parse raw JSON into a FactoryStage object
-
-**Kind**: static method of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
-**Returns**: [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage) - FactoryStage representation of parsed JSON  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| json | [<code>JSON</code>](#STARPEACE.building.simulation.factory.FactoryStage..JSON) | raw JSON object to parse into FactoryStage |
-
-
-<a name="STARPEACE.building.simulation.factory.FactoryStage..JSON"></a>
-
-###### STARPEACE.building.simulation.factory.FactoryStage~JSON
-**Kind**: inner typedef of [<code>FactoryStage</code>](#STARPEACE.building.simulation.factory.FactoryStage)
-**Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| index | <code>number</code> | number index of stage, starting at one and increasing |
-| duration | <code>number</code> | length of stage duration in calendar hours |
-| labor | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | labor requirements for building |
-| operations | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of resource quantities required for building operations |
-| inputs | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of input resource quantities |
-| outputs | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of output resource quantities |
-
-
 <a name="STARPEACE.building.simulation.headquarters.HeadquartersDefinition"></a>
 
 ##### STARPEACE.building.simulation.headquarters.HeadquartersDefinition
@@ -1595,7 +1214,7 @@ Class representing headquarters building simulation definition
 | satellite_category | <code>string</code> | satellite category if building is flagged as satellite |
 
 
-* [.HeadquartersDefinition](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~HeadquartersDefinition](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new HeadquartersDefinition(json)](#new_STARPEACE.building.simulation.headquarters.HeadquartersDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.headquarters.HeadquartersDefinition..JSON)
@@ -1684,7 +1303,7 @@ Class representing antenna building simulation definition
 | range | <code>number</code> | tile range building can reach |
 
 
-* [.AntennaDefinition](#STARPEACE.building.simulation.media.AntennaDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~AntennaDefinition](#STARPEACE.building.simulation.media.AntennaDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new AntennaDefinition(json)](#new_STARPEACE.building.simulation.media.AntennaDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.media.AntennaDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.media.AntennaDefinition..JSON)
@@ -1771,7 +1390,7 @@ Class representing media station building simulation definition
 | labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
 
 
-* [.MediaStationDefinition](#STARPEACE.building.simulation.media.MediaStationDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~MediaStationDefinition](#STARPEACE.building.simulation.media.MediaStationDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new MediaStationDefinition(json)](#new_STARPEACE.building.simulation.media.MediaStationDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.media.MediaStationDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.media.MediaStationDefinition..JSON)
@@ -1859,7 +1478,7 @@ Class representing office building simulation definition
 | efficiency | <code>number</code> | base efficiency of building |
 
 
-* [.OfficeDefinition](#STARPEACE.building.simulation.office.OfficeDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~OfficeDefinition](#STARPEACE.building.simulation.office.OfficeDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new OfficeDefinition(json)](#new_STARPEACE.building.simulation.office.OfficeDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.office.OfficeDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.office.OfficeDefinition..JSON)
@@ -1948,7 +1567,7 @@ Class representing park building simulation definition
 | sport | <code>number</code> | amount of sport provided by building per hour |
 
 
-* [.ParkDefinition](#STARPEACE.building.simulation.park.ParkDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~ParkDefinition](#STARPEACE.building.simulation.park.ParkDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new ParkDefinition(json)](#new_STARPEACE.building.simulation.park.ParkDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.park.ParkDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.park.ParkDefinition..JSON)
@@ -2039,7 +1658,7 @@ Class representing residence building simulation definition
 | pollution_resistence | <code>number</code> | base pollution resistence of building |
 
 
-* [.ResidenceDefinition](#STARPEACE.building.simulation.residence.ResidenceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~ResidenceDefinition](#STARPEACE.building.simulation.residence.ResidenceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new ResidenceDefinition(json)](#new_STARPEACE.building.simulation.residence.ResidenceDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.residence.ResidenceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.residence.ResidenceDefinition..JSON)
@@ -2130,7 +1749,7 @@ Class representing service building simulation definition
 | service | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | array of output service resource quantities provided by building |
 
 
-* [.ServiceDefinition](#STARPEACE.building.simulation.service.ServiceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~ServiceDefinition](#STARPEACE.building.simulation.service.ServiceDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new ServiceDefinition(json)](#new_STARPEACE.building.simulation.service.ServiceDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.service.ServiceDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.service.ServiceDefinition..JSON)
@@ -2204,6 +1823,70 @@ Parse raw JSON into a ServiceDefinition object
 | service | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of output service resource quantities provided by building |
 
 
+<a name="STARPEACE.building.simulation.storage.StorageQuantity"></a>
+
+##### STARPEACE.building.simulation.storage.StorageQuantity
+Class representing a storage quantity of a resource
+
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| resource_id | <code>string</code> | identifier of resource type of storage |
+| max | <code>number</code> | maximum amount of resource that can be stored |
+
+
+* [.StorageQuantity](#STARPEACE.building.simulation.storage.StorageQuantity)
+    * _instance_
+        * [.toJSON()](#STARPEACE.building.simulation.storage.StorageQuantity+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON)
+        * [.is_valid()](#STARPEACE.building.simulation.storage.StorageQuantity+is_valid) ⇒ <code>boolean</code>
+    * _static_
+        * [.from_json(json)](#STARPEACE.building.simulation.storage.StorageQuantity.from_json) ⇒ [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+    * _inner_
+        * [~JSON](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) : <code>object</code>
+
+
+<a name="STARPEACE.building.simulation.storage.StorageQuantity+toJSON"></a>
+
+###### STARPEACE.building.simulation.storage.StorageQuantity#toJSON
+Retrieve JSON representation of object
+
+**Kind**: instance method of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+**Returns**: [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) - JSON representation of StorageQuantity  
+
+<a name="STARPEACE.building.simulation.storage.StorageQuantity+is_valid"></a>
+
+###### STARPEACE.building.simulation.storage.StorageQuantity#is_valid
+Determine whether object and game configuration has valid attributes.
+
+**Kind**: instance method of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
+
+<a name="STARPEACE.building.simulation.storage.StorageQuantity.from_json"></a>
+
+###### STARPEACE.building.simulation.storage.StorageQuantity.from_json
+Parse raw JSON into a StorageQuantity object
+
+**Kind**: static method of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+**Returns**: [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity) - StorageQuantity representation of parsed JSON  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) | raw JSON object to parse into StorageQuantity |
+
+
+<a name="STARPEACE.building.simulation.storage.StorageQuantity..JSON"></a>
+
+###### STARPEACE.building.simulation.storage.StorageQuantity~JSON
+**Kind**: inner typedef of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| resource_id | <code>string</code> | identifier of resource type of storage |
+| max | <code>number</code> | maximum amount of resource that can be stored |
+
+
 <a name="STARPEACE.building.simulation.storage.StorageDefinition"></a>
 
 ##### STARPEACE.building.simulation.storage.StorageDefinition
@@ -2219,7 +1902,7 @@ Class representing storage building simulation definition
 | storage | [<code>Array.&lt;StorageQuantity&gt;</code>](#STARPEACE.building.simulation.storage.StorageQuantity) | array of resource quantities stored by building |
 
 
-* [.StorageDefinition](#STARPEACE.building.simulation.storage.StorageDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+* [~StorageDefinition](#STARPEACE.building.simulation.storage.StorageDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
     * [new StorageDefinition(json)](#new_STARPEACE.building.simulation.storage.StorageDefinition_new)
     * _instance_
         * [.toJSON()](#STARPEACE.building.simulation.storage.StorageDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageDefinition..JSON)
@@ -2292,160 +1975,6 @@ Parse raw JSON into a StorageDefinition object
 | labor | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | labor requirements for building |
 | operations | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of resource quantities required for building operations |
 | storage | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) | array of resource quantities stored by building |
-
-
-<a name="STARPEACE.building.simulation.storage.StorageQuantity"></a>
-
-##### STARPEACE.building.simulation.storage.StorageQuantity
-Class representing a storage quantity of a resource
-
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| resource_id | <code>string</code> | identifier of resource type of storage |
-| max | <code>number</code> | maximum amount of resource that can be stored |
-
-
-* [.StorageQuantity](#STARPEACE.building.simulation.storage.StorageQuantity)
-    * _instance_
-        * [.toJSON()](#STARPEACE.building.simulation.storage.StorageQuantity+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON)
-        * [.is_valid()](#STARPEACE.building.simulation.storage.StorageQuantity+is_valid) ⇒ <code>boolean</code>
-    * _static_
-        * [.from_json(json)](#STARPEACE.building.simulation.storage.StorageQuantity.from_json) ⇒ [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
-    * _inner_
-        * [~JSON](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) : <code>object</code>
-
-
-<a name="STARPEACE.building.simulation.storage.StorageQuantity+toJSON"></a>
-
-###### STARPEACE.building.simulation.storage.StorageQuantity#toJSON
-Retrieve JSON representation of object
-
-**Kind**: instance method of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
-**Returns**: [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) - JSON representation of StorageQuantity  
-
-<a name="STARPEACE.building.simulation.storage.StorageQuantity+is_valid"></a>
-
-###### STARPEACE.building.simulation.storage.StorageQuantity#is_valid
-Determine whether object and game configuration has valid attributes.
-
-**Kind**: instance method of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
-**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
-
-<a name="STARPEACE.building.simulation.storage.StorageQuantity.from_json"></a>
-
-###### STARPEACE.building.simulation.storage.StorageQuantity.from_json
-Parse raw JSON into a StorageQuantity object
-
-**Kind**: static method of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
-**Returns**: [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity) - StorageQuantity representation of parsed JSON  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| json | [<code>JSON</code>](#STARPEACE.building.simulation.storage.StorageQuantity..JSON) | raw JSON object to parse into StorageQuantity |
-
-
-<a name="STARPEACE.building.simulation.storage.StorageQuantity..JSON"></a>
-
-###### STARPEACE.building.simulation.storage.StorageQuantity~JSON
-**Kind**: inner typedef of [<code>StorageQuantity</code>](#STARPEACE.building.simulation.storage.StorageQuantity)
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| resource_id | <code>string</code> | identifier of resource type of storage |
-| max | <code>number</code> | maximum amount of resource that can be stored |
-
-
-<a name="STARPEACE.building.simulation.store.StoreDefinition"></a>
-
-##### STARPEACE.building.simulation.store.StoreDefinition
-Class representing store building simulation definition
-
-**Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
-| operations | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | array of resource quantities required for building operations |
-| products | [<code>Array.&lt;StoreProduct&gt;</code>](#STARPEACE.building.simulation.store.StoreProduct) | array of output resource products sold by building |
-
-
-* [.StoreDefinition](#STARPEACE.building.simulation.store.StoreDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
-    * [new StoreDefinition(json)](#new_STARPEACE.building.simulation.store.StoreDefinition_new)
-    * _instance_
-        * [.toJSON()](#STARPEACE.building.simulation.store.StoreDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON)
-        * [.is_valid()](#STARPEACE.building.simulation.store.StoreDefinition+is_valid) ⇒ <code>boolean</code>
-    * _static_
-        * [.TYPE()](#STARPEACE.building.simulation.store.StoreDefinition.TYPE)
-        * [.from_json(json)](#STARPEACE.building.simulation.store.StoreDefinition.from_json) ⇒ [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
-    * _inner_
-        * [~JSON](#STARPEACE.building.simulation.store.StoreDefinition..JSON) : <code>object</code>
-
-
-<a name="new_STARPEACE.building.simulation.store.StoreDefinition_new"></a>
-
-###### STARPEACE.building.simulation.store.StoreDefinition()
-Create a StoreDefinition object
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
-
-
-<a name="STARPEACE.building.simulation.store.StoreDefinition+toJSON"></a>
-
-###### STARPEACE.building.simulation.store.StoreDefinition#toJSON
-Retrieve JSON representation of object
-
-**Kind**: instance method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
-**Overrides**: [<code>toJSON</code>](#STARPEACE.building.simulation.SimulationDefinition+toJSON)  
-**Returns**: [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON) - JSON representation of StoreDefinition  
-
-<a name="STARPEACE.building.simulation.store.StoreDefinition+is_valid"></a>
-
-###### STARPEACE.building.simulation.store.StoreDefinition#is_valid
-Determine whether object and game configuration has valid attributes.
-
-**Kind**: instance method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
-**Overrides**: [<code>is\_valid</code>](#STARPEACE.building.simulation.SimulationDefinition+is_valid)  
-**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
-
-<a name="STARPEACE.building.simulation.store.StoreDefinition.TYPE"></a>
-
-###### STARPEACE.building.simulation.store.StoreDefinition.TYPE
-Type identifier for simulation definition
-
-**Kind**: static method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
-
-<a name="STARPEACE.building.simulation.store.StoreDefinition.from_json"></a>
-
-###### STARPEACE.building.simulation.store.StoreDefinition.from_json
-Parse raw JSON into a StoreDefinition object
-
-**Kind**: static method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
-**Returns**: [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition) - StoreDefinition representation of parsed JSON  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| json | [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON) | raw JSON object to parse into StoreDefinition |
-
-
-<a name="STARPEACE.building.simulation.store.StoreDefinition..JSON"></a>
-
-###### STARPEACE.building.simulation.store.StoreDefinition~JSON
-**Kind**: inner typedef of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
-**Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| labor | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | labor requirements for building |
-| operations | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of resource quantities required for building operations |
-| products | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.simulation.store.StoreProduct..JSON) | array of output resource products sold by building |
 
 
 <a name="STARPEACE.building.simulation.store.StoreProductCustomer"></a>
@@ -2642,6 +2171,483 @@ Parse raw JSON into a StoreProduct object
 | --- | --- | --- |
 | inputs | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of input resource quantities |
 | outputs | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.simulation.store.StoreProductOutput..JSON) | array of output resource quantities |
+
+
+<a name="STARPEACE.building.simulation.store.StoreDefinition"></a>
+
+##### STARPEACE.building.simulation.store.StoreDefinition
+Class representing store building simulation definition
+
+**Extends**: [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
+| operations | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | array of resource quantities required for building operations |
+| products | [<code>Array.&lt;StoreProduct&gt;</code>](#STARPEACE.building.simulation.store.StoreProduct) | array of output resource products sold by building |
+
+
+* [~StoreDefinition](#STARPEACE.building.simulation.store.StoreDefinition) ⇐ [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new StoreDefinition(json)](#new_STARPEACE.building.simulation.store.StoreDefinition_new)
+    * _instance_
+        * [.toJSON()](#STARPEACE.building.simulation.store.StoreDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON)
+        * [.is_valid()](#STARPEACE.building.simulation.store.StoreDefinition+is_valid) ⇒ <code>boolean</code>
+    * _static_
+        * [.TYPE()](#STARPEACE.building.simulation.store.StoreDefinition.TYPE)
+        * [.from_json(json)](#STARPEACE.building.simulation.store.StoreDefinition.from_json) ⇒ [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
+    * _inner_
+        * [~JSON](#STARPEACE.building.simulation.store.StoreDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.store.StoreDefinition_new"></a>
+
+###### STARPEACE.building.simulation.store.StoreDefinition()
+Create a StoreDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
+
+
+<a name="STARPEACE.building.simulation.store.StoreDefinition+toJSON"></a>
+
+###### STARPEACE.building.simulation.store.StoreDefinition#toJSON
+Retrieve JSON representation of object
+
+**Kind**: instance method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
+**Overrides**: [<code>toJSON</code>](#STARPEACE.building.simulation.SimulationDefinition+toJSON)  
+**Returns**: [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON) - JSON representation of StoreDefinition  
+
+<a name="STARPEACE.building.simulation.store.StoreDefinition+is_valid"></a>
+
+###### STARPEACE.building.simulation.store.StoreDefinition#is_valid
+Determine whether object and game configuration has valid attributes.
+
+**Kind**: instance method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
+**Overrides**: [<code>is\_valid</code>](#STARPEACE.building.simulation.SimulationDefinition+is_valid)  
+**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
+
+<a name="STARPEACE.building.simulation.store.StoreDefinition.TYPE"></a>
+
+###### STARPEACE.building.simulation.store.StoreDefinition.TYPE
+Type identifier for simulation definition
+
+**Kind**: static method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
+
+<a name="STARPEACE.building.simulation.store.StoreDefinition.from_json"></a>
+
+###### STARPEACE.building.simulation.store.StoreDefinition.from_json
+Parse raw JSON into a StoreDefinition object
+
+**Kind**: static method of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
+**Returns**: [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition) - StoreDefinition representation of parsed JSON  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.store.StoreDefinition..JSON) | raw JSON object to parse into StoreDefinition |
+
+
+<a name="STARPEACE.building.simulation.store.StoreDefinition..JSON"></a>
+
+###### STARPEACE.building.simulation.store.StoreDefinition~JSON
+**Kind**: inner typedef of [<code>StoreDefinition</code>](#STARPEACE.building.simulation.store.StoreDefinition)
+**Extends**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| labor | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | labor requirements for building |
+| operations | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.industry.ResourceQuantity..JSON) | array of resource quantities required for building operations |
+| products | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.simulation.store.StoreProduct..JSON) | array of output resource products sold by building |
+
+
+<a name="STARPEACE.building.simulation.SimulationDefinition"></a>
+
+#### STARPEACE.building.simulation.SimulationDefinition
+Base class representing building simulation with common properties for all building simulations
+
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | unique identifier of building simulation |
+| type | <code>string</code> | type identifier of building simulation, mapping to child subclass simulation definitions |
+| max_level | <code>number</code> | maximum upgrade level of building |
+| construction_inputs | [<code>Array.&lt;ConstructionQuantity&gt;</code>](#STARPEACE.building.simulation.ConstructionQuantity) | array of input quantities required for construction |
+| prestige | <code>number</code> | prestige earned or lost per level of this building simulation |
+| maintainance | <code>number</code> | maintainance required per level of this building simulation per hour |
+| beauty | <code>number</code> | beauty earned or lost per level of this building simulation per hour |
+| pollution | <code>number</code> | pollution earned or lost per level of this building simulation per hour |
+
+
+* [~SimulationDefinition](#STARPEACE.building.simulation.SimulationDefinition)
+    * [new SimulationDefinition(json)](#new_STARPEACE.building.simulation.SimulationDefinition_new)
+    * _instance_
+        * [.toJSON()](#STARPEACE.building.simulation.SimulationDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON)
+        * [.is_valid()](#STARPEACE.building.simulation.SimulationDefinition+is_valid) ⇒ <code>boolean</code>
+    * _inner_
+        * [~JSON](#STARPEACE.building.simulation.SimulationDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.simulation.SimulationDefinition_new"></a>
+
+##### STARPEACE.building.simulation.SimulationDefinition()
+Create a SimulationDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) | raw JSON object to populate into simulation definition |
+
+
+<a name="STARPEACE.building.simulation.SimulationDefinition+toJSON"></a>
+
+##### STARPEACE.building.simulation.SimulationDefinition#toJSON
+Retrieve JSON representation of object
+
+**Kind**: instance method of [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+**Returns**: [<code>JSON</code>](#STARPEACE.building.simulation.SimulationDefinition..JSON) - JSON representation of SimulationDefinition  
+
+<a name="STARPEACE.building.simulation.SimulationDefinition+is_valid"></a>
+
+##### STARPEACE.building.simulation.SimulationDefinition#is_valid
+Determine whether object and game configuration has valid attributes.
+
+**Kind**: instance method of [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
+
+<a name="STARPEACE.building.simulation.SimulationDefinition..JSON"></a>
+
+##### STARPEACE.building.simulation.SimulationDefinition~JSON
+**Kind**: inner typedef of [<code>SimulationDefinition</code>](#STARPEACE.building.simulation.SimulationDefinition)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | unique identifier of building simulation |
+| type | <code>string</code> | type identifier of building simulation, mapping to child subclass simulation definitions |
+| max_level | <code>number</code> | maximum upgrade level of building |
+| construction_inputs | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.simulation.ConstructionQuantity..JSON) | array of input quantities required for construction |
+| prestige | <code>number</code> | prestige earned or lost per level of this building simulation |
+| maintainance | <code>number</code> | maintainance required per level of this building simulation per hour |
+| beauty | <code>number</code> | beauty earned or lost per level of this building simulation per hour |
+| pollution | <code>number</code> | pollution earned or lost per level of this building simulation per hour |
+
+
+<a name="STARPEACE.building.BuildingDefinition"></a>
+
+### STARPEACE.building.BuildingDefinition
+Class representing building definition metadata
+
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | unique identifier for building definition |
+| image_id | <code>string</code> | default building image definition identifier for this building |
+| construction_image_id | <code>string</code> | building image definition identifier to use during construction of this building |
+| name | [<code>Translation</code>](#STARPEACE.language.Translation) | translation object with name of building |
+| zone_id | <code>string</code> | identifier for city zone of this building |
+| category_id | <code>string</code> | identifier for category of this building |
+| industry_type_id | <code>string</code> | identifier for industry type of this building |
+| seal_id | <code>string</code> | identifier for seal of this building |
+| restricted | <code>boolean</code> | flag indicating whether this building is restricted from tycoon construction |
+| required_invention_ids | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that must be researched before construction of this building |
+
+
+* [~BuildingDefinition](#STARPEACE.building.BuildingDefinition)
+    * [new BuildingDefinition(id)](#new_STARPEACE.building.BuildingDefinition_new)
+    * _instance_
+        * [.is_valid()](#STARPEACE.building.BuildingDefinition+is_valid) ⇒ <code>boolean</code>
+        * [.toJSON()](#STARPEACE.building.BuildingDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.BuildingDefinition..JSON)
+    * _static_
+        * [.from_json(json)](#STARPEACE.building.BuildingDefinition.from_json) ⇒ [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
+    * _inner_
+        * [~JSON](#STARPEACE.building.BuildingDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.BuildingDefinition_new"></a>
+
+#### STARPEACE.building.BuildingDefinition()
+Create a BuildingDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | unique identifier for building definition |
+
+
+<a name="STARPEACE.building.BuildingDefinition+is_valid"></a>
+
+#### STARPEACE.building.BuildingDefinition#is_valid
+Determine whether object and game configuration has valid attributes.
+
+**Kind**: instance method of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
+**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
+
+<a name="STARPEACE.building.BuildingDefinition+toJSON"></a>
+
+#### STARPEACE.building.BuildingDefinition#toJSON
+Retrieve JSON representation of object
+
+**Kind**: instance method of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
+**Returns**: [<code>JSON</code>](#STARPEACE.building.BuildingDefinition..JSON) - JSON representation of BuildingDefinition  
+
+<a name="STARPEACE.building.BuildingDefinition.from_json"></a>
+
+#### STARPEACE.building.BuildingDefinition.from_json
+Parse raw JSON into a BuildingDefinition object
+
+**Kind**: static method of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
+**Returns**: [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition) - BuildingDefinition representation of parsed JSON  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.BuildingDefinition..JSON) | raw JSON object to parse into BuildingDefinition |
+
+
+<a name="STARPEACE.building.BuildingDefinition..JSON"></a>
+
+#### STARPEACE.building.BuildingDefinition~JSON
+**Kind**: inner typedef of [<code>BuildingDefinition</code>](#STARPEACE.building.BuildingDefinition)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | unique identifier for building definition |
+| image_id | <code>string</code> | default building image definition identifier for this building |
+| construction_image_id | <code>string</code> | building image definition identifier to use during construction of this building |
+| name | [<code>JSON</code>](#STARPEACE.language.Translation..JSON) | translation object with name of building |
+| zone | <code>string</code> | identifier for city zone of this building |
+| industry_type | <code>string</code> | identifier for category of this building |
+| seal_id | <code>string</code> | identifier for seal of this building |
+| restricted | <code>boolean</code> | flag indicating whether this building is restricted from tycoon construction |
+| required_inventions | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that must be researched before construction of this building |
+
+
+<a name="STARPEACE.building.BuildingImageDefinition"></a>
+
+### STARPEACE.building.BuildingImageDefinition
+Class representing image metadata for a building definition
+
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | unique identifier for building image definition |
+| image_path | <code>string</code> | path to image file for building |
+| tile_width | <code>number</code> | width of building in game tiles |
+| tile_height | <code>number</code> | height of building in game tiles |
+| hit_area | [<code>Array.&lt;CoordinateList&gt;</code>](#STARPEACE.building.CoordinateList) | array of coordinate lists representing vertices of each polygon making up building hit area |
+| effects | [<code>Array.&lt;ImageEffect&gt;</code>](#STARPEACE.building.ImageEffect) | array of image effects for building |
+
+
+* [~BuildingImageDefinition](#STARPEACE.building.BuildingImageDefinition)
+    * [new BuildingImageDefinition(id)](#new_STARPEACE.building.BuildingImageDefinition_new)
+    * _instance_
+        * [.is_valid()](#STARPEACE.building.BuildingImageDefinition+is_valid) ⇒ <code>boolean</code>
+        * [.toJSON()](#STARPEACE.building.BuildingImageDefinition+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.BuildingImageDefinition..JSON)
+    * _static_
+        * [.from_json(json)](#STARPEACE.building.BuildingImageDefinition.from_json) ⇒ [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
+    * _inner_
+        * [~JSON](#STARPEACE.building.BuildingImageDefinition..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.BuildingImageDefinition_new"></a>
+
+#### STARPEACE.building.BuildingImageDefinition()
+Create a BuildingImageDefinition object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | unique identifier for building image definition |
+
+
+<a name="STARPEACE.building.BuildingImageDefinition+is_valid"></a>
+
+#### STARPEACE.building.BuildingImageDefinition#is_valid
+Determine whether object and game configuration has valid attributes.
+
+**Kind**: instance method of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
+**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
+
+<a name="STARPEACE.building.BuildingImageDefinition+toJSON"></a>
+
+#### STARPEACE.building.BuildingImageDefinition#toJSON
+Retrieve JSON representation of object
+
+**Kind**: instance method of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
+**Returns**: [<code>JSON</code>](#STARPEACE.building.BuildingImageDefinition..JSON) - JSON representation of BuildingImageDefinition  
+
+<a name="STARPEACE.building.BuildingImageDefinition.from_json"></a>
+
+#### STARPEACE.building.BuildingImageDefinition.from_json
+Parse raw JSON into a BuildingImageDefinition object
+
+**Kind**: static method of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
+**Returns**: [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition) - BuildingImageDefinition representation of parsed JSON  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.BuildingImageDefinition..JSON) | raw JSON object to parse into BuildingImageDefinition |
+
+
+<a name="STARPEACE.building.BuildingImageDefinition..JSON"></a>
+
+#### STARPEACE.building.BuildingImageDefinition~JSON
+**Kind**: inner typedef of [<code>BuildingImageDefinition</code>](#STARPEACE.building.BuildingImageDefinition)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | unique identifier for building image definition |
+| image_path | <code>string</code> | path to image file for building |
+| tile_width | <code>number</code> | width of building in game tiles |
+| tile_height | <code>number</code> | height of building in game tiles |
+| hit_area | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.CoordinateList..JSON) | array of coordinate lists representing vertices of each polygon making up building hit area |
+| effects | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.ImageEffect..JSON) | array of image effects for building |
+
+
+<a name="STARPEACE.building.CoordinateList"></a>
+
+### STARPEACE.building.CoordinateList
+Class representing an array of coordinates
+
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| coordinates | [<code>Array.&lt;Coordinate&gt;</code>](#STARPEACE.building.Coordinate) | array of coordinate values |
+
+
+* [~CoordinateList](#STARPEACE.building.CoordinateList)
+    * _instance_
+        * [.is_valid()](#STARPEACE.building.CoordinateList+is_valid) ⇒ <code>boolean</code>
+        * [.toJSON()](#STARPEACE.building.CoordinateList+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.CoordinateList..JSON)
+    * _static_
+        * [.from_json(json)](#STARPEACE.building.CoordinateList.from_json) ⇒ [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
+    * _inner_
+        * [~JSON](#STARPEACE.building.CoordinateList..JSON) : <code>object</code>
+
+
+<a name="STARPEACE.building.CoordinateList+is_valid"></a>
+
+#### STARPEACE.building.CoordinateList#is_valid
+Determine whether object and game configuration has valid attributes.
+
+**Kind**: instance method of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
+**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
+
+<a name="STARPEACE.building.CoordinateList+toJSON"></a>
+
+#### STARPEACE.building.CoordinateList#toJSON
+Retrieve JSON representation of object
+
+**Kind**: instance method of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
+**Returns**: [<code>JSON</code>](#STARPEACE.building.CoordinateList..JSON) - JSON representation of CoordinateList  
+
+<a name="STARPEACE.building.CoordinateList.from_json"></a>
+
+#### STARPEACE.building.CoordinateList.from_json
+Parse raw JSON into a CoordinateList object
+
+**Kind**: static method of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
+**Returns**: [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList) - CoordinateList representation of parsed JSON  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.CoordinateList..JSON) | raw JSON object to parse into CoordinateList |
+
+
+<a name="STARPEACE.building.CoordinateList..JSON"></a>
+
+#### STARPEACE.building.CoordinateList~JSON
+**Kind**: inner typedef of [<code>CoordinateList</code>](#STARPEACE.building.CoordinateList)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| coordinates | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.Coordinate..JSON) | array of coordinate JSON objects |
+
+
+<a name="STARPEACE.building.Coordinate"></a>
+
+### STARPEACE.building.Coordinate
+Class representing an x and y coordinate
+
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| x | <code>number</code> | coordinate value along x axis |
+| y | <code>number</code> | coordinate value along y axis |
+
+
+* [~Coordinate](#STARPEACE.building.Coordinate)
+    * [new Coordinate(x, y)](#new_STARPEACE.building.Coordinate_new)
+    * _instance_
+        * [.is_valid()](#STARPEACE.building.Coordinate+is_valid) ⇒ <code>boolean</code>
+        * [.toJSON()](#STARPEACE.building.Coordinate+toJSON) ⇒ [<code>JSON</code>](#STARPEACE.building.Coordinate..JSON)
+    * _static_
+        * [.from_json(json)](#STARPEACE.building.Coordinate.from_json) ⇒ [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
+    * _inner_
+        * [~JSON](#STARPEACE.building.Coordinate..JSON) : <code>object</code>
+
+
+<a name="new_STARPEACE.building.Coordinate_new"></a>
+
+#### STARPEACE.building.Coordinate()
+Create a Coordinate object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| x | <code>number</code> | coordinate value along x axis |
+| y | <code>number</code> | coordinate value along y axis |
+
+
+<a name="STARPEACE.building.Coordinate+is_valid"></a>
+
+#### STARPEACE.building.Coordinate#is_valid
+Determine whether object and game configuration has valid attributes.
+
+**Kind**: instance method of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
+**Returns**: <code>boolean</code> - true if object has valid configuration, false otherwise  
+
+<a name="STARPEACE.building.Coordinate+toJSON"></a>
+
+#### STARPEACE.building.Coordinate#toJSON
+Retrieve JSON representation of object
+
+**Kind**: instance method of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
+**Returns**: [<code>JSON</code>](#STARPEACE.building.Coordinate..JSON) - JSON representation of Coordinate  
+
+<a name="STARPEACE.building.Coordinate.from_json"></a>
+
+#### STARPEACE.building.Coordinate.from_json
+Parse raw JSON into a Coordinate object
+
+**Kind**: static method of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
+**Returns**: [<code>Coordinate</code>](#STARPEACE.building.Coordinate) - Coordinate representation of parsed JSON  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| json | [<code>JSON</code>](#STARPEACE.building.Coordinate..JSON) | raw JSON object to parse into Coordinate |
+
+
+<a name="STARPEACE.building.Coordinate..JSON"></a>
+
+#### STARPEACE.building.Coordinate~JSON
+**Kind**: inner typedef of [<code>Coordinate</code>](#STARPEACE.building.Coordinate)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| x | <code>number</code> | coordinate value along x axis |
+| y | <code>number</code> | coordinate value along y axis |
 
 
 <a name="STARPEACE.industry.CityZone"></a>
@@ -2898,7 +2904,7 @@ Class representing a resource quantity and metadata
 | Name | Type | Description |
 | --- | --- | --- |
 | resource_id | <code>string</code> | identifier of resource |
-| max_velocity | <code>number</code> | maximum quantity of resource per day |
+| max_velocity | <code>number</code> | maximum quantity of resource per hour |
 | weight_efficiency | <code>number</code> | importance weight of efficiency on this quantity |
 | weight_quality | <code>number</code> | importance weight of qualityy on this quantity |
 
@@ -2947,9 +2953,9 @@ Parse raw JSON into a ResourceQuantity object
 | Name | Type | Description |
 | --- | --- | --- |
 | resource | <code>string</code> | identifier of resource |
-| max_velocity | <code>number</code> | maximum quantity of resource per day |
+| max_velocity | <code>number</code> | maximum quantity of resource per hour |
 | weight_efficiency | <code>number</code> | importance weight of efficiency on this quantity |
-| weight_quality | <code>number</code> | importance weight of qualityy on this quantity |
+| weight_quality | <code>number</code> | importance weight of quality on this quantity |
 
 
 <a name="STARPEACE.industry.ResourceType"></a>
@@ -3094,7 +3100,7 @@ Class representing metadata definition of an invention
 | properties | <code>object</code> | Properties of invention |
 
 
-* [.InventionDefinition](#STARPEACE.invention.InventionDefinition)
+* [~InventionDefinition](#STARPEACE.invention.InventionDefinition)
     * [new InventionDefinition(id)](#new_STARPEACE.invention.InventionDefinition_new)
     * _instance_
         * [.is_valid()](#STARPEACE.invention.InventionDefinition+is_valid) ⇒ <code>boolean</code>

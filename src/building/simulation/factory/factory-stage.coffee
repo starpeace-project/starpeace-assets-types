@@ -4,7 +4,6 @@ ResourceQuantity = require('../../../industry/resource-quantity')
 
 ###*
 # @typedef {object} STARPEACE.building.simulation.factory.FactoryStage~JSON
-# @extends STARPEACE.building.simulation.SimulationDefinition~JSON
 # @property {number} index - number index of stage, starting at one and increasing
 # @property {number} duration - length of stage duration in calendar hours
 # @property {STARPEACE.industry.ResourceQuantity~JSON[]} labor - labor requirements for building
@@ -16,7 +15,6 @@ ResourceQuantity = require('../../../industry/resource-quantity')
 ###*
 # Class representing factory building simulation stage metadata
 # @memberof STARPEACE.building.simulation.factory
-# @extends STARPEACE.building.simulation.SimulationDefinition
 #
 # @property {number} index - number index of stage, starting at one and increasing
 # @property {number} duration - length of stage duration in calendar hours
