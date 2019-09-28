@@ -36,8 +36,8 @@ class CompanySeal
   ###
   is_valid: () ->
     return false unless _.isString(@id) && @id.length > 0
-    return false unless @name_short?
-    return false unless @name_long?
+    return false unless _.isString(@name_short) && @name_short.length > 0
+    return false unless _.isString(@name_long) && @name_long.length > 0
     true
 
   ###*
