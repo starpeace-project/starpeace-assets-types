@@ -1,5 +1,7 @@
 _ = require('lodash')
 
+Translation = require('../language/translation')
+
 ###*
 # @typedef {object} STARPEACE.industry.CityZone~JSON
 # @property {string} id - unique identifier of zone
@@ -24,8 +26,11 @@ class CityZone
   toJSON: () ->
     {
       id: @id
+      label: @label.toJSON()
       value: @value
       color: @color
+      mini_map_color: @mini_map_color
+      included_city_zone_ids: @included_city_zone_ids
     }
 
   ###*
@@ -35,7 +40,7 @@ class CityZone
   is_valid: () ->
     return false unless _.isString(@id) && @id.length > 0
     return false unless _.isNumber(@value) && @value >= 0
-    return false unless _.isString(@color) && @color.length > 0
+    return false unless _.isNumber(@color) && @color >= 0
     true
 
   ###*
@@ -46,8 +51,11 @@ class CityZone
   @from_json = (json) ->
     zone = new CityZone()
     zone.id = json.id
+    zone.label = Translation.from_json(json.label)
     zone.value = json.value
     zone.color = json.color
+    zone.mini_map_color = json.mini_map_color
+    zone.included_city_zone_ids = json.included_city_zone_ids || []
     zone
 
 exports = module.exports = CityZone

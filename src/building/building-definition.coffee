@@ -24,7 +24,7 @@ Translation = require('../language/translation')
 # @property {string} construction_image_id - building image definition identifier to use during construction of this building
 # @property {STARPEACE.language.Translation} name - translation object with name of building
 # @property {string} zone_id - identifier for city zone of this building
-# @property {string} category_id - identifier for category of this building
+# @property {string} industry_category_id - identifier for category of this building
 # @property {string} industry_type_id - identifier for industry type of this building
 # @property {string} seal_id - identifier for seal of this building
 # @property {boolean} restricted - flag indicating whether this building is restricted from tycoon construction
@@ -50,7 +50,7 @@ class BuildingDefinition
 
     return false unless _.isString(@zone_id) && @zone_id?.length > 0
     return false unless _.isString(@seal_id) && @seal_id?.length > 0
-    return false unless _.isString(@category_id) && @category_id?.length > 0
+    return false unless _.isString(@industry_category_id) && @industry_category_id?.length > 0
     return false unless _.isString(@industry_type_id) && @industry_type_id?.length > 0
 
     true
@@ -65,7 +65,7 @@ class BuildingDefinition
       name: @name.toJSON()
       image_id: @image_id
       construction_image_id: @construction_image_id
-      category: @category_id
+      category: @industry_category_id
       seal_id: @seal_id
       industry_type: @industry_type_id
       zone: @zone_id
@@ -85,7 +85,7 @@ class BuildingDefinition
     definition.construction_image_id = json.construction_image_id
     definition.name = Translation.from_json(json.name)
     definition.zone_id = json.zone
-    definition.category_id = json.category
+    definition.industry_category_id = json.category
     definition.industry_type_id = json.industry_type
     definition.seal_id = json.seal_id
     definition.restricted = json.restricted || false
