@@ -14,9 +14,9 @@ describe('STARPEACE.seal.CompanySeal', ->
     it('should be able to create from json', ->
       JSON = {
         id: 'id'
-        name_short: 'name'
-        name_long: 'long name'
-        buildings: ['bid1', 'bid2']
+        nameShort: 'name'
+        nameLong: 'long name'
+        buildingIds: ['bid1', 'bid2']
       }
 
       seal = STARPEACE.seal.CompanySeal.from_json(JSON)

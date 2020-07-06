@@ -3,9 +3,9 @@ _ = require('lodash')
 ###*
 # @typedef {object} STARPEACE.seal.CompanySeal~JSON
 # @property {string} id - identifier of seal
-# @property {string} name_short - short name of seal
-# @property {string} name_long - long or full name of seal
-# @property {string[]} buildings - array of building definition identifiers constructable by seal
+# @property {string} nameShort - short name of seal
+# @property {string} nameLong - long or full name of seal
+# @property {string[]} buildingIds - array of building definition identifiers constructable by seal
 ###
 
 ###*
@@ -15,7 +15,7 @@ _ = require('lodash')
 # @property {string} id - Unique identifier of seal
 # @property {string} name_short - Short name for seal (same in all languages)
 # @property {string} name_long - Longer full name for seal (may be same as json.name_short; same in all languages)
-# @property {string[]} buildings - Array of building definition identifiers that can be constructed by seal
+# @property {string[]} building_ids - Array of building definition identifiers that can be constructed by seal
 ###
 class CompanySeal
   ###*
@@ -25,9 +25,9 @@ class CompanySeal
   toJSON: () ->
     {
       id: @id
-      name_short: @name_short
-      name_long: @name_long
-      buildings: @building_ids if @building_ids?.length
+      nameShort: @name_short
+      nameLong: @name_long
+      buildingIds: @building_ids if @building_ids?.length
     }
 
   ###*
@@ -48,9 +48,9 @@ class CompanySeal
   @from_json = (json) ->
     seal = new CompanySeal()
     seal.id = json.id
-    seal.name_short = json.name_short
-    seal.name_long = json.name_long
-    seal.building_ids = json.buildings || []
+    seal.name_short = json.nameShort
+    seal.name_long = json.nameLong
+    seal.building_ids = json.buildingIds || []
     seal
 
 exports = module.exports = CompanySeal

@@ -17,7 +17,7 @@ describe('STARPEACE', ->
 
       JSON = {
         id: 'id'
-        label_plural: {
+        labelPlural: {
           DE: 'de label_plural'
           EN: 'en label_plural'
           ES: 'es label_plural'

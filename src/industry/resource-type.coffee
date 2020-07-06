@@ -5,8 +5,8 @@ Translation = require('../language/translation')
 ###*
 # @typedef {object} STARPEACE.industry.ResourceType~JSON
 # @property {string} id - unique identifier of resource
-# @property {STARPEACE.language.Translation~JSON} label_plural - translation object with plural label of resource
-# @property {string} unit_id - identifier of resource unit for this resource
+# @property {STARPEACE.language.Translation~JSON} labelPlural - translation object with plural label of resource
+# @property {string} unitId - identifier of resource unit for this resource
 # @property {number} price - base price of this resource in dollars
 ###
 
@@ -28,8 +28,8 @@ class ResourceType
   toJSON: () ->
     {
       id: @id
-      label_plural: @label_plural.toJSON()
-      unit_id: @unit_id
+      labelPlural: @label_plural.toJSON()
+      unitId: @unit_id
       price: @price
     }
 
@@ -52,8 +52,8 @@ class ResourceType
   @from_json = (json) ->
     type = new ResourceType()
     type.id = json.id
-    type.label_plural = Translation.from_json(json.label_plural)
-    type.unit_id = json.unit_id
+    type.label_plural = Translation.from_json(json.labelPlural)
+    type.unit_id = json.unitId
     type.price = json.price
     type
 

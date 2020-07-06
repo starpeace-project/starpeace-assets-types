@@ -14,7 +14,7 @@ describe('STARPEACE.industry.ResourceUnit', ->
     it('should be able to create from json', ->
       JSON = {
         id: 'id'
-        label_plural: {
+        labelPlural: {
           DE: 'de label_plural'
           EN: 'en label_plural'
           ES: 'es label_plural'
@@ -27,7 +27,7 @@ describe('STARPEACE.industry.ResourceUnit', ->
       unit = STARPEACE.industry.ResourceUnit.from_json(JSON)
       assert.ok(unit)
       assert.strictEqual(unit.id, 'id')
-      assert.deepStrictEqual(unit.label_plural.toJSON(), JSON.label_plural)
+      assert.deepStrictEqual(unit.label_plural.toJSON(), JSON.labelPlural)
       assert.ok(unit.is_valid())
       assert.deepStrictEqual(unit.toJSON(), JSON)
     )

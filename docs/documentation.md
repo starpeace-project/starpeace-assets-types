@@ -2350,7 +2350,7 @@ Class representing building definition metadata
 | construction_image_id | <code>string</code> | building image definition identifier to use during construction of this building |
 | name | [<code>Translation</code>](#STARPEACE.language.Translation) | translation object with name of building |
 | zone_id | <code>string</code> | identifier for city zone of this building |
-| category_id | <code>string</code> | identifier for category of this building |
+| industry_category_id | <code>string</code> | identifier for category of this building |
 | industry_type_id | <code>string</code> | identifier for industry type of this building |
 | seal_id | <code>string</code> | identifier for seal of this building |
 | restricted | <code>boolean</code> | flag indicating whether this building is restricted from tycoon construction |
@@ -2661,7 +2661,9 @@ Class representing a city zone
 | --- | --- | --- |
 | id | <code>string</code> | unique identifier of zone |
 | value | <code>number</code> | unique numeric value of zone |
-| color | <code>string</code> | hexidecimal number value of zone color |
+| color | <code>number</code> | number value of zone color |
+| mini_map_color | <code>number</code> | number value of zone color on mini-map |
+| included_city_zone_ids | <code>Array.&lt;string&gt;</code> | Array of city zone IDs children zones |
 
 
 * [.CityZone](#STARPEACE.industry.CityZone)
@@ -2709,7 +2711,9 @@ Parse raw JSON into a CityZone object
 | --- | --- | --- |
 | id | <code>string</code> | unique identifier of zone |
 | value | <code>number</code> | unique numeric value of zone |
-| color | <code>string</code> | hexidecimal number value of zone color |
+| color | <code>number</code> | hexidecimal number value of zone color |
+| miniMapColor | <code>number</code> | number value of zone color on mini-map |
+| includedCityZoneIds | <code>Array.&lt;string&gt;</code> | Array of city zone IDs children zones |
 
 
 <a name="STARPEACE.industry.IndustryCategory"></a>
@@ -3017,8 +3021,8 @@ Parse raw JSON into a ResourceType object
 | Name | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | unique identifier of resource |
-| label_plural | [<code>JSON</code>](#STARPEACE.language.Translation..JSON) | translation object with plural label of resource |
-| unit_id | <code>string</code> | identifier of resource unit for this resource |
+| labelPlural | [<code>JSON</code>](#STARPEACE.language.Translation..JSON) | translation object with plural label of resource |
+| unitId | <code>string</code> | identifier of resource unit for this resource |
 | price | <code>number</code> | base price of this resource in dollars |
 
 
@@ -3079,7 +3083,7 @@ Parse raw JSON into a ResourceUnit object
 | Name | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | identifier of resource unit |
-| label_plural | [<code>JSON</code>](#STARPEACE.language.Translation..JSON) | translation object with plural label of unit |
+| labelPlural | [<code>JSON</code>](#STARPEACE.language.Translation..JSON) | translation object with plural label of unit |
 
 
 <a name="STARPEACE.invention.InventionDefinition"></a>
@@ -3092,7 +3096,7 @@ Class representing metadata definition of an invention
 | Name | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | Unique identifier of invention definition metadata |
-| category_id | <code>string</code> | Category of invention |
+| industry_category_id | <code>string</code> | Category of invention |
 | industry_type_id | <code>string</code> | Industry type of invention |
 | name | [<code>Translation</code>](#STARPEACE.language.Translation) | Translation object with name of invention |
 | description | [<code>Translation</code>](#STARPEACE.language.Translation) | Translation with description of invention |
@@ -3156,11 +3160,11 @@ Parse raw JSON into a InventionDefinition object
 | Name | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | identifier of invention |
-| category | <code>string</code> | category of invention |
-| industry_type | <code>string</code> | industry type of invention |
+| industryCategoryId | <code>string</code> | category of invention |
+| industryTypeId | <code>string</code> | industry type of invention |
 | name | [<code>JSON</code>](#STARPEACE.language.Translation..JSON) | translation object with name of invention |
 | description | [<code>JSON</code>](#STARPEACE.language.Translation..JSON) | translation object with description of invention |
-| depends_on | <code>Array.&lt;string&gt;</code> | array of other invention definition identifiers this depends on |
+| dependsOnIds | <code>Array.&lt;string&gt;</code> | array of other invention definition identifiers this depends on |
 | properties | <code>object</code> | properties of invention |
 
 
@@ -3244,7 +3248,7 @@ Class representing company seal, with metadata and buildings allowed defined.
 | id | <code>string</code> | Unique identifier of seal |
 | name_short | <code>string</code> | Short name for seal (same in all languages) |
 | name_long | <code>string</code> | Longer full name for seal (may be same as json.name_short; same in all languages) |
-| buildings | <code>Array.&lt;string&gt;</code> | Array of building definition identifiers that can be constructed by seal |
+| building_ids | <code>Array.&lt;string&gt;</code> | Array of building definition identifiers that can be constructed by seal |
 
 
 * [.CompanySeal](#STARPEACE.seal.CompanySeal)
@@ -3291,7 +3295,7 @@ Parse raw JSON into a CompanySeal object
 | Name | Type | Description |
 | --- | --- | --- |
 | id | <code>string</code> | identifier of seal |
-| name_short | <code>string</code> | short name of seal |
-| name_long | <code>string</code> | long or full name of seal |
-| buildings | <code>Array.&lt;string&gt;</code> | array of building definition identifiers constructable by seal |
+| nameShort | <code>string</code> | short name of seal |
+| nameLong | <code>string</code> | long or full name of seal |
+| buildingIds | <code>Array.&lt;string&gt;</code> | array of building definition identifiers constructable by seal |
 

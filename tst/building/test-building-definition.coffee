@@ -40,7 +40,7 @@ describe('STARPEACE.building.BuildingDefinition', ->
       assert.deepStrictEqual(building.name.toJSON(), JSON.name)
       assert.strictEqual(building.seal_id, JSON.seal_id)
       assert.strictEqual(building.zone_id, JSON.zone)
-      assert.strictEqual(building.category_id, JSON.category)
+      assert.strictEqual(building.industry_category_id, JSON.category)
       assert.strictEqual(building.industry_type_id, JSON.industry_type)
       assert.ok(building.restricted)
       assert.deepStrictEqual(building.required_invention_ids, JSON.required_inventions)

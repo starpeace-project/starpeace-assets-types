@@ -6,7 +6,9 @@ Translation = require('../language/translation')
 # @typedef {object} STARPEACE.industry.CityZone~JSON
 # @property {string} id - unique identifier of zone
 # @property {number} value - unique numeric value of zone
-# @property {string} color - hexidecimal number value of zone color
+# @property {number} color - hexidecimal number value of zone color
+# @property {number} miniMapColor - number value of zone color on mini-map
+# @property {string[]} includedCityZoneIds - Array of city zone IDs children zones
 ###
 
 ###*
@@ -15,7 +17,9 @@ Translation = require('../language/translation')
 #
 # @property {string} id - unique identifier of zone
 # @property {number} value - unique numeric value of zone
-# @property {string} color - hexidecimal number value of zone color
+# @property {number} color - number value of zone color
+# @property {number} mini_map_color - number value of zone color on mini-map
+# @property {string[]} included_city_zone_ids - Array of city zone IDs children zones
 ###
 class CityZone
 
@@ -29,8 +33,8 @@ class CityZone
       label: @label.toJSON()
       value: @value
       color: @color
-      mini_map_color: @mini_map_color
-      included_city_zone_ids: @included_city_zone_ids
+      miniMapColor: @mini_map_color
+      includedCityZoneIds: @included_city_zone_ids
     }
 
   ###*
@@ -54,8 +58,8 @@ class CityZone
     zone.label = Translation.from_json(json.label)
     zone.value = json.value
     zone.color = json.color
-    zone.mini_map_color = json.mini_map_color
-    zone.included_city_zone_ids = json.included_city_zone_ids || []
+    zone.mini_map_color = json.miniMapColor
+    zone.included_city_zone_ids = json.includedCityZoneIds || []
     zone
 
 exports = module.exports = CityZone

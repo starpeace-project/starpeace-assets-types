@@ -13,9 +13,19 @@ describe('STARPEACE.industry.CityZone', ->
   describe('#from_json', ->
     it('should be able to create from json', ->
       JSON = {
-        id: 'COMMERCIAL'
+        id: "COMMERCIAL"
+        label: {
+          "DE": "Kommerziell",
+          "EN": "Commercial",
+          "ES": "Comercial",
+          "FR": "Commercial",
+          "IT": "Commerciale",
+          "PT": "Comercial"
+        }
         value: 7
-        color: '0x4974D8'
+        color: 4814040
+        miniMapColor: 4814040
+        includedCityZoneIds: ["SERVICE"]
       }
 
       zone = STARPEACE.industry.CityZone.from_json(JSON)

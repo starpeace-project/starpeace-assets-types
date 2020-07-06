@@ -5,7 +5,7 @@ Translation = require('../language/translation')
 ###*
 # @typedef {object} STARPEACE.industry.ResourceUnit~JSON
 # @property {string} id - identifier of resource unit
-# @property {STARPEACE.language.Translation~JSON} label_plural - translation object with plural label of unit
+# @property {STARPEACE.language.Translation~JSON} labelPlural - translation object with plural label of unit
 ###
 
 ###*
@@ -24,7 +24,7 @@ class ResourceUnit
   toJSON: () ->
     {
       id: @id
-      label_plural: @label_plural.toJSON()
+      labelPlural: @label_plural.toJSON()
     }
 
   ###*
@@ -44,7 +44,7 @@ class ResourceUnit
   @from_json = (json) ->
     unit = new ResourceUnit()
     unit.id = json.id
-    unit.label_plural = Translation.from_json(json.label_plural)
+    unit.label_plural = Translation.from_json(json.labelPlural)
     unit
 
 exports = module.exports = ResourceUnit
