@@ -4,8 +4,8 @@ StoreProductCustomer = require('./store-product-customer')
 
 ###*
 # @typedef {object} STARPEACE.building.simulation.store.StoreProductOutput~JSON
-# @property {string} resource_id - identifier of resource type of output
-# @property {number} max_velocity - maximum amount of resource that can be sold per hour
+# @property {string} resourceId - identifier of resource type of output
+# @property {number} maxVelocity - maximum amount of resource that can be sold per hour
 # @property {STARPEACE.building.simulation.store.StoreProductCustomer~JSON[]} customers - array of store customer metadata
 ###
 
@@ -13,8 +13,8 @@ StoreProductCustomer = require('./store-product-customer')
 # Class representing store building product output
 # @memberof STARPEACE.building.simulation.store
 #
-# @property {string} resource_id - identifier of resource type of output
-# @property {number} max_velocity - maximum amount of resource that can be sold per hour
+# @property {string} resourceId - identifier of resource type of output
+# @property {number} maxVelocity - maximum amount of resource that can be sold per hour
 # @property {STARPEACE.building.simulation.store.StoreProductCustomer[]} customers - array of store customer metadata
 ###
 exports = module.exports = class StoreProductOutput
@@ -25,8 +25,8 @@ exports = module.exports = class StoreProductOutput
   ###
   toJson: () ->
     {
-      resource: @resource_id
-      max_velocity: @max_velocity
+      resourceId: @resourceId
+      maxVelocity: @maxVelocity
       customers: _.map(@customers, (c) -> c.toJson())
     }
 
@@ -35,8 +35,8 @@ exports = module.exports = class StoreProductOutput
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
   isValid: () ->
-    return false unless _.isString(@resource_id) && @resource_id.length > 0
-    return false unless _.isNumber(@max_velocity) && @max_velocity > 0
+    return false unless _.isString(@resourceId) && @resourceId.length > 0
+    return false unless _.isNumber(@maxVelocity) && @maxVelocity > 0
     return false unless Array.isArray(@customers) && (!@customers.length || _.every(@customers, (c) -> c.isValid()))
     true
 
@@ -47,7 +47,7 @@ exports = module.exports = class StoreProductOutput
   ###
   @fromJson: (json) ->
     output = new StoreProductOutput()
-    output.resource_id = json.resource
-    output.max_velocity = json.max_velocity
+    output.resourceId = json.resourceId
+    output.maxVelocity = json.maxVelocity
     output.customers = _.map(json.customers, StoreProductCustomer.fromJson)
     output

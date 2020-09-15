@@ -29,6 +29,7 @@ exports = module.exports = class CompanySeal
     return false unless _.isString(@id) && @id.length > 0
     return false unless _.isString(@nameShort) && @nameShort.length > 0
     return false unless _.isString(@nameLong) && @nameLong.length > 0
+    return false unless _.isBoolean(@playable)
     return false unless _.isArray(@descriptions) && @descriptions.length > 0 && _.every(@descriptions, (d) -> d.isValid())
     true
 
@@ -42,6 +43,7 @@ exports = module.exports = class CompanySeal
       nameShort: @nameShort
       nameLong: @nameLong
       descriptions: _.map(@descriptions, (d) -> d.toJson())
+      playable: @playable
       buildingIds: @buildingIds
     }
     json.pros = @pros.toJson() if @pros?
@@ -61,6 +63,7 @@ exports = module.exports = class CompanySeal
     seal.nameShort = json.nameShort
     seal.nameLong = json.nameLong
     seal.descriptions = _.map(json.descriptions, Translation.fromJson)
+    seal.playable = json.playable
     seal.pros = Translation.fromJson(json.pros) if json.pros?
     seal.cons = Translation.fromJson(json.cons) if json.cons?
     seal.strengths = Translation.fromJson(json.strengths) if json.strengths?

@@ -41,7 +41,7 @@ exports = module.exports = class StorageDefinition extends SimulationDefinition
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
   isValid: () ->
-    return false unless super.is_valid()
+    return false unless super.isValid()
     return false unless Array.isArray(@labor) && (!@labor.length || _.every(@labor, (i) -> i.isValid()))
     return false unless Array.isArray(@operations) && (!@operations.length || _.every(@operations, (i) -> i.isValid()))
     return false unless Array.isArray(@storage) && (!@storage.length || _.every(@storage, (i) -> i.isValid()))

@@ -67,6 +67,7 @@ describe('STARPEACE.seal.CompanySeal', ->
           IT: 'it weaknesses'
           PT: 'pt weaknesses'
         }
+        playable: true
         buildingIds: ['bid1', 'bid2']
       }
 
@@ -80,6 +81,7 @@ describe('STARPEACE.seal.CompanySeal', ->
       assert.deepStrictEqual(seal.cons.toJson(), JSON.cons)
       assert.deepStrictEqual(seal.strengths.toJson(), JSON.strengths)
       assert.deepStrictEqual(seal.weaknesses.toJson(), JSON.weaknesses)
+      assert.strictEqual(seal.playable, JSON.playable)
       assert.deepStrictEqual(seal.buildingIds, ['bid1', 'bid2'])
       assert.ok(seal.isValid())
       assert.deepStrictEqual(seal.toJson(), JSON)

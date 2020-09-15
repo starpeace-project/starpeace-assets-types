@@ -782,8 +782,8 @@ Class representing store building product output
 
 | Name | Type | Description |
 | --- | --- | --- |
-| resource_id | <code>string</code> | identifier of resource type of output |
-| max_velocity | <code>number</code> | maximum amount of resource that can be sold per hour |
+| resourceId | <code>string</code> | identifier of resource type of output |
+| maxVelocity | <code>number</code> | maximum amount of resource that can be sold per hour |
 | customers | [<code>Array.&lt;StoreProductCustomer&gt;</code>](#STARPEACE.building.simulation.store.StoreProductCustomer) | array of store customer metadata |
 
 
