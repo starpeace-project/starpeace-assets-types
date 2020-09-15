@@ -6,8 +6,8 @@ ConstructionQuantity = require('./construction-quantity')
 # @typedef {object} STARPEACE.building.simulation.SimulationDefinition~JSON
 # @property {string} id - unique identifier of building simulation
 # @property {string} type - type identifier of building simulation, mapping to child subclass simulation definitions
-# @property {number} max_level - maximum upgrade level of building
-# @property {STARPEACE.building.simulation.ConstructionQuantity~JSON[]} construction_inputs - array of input quantities required for construction
+# @property {number} maxLevel - maximum upgrade level of building
+# @property {STARPEACE.building.simulation.ConstructionQuantity~JSON[]} constructionInputs - array of input quantities required for construction
 # @property {number} prestige - prestige earned or lost per level of this building simulation
 # @property {number} maintainance - maintainance required per level of this building simulation per hour
 # @property {number} beauty - beauty earned or lost per level of this building simulation per hour
@@ -20,14 +20,14 @@ ConstructionQuantity = require('./construction-quantity')
 #
 # @property {string} id - unique identifier of building simulation
 # @property {string} type - type identifier of building simulation, mapping to child subclass simulation definitions
-# @property {number} max_level - maximum upgrade level of building
-# @property {STARPEACE.building.simulation.ConstructionQuantity[]} construction_inputs - array of input quantities required for construction
+# @property {number} maxLevel - maximum upgrade level of building
+# @property {STARPEACE.building.simulation.ConstructionQuantity[]} constructionInputs - array of input quantities required for construction
 # @property {number} prestige - prestige earned or lost per level of this building simulation
 # @property {number} maintainance - maintainance required per level of this building simulation per hour
 # @property {number} beauty - beauty earned or lost per level of this building simulation per hour
 # @property {number} pollution - pollution earned or lost per level of this building simulation per hour
 ###
-class SimulationDefinition
+exports = module.exports = class SimulationDefinition
   ###*
   # Create a SimulationDefinition object
   # @param {STARPEACE.building.simulation.SimulationDefinition~JSON} json - raw JSON object to populate into simulation definition
@@ -35,8 +35,8 @@ class SimulationDefinition
   constructor: (json) ->
     @id = json.id
     @type = json.type
-    @max_level = json.max_level
-    @construction_inputs = _.map(json.construction_inputs, ConstructionQuantity.from_json)
+    @maxLevel = json.maxLevel
+    @constructionInputs = _.map(json.constructionInputs, ConstructionQuantity.from_json)
     @prestige = json.prestige || 0
     @maintainance = json.maintainance || 0
     @beauty = json.beauty || 0
@@ -46,12 +46,12 @@ class SimulationDefinition
   # Retrieve JSON representation of object
   # @return {STARPEACE.building.simulation.SimulationDefinition~JSON} JSON representation of SimulationDefinition
   ###
-  toJSON: () ->
+  toJson: () ->
     {
       id: @id
       type: @type
-      max_level: @max_level
-      construction_inputs: _.map(@construction_inputs, (ci) -> ci.toJSON())
+      maxLevel: @maxLevel
+      constructionInputs: _.map(@constructionInputs, (ci) -> ci.toJson())
       prestige: @prestige
       maintainance: @maintainance
       beauty: @beauty
@@ -62,14 +62,12 @@ class SimulationDefinition
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
+  isValid: () ->
     return false unless _.isString(@id) && @id.length > 0
     return false unless _.isString(@type) && @type.length > 0
-    return false unless _.isNumber(@max_level) && @max_level > 0
+    return false unless _.isNumber(@maxLevel) && @maxLevel > 0
     return false unless _.isNumber(@prestige)
     return false unless _.isNumber(@maintainance)
     return false unless _.isNumber(@beauty)
     return false unless _.isNumber(@pollution)
     true
-
-exports = module.exports = SimulationDefinition

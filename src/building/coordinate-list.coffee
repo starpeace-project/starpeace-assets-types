@@ -13,7 +13,7 @@ Coordinate = require('./coordinate')
 #
 # @property {STARPEACE.building.Coordinate[]} coordinates - array of coordinate values
 ###
-class CoordinateList
+exports = module.exports = class CoordinateList
   constructor: () ->
     @coordinates = []
 
@@ -21,24 +21,22 @@ class CoordinateList
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
-    return false unless !@coordinates.length || _.every(@coordinates)
+  isValid: () ->
+    return false unless !@coordinates.length || _.every(@coordinates, (c) -> c.isValid())
     true
 
   ###*
   # Retrieve JSON representation of object
   # @return {STARPEACE.building.CoordinateList~JSON} JSON representation of CoordinateList
   ###
-  toJSON: () -> _.map(@coordinates, (c) -> c.toJSON())
+  toJson: () -> _.map(@coordinates, (c) -> c.toJson())
 
   ###*
   # Parse raw JSON into a CoordinateList object
   # @param {STARPEACE.building.CoordinateList~JSON} json - raw JSON object to parse into CoordinateList
   # @return {STARPEACE.building.CoordinateList} CoordinateList representation of parsed JSON
   ###
-  @from_json: (json) ->
+  @fromJson: (json) ->
     list = new CoordinateList()
-    list.coordinates = _.map(json, Coordinate.from_json)
+    list.coordinates = _.map(json, Coordinate.fromJson)
     list
-
-exports = module.exports = CoordinateList

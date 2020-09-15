@@ -2,57 +2,55 @@ _ = require('lodash')
 
 ###*
 # @typedef {object} STARPEACE.industry.ResourceQuantity~JSON
-# @property {string} resource - identifier of resource
-# @property {number} max_velocity - maximum quantity of resource per hour
-# @property {number} weight_efficiency - importance weight of efficiency on this quantity
-# @property {number} weight_quality - importance weight of quality on this quantity
+# @property {string} resourceId - identifier of resource
+# @property {number} maxVelocity - maximum quantity of resource per hour
+# @property {number} weightEfficiency - importance weight of efficiency on this quantity
+# @property {number} weightQuality - importance weight of quality on this quantity
 ###
 
 ###*
 # Class representing a resource quantity and metadata
 # @memberof STARPEACE.industry
 #
-# @property {string} resource_id - identifier of resource
-# @property {number} max_velocity - maximum quantity of resource per hour
-# @property {number} weight_efficiency - importance weight of efficiency on this quantity
-# @property {number} weight_quality - importance weight of qualityy on this quantity
+# @property {string} resourceId - identifier of resource
+# @property {number} maxVelocity - maximum quantity of resource per hour
+# @property {number} weightEfficiency - importance weight of efficiency on this quantity
+# @property {number} weightQuality - importance weight of qualityy on this quantity
 ###
-class ResourceQuantity
-
-  ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.industry.ResourceQuantity~JSON} JSON representation of ResourceQuantity
-  ###
-  toJSON: () ->
-    {
-      resource: @resource_id
-      max_velocity: @max_velocity
-      weight_efficiency: @weight_efficiency
-      weight_quality: @weight_quality
-    }
+exports = module.exports = class ResourceQuantity
 
   ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
-    return false unless _.isString(@resource_id) && @resource_id.length > 0
-    return false unless _.isNumber(@max_velocity) && @max_velocity > 0
-    return false unless _.isNumber(@weight_efficiency) && @weight_efficiency >= 0
-    return false unless _.isNumber(@weight_quality) && @weight_quality >= 0
+  isValid: () ->
+    return false unless _.isString(@resourceId) && @resourceId.length > 0
+    return false unless _.isNumber(@maxVelocity) && @maxVelocity > 0
+    return false unless _.isNumber(@weightEfficiency) && @weightEfficiency >= 0
+    return false unless _.isNumber(@weightQuality) && @weightQuality >= 0
     true
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.industry.ResourceQuantity~JSON} JSON representation of ResourceQuantity
+  ###
+  toJson: () ->
+    {
+      resourceId: @resourceId
+      maxVelocity: @maxVelocity
+      weightEfficiency: @weightEfficiency
+      weightQuality: @weightQuality
+    }
 
   ###*
   # Parse raw JSON into a ResourceQuantity object
   # @params {STARPEACE.industry.ResourceQuantity~JSON} json - raw JSON object to parse into ResourceQuantity
   # @return {STARPEACE.industry.ResourceQuantity} ResourceQuantity representation of parsed JSON
   ###
-  @from_json = (json) ->
+  @fromJson = (json) ->
     quantity = new ResourceQuantity()
-    quantity.resource_id = json.resource
-    quantity.max_velocity = json.max_velocity
-    quantity.weight_efficiency = if json.weight_efficiency? then json.weight_efficiency else 0
-    quantity.weight_quality = if json.weight_quality? then json.weight_quality else 0
+    quantity.resourceId = json.resourceId
+    quantity.maxVelocity = json.maxVelocity
+    quantity.weightEfficiency = if json.weightEfficiency? then json.weightEfficiency else 0
+    quantity.weightQuality = if json.weightQuality? then json.weightQuality else 0
     quantity
-
-exports = module.exports = ResourceQuantity

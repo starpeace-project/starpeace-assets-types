@@ -22,7 +22,7 @@ StoreProduct = require('./store-product')
 # @property {STARPEACE.industry.ResourceQuantity[]} operations - array of resource quantities required for building operations
 # @property {STARPEACE.building.simulation.store.StoreProduct[]} products - array of output resource products sold by building
 ###
-class StoreDefinition extends SimulationDefinition
+exports = module.exports = class StoreDefinition extends SimulationDefinition
   ###*
   # Type identifier for simulation definition
   # @static
@@ -37,40 +37,35 @@ class StoreDefinition extends SimulationDefinition
     super(json)
 
   ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.building.simulation.store.StoreDefinition~JSON} JSON representation of StoreDefinition
-  ###
-  toJSON: () ->
-    _.assign(super.toJSON(), {
-      labor: _.map(@labor, (l) -> l.toJSON())
-      operations: _.map(@operations, (o) -> o.toJSON())
-      products: _.map(@products, (p) -> p.toJSON())
-    })
-
-  ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
-    return false unless super.is_valid()
-    return false unless Array.isArray(@labor) && @labor?.length > 0
-    return false if _.find(@labor, (item) -> !item.is_valid())?
-    return false unless Array.isArray(@operations)
-    return false if @operations.length && _.find(@operations, (item) -> !item.is_valid())?
-    return false unless Array.isArray(@products) && @products?.length > 0
-    return false if _.find(@products, (item) -> !item.is_valid())?
+  isValid: () ->
+    return false unless super.isValid()
+    return false unless Array.isArray(@labor) && @labor?.length > 0 && _.every(@labor, (l) -> l.isValid())
+    return false unless Array.isArray(@operations) && (!@operations.length || _.every(@operations, (o) -> o.isValid()))
+    return false unless Array.isArray(@products) && @products?.length > 0 && _.every(@products, (p) -> p.isValid())
     true
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.building.simulation.store.StoreDefinition~JSON} JSON representation of StoreDefinition
+  ###
+  toJson: () ->
+    _.assign(super.toJson(), {
+      labor: _.map(@labor, (l) -> l.toJson())
+      operations: _.map(@operations, (o) -> o.toJson())
+      products: _.map(@products, (p) -> p.toJson())
+    })
 
   ###*
   # Parse raw JSON into a StoreDefinition object
   # @param {STARPEACE.building.simulation.store.StoreDefinition~JSON} json - raw JSON object to parse into StoreDefinition
   # @return {STARPEACE.building.simulation.store.StoreDefinition} StoreDefinition representation of parsed JSON
   ###
-  @from_json: (json) ->
+  @fromJson: (json) ->
     definition = new StoreDefinition(json)
-    definition.labor = _.map(json.labor, ResourceQuantity.from_json)
-    definition.operations = _.map(json.operations, ResourceQuantity.from_json)
-    definition.products = _.map(json.products, StoreProduct.from_json)
+    definition.labor = _.map(json.labor, ResourceQuantity.fromJson)
+    definition.operations = _.map(json.operations, ResourceQuantity.fromJson)
+    definition.products = _.map(json.products, StoreProduct.fromJson)
     definition
-
-exports = module.exports = StoreDefinition

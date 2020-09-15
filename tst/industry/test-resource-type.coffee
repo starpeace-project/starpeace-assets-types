@@ -10,7 +10,7 @@ describe('STARPEACE.industry.ResourceType', ->
       assert.ok(STARPEACE.industry.ResourceType)
     )
   )
-  describe('#from_json', ->
+  describe('#fromJson', ->
     it('should be able to create from json', ->
       JSON = {
         id: 'id'
@@ -26,14 +26,14 @@ describe('STARPEACE.industry.ResourceType', ->
         price: 12.34
       }
 
-      type = STARPEACE.industry.ResourceType.from_json(JSON)
+      type = STARPEACE.industry.ResourceType.fromJson(JSON)
       assert.ok(type)
-      assert.strictEqual(type.id, 'id')
-      assert.deepStrictEqual(type.label_plural.toJSON(), JSON.labelPlural)
-      assert.strictEqual(type.unit_id, 'unit-id')
-      assert.strictEqual(type.price, 12.34)
-      assert.ok(type.is_valid())
-      assert.deepStrictEqual(type.toJSON(), JSON)
+      assert.strictEqual(type.id, JSON.id)
+      assert.deepStrictEqual(type.labelPlural.toJson(), JSON.labelPlural)
+      assert.strictEqual(type.unitId, JSON.unitId)
+      assert.strictEqual(type.price, JSON.price)
+      assert.ok(type.isValid())
+      assert.deepStrictEqual(type.toJson(), JSON)
     )
   )
 )

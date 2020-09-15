@@ -22,7 +22,7 @@ StorageQuantity = require('./storage-quantity')
 # @property {STARPEACE.industry.ResourceQuantity[]} operations - array of resource quantities required for building operations
 # @property {STARPEACE.building.simulation.storage.StorageQuantity[]} storage - array of resource quantities stored by building
 ###
-class StorageDefinition extends SimulationDefinition
+exports = module.exports = class StorageDefinition extends SimulationDefinition
   ###*
   # Type identifier for simulation definition
   # @static
@@ -37,37 +37,35 @@ class StorageDefinition extends SimulationDefinition
     super(json)
 
   ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.building.simulation.storage.StorageDefinition~JSON} JSON representation of StorageDefinition
-  ###
-  toJSON: () ->
-    _.assign(super.toJSON(), {
-      labor: _.map(@labor, (l) -> l.toJSON())
-      operations: _.map(@operations, (o) -> o.toJSON())
-      storage: _.map(@storage, (s) -> s.toJSON())
-    })
-
-  ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
+  isValid: () ->
     return false unless super.is_valid()
-    return false unless Array.isArray(@labor) && (!@labor.length || _.every(@labor, (i) -> i.is_valid()))
-    return false unless Array.isArray(@operations) && (!@operations.length || _.every(@operations, (i) -> i.is_valid()))
-    return false unless Array.isArray(@storage) && (!@storage.length || _.every(@storage, (i) -> i.is_valid()))
+    return false unless Array.isArray(@labor) && (!@labor.length || _.every(@labor, (i) -> i.isValid()))
+    return false unless Array.isArray(@operations) && (!@operations.length || _.every(@operations, (i) -> i.isValid()))
+    return false unless Array.isArray(@storage) && (!@storage.length || _.every(@storage, (i) -> i.isValid()))
     true
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.building.simulation.storage.StorageDefinition~JSON} JSON representation of StorageDefinition
+  ###
+  toJson: () ->
+    _.assign(super.toJson(), {
+      labor: _.map(@labor, (l) -> l.toJson())
+      operations: _.map(@operations, (o) -> o.toJson())
+      storage: _.map(@storage, (s) -> s.toJson())
+    })
 
   ###*
   # Parse raw JSON into a StorageDefinition object
   # @param {STARPEACE.building.simulation.storage.StorageDefinition~JSON} json - raw JSON object to parse into StorageDefinition
   # @return {STARPEACE.building.simulation.storage.StorageDefinition} StorageDefinition representation of parsed JSON
   ###
-  @from_json: (json) ->
+  @fromJson: (json) ->
     definition = new StorageDefinition(json)
-    definition.labor = _.map(json.labor, ResourceQuantity.from_json)
-    definition.operations = _.map(json.operations, ResourceQuantity.from_json)
-    definition.storage = _.map(json.storage, StorageQuantity.from_json)
+    definition.labor = _.map(json.labor, ResourceQuantity.fromJson)
+    definition.operations = _.map(json.operations, ResourceQuantity.fromJson)
+    definition.storage = _.map(json.storage, StorageQuantity.fromJson)
     definition
-
-exports = module.exports = StorageDefinition

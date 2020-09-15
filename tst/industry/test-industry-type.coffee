@@ -10,7 +10,7 @@ describe('STARPEACE.industry.IndustryType', ->
       assert.ok(STARPEACE.industry.IndustryType)
     )
   )
-  describe('#from_json', ->
+  describe('#fromJson', ->
     it('should be able to create from json', ->
       JSON = {
         id: 'APPLIANCE',
@@ -24,12 +24,12 @@ describe('STARPEACE.industry.IndustryType', ->
         }
       }
 
-      type = STARPEACE.industry.IndustryType.from_json(JSON)
+      type = STARPEACE.industry.IndustryType.fromJson(JSON)
       assert.ok(type)
       assert.strictEqual(type.id, JSON.id)
-      assert.deepStrictEqual(type.label.toJSON(), JSON.label)
-      assert.ok(type.is_valid())
-      assert.deepStrictEqual(type.toJSON(), JSON)
+      assert.deepStrictEqual(type.label.toJson(), JSON.label)
+      assert.ok(type.isValid())
+      assert.deepStrictEqual(type.toJson(), JSON)
     )
   )
 )

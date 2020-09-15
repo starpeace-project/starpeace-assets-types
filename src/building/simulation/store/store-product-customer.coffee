@@ -4,8 +4,8 @@ ResourceQuantity = require('../../../industry/resource-quantity')
 
 ###*
 # @typedef {object} STARPEACE.building.simulation.store.StoreProductCustomer~JSON
-# @property {string} resource_id - identifier of resource type of customer
-# @property {number} max_velocity - maximum amount of resource that can be bought by customers per hour
+# @property {string} resourceId - identifier of resource type of customer
+# @property {number} maxVelocity - maximum amount of resource that can be bought by customers per hour
 # @property {number} probability - base probability customers will purchase products per hour
 ###
 
@@ -13,43 +13,41 @@ ResourceQuantity = require('../../../industry/resource-quantity')
 # Class representing store building customer metadata
 # @memberof STARPEACE.building.simulation.store
 #
-# @property {string} resource_id - identifier of resource type of customer
-# @property {number} max_velocity - maximum amount of resource that can be bought by customers per hour
+# @property {string} resourceId - identifier of resource type of customer
+# @property {number} maxVelocity - maximum amount of resource that can be bought by customers per hour
 # @property {number} probability - base probability customers will purchase products per hour
 ###
-class StoreProductCustomer
-
-  ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.building.simulation.store.StoreProductCustomer~JSON} JSON representation of StoreProductCustomer
-  ###
-  toJSON: () ->
-    {
-      resource: @resource_id
-      max_velocity: @max_velocity
-      probability: @probability
-    }
+exports = module.exports = class StoreProductCustomer
 
   ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
-    return false unless _.isString(@resource_id) && @resource_id.length > 0
-    return false unless _.isNumber(@max_velocity) && @max_velocity > 0
+  isValid: () ->
+    return false unless _.isString(@resourceId) && @resourceId.length > 0
+    return false unless _.isNumber(@maxVelocity) && @maxVelocity > 0
     return false unless _.isNumber(@probability) && @probability > 0 && @probability <= 1.0
     true
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.building.simulation.store.StoreProductCustomer~JSON} JSON representation of StoreProductCustomer
+  ###
+  toJson: () ->
+    {
+      resourceId: @resourceId
+      maxVelocity: @maxVelocity
+      probability: @probability
+    }
 
   ###*
   # Parse raw JSON into a StoreProductCustomer object
   # @param {STARPEACE.building.simulation.store.StoreProductCustomer~JSON} json - raw JSON object to parse into StoreProductCustomer
   # @return {STARPEACE.building.simulation.store.StoreProductCustomer} StoreProductCustomer representation of parsed JSON
   ###
-  @from_json: (json) ->
+  @fromJson: (json) ->
     customer = new StoreProductCustomer()
-    customer.resource_id = json.resource
-    customer.max_velocity = json.max_velocity
+    customer.resourceId = json.resourceId
+    customer.maxVelocity = json.maxVelocity
     customer.probability = json.probability
     customer
-
-exports = module.exports = StoreProductCustomer

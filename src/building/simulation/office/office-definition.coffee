@@ -20,7 +20,7 @@ ResourceQuantity = require('../../../industry/resource-quantity')
 # @property {number} capacity - capacity of resource for which building provides offices
 # @property {number} efficiency - base efficiency of building
 ###
-class OfficeDefinition extends SimulationDefinition
+exports = module.exports = class OfficeDefinition extends SimulationDefinition
   ###*
   # Type identifier for simulation definition
   # @static
@@ -35,38 +35,35 @@ class OfficeDefinition extends SimulationDefinition
     super(json)
 
   ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.building.simulation.office.OfficeDefinition~JSON} JSON representation of OfficeDefinition
-  ###
-  toJSON: () ->
-    _.assign(super.toJSON(), {
-      labor: _.map(@labor, (l) -> l.toJSON())
-      efficiency: @efficiency
-      capacity: @capacity
-    })
-
-  ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
-    return false unless super.is_valid()
-    return false unless Array.isArray(@labor) && @labor?.length > 0 && _.every(@label, (l) -> l.is_valid())
+  isValid: () ->
+    return false unless super.isValid()
+    return false unless Array.isArray(@labor) && @labor?.length > 0 && _.every(@label, (l) -> l.isValid())
     return false unless _.isNumber(@efficiency) && @efficiency > 0 && @efficiency <= 1.0
     return false unless _.isNumber(@capacity) && @capacity > 0
-
     true
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.building.simulation.office.OfficeDefinition~JSON} JSON representation of OfficeDefinition
+  ###
+  toJson: () ->
+    _.assign(super.toJson(), {
+      labor: _.map(@labor, (l) -> l.toJson())
+      efficiency: @efficiency
+      capacity: @capacity
+    })
 
   ###*
   # Parse raw JSON into a OfficeDefinition object
   # @param {STARPEACE.building.simulation.office.OfficeDefinition~JSON} json - raw JSON object to parse into OfficeDefinition
   # @return {STARPEACE.building.simulation.office.OfficeDefinition} OfficeDefinition representation of parsed JSON
   ###
-  @from_json: (json) ->
+  @fromJson: (json) ->
     definition = new OfficeDefinition(json)
-    definition.labor = _.map(json.labor, ResourceQuantity.from_json)
+    definition.labor = _.map(json.labor, ResourceQuantity.fromJson)
     definition.efficiency = json.efficiency
     definition.capacity = json.capacity
     definition
-
-exports = module.exports = OfficeDefinition

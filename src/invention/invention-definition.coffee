@@ -18,32 +18,27 @@ Translation = require('../language/translation')
 # @memberof STARPEACE.invention
 #
 # @property {string} id - Unique identifier of invention definition metadata
-# @property {string} industry_category_id - Category of invention
-# @property {string} industry_type_id - Industry type of invention
+# @property {string} industryCategoryId - Category of invention
+# @property {string} industryTypeId - Industry type of invention
 # @property {STARPEACE.language.Translation} name - Translation object with name of invention
 # @property {STARPEACE.language.Translation} description - Translation with description of invention
-# @property {string[]} depends_on_ids - Array of other invention definition identifiers this depends on
+# @property {string[]} dependsOnIds - Array of other invention definition identifiers this depends on
 # @property {object} properties - Properties of invention
 ###
-class InventionDefinition
-  ###*
-  # Create an InventionDefinition object
-  # @param {string} id - unique identifier of invention definition metadata
-  ###
-  constructor: (@id) ->
+exports = module.exports = class InventionDefinition
 
   ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
+  isValid: () ->
     return false unless @id?.length > 0
 
-    return false unless @industry_category_id?.length > 0
-    return false unless @industry_type_id?.length > 0
+    return false unless @industryCategoryId?.length > 0
+    return false unless @industryTypeId?.length > 0
 
-    return false unless @name?.is_valid()
-    return false unless @description?.is_valid()
+    return false unless @name?.isValid()
+    return false unless @description?.isValid()
 
     # TODO: validate @properties
     true
@@ -52,14 +47,14 @@ class InventionDefinition
   # Retrieve JSON representation of object
   # @return {STARPEACE.invention.InventionDefinition~JSON} JSON representation of InventionDefinition
   ###
-  toJSON: () ->
+  toJson: () ->
     {
       id: @id
-      industryCategoryId: @industry_category_id
-      industryTypeId: @industry_type_id
-      name: @name.toJSON()
-      description: @description.toJSON()
-      dependsOnIds: @depends_on_ids
+      industryCategoryId: @industryCategoryId
+      industryTypeId: @industryTypeId
+      name: @name?.toJson()
+      description: @description?.toJson()
+      dependsOnIds: @dependsOnIds
       properties: @properties
     }
 
@@ -68,15 +63,13 @@ class InventionDefinition
   # @params {STARPEACE.invention.InventionDefinition~JSON} json - raw JSON object to parse into InventionDefinition
   # @return {STARPEACE.invention.InventionDefinition} InventionDefinition representation of parsed JSON
   ###
-  @from_json: (json) ->
-    definition = new InventionDefinition(json.id)
-    definition.industry_category_id = json.industryCategoryId
-    definition.industry_type_id = json.industryTypeId
-    definition.name = Translation.from_json(json.name)
-    definition.description = Translation.from_json(json.description)
-    definition.depends_on_ids = json.dependsOnIds || []
+  @fromJson: (json) ->
+    definition = new InventionDefinition()
+    definition.id = json.id
+    definition.industryCategoryId = json.industryCategoryId
+    definition.industryTypeId = json.industryTypeId
+    definition.name = Translation.fromJson(json.name)
+    definition.description = Translation.fromJson(json.description)
+    definition.dependsOnIds = json.dependsOnIds || []
     definition.properties = json.properties || {}
-
     definition
-
-exports = module.exports = InventionDefinition

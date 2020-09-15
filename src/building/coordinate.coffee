@@ -13,7 +13,7 @@ _ = require('lodash')
 # @property {number} x - coordinate value along x axis
 # @property {number} y - coordinate value along y axis
 ###
-class Coordinate
+exports = module.exports = class Coordinate
   ###*
   # Create a Coordinate object
   # @param {number} x - coordinate value along x axis
@@ -25,7 +25,7 @@ class Coordinate
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
+  isValid: () ->
     return false unless _.isNumber(@x)
     return false unless _.isNumber(@y)
     true
@@ -34,7 +34,7 @@ class Coordinate
   # Retrieve JSON representation of object
   # @return {STARPEACE.building.Coordinate~JSON} JSON representation of Coordinate
   ###
-  toJSON: () ->
+  toJson: () ->
     {
       x: @x
       y: @y
@@ -45,6 +45,4 @@ class Coordinate
   # @param {STARPEACE.building.Coordinate~JSON} json - raw JSON object to parse into Coordinate
   # @return {STARPEACE.building.Coordinate} Coordinate representation of parsed JSON
   ###
-  @from_json: (json) -> new Coordinate(json.x, json.y)
-
-exports = module.exports = Coordinate
+  @fromJson: (json) -> new Coordinate(json.x, json.y)

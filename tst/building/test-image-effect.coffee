@@ -10,7 +10,7 @@ describe('STARPEACE.building.ImageEffect', ->
       assert.ok(STARPEACE.building.ImageEffect)
     )
   )
-  describe('#from_json', ->
+  describe('#fromJson', ->
     it('should be able to create from json', ->
       JSON = {
         x: 0.78125
@@ -18,13 +18,13 @@ describe('STARPEACE.building.ImageEffect', ->
         type:"smoke.dark"
       }
 
-      effect = STARPEACE.building.ImageEffect.from_json(JSON)
+      effect = STARPEACE.building.ImageEffect.fromJson(JSON)
       assert.ok(effect)
       assert.strictEqual(effect.type, JSON.type)
       assert.strictEqual(effect.x, JSON.x)
       assert.strictEqual(effect.y, JSON.y)
-      assert.ok(effect.is_valid())
-      assert.deepStrictEqual(effect.toJSON(), JSON)
+      assert.ok(effect.isValid())
+      assert.deepStrictEqual(effect.toJson(), JSON)
     )
   )
 )

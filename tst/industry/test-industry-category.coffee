@@ -10,7 +10,7 @@ describe('STARPEACE.industry.IndustryCategory', ->
       assert.ok(STARPEACE.industry.IndustryCategory)
     )
   )
-  describe('#from_json', ->
+  describe('#fromJson', ->
     it('should be able to create from json', ->
       JSON = {
         id: 'NONE',
@@ -24,12 +24,12 @@ describe('STARPEACE.industry.IndustryCategory', ->
         }
       }
 
-      category = STARPEACE.industry.IndustryCategory.from_json(JSON)
+      category = STARPEACE.industry.IndustryCategory.fromJson(JSON)
       assert.ok(category)
       assert.strictEqual(category.id, JSON.id)
-      assert.deepStrictEqual(category.label.toJSON(), JSON.label)
-      assert.ok(category.is_valid())
-      assert.deepStrictEqual(category.toJSON(), JSON)
+      assert.deepStrictEqual(category.label.toJson(), JSON.label)
+      assert.ok(category.isValid())
+      assert.deepStrictEqual(category.toJson(), JSON)
     )
   )
 )

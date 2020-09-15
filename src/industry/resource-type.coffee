@@ -15,46 +15,44 @@ Translation = require('../language/translation')
 # @memberof STARPEACE.industry
 #
 # @property {string} id - Unique identifier of resource
-# @property {STARPEACE.language.Translation} label_plural - Translation with plural label of resource
-# @property {string} unit_id - Unique identifier of resource unit for this resource
+# @property {STARPEACE.language.Translation} labelPlural - Translation with plural label of resource
+# @property {string} unitId - Unique identifier of resource unit for this resource
 # @property {number} price - Base price of this resource in dollars
 ###
-class ResourceType
-
-  ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.industry.ResourceType~JSON} JSON representation of ResourceType
-  ###
-  toJSON: () ->
-    {
-      id: @id
-      labelPlural: @label_plural.toJSON()
-      unitId: @unit_id
-      price: @price
-    }
+exports = module.exports = class ResourceType
 
   ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
+  isValid: () ->
     return false unless _.isString(@id) && @id.length > 0
-    return false unless @label_plural?.is_valid()
-    return false unless _.isString(@unit_id) && @unit_id.length > 0
+    return false unless @labelPlural?.isValid()
+    return false unless _.isString(@unitId) && @unitId.length > 0
     return false unless _.isNumber(@price) && @price >= 0
     true
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.industry.ResourceType~JSON} JSON representation of ResourceType
+  ###
+  toJson: () ->
+    {
+      id: @id
+      labelPlural: @labelPlural?.toJson()
+      unitId: @unitId
+      price: @price
+    }
 
   ###*
   # Parse raw JSON into a ResourceType object
   # @params {STARPEACE.industry.ResourceType~JSON} json - raw JSON object to parse into ResourceType
   # @return {STARPEACE.industry.ResourceType} ResourceType representation of parsed JSON
   ###
-  @from_json = (json) ->
+  @fromJson = (json) ->
     type = new ResourceType()
     type.id = json.id
-    type.label_plural = Translation.from_json(json.labelPlural)
-    type.unit_id = json.unitId
+    type.labelPlural = Translation.fromJson(json.labelPlural)
+    type.unitId = json.unitId
     type.price = json.price
     type
-
-exports = module.exports = ResourceType

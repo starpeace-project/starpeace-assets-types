@@ -10,7 +10,7 @@ describe('STARPEACE.industry.Level', ->
       assert.ok(STARPEACE.industry.Level)
     )
   )
-  describe('#from_json', ->
+  describe('#fromJson', ->
     it('should be able to create from json', ->
       JSON = {
         id: 'ENTREPRENEUR'
@@ -25,13 +25,13 @@ describe('STARPEACE.industry.Level', ->
         level: 2
       }
 
-      level = STARPEACE.industry.Level.from_json(JSON)
+      level = STARPEACE.industry.Level.fromJson(JSON)
       assert.ok(level)
       assert.strictEqual(level.id, JSON.id)
-      assert.deepStrictEqual(level.label.toJSON(), JSON.label)
+      assert.deepStrictEqual(level.label.toJson(), JSON.label)
       assert.strictEqual(level.level, JSON.level)
-      assert.ok(level.is_valid())
-      assert.deepStrictEqual(level.toJSON(), JSON)
+      assert.ok(level.isValid())
+      assert.deepStrictEqual(level.toJson(), JSON)
     )
   )
 )

@@ -15,13 +15,13 @@ _ = require('lodash')
 # @property {number} x - horizontal percent offset of effect image relative building image
 # @property {string} y - vertical percent offset of effect image relative building image
 ###
-class ImageEffect
+exports = module.exports = class ImageEffect
 
   ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
+  isValid: () ->
     return false unless @type?.length > 0
     return false unless @x >= 0 && @x <= 1.0
     return false unless @y >= 0 && @y <= 1.0
@@ -31,7 +31,7 @@ class ImageEffect
   # Retrieve JSON representation of object
   # @return {STARPEACE.building.ImageEffect~JSON} JSON representation of ImageEffect
   ###
-  toJSON: () ->
+  toJson: () ->
     {
       type: @type
       x: @x
@@ -43,11 +43,9 @@ class ImageEffect
   # @param {STARPEACE.building.ImageEffect~JSON} json - raw JSON object to parse into ImageEffect
   # @return {STARPEACE.building.ImageEffect} ImageEffect representation of parsed JSON
   ###
-  @from_json: (json) ->
+  @fromJson: (json) ->
     effect = new ImageEffect()
     effect.type = json.type
     effect.x = json.x
     effect.y = json.y
     effect
-
-exports = module.exports = ImageEffect

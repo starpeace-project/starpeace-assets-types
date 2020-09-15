@@ -26,12 +26,13 @@ describe('STARPEACE', ->
           PT: 'pt label_plural'
         }
       }
-      unit = STARPEACE.industry.ResourceUnit.from_json(JSON)
+
+      unit = STARPEACE.industry.ResourceUnit.fromJson(JSON)
       assert.ok(unit)
-      assert.strictEqual(unit.id, 'id')
-      assert.ok(unit.label_plural)
-      assert.ok(unit.is_valid())
-      assert.deepStrictEqual(unit.toJSON(), JSON)
+      assert.strictEqual(unit.id, JSON.id)
+      assert.deepStrictEqual(unit.labelPlural.toJson(), JSON.labelPlural)
+      assert.ok(unit.isValid())
+      assert.deepStrictEqual(unit.toJson(), JSON)
     )
   )
 )

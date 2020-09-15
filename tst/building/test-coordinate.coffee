@@ -10,19 +10,19 @@ describe('STARPEACE.building.Coordinate', ->
       assert.ok(STARPEACE.building.Coordinate)
     )
   )
-  describe('#from_json', ->
+  describe('#fromJson', ->
     it('should be able to create from json', ->
       JSON = {
         x: 73
         y: 52
       }
 
-      coordinate = STARPEACE.building.Coordinate.from_json(JSON)
+      coordinate = STARPEACE.building.Coordinate.fromJson(JSON)
       assert.ok(coordinate)
       assert.strictEqual(coordinate.x, JSON.x)
       assert.strictEqual(coordinate.y, JSON.y)
-      assert.ok(coordinate.is_valid())
-      assert.deepStrictEqual(coordinate.toJSON(), JSON)
+      assert.ok(coordinate.isValid())
+      assert.deepStrictEqual(coordinate.toJson(), JSON)
     )
   )
 )

@@ -10,7 +10,7 @@ describe('STARPEACE.seal.InventionDefinition', ->
       assert.ok(STARPEACE.invention.InventionDefinition)
     )
   )
-  describe('#from_json', ->
+  describe('#fromJson', ->
     it('should be able to create from json', ->
       JSON = {
         id: 'id'
@@ -38,15 +38,15 @@ describe('STARPEACE.seal.InventionDefinition', ->
         }
       }
 
-      invention = STARPEACE.invention.InventionDefinition.from_json(JSON)
+      invention = STARPEACE.invention.InventionDefinition.fromJson(JSON)
       assert.ok(invention)
-      assert.strictEqual(invention.id, 'id')
-      assert.strictEqual(invention.industry_category_id, 'category')
-      assert.strictEqual(invention.industry_type_id, 'industry')
-      assert.deepStrictEqual(invention.name.toJSON(), JSON.name)
-      assert.deepStrictEqual(invention.depends_on_ids, ['id1', 'id2'])
-      assert.ok(invention.is_valid())
-      assert.deepStrictEqual(invention.toJSON(), JSON)
+      assert.strictEqual(invention.id, JSON.id)
+      assert.strictEqual(invention.industryCategoryId, JSON.industryCategoryId)
+      assert.strictEqual(invention.industryTypeId, JSON.industryTypeId)
+      assert.deepStrictEqual(invention.name.toJson(), JSON.name)
+      assert.deepStrictEqual(invention.dependsOnIds, ['id1', 'id2'])
+      assert.ok(invention.isValid())
+      assert.deepStrictEqual(invention.toJson(), JSON)
     )
   )
 )

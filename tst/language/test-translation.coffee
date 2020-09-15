@@ -10,7 +10,7 @@ describe('STARPEACE.language.Translation', ->
       assert.ok(STARPEACE.language.Translation)
     )
   )
-  describe('#from_json', ->
+  describe('#fromJson', ->
     it('should be able to create from json', ->
       JSON = {
         DE: 'de german'
@@ -21,7 +21,7 @@ describe('STARPEACE.language.Translation', ->
         PT: 'pt portuguese'
       }
 
-      translation = STARPEACE.language.Translation.from_json(JSON)
+      translation = STARPEACE.language.Translation.fromJson(JSON)
       assert.ok(translation)
       assert.strictEqual(translation.german, JSON.DE)
       assert.strictEqual(translation.english, JSON.EN)
@@ -29,8 +29,8 @@ describe('STARPEACE.language.Translation', ->
       assert.strictEqual(translation.french, JSON.FR)
       assert.strictEqual(translation.italian, JSON.IT)
       assert.strictEqual(translation.portuguese, JSON.PT)
-      assert.ok(translation.is_valid())
-      assert.deepStrictEqual(translation.toJSON(), JSON)
+      assert.ok(translation.isValid())
+      assert.deepStrictEqual(translation.toJson(), JSON)
     )
   )
 )

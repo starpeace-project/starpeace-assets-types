@@ -16,7 +16,7 @@ ResourceQuantity = require('../../../industry/resource-quantity')
 #
 # @property {STARPEACE.industry.ResourceQuantity[]} labor - labor requirements for building
 ###
-class BankDefinition extends SimulationDefinition
+exports = module.exports = class BankDefinition extends SimulationDefinition
   ###*
   # Type identifier for simulation definition
   # @static
@@ -31,32 +31,29 @@ class BankDefinition extends SimulationDefinition
     super(json)
 
   ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.building.simulation.bank.BankDefinition~JSON} JSON representation of BankDefinition
-  ###
-  toJSON: () ->
-    _.assign(super.toJSON(), {
-      labor: _.map(@labor, (l) -> l.toJSON())
-    })
-
-  ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
-    return false unless super.is_valid()
-    return false unless Array.isArray(@labor) && @labor?.length > 0 && _.every(@labor, (item) -> item.is_valid())
-
+  isValid: () ->
+    return false unless super.isValid()
+    return false unless Array.isArray(@labor) && @labor?.length > 0 && _.every(@labor, (l) -> l.isValid())
     true
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.building.simulation.bank.BankDefinition~JSON} JSON representation of BankDefinition
+  ###
+  toJson: () ->
+    _.assign(super.toJson(), {
+      labor: _.map(@labor, (l) -> l.toJSON())
+    })
 
   ###*
   # Parse raw JSON into a BankDefinition object
   # @param {STARPEACE.building.simulation.bank.BankDefinition~JSON} json - raw JSON object to parse into BankDefinition
   # @return {STARPEACE.building.simulation.bank.BankDefinition} BankDefinition representation of parsed JSON
   ###
-  @from_json: (json) ->
+  @fromJson: (json) ->
     definition = new BankDefinition(json)
-    definition.labor = _.map(json.labor, ResourceQuantity.from_json)
+    definition.labor = _.map(json.labor, ResourceQuantity.fromJson)
     definition
-
-exports = module.exports = BankDefinition

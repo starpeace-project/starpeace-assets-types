@@ -21,13 +21,26 @@ _ = require('lodash')
 # @property {string} italian - Italian translation value
 # @property {string} portuguese - Portuguese translation value
 ###
-class Translation
+exports = module.exports = class Translation
+
+  ###*
+  # Determine whether object and game configuration has valid attributes.
+  # @return {boolean} true if object has valid configuration, false otherwise
+  ###
+  isValid: () ->
+    return false unless _.isString(@german) && @german.length > 0
+    return false unless _.isString(@english) && @english.length > 0
+    return false unless _.isString(@spanish) && @spanish.length > 0
+    return false unless _.isString(@french) && @french.length > 0
+    return false unless _.isString(@italian) && @italian.length > 0
+    return false unless _.isString(@portuguese) && @portuguese.length > 0
+    true
 
   ###*
   # Retrieve JSON representation of object
   # @return {STARPEACE.language.Translation~JSON} JSON representation of Translation
   ###
-  toJSON: () ->
+  toJson: () ->
     {
       DE: @german
       EN: @english
@@ -38,24 +51,11 @@ class Translation
     }
 
   ###*
-  # Determine whether object and game configuration has valid attributes.
-  # @return {boolean} true if object has valid configuration, false otherwise
-  ###
-  is_valid: () ->
-    return false unless _.isString(@german) && @german.length > 0
-    return false unless _.isString(@english) && @english.length > 0
-    return false unless _.isString(@spanish) && @spanish.length > 0
-    return false unless _.isString(@french) && @french.length > 0
-    return false unless _.isString(@italian) && @italian.length > 0
-    return false unless _.isString(@portuguese) && @portuguese.length > 0
-    true
-
-  ###*
   # Parse raw JSON into a Translation object
   # @params {STARPEACE.language.Translation~JSON} json - raw JSON object to parse into Translation
   # @return {STARPEACE.language.Translation} Translation representation of parsed JSON
   ###
-  @from_json = (json) ->
+  @fromJson = (json) ->
     translation = new Translation()
     translation.german = json.DE
     translation.english = json.EN
@@ -64,5 +64,3 @@ class Translation
     translation.italian = json.IT
     translation.portuguese = json.PT
     translation
-
-exports = module.exports = Translation

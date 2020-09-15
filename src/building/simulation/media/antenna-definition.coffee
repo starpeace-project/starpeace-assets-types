@@ -18,7 +18,7 @@ ResourceQuantity = require('../../../industry/resource-quantity')
 # @property {STARPEACE.industry.ResourceQuantity[]} labor - labor requirements for building
 # @property {number} range - tile range building can reach
 ###
-class AntennaDefinition extends SimulationDefinition
+exports = module.exports = class AntennaDefinition extends SimulationDefinition
   ###*
   # Type identifier for simulation definition
   # @static
@@ -36,9 +36,9 @@ class AntennaDefinition extends SimulationDefinition
   # Retrieve JSON representation of object
   # @return {STARPEACE.building.simulation.media.AntennaDefinition~JSON} JSON representation of AntennaDefinition
   ###
-  toJSON: () ->
-    _.assign(super.toJSON(), {
-      labor: _.map(@labor, (l) -> l.toJSON())
+  toJson: () ->
+    _.assign(super.toJson(), {
+      labor: _.map(@labor, (l) -> l.toJson())
       range: @range
     })
 
@@ -46,11 +46,10 @@ class AntennaDefinition extends SimulationDefinition
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
-    return false unless super.is_valid()
-    return false unless Array.isArray(@labor) && @labor?.length > 0 && _.every(@labor, (l) -> l.is_valid())
+  isValid: () ->
+    return false unless super.isValid()
+    return false unless Array.isArray(@labor) && @labor?.length > 0 && _.every(@labor, (l) -> l.isValid())
     return false unless _.isNumber(@range) && @range > 0
-
     true
 
   ###*
@@ -58,10 +57,8 @@ class AntennaDefinition extends SimulationDefinition
   # @param {STARPEACE.building.simulation.media.AntennaDefinition~JSON} json - raw JSON object to parse into AntennaDefinition
   # @return {STARPEACE.building.simulation.media.AntennaDefinition} AntennaDefinition representation of parsed JSON
   ###
-  @from_json: (json) ->
+  @fromJson: (json) ->
     definition = new AntennaDefinition(json)
-    definition.labor = _.map(json.labor, ResourceQuantity.from_json)
+    definition.labor = _.map(json.labor, ResourceQuantity.fromJson)
     definition.range = json.range
     definition
-
-exports = module.exports = AntennaDefinition

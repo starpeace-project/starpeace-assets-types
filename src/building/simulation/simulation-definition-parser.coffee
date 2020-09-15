@@ -24,7 +24,7 @@ DEFINITIONS_BY_TYPE = _.keyBy(DEFINITIONS, (def) -> def.TYPE())
 # Class used to parse simulation definition json into simulation definitions
 # @memberof STARPEACE.building.simulation
 ###
-class SimulationDefinitionParser
+exports = module.exports = class SimulationDefinitionParser
 
   ###*
   # Parse raw JSON into a simulation definition object
@@ -65,8 +65,6 @@ class SimulationDefinitionParser
     STARPEACE.building.simulation.store.StoreDefinition
   } simulation definition representation of parsed JSON
   ###
-  @from_json: (json) ->
-    return DEFINITIONS_BY_TYPE[json.type].from_json(json) if DEFINITIONS_BY_TYPE[json.type]?
+  @fromJson: (json) ->
+    return DEFINITIONS_BY_TYPE[json.type].fromJson(json) if DEFINITIONS_BY_TYPE[json.type]?
     throw "unknown simulation type #{json.type}"
-
-exports = module.exports = SimulationDefinitionParser

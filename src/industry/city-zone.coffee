@@ -18,48 +18,46 @@ Translation = require('../language/translation')
 # @property {string} id - unique identifier of zone
 # @property {number} value - unique numeric value of zone
 # @property {number} color - number value of zone color
-# @property {number} mini_map_color - number value of zone color on mini-map
-# @property {string[]} included_city_zone_ids - Array of city zone IDs children zones
+# @property {number} miniMapColor - number value of zone color on mini-map
+# @property {string[]} includedCityZoneIds - Array of city zone IDs children zones
 ###
-class CityZone
-
-  ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.industry.CityZone~JSON} JSON representation of CityZone
-  ###
-  toJSON: () ->
-    {
-      id: @id
-      label: @label.toJSON()
-      value: @value
-      color: @color
-      miniMapColor: @mini_map_color
-      includedCityZoneIds: @included_city_zone_ids
-    }
+exports = module.exports = class CityZone
 
   ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
+  isValid: () ->
     return false unless _.isString(@id) && @id.length > 0
     return false unless _.isNumber(@value) && @value >= 0
     return false unless _.isNumber(@color) && @color >= 0
     true
 
   ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.industry.CityZone~JSON} JSON representation of CityZone
+  ###
+  toJson: () ->
+    {
+      id: @id
+      label: @label?.toJson()
+      value: @value
+      color: @color
+      miniMapColor: @miniMapColor
+      includedCityZoneIds: @includedCityZoneIds
+    }
+
+  ###*
   # Parse raw JSON into a CityZone object
   # @params {STARPEACE.industry.CityZone~JSON} json - raw JSON object to parse into CityZone
   # @return {STARPEACE.industry.CityZone} CityZone representation of parsed JSON
   ###
-  @from_json = (json) ->
+  @fromJson = (json) ->
     zone = new CityZone()
     zone.id = json.id
-    zone.label = Translation.from_json(json.label)
+    zone.label = Translation.fromJson(json.label)
     zone.value = json.value
     zone.color = json.color
-    zone.mini_map_color = json.miniMapColor
-    zone.included_city_zone_ids = json.includedCityZoneIds || []
+    zone.miniMapColor = json.miniMapColor
+    zone.includedCityZoneIds = json.includedCityZoneIds || []
     zone
-
-exports = module.exports = CityZone

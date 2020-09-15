@@ -16,7 +16,7 @@ SimulationDefinition = require('../simulation-definition')
 #
 # @property {STARPEACE.building.simulation.factory.FactoryStage[]} stages - each stage of factory production
 ###
-class FactoryDefinition extends SimulationDefinition
+exports = module.exports = class FactoryDefinition extends SimulationDefinition
   ###*
   # Type identifier for simulation definition
   # @static
@@ -31,31 +31,29 @@ class FactoryDefinition extends SimulationDefinition
     super(json)
 
   ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.building.simulation.factory.FactoryDefinition~JSON} JSON representation of FactoryDefinition
-  ###
-  toJSON: () ->
-    _.assign(super.toJSON(), {
-      stages: _.map(@stages, (s) -> s.toJSON())
-    })
-
-  ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
-    return false unless super.is_valid()
-    return false unless Array.isArray(@stages) && @stages?.length > 0 && _.every(@stages, (s) -> s.is_valid())
+  isValid: () ->
+    return false unless super.isValid()
+    return false unless Array.isArray(@stages) && @stages?.length > 0 && _.every(@stages, (s) -> s.isValid())
     true
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.building.simulation.factory.FactoryDefinition~JSON} JSON representation of FactoryDefinition
+  ###
+  toJson: () ->
+    _.assign(super.toJson(), {
+      stages: _.map(@stages, (s) -> s.toJson())
+    })
 
   ###*
   # Parse raw JSON into a FactoryDefinition object
   # @param {STARPEACE.building.simulation.factory.FactoryDefinition~JSON} json - raw JSON object to parse into FactoryDefinition
   # @return {STARPEACE.building.simulation.factory.FactoryDefinition} FactoryDefinition representation of parsed JSON
   ###
-  @from_json: (json) ->
+  @fromJson: (json) ->
     definition = new FactoryDefinition(json)
-    definition.stages = _.map(json.stages, FactoryStage.from_json)
+    definition.stages = _.map(json.stages, FactoryStage.fromJson)
     definition
-
-exports = module.exports = FactoryDefinition

@@ -1,5 +1,7 @@
 _ = require('lodash')
 
+Translation = require('../language/translation')
+
 ###*
 # @typedef {object} STARPEACE.seal.CompanySeal~JSON
 # @property {string} id - identifier of seal
@@ -13,44 +15,55 @@ _ = require('lodash')
 # @memberof STARPEACE.seal
 #
 # @property {string} id - Unique identifier of seal
-# @property {string} name_short - Short name for seal (same in all languages)
-# @property {string} name_long - Longer full name for seal (may be same as json.name_short; same in all languages)
-# @property {string[]} building_ids - Array of building definition identifiers that can be constructed by seal
+# @property {string} nameShort - Short name for seal (same in all languages)
+# @property {string} nameLong - Longer full name for seal (may be same as json.name_short; same in all languages)
+# @property {string[]} buildingIds - Array of building definition identifiers that can be constructed by seal
 ###
-class CompanySeal
-  ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.seal.CompanySeal~JSON} JSON representation of CompanySeal
-  ###
-  toJSON: () ->
-    {
-      id: @id
-      nameShort: @name_short
-      nameLong: @name_long
-      buildingIds: @building_ids if @building_ids?.length
-    }
+exports = module.exports = class CompanySeal
 
   ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
+  isValid: () ->
     return false unless _.isString(@id) && @id.length > 0
-    return false unless _.isString(@name_short) && @name_short.length > 0
-    return false unless _.isString(@name_long) && @name_long.length > 0
+    return false unless _.isString(@nameShort) && @nameShort.length > 0
+    return false unless _.isString(@nameLong) && @nameLong.length > 0
+    return false unless _.isArray(@descriptions) && @descriptions.length > 0 && _.every(@descriptions, (d) -> d.isValid())
     true
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.seal.CompanySeal~JSON} JSON representation of CompanySeal
+  ###
+  toJson: () ->
+    json = {
+      id: @id
+      nameShort: @nameShort
+      nameLong: @nameLong
+      descriptions: _.map(@descriptions, (d) -> d.toJson())
+      buildingIds: @buildingIds
+    }
+    json.pros = @pros.toJson() if @pros?
+    json.cons = @cons.toJson() if @cons?
+    json.strengths = @strengths.toJson() if @strengths?
+    json.weaknesses = @weaknesses.toJson() if @weaknesses?
+    json
 
   ###*
   # Parse raw JSON into a CompanySeal object
   # @params {STARPEACE.seal.CompanySeal~JSON} json - raw JSON object to parse into CompanySeal
   # @return {STARPEACE.seal.CompanySeal} CompanySeal representation of parsed JSON
   ###
-  @from_json = (json) ->
+  @fromJson = (json) ->
     seal = new CompanySeal()
     seal.id = json.id
-    seal.name_short = json.nameShort
-    seal.name_long = json.nameLong
-    seal.building_ids = json.buildingIds || []
+    seal.nameShort = json.nameShort
+    seal.nameLong = json.nameLong
+    seal.descriptions = _.map(json.descriptions, Translation.fromJson)
+    seal.pros = Translation.fromJson(json.pros) if json.pros?
+    seal.cons = Translation.fromJson(json.cons) if json.cons?
+    seal.strengths = Translation.fromJson(json.strengths) if json.strengths?
+    seal.weaknesses = Translation.fromJson(json.weaknesses) if json.weaknesses?
+    seal.buildingIds = json.buildingIds || []
     seal
-
-exports = module.exports = CompanySeal

@@ -15,36 +15,34 @@ Translation = require('../language/translation')
 # @property {string} id - unique identifier of industry category
 # @property {STARPEACE.language.Translation} label - translation with label of industry
 ###
-class IndustryCategory
-
-  ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.industry.IndustryCategory~JSON} JSON representation of IndustryCategory
-  ###
-  toJSON: () ->
-    {
-      id: @id
-      label: @label.toJSON()
-    }
+exports = module.exports = class IndustryCategory
 
   ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
+  isValid: () ->
     return false unless _.isString(@id) && @id.length > 0
-    return false unless @label?.is_valid()
+    return false unless @label?.isValid()
     true
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.industry.IndustryCategory~JSON} JSON representation of IndustryCategory
+  ###
+  toJson: () ->
+    {
+      id: @id
+      label: @label?.toJson()
+    }
 
   ###*
   # Parse raw JSON into a IndustryCategory object
   # @params {STARPEACE.industry.IndustryCategory~JSON} json - raw JSON object to parse into IndustryCategory
   # @return {STARPEACE.industry.IndustryCategory} IndustryCategory representation of parsed JSON
   ###
-  @from_json = (json) ->
+  @fromJson = (json) ->
     category = new IndustryCategory()
     category.id = json.id
-    category.label = Translation.from_json(json.label)
+    category.label = Translation.fromJson(json.label)
     category
-
-exports = module.exports = IndustryCategory

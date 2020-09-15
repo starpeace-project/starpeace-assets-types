@@ -10,7 +10,7 @@ describe('STARPEACE.industry.CityZone', ->
       assert.ok(STARPEACE.industry.CityZone)
     )
   )
-  describe('#from_json', ->
+  describe('#fromJson', ->
     it('should be able to create from json', ->
       JSON = {
         id: "COMMERCIAL"
@@ -28,13 +28,15 @@ describe('STARPEACE.industry.CityZone', ->
         includedCityZoneIds: ["SERVICE"]
       }
 
-      zone = STARPEACE.industry.CityZone.from_json(JSON)
+      zone = STARPEACE.industry.CityZone.fromJson(JSON)
       assert.ok(zone)
       assert.strictEqual(zone.id, JSON.id)
       assert.strictEqual(zone.value, JSON.value)
       assert.strictEqual(zone.color, JSON.color)
-      assert.ok(zone.is_valid())
-      assert.deepStrictEqual(zone.toJSON(), JSON)
+      assert.strictEqual(zone.miniMapColor, JSON.miniMapColor)
+      assert.strictEqual(zone.includedCityZoneIds, JSON.includedCityZoneIds)
+      assert.ok(zone.isValid())
+      assert.deepStrictEqual(zone.toJson(), JSON)
     )
   )
 )

@@ -13,38 +13,36 @@ Translation = require('../language/translation')
 # @memberof STARPEACE.industry
 #
 # @property {string} id Unique identifier of resource unit
-# @property {STARPEACE.language.Translation} label_plural Translation with plural label of unit
+# @property {STARPEACE.language.Translation} labelPlural Translation with plural label of unit
 ###
-class ResourceUnit
-
-  ###*
-  # Retrieve JSON representation of object
-  # @return {STARPEACE.industry.ResourceUnit~JSON} JSON representation of ResourceUnit
-  ###
-  toJSON: () ->
-    {
-      id: @id
-      labelPlural: @label_plural.toJSON()
-    }
+exports = module.exports = class ResourceUnit
 
   ###*
   # Determine whether object and game configuration has valid attributes.
   # @return {boolean} true if object has valid configuration, false otherwise
   ###
-  is_valid: () ->
+  isValid: () ->
     return false unless _.isString(@id) && @id.length > 0
-    return false unless @label_plural?.is_valid()
+    return false unless @labelPlural?.isValid()
     true
+
+  ###*
+  # Retrieve JSON representation of object
+  # @return {STARPEACE.industry.ResourceUnit~JSON} JSON representation of ResourceUnit
+  ###
+  toJson: () ->
+    {
+      id: @id
+      labelPlural: @labelPlural?.toJson()
+    }
 
   ###*
   # Parse raw JSON into a ResourceUnit object
   # @params {STARPEACE.industry.ResourceUnit~JSON} json - raw JSON object to parse into ResourceUnit
   # @return {STARPEACE.industry.ResourceUnit} ResourceUnit representation of parsed JSON
   ###
-  @from_json = (json) ->
+  @fromJson = (json) ->
     unit = new ResourceUnit()
     unit.id = json.id
-    unit.label_plural = Translation.from_json(json.labelPlural)
+    unit.labelPlural = Translation.fromJson(json.labelPlural)
     unit
-
-exports = module.exports = ResourceUnit

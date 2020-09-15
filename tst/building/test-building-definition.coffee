@@ -10,12 +10,12 @@ describe('STARPEACE.building.BuildingDefinition', ->
       assert.ok(STARPEACE.building.BuildingDefinition)
     )
   )
-  describe('#from_json', ->
+  describe('#fromJson', ->
     it('should be able to create from json', ->
       JSON = {
         id: "generic.capitol"
-        image_id: "generic.capitol"
-        construction_image_id: "generic.construction.7"
+        imageId: "generic.capitol"
+        constructionImageId: "generic.construction.7"
         name: {
           "DE": "Kapitol",
           "EN": "Capitol",
@@ -24,28 +24,28 @@ describe('STARPEACE.building.BuildingDefinition', ->
           "IT": "Campidoglio",
           "PT": "Capitólio"
         }
-        seal_id: "GEN"
-        zone: "CIVICS"
-        category: "CIVIC"
-        industry_type: "GOVERNMENT"
+        sealId: "GEN"
+        zoneId: "CIVICS"
+        industryCategoryId: "CIVIC"
+        industryTypeId: "GOVERNMENT"
         restricted: true
-        required_inventions: ['invention1', 'invention2']
+        requiredInventionIds: ['invention1', 'invention2']
       }
 
-      building = STARPEACE.building.BuildingDefinition.from_json(JSON)
+      building = STARPEACE.building.BuildingDefinition.fromJson(JSON)
       assert.ok(building)
       assert.strictEqual(building.id, JSON.id)
-      assert.strictEqual(building.image_id, JSON.image_id)
-      assert.strictEqual(building.construction_image_id, JSON.construction_image_id)
-      assert.deepStrictEqual(building.name.toJSON(), JSON.name)
-      assert.strictEqual(building.seal_id, JSON.seal_id)
-      assert.strictEqual(building.zone_id, JSON.zone)
-      assert.strictEqual(building.industry_category_id, JSON.category)
-      assert.strictEqual(building.industry_type_id, JSON.industry_type)
+      assert.strictEqual(building.imageId, JSON.imageId)
+      assert.strictEqual(building.constructionImageId, JSON.constructionImageId)
+      assert.deepStrictEqual(building.name.toJson(), JSON.name)
+      assert.strictEqual(building.sealId, JSON.sealId)
+      assert.strictEqual(building.zoneId, JSON.zoneId)
+      assert.strictEqual(building.industryCategoryId, JSON.industryCategoryId)
+      assert.strictEqual(building.industryTypeId, JSON.industryTypeId)
       assert.ok(building.restricted)
-      assert.deepStrictEqual(building.required_invention_ids, JSON.required_inventions)
-      assert.ok(building.is_valid())
-      assert.deepStrictEqual(building.toJSON(), JSON)
+      assert.deepStrictEqual(building.requiredInventionIds, JSON.requiredInventionIds)
+      assert.ok(building.isValid())
+      assert.deepStrictEqual(building.toJson(), JSON)
     )
   )
 )
