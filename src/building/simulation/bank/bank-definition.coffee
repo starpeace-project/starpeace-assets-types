@@ -45,7 +45,7 @@ exports = module.exports = class BankDefinition extends SimulationDefinition
   ###
   toJson: () ->
     _.assign(super.toJson(), {
-      labor: _.map(@labor, (l) -> l.toJSON())
+      labor: _.map(@labor, (l) -> l.toJson())
     })
 
   ###*

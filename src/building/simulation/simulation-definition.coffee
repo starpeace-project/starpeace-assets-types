@@ -36,7 +36,7 @@ exports = module.exports = class SimulationDefinition
     @id = json.id
     @type = json.type
     @maxLevel = json.maxLevel
-    @constructionInputs = _.map(json.constructionInputs, ConstructionQuantity.from_json)
+    @constructionInputs = _.map(json.constructionInputs, ConstructionQuantity.fromJson)
     @prestige = json.prestige || 0
     @maintainance = json.maintainance || 0
     @beauty = json.beauty || 0
