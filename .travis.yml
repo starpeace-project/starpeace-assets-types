@@ -21,4 +21,5 @@ cache:
     - node_modules
 
 script:
+  - npm test
   - grunt documentation

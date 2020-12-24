@@ -67,6 +67,9 @@
                 * [.StoreProductCustomer](#STARPEACE.building.simulation.store.StoreProductCustomer)
                     * [~JSON](#STARPEACE.building.simulation.store.StoreProductCustomer..JSON) : <code>object</code>
                 * [.ResourceQuantity](#STARPEACE.building.simulation.store.ResourceQuantity)
+    * .effect
+        * [.EffectDefinition](#STARPEACE.effect.EffectDefinition)
+            * [~JSON](#STARPEACE.effect.EffectDefinition..JSON) : <code>object</code>
     * .industry
         * [.CityZone](#STARPEACE.industry.CityZone)
             * [~JSON](#STARPEACE.industry.CityZone..JSON) : <code>object</code>
@@ -91,6 +94,9 @@
     * .seal
         * [.CompanySeal](#STARPEACE.seal.CompanySeal)
             * [~JSON](#STARPEACE.seal.CompanySeal..JSON) : <code>object</code>
+    * .sign
+        * [.SignDefinition](#STARPEACE.sign.SignDefinition)
+            * [~JSON](#STARPEACE.sign.SignDefinition..JSON) : <code>object</code>
 
 
 <a name="STARPEACE.building.BuildingDefinition"></a>
@@ -814,6 +820,40 @@ Class representing store building simulation product outputs
 | outputs | <code>Array.&lt;STARPEACE.building.simulation.store.StoreProductOutput&gt;</code> | array of output resource quantities |
 
 
+<a name="STARPEACE.effect.EffectDefinition"></a>
+
+### STARPEACE.effect.EffectDefinition
+Class representing building effect definition
+
+**Kind**: static property of [<code>effect</code>](#STARPEACE.effect)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | identifier of effect |
+| image | <code>string</code> | image path of asset |
+| width | <code>number</code> | width of effect asset |
+| height | <code>number</code> | height of effect asset |
+| sourceX | <code>number</code> | x coordinate of origin within asset |
+| sourceY | <code>number</code> | y coordinate of origin within asset |
+
+
+<a name="STARPEACE.effect.EffectDefinition..JSON"></a>
+
+#### STARPEACE.effect.EffectDefinition~JSON
+**Kind**: inner typedef of [<code>EffectDefinition</code>](#STARPEACE.effect.EffectDefinition)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | identifier of effect |
+| image | <code>string</code> | image path of asset |
+| width | <code>number</code> | width of effect asset |
+| height | <code>number</code> | height of effect asset |
+| sourceX | <code>number</code> | x coordinate of origin within asset |
+| sourceY | <code>number</code> | y coordinate of origin within asset |
+
+
 <a name="STARPEACE.industry.CityZone"></a>
 
 ### STARPEACE.industry.CityZone
@@ -1110,4 +1150,34 @@ Class representing company seal, with metadata and buildings allowed defined.
 | nameShort | <code>string</code> | short name of seal |
 | nameLong | <code>string</code> | long or full name of seal |
 | buildingIds | <code>Array.&lt;string&gt;</code> | array of building definition identifiers constructable by seal |
+
+
+<a name="STARPEACE.sign.SignDefinition"></a>
+
+### STARPEACE.sign.SignDefinition
+Class representing building sign definition
+
+**Kind**: static property of [<code>sign</code>](#STARPEACE.sign)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | identifier of sign |
+| image | <code>string</code> | image path of asset |
+| width | <code>number</code> | width of sign asset |
+| height | <code>number</code> | height of sign asset |
+
+
+<a name="STARPEACE.sign.SignDefinition..JSON"></a>
+
+#### STARPEACE.sign.SignDefinition~JSON
+**Kind**: inner typedef of [<code>SignDefinition</code>](#STARPEACE.sign.SignDefinition)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | identifier of sign |
+| image | <code>string</code> | image path of asset |
+| width | <code>number</code> | width of sign asset |
+| height | <code>number</code> | height of sign asset |
 

@@ -43,6 +43,9 @@
 # @namespace STARPEACE.building.simulation.store
 ###
 ###*
+# @namespace STARPEACE.effect
+###
+###*
 # @namespace STARPEACE.industry
 ###
 ###*
@@ -53,6 +56,9 @@
 ###
 ###*
 # @namespace STARPEACE.seal
+###
+###*
+# @namespace STARPEACE.sign
 ###
 
 exports = module.exports = {
@@ -114,6 +120,10 @@ exports = module.exports = {
     ImageEffect: require('./building/image-effect')
   }
 
+  effect: {
+    EffectDefinition: require('./effect/effect-definition')
+  }
+
   industry: {
     CityZone: require('./industry/city-zone')
     IndustryCategory: require('./industry/industry-category')
@@ -131,8 +141,12 @@ exports = module.exports = {
   language: {
     Translation: require('./language/translation')
   }
+
   seal: {
     CompanySeal: require('./seal/company-seal')
   }
 
+  sign: {
+    SignDefinition: require('./sign/sign-definition')
+  }
 }
