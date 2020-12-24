@@ -67,6 +67,9 @@
                 * [.StoreProductCustomer](#STARPEACE.building.simulation.store.StoreProductCustomer)
                     * [~JSON](#STARPEACE.building.simulation.store.StoreProductCustomer..JSON) : <code>object</code>
                 * [.ResourceQuantity](#STARPEACE.building.simulation.store.ResourceQuantity)
+    * .concrete
+        * [.ConcreteDefinition](#STARPEACE.concrete.ConcreteDefinition)
+            * [~JSON](#STARPEACE.concrete.ConcreteDefinition..JSON) : <code>object</code>
     * .effect
         * [.EffectDefinition](#STARPEACE.effect.EffectDefinition)
             * [~JSON](#STARPEACE.effect.EffectDefinition..JSON) : <code>object</code>
@@ -91,6 +94,12 @@
     * .language
         * [.Translation](#STARPEACE.language.Translation)
             * [~JSON](#STARPEACE.language.Translation..JSON) : <code>object</code>
+    * .overlay
+        * [.OverlayDefinition](#STARPEACE.overlay.OverlayDefinition)
+            * [~JSON](#STARPEACE.overlay.OverlayDefinition..JSON) : <code>object</code>
+    * .road
+        * [.RoadDefinition](#STARPEACE.road.RoadDefinition)
+            * [~JSON](#STARPEACE.road.RoadDefinition..JSON) : <code>object</code>
     * .seal
         * [.CompanySeal](#STARPEACE.seal.CompanySeal)
             * [~JSON](#STARPEACE.seal.CompanySeal..JSON) : <code>object</code>
@@ -820,6 +829,32 @@ Class representing store building simulation product outputs
 | outputs | <code>Array.&lt;STARPEACE.building.simulation.store.StoreProductOutput&gt;</code> | array of output resource quantities |
 
 
+<a name="STARPEACE.concrete.ConcreteDefinition"></a>
+
+### STARPEACE.concrete.ConcreteDefinition
+Class representing concrete metadata
+
+**Kind**: static property of [<code>concrete</code>](#STARPEACE.concrete)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | Unique identifier of concrete asset |
+| image | <code>string</code> | image path of asset |
+
+
+<a name="STARPEACE.concrete.ConcreteDefinition..JSON"></a>
+
+#### STARPEACE.concrete.ConcreteDefinition~JSON
+**Kind**: inner typedef of [<code>ConcreteDefinition</code>](#STARPEACE.concrete.ConcreteDefinition)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | identifier of asset |
+| image | <code>string</code> | image path of asset |
+
+
 <a name="STARPEACE.effect.EffectDefinition"></a>
 
 ### STARPEACE.effect.EffectDefinition
@@ -1122,6 +1157,62 @@ Class representing a multi-language translation
 | PT | <code>object</code> | Portuguese translation value |
 
 
+<a name="STARPEACE.overlay.OverlayDefinition"></a>
+
+### STARPEACE.overlay.OverlayDefinition
+Class representing overlay metadata
+
+**Kind**: static property of [<code>overlay</code>](#STARPEACE.overlay)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | Unique identifier of overlay asset |
+| image | <code>string</code> | image path of asset |
+| tileWidth | <code>string</code> | width of asset in tiles |
+| tileHeight | <code>string</code> | height of asset in tiles |
+
+
+<a name="STARPEACE.overlay.OverlayDefinition..JSON"></a>
+
+#### STARPEACE.overlay.OverlayDefinition~JSON
+**Kind**: inner typedef of [<code>OverlayDefinition</code>](#STARPEACE.overlay.OverlayDefinition)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | identifier of asset |
+| image | <code>string</code> | image path of asset |
+| tileWidth | <code>string</code> | width of asset in tiles |
+| tileHeight | <code>string</code> | height of asset in tiles |
+
+
+<a name="STARPEACE.road.RoadDefinition"></a>
+
+### STARPEACE.road.RoadDefinition
+Class representing road metadata
+
+**Kind**: static property of [<code>road</code>](#STARPEACE.road)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | Unique identifier of road asset |
+| image | <code>string</code> | image path of asset |
+
+
+<a name="STARPEACE.road.RoadDefinition..JSON"></a>
+
+#### STARPEACE.road.RoadDefinition~JSON
+**Kind**: inner typedef of [<code>RoadDefinition</code>](#STARPEACE.road.RoadDefinition)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | identifier of asset |
+| image | <code>string</code> | image path of asset |
+
+
 <a name="STARPEACE.seal.CompanySeal"></a>
 
 ### STARPEACE.seal.CompanySeal
@@ -1166,6 +1257,8 @@ Class representing building sign definition
 | image | <code>string</code> | image path of asset |
 | width | <code>number</code> | width of sign asset |
 | height | <code>number</code> | height of sign asset |
+| sourceX | <code>number</code> | x coordinate of origin within asset |
+| sourceY | <code>number</code> | y coordinate of origin within asset |
 
 
 <a name="STARPEACE.sign.SignDefinition..JSON"></a>
@@ -1180,4 +1273,6 @@ Class representing building sign definition
 | image | <code>string</code> | image path of asset |
 | width | <code>number</code> | width of sign asset |
 | height | <code>number</code> | height of sign asset |
+| sourceX | <code>number</code> | x coordinate of origin within asset |
+| sourceY | <code>number</code> | y coordinate of origin within asset |
 

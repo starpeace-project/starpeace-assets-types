@@ -6,6 +6,8 @@ _ = require('lodash')
 # @property {string} image - image path of asset
 # @property {number} width - width of sign asset
 # @property {number} height - height of sign asset
+# @property {number} sourceX - x coordinate of origin within asset
+# @property {number} sourceY - y coordinate of origin within asset
 ###
 
 ###*
@@ -16,6 +18,8 @@ _ = require('lodash')
 # @property {string} image - image path of asset
 # @property {number} width - width of sign asset
 # @property {number} height - height of sign asset
+# @property {number} sourceX - x coordinate of origin within asset
+# @property {number} sourceY - y coordinate of origin within asset
 ###
 exports = module.exports = class SignDefinition
 
@@ -28,6 +32,8 @@ exports = module.exports = class SignDefinition
     return false unless _.isString(@image) && @image.length > 0
     return false unless _.isNumber(@width) && @width > 0
     return false unless _.isNumber(@height) && @height > 0
+    return false unless _.isNumber(@sourceX)
+    return false unless _.isNumber(@sourceY)
     true
 
   ###*
@@ -40,6 +46,8 @@ exports = module.exports = class SignDefinition
       image: @image
       width: @width
       height: @height
+      sourceX: @sourceX
+      sourceY: @sourceY
     }
 
   ###*
@@ -53,4 +61,6 @@ exports = module.exports = class SignDefinition
     sign.image = json.image
     sign.width = json.width
     sign.height = json.height
+    sign.sourceX = json.sourceX
+    sign.sourceY = json.sourceY
     sign

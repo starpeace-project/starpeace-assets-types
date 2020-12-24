@@ -18,6 +18,8 @@ describe('STARPEACE.sign.SignDefinition', ->
         image: 'image.gif'
         width: 16
         height: 16
+        sourceX: 4
+        sourceY: 4
       }
 
       sign = STARPEACE.sign.SignDefinition.fromJson(JSON)
@@ -26,6 +28,8 @@ describe('STARPEACE.sign.SignDefinition', ->
       assert.strictEqual(sign.image, JSON.image)
       assert.strictEqual(sign.width, JSON.width)
       assert.strictEqual(sign.height, JSON.height)
+      assert.strictEqual(sign.sourceX, JSON.sourceX)
+      assert.strictEqual(sign.sourceY, JSON.sourceY)
       assert.ok(sign.isValid())
       assert.deepStrictEqual(sign.toJson(), JSON)
     )

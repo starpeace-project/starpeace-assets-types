@@ -43,6 +43,9 @@
 # @namespace STARPEACE.building.simulation.store
 ###
 ###*
+# @namespace STARPEACE.concrete
+###
+###*
 # @namespace STARPEACE.effect
 ###
 ###*
@@ -53,6 +56,12 @@
 ###
 ###*
 # @namespace STARPEACE.language
+###
+###*
+# @namespace STARPEACE.overlay
+###
+###*
+# @namespace STARPEACE.road
 ###
 ###*
 # @namespace STARPEACE.seal
@@ -120,6 +129,10 @@ exports = module.exports = {
     ImageEffect: require('./building/image-effect')
   }
 
+  concrete: {
+    ConcreteDefinition: require('./concrete/concrete-definition')
+  }
+
   effect: {
     EffectDefinition: require('./effect/effect-definition')
   }
@@ -140,6 +153,14 @@ exports = module.exports = {
 
   language: {
     Translation: require('./language/translation')
+  }
+
+  overlay: {
+    OverlayDefinition: require('./overlay/overlay-definition')
+  }
+
+  road: {
+    RoadDefinition: require('./road/road-definition')
   }
 
   seal: {
