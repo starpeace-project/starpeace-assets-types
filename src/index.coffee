@@ -61,6 +61,9 @@
 # @namespace STARPEACE.overlay
 ###
 ###*
+# @namespace STARPEACE.plane
+###
+###*
 # @namespace STARPEACE.road
 ###
 ###*
@@ -157,6 +160,10 @@ exports = module.exports = {
 
   overlay: {
     OverlayDefinition: require('./overlay/overlay-definition')
+  }
+
+  plane: {
+    PlaneDefinition: require('./plane/plane-definition')
   }
 
   road: {

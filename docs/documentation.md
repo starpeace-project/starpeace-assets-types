@@ -97,6 +97,9 @@
     * .overlay
         * [.OverlayDefinition](#STARPEACE.overlay.OverlayDefinition)
             * [~JSON](#STARPEACE.overlay.OverlayDefinition..JSON) : <code>object</code>
+    * .plane
+        * [.PlaneDefinition](#STARPEACE.plane.PlaneDefinition)
+            * [~JSON](#STARPEACE.plane.PlaneDefinition..JSON) : <code>object</code>
     * .road
         * [.RoadDefinition](#STARPEACE.road.RoadDefinition)
             * [~JSON](#STARPEACE.road.RoadDefinition..JSON) : <code>object</code>
@@ -1185,6 +1188,36 @@ Class representing overlay metadata
 | image | <code>string</code> | image path of asset |
 | tileWidth | <code>string</code> | width of asset in tiles |
 | tileHeight | <code>string</code> | height of asset in tiles |
+
+
+<a name="STARPEACE.plane.PlaneDefinition"></a>
+
+### STARPEACE.plane.PlaneDefinition
+Class representing plane metadata
+
+**Kind**: static property of [<code>plane</code>](#STARPEACE.plane)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | Unique identifier of plane asset |
+| image | <code>string</code> | image path of asset |
+| width | <code>number</code> | width of plane asset |
+| height | <code>number</code> | height of plane asset |
+
+
+<a name="STARPEACE.plane.PlaneDefinition..JSON"></a>
+
+#### STARPEACE.plane.PlaneDefinition~JSON
+**Kind**: inner typedef of [<code>PlaneDefinition</code>](#STARPEACE.plane.PlaneDefinition)
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | identifier of asset |
+| image | <code>string</code> | image path of asset |
+| width | <code>number</code> | width of plane asset |
+| height | <code>number</code> | height of plane asset |
 
 
 <a name="STARPEACE.road.RoadDefinition"></a>
