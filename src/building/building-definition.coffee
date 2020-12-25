@@ -15,6 +15,7 @@ Translation = require('../language/translation')
 # @property {string} sealId - identifier for seal of this building
 # @property {boolean} restricted - flag indicating whether this building is restricted from tycoon construction
 # @property {string[]} requiredInventionIds - array of invention definition identifiers that must be researched before construction of this building
+# @property {string[]} allowedInventionIds - array of invention definition identifiers that are allowed for research after construction of this building
 ###
 
 ###*
@@ -32,6 +33,7 @@ Translation = require('../language/translation')
 # @property {string} sealId - identifier for seal of this building
 # @property {boolean} restricted - flag indicating whether this building is restricted from tycoon construction
 # @property {string[]} requiredInventionIds - array of invention definition identifiers that must be researched before construction of this building
+# @property {string[]} allowedInventionIds - array of invention definition identifiers that are allowed for research after construction of this building
 ###
 exports = module.exports = class BuildingDefinition
 
@@ -71,6 +73,7 @@ exports = module.exports = class BuildingDefinition
     json.signId = @signId if @signId?.length
     json.restricted = true if @restricted
     json.requiredInventionIds = @requiredInventionIds if @requiredInventionIds?.length
+    json.allowedInventionIds = @allowedInventionIds if @allowedInventionIds?.length
     json
 
   ###*
@@ -91,4 +94,5 @@ exports = module.exports = class BuildingDefinition
     definition.sealId = json.sealId
     definition.restricted = json.restricted || false
     definition.requiredInventionIds = json.requiredInventionIds || []
+    definition.allowedInventionIds = json.allowedInventionIds || []
     definition

@@ -31,6 +31,7 @@ describe('STARPEACE.building.BuildingDefinition', ->
         industryTypeId: "GOVERNMENT"
         restricted: true
         requiredInventionIds: ['invention1', 'invention2']
+        allowedInventionIds: ['invention3', 'invention4']
       }
 
       building = STARPEACE.building.BuildingDefinition.fromJson(JSON)
@@ -46,6 +47,7 @@ describe('STARPEACE.building.BuildingDefinition', ->
       assert.strictEqual(building.industryTypeId, JSON.industryTypeId)
       assert.ok(building.restricted)
       assert.deepStrictEqual(building.requiredInventionIds, JSON.requiredInventionIds)
+      assert.deepStrictEqual(building.allowedInventionIds, JSON.allowedInventionIds)
       assert.ok(building.isValid())
       assert.deepStrictEqual(building.toJson(), JSON)
     )

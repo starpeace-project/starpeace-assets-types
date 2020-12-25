@@ -132,6 +132,7 @@ Class representing building definition metadata
 | sealId | <code>string</code> | identifier for seal of this building |
 | restricted | <code>boolean</code> | flag indicating whether this building is restricted from tycoon construction |
 | requiredInventionIds | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that must be researched before construction of this building |
+| allowedInventionIds | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that are allowed for research after construction of this building |
 
 
 <a name="STARPEACE.building.BuildingDefinition..JSON"></a>
@@ -153,6 +154,7 @@ Class representing building definition metadata
 | sealId | <code>string</code> | identifier for seal of this building |
 | restricted | <code>boolean</code> | flag indicating whether this building is restricted from tycoon construction |
 | requiredInventionIds | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that must be researched before construction of this building |
+| allowedInventionIds | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that are allowed for research after construction of this building |
 
 
 <a name="STARPEACE.building.BuildingImageDefinition"></a>
