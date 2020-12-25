@@ -28,7 +28,8 @@ describe('STARPEACE.building.BuildingImageDefinition', ->
         effects: [
           {"x":0.515625,"y":0.0326,"type":"smoke.dark"},
           {"x":0.78125,"y":0.21739,"type":"smoke.dark"}
-        ]
+        ],
+        "signPosition": {"x":0.78125,"y":0.21739}
       }
 
       image = STARPEACE.building.BuildingImageDefinition.fromJson(JSON)
@@ -39,6 +40,7 @@ describe('STARPEACE.building.BuildingImageDefinition', ->
       assert.strictEqual(image.tileHeight, JSON.tileHeight)
       assert.deepStrictEqual(_.map(image.hitArea, (cl) -> cl.toJson()), JSON.hitArea)
       assert.deepStrictEqual(_.map(image.effects, (e) -> e.toJson()), JSON.effects)
+      assert.deepStrictEqual(image.signPosition.toJson(), JSON.signPosition)
       assert.ok(image.isValid())
       assert.deepStrictEqual(image.toJson(), JSON)
     )

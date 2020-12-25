@@ -123,6 +123,7 @@ Class representing building definition metadata
 | --- | --- | --- |
 | id | <code>string</code> | unique identifier for building definition |
 | imageId | <code>string</code> | default building image definition identifier for this building |
+| signId | <code>string</code> | identifier for sign of this building |
 | constructionImageId | <code>string</code> | building image definition identifier to use during construction of this building |
 | name | [<code>Translation</code>](#STARPEACE.language.Translation) | translation object with name of building |
 | zoneId | <code>string</code> | identifier for city zone of this building |
@@ -143,6 +144,7 @@ Class representing building definition metadata
 | --- | --- | --- |
 | id | <code>string</code> | unique identifier for building definition |
 | imageId | <code>string</code> | default building image definition identifier for this building |
+| signId | <code>string</code> | identifier for sign of this building |
 | constructionImageId | <code>string</code> | building image definition identifier to use during construction of this building |
 | name | [<code>JSON</code>](#STARPEACE.language.Translation..JSON) | translation object with name of building |
 | zoneId | <code>string</code> | identifier for city zone of this building |
@@ -169,6 +171,7 @@ Class representing image metadata for a building definition
 | tileHeight | <code>number</code> | height of building in game tiles |
 | hitArea | <code>Array.&lt;STARPEACE.building.CoordinateList&gt;</code> | array of coordinate lists representing vertices of each polygon making up building hit area |
 | effects | [<code>Array.&lt;ImageEffect&gt;</code>](#STARPEACE.building.ImageEffect) | array of image effects for building |
+| signPosition | [<code>JSON</code>](#STARPEACE.building.Coordinate..JSON) | origin position for sign |
 
 
 <a name="STARPEACE.building.BuildingImageDefinition..JSON"></a>
@@ -185,6 +188,7 @@ Class representing image metadata for a building definition
 | tileHeight | <code>number</code> | height of building in game tiles |
 | hitArea | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.CoordinateList..JSON) | array of coordinate lists representing vertices of each polygon making up building hit area |
 | effects | [<code>Array.&lt;JSON&gt;</code>](#STARPEACE.building.ImageEffect..JSON) | array of image effects for building |
+| signPosition | [<code>JSON</code>](#STARPEACE.building.Coordinate..JSON) | origin position for sign |
 
 
 <a name="STARPEACE.building.Coordinate"></a>

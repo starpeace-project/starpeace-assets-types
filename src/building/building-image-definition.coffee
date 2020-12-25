@@ -1,5 +1,6 @@
 _ = require('lodash')
 
+Coordinate = require('./coordinate')
 CoordinateList = require('./coordinate-list')
 ImageEffect = require('./image-effect')
 
@@ -11,6 +12,7 @@ ImageEffect = require('./image-effect')
 # @property {number} tileHeight - height of building in game tiles
 # @property {STARPEACE.building.CoordinateList~JSON[]} hitArea - array of coordinate lists representing vertices of each polygon making up building hit area
 # @property {STARPEACE.building.ImageEffect~JSON[]} effects - array of image effects for building
+# @property {STARPEACE.building.Coordinate~JSON} signPosition - origin position for sign
 ###
 
 ###*
@@ -23,6 +25,7 @@ ImageEffect = require('./image-effect')
 # @property {number} tileHeight - height of building in game tiles
 # @property {STARPEACE.building.CoordinateList[]} hitArea - array of coordinate lists representing vertices of each polygon making up building hit area
 # @property {STARPEACE.building.ImageEffect[]} effects - array of image effects for building
+# @property {STARPEACE.building.Coordinate~JSON} signPosition - origin position for sign
 ###
 exports = module.exports = class BuildingImageDefinition
 
@@ -37,6 +40,7 @@ exports = module.exports = class BuildingImageDefinition
     return false unless _.isNumber(@tileHeight) && @tileHeight? && @tileHeight > 0
     return false unless @hitArea?.length > 0 && _.every(@hitArea, (a) -> a.isValid())
     return false unless !@effects?.length || _.every(@effects, (e) -> e.isValid())
+    return false unless !@signPosition? || @signPosition.isValid()
     true
 
   ###*
@@ -44,7 +48,7 @@ exports = module.exports = class BuildingImageDefinition
   # @return {STARPEACE.building.BuildingImageDefinition~JSON} JSON representation of BuildingImageDefinition
   ###
   toJson: () ->
-    {
+    json = {
       id: @id
       imagePath: @imagePath
       tileWidth: @tileWidth
@@ -52,6 +56,8 @@ exports = module.exports = class BuildingImageDefinition
       hitArea: _.map(@hitArea, (lc) -> lc.toJson())
       effects: _.map(@effects, (e) -> e.toJson())
     }
+    json.signPosition = @signPosition.toJson() if @signPosition?
+    json
 
   ###*
   # Parse raw JSON into a BuildingImageDefinition object
@@ -66,4 +72,5 @@ exports = module.exports = class BuildingImageDefinition
     definition.tileHeight = json.tileHeight
     definition.hitArea = _.map(json.hitArea, CoordinateList.fromJson)
     definition.effects = _.map(json.effects, ImageEffect.fromJson)
+    definition.signPosition = Coordinate.fromJson(json.signPosition) if json.signPosition?
     definition

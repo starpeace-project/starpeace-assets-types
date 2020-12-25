@@ -6,6 +6,7 @@ Translation = require('../language/translation')
 # @typedef {object} STARPEACE.building.BuildingDefinition~JSON
 # @property {string} id - unique identifier for building definition
 # @property {string} imageId - default building image definition identifier for this building
+# @property {string} signId - identifier for sign of this building
 # @property {string} constructionImageId - building image definition identifier to use during construction of this building
 # @property {STARPEACE.language.Translation~JSON} name - translation object with name of building
 # @property {string} zoneId - identifier for city zone of this building
@@ -22,6 +23,7 @@ Translation = require('../language/translation')
 #
 # @property {string} id - unique identifier for building definition
 # @property {string} imageId - default building image definition identifier for this building
+# @property {string} signId - identifier for sign of this building
 # @property {string} constructionImageId - building image definition identifier to use during construction of this building
 # @property {STARPEACE.language.Translation} name - translation object with name of building
 # @property {string} zoneId - identifier for city zone of this building
@@ -66,6 +68,7 @@ exports = module.exports = class BuildingDefinition
       industryTypeId: @industryTypeId
       zoneId: @zoneId
     }
+    json.signId = @signId if @signId?.length
     json.restricted = true if @restricted
     json.requiredInventionIds = @requiredInventionIds if @requiredInventionIds?.length
     json
@@ -79,6 +82,7 @@ exports = module.exports = class BuildingDefinition
     definition = new BuildingDefinition()
     definition.id = json.id
     definition.imageId = json.imageId
+    definition.signId = json.signId
     definition.constructionImageId = json.constructionImageId
     definition.name = Translation.fromJson(json.name)
     definition.zoneId = json.zoneId

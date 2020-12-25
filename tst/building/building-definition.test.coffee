@@ -15,6 +15,7 @@ describe('STARPEACE.building.BuildingDefinition', ->
       JSON = {
         id: "generic.capitol"
         imageId: "generic.capitol"
+        signId: "coal"
         constructionImageId: "generic.construction.7"
         name: {
           "DE": "Kapitol",
@@ -36,6 +37,7 @@ describe('STARPEACE.building.BuildingDefinition', ->
       assert.ok(building)
       assert.strictEqual(building.id, JSON.id)
       assert.strictEqual(building.imageId, JSON.imageId)
+      assert.strictEqual(building.signId, JSON.signId)
       assert.strictEqual(building.constructionImageId, JSON.constructionImageId)
       assert.deepStrictEqual(building.name.toJson(), JSON.name)
       assert.strictEqual(building.sealId, JSON.sealId)
