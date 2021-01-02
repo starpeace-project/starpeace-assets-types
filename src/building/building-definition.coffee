@@ -13,6 +13,7 @@ Translation = require('../language/translation')
 # @property {string} industryCategoryId - identifier for category of this building
 # @property {string} industryTypeId - identifier for industry type of this building
 # @property {string} sealId - identifier for seal of this building
+# @property {boolean} foundation - flag indicating whether building has concrete foundation
 # @property {boolean} restricted - flag indicating whether this building is restricted from tycoon construction
 # @property {string[]} requiredInventionIds - array of invention definition identifiers that must be researched before construction of this building
 # @property {string[]} allowedInventionIds - array of invention definition identifiers that are allowed for research after construction of this building
@@ -31,6 +32,7 @@ Translation = require('../language/translation')
 # @property {string} industryCategoryId - identifier for category of this building
 # @property {string} industryTypeId - identifier for industry type of this building
 # @property {string} sealId - identifier for seal of this building
+# @property {boolean} foundation - flag indicating whether building has concrete foundation
 # @property {boolean} restricted - flag indicating whether this building is restricted from tycoon construction
 # @property {string[]} requiredInventionIds - array of invention definition identifiers that must be researched before construction of this building
 # @property {string[]} allowedInventionIds - array of invention definition identifiers that are allowed for research after construction of this building
@@ -71,6 +73,7 @@ exports = module.exports = class BuildingDefinition
       zoneId: @zoneId
     }
     json.signId = @signId if @signId?.length
+    json.foundation = true if @foundation
     json.restricted = true if @restricted
     json.requiredInventionIds = @requiredInventionIds if @requiredInventionIds?.length
     json.allowedInventionIds = @allowedInventionIds if @allowedInventionIds?.length
@@ -92,6 +95,7 @@ exports = module.exports = class BuildingDefinition
     definition.industryCategoryId = json.industryCategoryId
     definition.industryTypeId = json.industryTypeId
     definition.sealId = json.sealId
+    definition.foundation = json.foundation || false
     definition.restricted = json.restricted || false
     definition.requiredInventionIds = json.requiredInventionIds || []
     definition.allowedInventionIds = json.allowedInventionIds || []

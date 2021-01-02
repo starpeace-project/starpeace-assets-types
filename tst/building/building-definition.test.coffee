@@ -29,6 +29,7 @@ describe('STARPEACE.building.BuildingDefinition', ->
         zoneId: "CIVICS"
         industryCategoryId: "CIVIC"
         industryTypeId: "GOVERNMENT"
+        foundation: true
         restricted: true
         requiredInventionIds: ['invention1', 'invention2']
         allowedInventionIds: ['invention3', 'invention4']
@@ -45,6 +46,7 @@ describe('STARPEACE.building.BuildingDefinition', ->
       assert.strictEqual(building.zoneId, JSON.zoneId)
       assert.strictEqual(building.industryCategoryId, JSON.industryCategoryId)
       assert.strictEqual(building.industryTypeId, JSON.industryTypeId)
+      assert.ok(building.foundation)
       assert.ok(building.restricted)
       assert.deepStrictEqual(building.requiredInventionIds, JSON.requiredInventionIds)
       assert.deepStrictEqual(building.allowedInventionIds, JSON.allowedInventionIds)

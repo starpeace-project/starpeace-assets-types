@@ -131,6 +131,7 @@ Class representing building definition metadata
 | industryCategoryId | <code>string</code> | identifier for category of this building |
 | industryTypeId | <code>string</code> | identifier for industry type of this building |
 | sealId | <code>string</code> | identifier for seal of this building |
+| foundation | <code>boolean</code> | flag indicating whether building has concrete foundation |
 | restricted | <code>boolean</code> | flag indicating whether this building is restricted from tycoon construction |
 | requiredInventionIds | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that must be researched before construction of this building |
 | allowedInventionIds | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that are allowed for research after construction of this building |
@@ -153,6 +154,7 @@ Class representing building definition metadata
 | industryCategoryId | <code>string</code> | identifier for category of this building |
 | industryTypeId | <code>string</code> | identifier for industry type of this building |
 | sealId | <code>string</code> | identifier for seal of this building |
+| foundation | <code>boolean</code> | flag indicating whether building has concrete foundation |
 | restricted | <code>boolean</code> | flag indicating whether this building is restricted from tycoon construction |
 | requiredInventionIds | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that must be researched before construction of this building |
 | allowedInventionIds | <code>Array.&lt;string&gt;</code> | array of invention definition identifiers that are allowed for research after construction of this building |
