@@ -10,7 +10,7 @@ SimulationDefinition = require('../simulation-definition')
 ###
 
 ###*
-# Class representing tradecenter building simulation definition
+# Class representing factory building simulation definition
 # @memberof STARPEACE.building.simulation.factory
 # @extends STARPEACE.building.simulation.SimulationDefinition
 #

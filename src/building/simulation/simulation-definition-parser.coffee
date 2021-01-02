@@ -6,7 +6,7 @@ DEFINITIONS = [
   require('./civic/mausoleum-definition'),
   require('./civic/portal-definition'),
   require('./civic/townhall-definition'),
-  require('./civic/tradecenter-definition'),
+  require('./civic/trade-center-definition'),
   require('./factory/factory-definition'),
   require('./headquarters/headquarters-definition'),
   require('./media/antenna-definition'),
@@ -34,7 +34,7 @@ exports = module.exports = class SimulationDefinitionParser
     STARPEACE.building.simulation.civic.MausoleumDefinition~JSON|
     STARPEACE.building.simulation.civic.PortalDefinition~JSON|
     STARPEACE.building.simulation.civic.TownhallDefinition~JSON|
-    STARPEACE.building.simulation.civic.TradecenterDefinition~JSON|
+    STARPEACE.building.simulation.civic.TradeCenterDefinition~JSON|
     STARPEACE.building.simulation.factory.FactoryDefinition~JSON|
     STARPEACE.building.simulation.headquarters.HeadquartersDefinition~JSON|
     STARPEACE.building.simulation.media.AntennaDefinition~JSON|
@@ -52,7 +52,7 @@ exports = module.exports = class SimulationDefinitionParser
     STARPEACE.building.simulation.civic.MausoleumDefinition|
     STARPEACE.building.simulation.civic.PortalDefinition|
     STARPEACE.building.simulation.civic.TownhallDefinition|
-    STARPEACE.building.simulation.civic.TradecenterDefinition|
+    STARPEACE.building.simulation.civic.TradeCenterDefinition|
     STARPEACE.building.simulation.factory.FactoryDefinition|
     STARPEACE.building.simulation.headquarters.HeadquartersDefinition|
     STARPEACE.building.simulation.media.AntennaDefinition|

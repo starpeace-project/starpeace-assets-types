@@ -84,7 +84,7 @@ exports = module.exports = {
         MausoleumDefinition: require('./building/simulation/civic/mausoleum-definition')
         PortalDefinition: require('./building/simulation/civic/portal-definition')
         TownhallDefinition: require('./building/simulation/civic/townhall-definition')
-        TradecenterDefinition: require('./building/simulation/civic/tradecenter-definition')
+        TradeCenterDefinition: require('./building/simulation/civic/trade-center-definition')
       }
       factory: {
         FactoryDefinition: require('./building/simulation/factory/factory-definition')

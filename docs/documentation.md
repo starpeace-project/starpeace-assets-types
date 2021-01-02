@@ -33,6 +33,7 @@
                     * [~JSON](#STARPEACE.building.simulation.civic.PortalDefinition..JSON) : <code>object</code>
                 * [.ResourceQuantity](#STARPEACE.building.simulation.civic.ResourceQuantity) ⇐ <code>STARPEACE.building.simulation.SimulationDefinition</code>
                 * [.ResourceQuantity](#STARPEACE.building.simulation.civic.ResourceQuantity) ⇐ <code>STARPEACE.building.simulation.SimulationDefinition</code>
+                * [.ResourceQuantity](#STARPEACE.building.simulation.civic.ResourceQuantity) ⇐ <code>STARPEACE.building.simulation.SimulationDefinition</code>
             * .factory
                 * [.FactoryDefinition](#STARPEACE.building.simulation.factory.FactoryDefinition) ⇐ <code>STARPEACE.building.simulation.SimulationDefinition</code>
                     * [~JSON](#STARPEACE.building.simulation.factory.FactoryDefinition..JSON) : <code>object</code>
@@ -461,6 +462,20 @@ Class representing townhall building simulation definition
 <a name="STARPEACE.building.simulation.civic.ResourceQuantity"></a>
 
 ##### STARPEACE.building.simulation.civic.ResourceQuantity
+Class representing trade center building simulation definition
+
+**Kind**: static property of [<code>civic</code>](#STARPEACE.building.simulation.civic)
+**Extends**: <code>STARPEACE.building.simulation.SimulationDefinition</code>  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| labor | [<code>Array.&lt;ResourceQuantity&gt;</code>](#STARPEACE.industry.ResourceQuantity) | labor requirements for building |
+
+
+<a name="STARPEACE.building.simulation.civic.ResourceQuantity"></a>
+
+##### STARPEACE.building.simulation.civic.ResourceQuantity
 Class representing tradecenter building simulation definition
 
 **Kind**: static property of [<code>civic</code>](#STARPEACE.building.simulation.civic)
@@ -475,7 +490,7 @@ Class representing tradecenter building simulation definition
 <a name="STARPEACE.building.simulation.factory.FactoryDefinition"></a>
 
 ##### STARPEACE.building.simulation.factory.FactoryDefinition
-Class representing tradecenter building simulation definition
+Class representing factory building simulation definition
 
 **Kind**: static property of [<code>factory</code>](#STARPEACE.building.simulation.factory)
 **Extends**: <code>STARPEACE.building.simulation.SimulationDefinition</code>  
