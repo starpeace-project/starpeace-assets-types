@@ -1,6 +1,6 @@
 {
   "name": "@starpeace/starpeace-assets-types",
-  "version": "0.2.24",
+  "version": "0.2.25",
   "description": "STARPEACE common type library for asset and gameplay configurations",
   "keywords": [],
   "author": "starpeace-project",
@@ -14,7 +14,7 @@
     "postinstall": "grunt build",
     "test": "cross-env grunt && mocha --require coffeescript/register 'tst/**/*.test.coffee'"
   },
-  "devDependencies": {
+  "dependencies": {
     "coffeescript": "^2.5.1",
     "cross-env": "^7.0.3",
     "fs-extra": "^9.0.1",
