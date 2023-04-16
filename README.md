@@ -2,7 +2,6 @@
 # starpeace-assets-types
 
 [![GitHub release](https://img.shields.io/github/release/starpeace-project/starpeace-assets-types.svg)](https://github.com/starpeace-project/starpeace-assets-types/releases/)
-[![Build Status](https://travis-ci.org/starpeace-project/starpeace-assets-types.svg)](https://travis-ci.org/starpeace-project/starpeace-assets-types)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Documentation](https://img.shields.io/badge/docs-STARPEACE-green.svg)](./docs/documentation.md)
 
