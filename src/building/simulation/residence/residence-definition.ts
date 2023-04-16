@@ -68,12 +68,12 @@ export class ResidenceDefinition extends SimulationDefinition {
    */
   isValid (): boolean {
     if (!super.isValid()) return false;
-    if (!Array.isArray(this.labor) || !this.labor?.length || !!this.labor.find((l) => !l.isValid())) return false;
+    if (!Array.isArray(this.labor) || !!this.labor.find((l) => !l.isValid())) return false;
     if (!_.isString(this.residentType) || !this.residentType?.length) return false;
     if (!_.isNumber(this.capacity) || this.capacity <= 0) return false;
-    if (!_.isNumber(this.efficiency) || this.efficiency <= 0 || this.efficiency > 4.0) return false;
-    if (!_.isNumber(this.crimeResistence) || this.crimeResistence <= 0 || this.crimeResistence > 4.0) return false;
-    if (!_.isNumber(this.pollutionResistence) || this.pollutionResistence <= 0 || this.pollutionResistence > 4.0) return false;
+    if (!_.isNumber(this.efficiency) || this.efficiency < 0 || this.efficiency > 4.0) return false;
+    if (!_.isNumber(this.crimeResistence) || this.crimeResistence < 0 || this.crimeResistence > 4.0) return false;
+    if (!_.isNumber(this.pollutionResistence) || this.pollutionResistence < 0 || this.pollutionResistence > 4.0) return false;
     return true;
   }
 
