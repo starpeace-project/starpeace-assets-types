@@ -16,10 +16,10 @@ import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-de
 export interface ResidenceDefinitionJson extends SimulationDefinitionJson {
   labor: ResourceQuantityJson[];
   residentType: string;
-  capacity: string;
-  efficiency: string;
-  crimeResistence: string;
-  pollutionResistence: string;
+  capacity: number;
+  efficiency: number;
+  crimeResistence: number;
+  pollutionResistence: number;
 }
 
 /**
@@ -43,10 +43,10 @@ export class ResidenceDefinition extends SimulationDefinition {
 
   labor: ResourceQuantity[];
   residentType: string;
-  capacity: string;
-  efficiency: string;
-  crimeResistence: string;
-  pollutionResistence: string;
+  capacity: number;
+  efficiency: number;
+  crimeResistence: number;
+  pollutionResistence: number;
 
   /**
    * Create a ResidenceDefinition object
@@ -56,10 +56,10 @@ export class ResidenceDefinition extends SimulationDefinition {
     super(json);
     this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
     this.residentType = json.residentType;
-    this.capacity = json.capacity;
-    this.efficiency = json.efficiency;
-    this.crimeResistence = json.crimeResistence;
-    this.pollutionResistence = json.pollutionResistence;
+    this.capacity = json.capacity ?? 0;
+    this.efficiency = json.efficiency ?? 0;
+    this.crimeResistence = json.crimeResistence ?? 0;
+    this.pollutionResistence = json.pollutionResistence ?? 0;
   }
 
   /**

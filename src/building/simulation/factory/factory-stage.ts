@@ -59,7 +59,6 @@ export class FactoryStage {
     if (!Array.isArray(this.operations) || !!this.operations.find((l) => !l.isValid())) return false;
     if (!Array.isArray(this.inputs) || !!this.inputs.find((l) => !l.isValid())) return false;
     if (!Array.isArray(this.outputs) || !!this.outputs.find((l) => !l.isValid())) return false;
-    if (!this.inputs?.length && !this.outputs?.length) return false;
     return true;
   }
 
