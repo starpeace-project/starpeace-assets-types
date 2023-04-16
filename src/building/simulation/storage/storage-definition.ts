@@ -54,8 +54,8 @@ export class StorageDefinition extends SimulationDefinition {
    */
   isValid (): boolean {
     if (!super.isValid()) return false;
-    if (!Array.isArray(this.labor) || !this.labor?.length || !!this.labor.find(l => !l.isValid())) return false;
-    if (!Array.isArray(this.operations) || !this.operations?.length || !!this.operations.find(o => !o.isValid())) return false;
+    if (!Array.isArray(this.labor) || !!this.labor.find(l => !l.isValid())) return false;
+    if (!Array.isArray(this.operations) || !!this.operations.find(o => !o.isValid())) return false;
     if (!Array.isArray(this.storage) || !this.storage?.length || !!this.storage.find(s => !s.isValid())) return false;
     return true;
   }

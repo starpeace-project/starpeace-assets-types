@@ -48,7 +48,7 @@ export class AntennaDefinition extends SimulationDefinition {
    */
   isValid (): boolean {
     if (!super.isValid()) return false;
-    if (!Array.isArray(this.labor) || !this.labor?.length || !!this.labor.find((l) => !l.isValid())) return false;
+    if (!Array.isArray(this.labor) || !!this.labor.find((l) => !l.isValid())) return false;
     if (!_.isNumber(this.range) || this.range <= 0) return false;
     return true;
   }

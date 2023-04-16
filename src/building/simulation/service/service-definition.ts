@@ -48,7 +48,7 @@ export class ServiceDefinition extends SimulationDefinition {
    */
   isValid (): boolean {
     if (!super.isValid()) return false;
-    if (!Array.isArray(this.labor) || !this.labor?.length || !!this.labor.find((l) => !l.isValid())) return false;
+    if (!Array.isArray(this.labor) || !!this.labor.find((l) => !l.isValid())) return false;
     if (!Array.isArray(this.service) || !this.service?.length || !!this.service.find((l) => !l.isValid())) return false;
     return true;
   }

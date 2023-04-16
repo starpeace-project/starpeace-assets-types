@@ -53,7 +53,7 @@ export class HeadquartersDefinition extends SimulationDefinition {
    */
   isValid (): boolean {
     if (!super.isValid()) return false;
-    if (!Array.isArray(this.labor) || !this.labor?.length || !!this.labor.find((l) => !l.isValid())) return false;
+    if (!Array.isArray(this.labor) || !!this.labor.find((l) => !l.isValid())) return false;
     if (!_.isBoolean(this.satellite)) return false;
     return true;
   }

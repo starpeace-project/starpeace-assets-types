@@ -48,7 +48,7 @@ export class ParkDefinition extends SimulationDefinition {
    */
   isValid (): boolean {
     if (!super.isValid()) return false;
-    if (!Array.isArray(this.labor) || !this.labor?.length || !!this.labor.find((l) => !l.isValid())) return false;
+    if (!Array.isArray(this.labor) || !!this.labor.find((l) => !l.isValid())) return false;
     if (!_.isNumber(this.sport) || this.sport < 0) return false;
     return true;
   }

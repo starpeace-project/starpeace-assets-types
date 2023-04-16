@@ -50,8 +50,8 @@ export class OfficeDefinition extends SimulationDefinition {
    */
   isValid (): boolean {
     if (!super.isValid()) return false;
-    if (!Array.isArray(this.labor) || !this.labor?.length || !!this.labor.find((l) => !l.isValid())) return false;
-    if (!_.isNumber(this.capacity) || this.capacity < 0) return false;
+    if (!Array.isArray(this.labor) || !!this.labor.find((l) => !l.isValid())) return false;
+    if (!_.isNumber(this.capacity) || this.capacity <= 0) return false;
     if (!_.isNumber(this.efficiency) || this.efficiency < 0) return false;
     return true;
   }
