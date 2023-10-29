@@ -4,7 +4,7 @@ export * from './building/simulation/civic/capitol-definition';
 export * from './building/simulation/civic/mausoleum-definition';
 export * from './building/simulation/civic/portal-definition';
 export * from './building/simulation/civic/townhall-definition';
-export * from './building/simulation/civic/townhall-definition';
+export * from './building/simulation/civic/trade-center-definition';
 export * from './building/simulation/factory/factory-definition';
 export * from './building/simulation/factory/factory-stage';
 export * from './building/simulation/headquarters/headquarters-definition';
