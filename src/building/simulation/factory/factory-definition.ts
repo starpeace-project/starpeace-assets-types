@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition';
-import { FactoryStage, FactoryStageJson } from './factory-stage';
+import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { FactoryStage, FactoryStageJson } from './factory-stage.js';
 
 /**
  * @memberof STARPEACE.building.simulation.factory

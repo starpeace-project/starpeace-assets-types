@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { PlaneDefinition } from '../../src';
+import { PlaneDefinition } from '../../src/index.js';
 
 describe('PlaneDefinition', () => {
   describe('#fromJson', () => {

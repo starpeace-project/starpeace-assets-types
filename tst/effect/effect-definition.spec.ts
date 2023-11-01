@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { EffectDefinition } from '../../src';
+import { EffectDefinition } from '../../src/index.js';
 
 describe('EffectDefinition', () => {
   describe('#fromJson', () => {

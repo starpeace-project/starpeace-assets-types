@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { BuildingDefinition } from '../../src';
+import { BuildingDefinition } from '../../src/index.js';
 
 describe('BuildingDefinition', () => {
   describe('#fromJson', () => {

@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { ResourceType } from '../../src';
+import { ResourceType } from '../../src/index.js';
 
 describe('ResourceType', () => {
   describe('#fromJson', () => {

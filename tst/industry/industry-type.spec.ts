@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { IndustryType } from '../../src';
+import { IndustryType } from '../../src/index.js';
 
 describe('IndustryType', () => {
   describe('#fromJson', () => {

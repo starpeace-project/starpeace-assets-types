@@ -1,8 +1,8 @@
 import _ from 'lodash';
 
-import { Coordinate, CoordinateJson } from './coordinate';
-import { CoordinateList } from './coordinate-list';
-import { ImageEffect, ImageEffectJson } from './image-effect';
+import { Coordinate, CoordinateJson } from './coordinate.js';
+import { CoordinateList } from './coordinate-list.js';
+import { ImageEffect, ImageEffectJson } from './image-effect.js';
 
 /**
  * @memberof STARPEACE.building

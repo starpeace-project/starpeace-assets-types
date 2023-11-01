@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { OverlayDefinition } from '../../src';
+import { OverlayDefinition } from '../../src/index.js';
 
 describe('OverlayDefinition', () => {
   describe('#fromJson', () => {

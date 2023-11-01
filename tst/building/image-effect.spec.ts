@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { ImageEffect } from '../../src';
+import { ImageEffect } from '../../src/index.js';
 
 describe('ImageEffect', () => {
   describe('#fromJson', () => {

@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { Coordinate } from '../../src';
+import { Coordinate } from '../../src/index.js';
 
 describe('Coordinate', () => {
   describe('#fromJson', () => {

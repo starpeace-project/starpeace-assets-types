@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity';
+import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
 
 /**
  * @memberof STARPEACE.building.simulation.factory

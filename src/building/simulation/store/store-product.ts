@@ -1,5 +1,5 @@
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity';
-import { StoreProductOutput, StoreProductOutputJson } from './store-product-output';
+import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
+import { StoreProductOutput, StoreProductOutputJson } from './store-product-output.js';
 
 /**
  * @memberof STARPEACE.building.simulation.storage

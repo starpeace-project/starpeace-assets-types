@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { SignDefinition } from '../../src';
+import { SignDefinition } from '../../src/index.js';
 
 describe('SignDefinition', () => {
   describe('#fromJson', () => {

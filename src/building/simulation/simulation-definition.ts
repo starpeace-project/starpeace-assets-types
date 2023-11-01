@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { ConstructionQuantity, ConstructionQuantityJson } from './construction-quantity';
+import { ConstructionQuantity, ConstructionQuantityJson } from './construction-quantity.js';
 
 /**
  * @memberof STARPEACE.building.simulation

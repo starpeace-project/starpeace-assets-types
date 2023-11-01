@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { CompanySeal } from '../../src';
+import { CompanySeal } from '../../src/index.js';
 
 describe('CompanySeal', () => {
   describe('#fromJson', () => {

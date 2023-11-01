@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { ConcreteDefinition } from '../../src';
+import { ConcreteDefinition } from '../../src/index.js';
 
 describe('ConcreteDefinition', () => {
   describe('#fromJson', () => {

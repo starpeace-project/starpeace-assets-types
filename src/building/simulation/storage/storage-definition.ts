@@ -1,8 +1,8 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition';
-import { StorageQuantity, StorageQuantityJson } from './storage-quantity';
+import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
+import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { StorageQuantity, StorageQuantityJson } from './storage-quantity.js';
 
 /**
  * @memberof STARPEACE.building.simulation.storage

@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { Level } from '../../src';
+import { Level } from '../../src/index.js';
 
 describe('Level', () => {
   describe('#fromJson', () => {

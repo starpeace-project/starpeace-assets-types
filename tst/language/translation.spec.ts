@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { Translation } from '../../src';
+import { Translation } from '../../src/index.js';
 
 describe('Translation', () => {
   describe('#fromJson', () => {

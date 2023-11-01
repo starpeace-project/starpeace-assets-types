@@ -1,4 +1,4 @@
-import { Translation, TranslationJson } from '../language/translation';
+import { Translation, TranslationJson } from '../language/translation.js';
 
 /**
  * @memberof STARPEACE.invention

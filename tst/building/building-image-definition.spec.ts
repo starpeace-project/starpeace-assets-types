@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { BuildingImageDefinition } from '../../src';
+import { BuildingImageDefinition } from '../../src/index.js';
 
 describe('BuildingImageDefinition', () => {
   describe('#fromJson', () => {

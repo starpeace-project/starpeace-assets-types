@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { StoreProductCustomer, StoreProductCustomerJson } from './store-product-customer';
+import { StoreProductCustomer, StoreProductCustomerJson } from './store-product-customer.js';
 
 /**
  * @memberof STARPEACE.building.simulation.store

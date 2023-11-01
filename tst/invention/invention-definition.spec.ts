@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { InventionDefinition } from '../../src';
+import { InventionDefinition } from '../../src/index.js';
 
 describe('InventionDefinition', () => {
   describe('#fromJson', () => {

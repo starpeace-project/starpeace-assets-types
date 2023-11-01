@@ -1,23 +1,23 @@
 import _ from 'lodash';
 
-import { SimulationDefinition, SimulationDefinitionJson } from './simulation-definition';
+import { SimulationDefinition, SimulationDefinitionJson } from './simulation-definition.js';
 
-import { BankDefinition } from './bank/bank-definition';
-import { CapitolDefinition } from './civic/capitol-definition';
-import { MausoleumDefinition } from './civic/mausoleum-definition';
-import { PortalDefinition } from './civic/portal-definition';
-import { TownhallDefinition } from './civic/townhall-definition';
-import { TradeCenterDefinition } from './civic/trade-center-definition';
-import { FactoryDefinition } from './factory/factory-definition';
-import { HeadquartersDefinition } from './headquarters/headquarters-definition';
-import { AntennaDefinition } from './media/antenna-definition';
-import { MediaStationDefinition } from './media/media-station-definition';
-import { OfficeDefinition } from './office/office-definition';
-import { ParkDefinition } from './park/park-definition';
-import { ResidenceDefinition } from './residence/residence-definition';
-import { ServiceDefinition } from './service/service-definition';
-import { StorageDefinition } from './storage/storage-definition';
-import { StoreDefinition } from './store/store-definition';
+import { BankDefinition } from './bank/bank-definition.js';
+import { CapitolDefinition } from './civic/capitol-definition.js';
+import { MausoleumDefinition } from './civic/mausoleum-definition.js';
+import { PortalDefinition } from './civic/portal-definition.js';
+import { TownhallDefinition } from './civic/townhall-definition.js';
+import { TradeCenterDefinition } from './civic/trade-center-definition.js';
+import { FactoryDefinition } from './factory/factory-definition.js';
+import { HeadquartersDefinition } from './headquarters/headquarters-definition.js';
+import { AntennaDefinition } from './media/antenna-definition.js';
+import { MediaStationDefinition } from './media/media-station-definition.js';
+import { OfficeDefinition } from './office/office-definition.js';
+import { ParkDefinition } from './park/park-definition.js';
+import { ResidenceDefinition } from './residence/residence-definition.js';
+import { ServiceDefinition } from './service/service-definition.js';
+import { StorageDefinition } from './storage/storage-definition.js';
+import { StoreDefinition } from './store/store-definition.js';
 
 
 const DEFINITIONS_BY_TYPE: Record<string, typeof SimulationDefinition> = _.keyBy([

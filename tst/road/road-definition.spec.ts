@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { RoadDefinition } from '../../src';
+import { RoadDefinition } from '../../src/index.js';
 
 describe('RoadDefinition', () => {
   describe('#fromJson', () => {

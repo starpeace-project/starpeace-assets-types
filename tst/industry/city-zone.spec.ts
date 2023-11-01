@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-import { CityZone } from '../../src';
+import { CityZone } from '../../src/index.js';
 
 describe('CityZone', () => {
   describe('#fromJson', () => {

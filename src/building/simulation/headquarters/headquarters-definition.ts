@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition';
+import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
+import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
 
 /**
  * @memberof STARPEACE.building.simulation.headquarters

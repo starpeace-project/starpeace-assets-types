@@ -1,4 +1,4 @@
-import { Coordinate, CoordinateJson } from "./coordinate";
+import { Coordinate, CoordinateJson } from "./coordinate.js";
 
 /**
  * Class representing building construction quantities
