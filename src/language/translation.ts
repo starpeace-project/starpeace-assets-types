@@ -22,28 +22,55 @@ export interface TranslationJson {
  * Class representing a multi-language translation
  * @memberof STARPEACE.language
  *
- * @property {string} german - German translation value
- * @property {string} english - English translation value
- * @property {string} spanish - Spanish translation value
- * @property {string} french - French translation value
- * @property {string} italian - Italian translation value
- * @property {string} portuguese - Portuguese translation value
+ * @property {Record<string, string>} textByCode - translation by language code
  */
 export class Translation {
-  german: string;
-  english: string;
-  spanish: string;
-  french: string;
-  italian: string;
-  portuguese: string;
+  textByCode: Record<string, string>;
 
-  constructor (german: string, english: string, spanish: string, french: string, italian: string, portuguese: string) {
-    this.german = german;
-    this.english = english;
-    this.spanish = spanish;
-    this.french = french;
-    this.italian = italian;
-    this.portuguese = portuguese;
+  constructor (textByCode: Record<string, string>) {
+    this.textByCode = textByCode;
+  }
+
+  get DE (): string | undefined {
+    return this.textByCode['DE'];
+  }
+  get EN (): string | undefined {
+    return this.textByCode['EN'];
+  }
+  get ES (): string | undefined {
+    return this.textByCode['ES'];
+  }
+  get FR (): string | undefined {
+    return this.textByCode['FR'];
+  }
+  get IT (): string | undefined {
+    return this.textByCode['IT'];
+  }
+  get PT (): string | undefined {
+    return this.textByCode['PT'];
+  }
+
+  get german (): string | undefined {
+    return this.textByCode['DE'];
+  }
+  get english (): string | undefined {
+    return this.textByCode['EN'];
+  }
+  get spanish (): string | undefined {
+    return this.textByCode['ES'];
+  }
+  get french (): string | undefined {
+    return this.textByCode['FR'];
+  }
+  get italian (): string | undefined {
+    return this.textByCode['IT'];
+  }
+  get portuguese (): string | undefined {
+    return this.textByCode['PT'];
+  }
+
+  forCode (code: string): string | undefined {
+    return this.textByCode[code];
   }
 
   /**
@@ -66,12 +93,12 @@ export class Translation {
    */
   toJson (): TranslationJson {
     return {
-      DE: this.german,
-      EN: this.english,
-      ES: this.spanish,
-      FR: this.french,
-      IT: this.italian,
-      PT: this.portuguese
+      DE: this.german ?? '',
+      EN: this.english ?? '',
+      ES: this.spanish ?? '',
+      FR: this.french ?? '',
+      IT: this.italian ?? '',
+      PT: this.portuguese ?? ''
     };
   }
 
@@ -80,7 +107,17 @@ export class Translation {
    * @params {STARPEACE.language.TranslationJson} json - raw JSON object to parse into Translation
    * @return {STARPEACE.language.Translation} Translation representation of parsed JSON
    */
-  static fromJson (json: TranslationJson): Translation {
-    return new Translation(json.DE, json.EN, json.ES, json.FR, json.IT, json.PT);
+  static from_json (json: TranslationJson): Translation {
+    return Translation.fromJson(json);
+  }
+  static fromJson (json: TranslationJson | undefined): Translation {
+    return new Translation({
+      DE: json?.DE ?? '',
+      EN: json?.EN ?? '',
+      ES: json?.ES ?? '',
+      FR: json?.FR ?? '',
+      IT: json?.IT ?? '',
+      PT: json?.PT ?? ''
+    });
   }
 }
