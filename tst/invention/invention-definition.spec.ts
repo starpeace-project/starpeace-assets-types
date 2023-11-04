@@ -26,7 +26,9 @@ describe('InventionDefinition', () => {
           PT: 'pt description'
         },
         dependsOnIds: ['id1', 'id2'],
-        properties: { }
+        properties: {
+          quality: 10
+        }
       };
 
       const invention = InventionDefinition.fromJson(JSON);

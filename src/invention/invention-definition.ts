@@ -89,6 +89,14 @@ export class InventionDefinition {
    * @return {STARPEACE.invention.InventionDefinition} InventionDefinition representation of parsed JSON
    */
   static fromJson (json: InventionDefinitionJson): InventionDefinition {
-    return new InventionDefinition(json.id, json.industryCategoryId, json.industryTypeId, Translation.fromJson(json.name), Translation.fromJson(json.description), json.dependsOnIds ?? [], json.properties ?? {});
+    return new InventionDefinition(
+      json.id,
+      json.industryCategoryId,
+      json.industryTypeId,
+      Translation.fromJson(json.name),
+      Translation.fromJson(json.description),
+      json.dependsOnIds ?? [],
+      Object.fromEntries(Object.entries(json.properties ?? {}).filter(e => e[1] !== undefined))
+    );
   }
 }
