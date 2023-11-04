@@ -8,7 +8,7 @@ import { Translation, TranslationJson } from '../language/translation.js';
  * @property {STARPEACE.language.TranslationJson} name - translation object with name of invention
  * @property {STARPEACE.language.TranslationJson} description - translation object with description of invention
  * @property {string[]} dependsOnIds - array of other invention definition identifiers this depends on
- * @property {object} properties - properties of invention
+ * @property {object} properties - properties of invention (only non-undefined fields used)
  */
  export interface InventionDefinitionJson {
   id: string;
@@ -17,7 +17,7 @@ import { Translation, TranslationJson } from '../language/translation.js';
   name: TranslationJson;
   description: TranslationJson;
   dependsOnIds: string[];
-  properties: Record<string, number | string>;
+  properties: Record<string, number | string | undefined>;
 }
 
 /**
@@ -96,7 +96,7 @@ export class InventionDefinition {
       Translation.fromJson(json.name),
       Translation.fromJson(json.description),
       json.dependsOnIds ?? [],
-      Object.fromEntries(Object.entries(json.properties ?? {}).filter(e => e[1] !== undefined))
+      Object.fromEntries(Object.entries(json.properties ?? {}).filter(e => e[1] !== undefined)) as Record<string, number | string>
     );
   }
 }
