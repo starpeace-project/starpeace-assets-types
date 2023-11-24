@@ -1,15 +1,21 @@
 import _ from 'lodash';
 
 import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
-import { FactoryStage, FactoryStageJson } from './factory-stage.js';
+import { ResourceQuantity, ResourceQuantityJson } from '../../../index.js';
 
 /**
  * @memberof STARPEACE.building.simulation.factory
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.building.simulation.factory.FactoryStageJson[]} stages - each stage of factory production
+ * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceQuantityJson[]} operations - array of resource quantities required for building operations
+ * @property {STARPEACE.industry.ResourceQuantityJson[]} inputs - array of input resource quantities
+ * @property {STARPEACE.industry.ResourceQuantityJson[]} outputs - array of output resource quantities
  */
 export interface FactoryDefinitionJson extends SimulationDefinitionJson {
-  stages: FactoryStageJson[];
+  labor: ResourceQuantityJson[];
+  operations: ResourceQuantityJson[];
+  inputs: ResourceQuantityJson[];
+  outputs: ResourceQuantityJson[];
 }
 
 /**
@@ -26,7 +32,10 @@ export class FactoryDefinition extends SimulationDefinition {
    */
   static TYPE (): string { return 'FACTORY'; }
 
-  stages: FactoryStage[];
+  labor: ResourceQuantity[];
+  operations: ResourceQuantity[];
+  inputs: ResourceQuantity[];
+  outputs: ResourceQuantity[];
 
   /**
    * Create a FactoryDefinition object
@@ -34,7 +43,11 @@ export class FactoryDefinition extends SimulationDefinition {
    */
   constructor (json: FactoryDefinitionJson) {
     super(json);
-    this.stages = (json.stages ?? []).map(FactoryStage.fromJson);
+
+    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
+    this.operations = (json.operations ?? []).map(ResourceQuantity.fromJson);
+    this.inputs = (json.inputs ?? []).map(ResourceQuantity.fromJson);
+    this.outputs = (json.outputs ?? []).map(ResourceQuantity.fromJson);
   }
 
   /**
@@ -43,7 +56,10 @@ export class FactoryDefinition extends SimulationDefinition {
    */
   isValid (): boolean {
     if (!super.isValid()) return false;
-    if (!Array.isArray(this.stages) || !this.stages?.length || !!this.stages.find((l) => !l.isValid())) return false;
+    if (!Array.isArray(this.labor) || !!this.labor.find((q) => !q.isValid())) return false;
+    if (!Array.isArray(this.operations) || !!this.operations.find((q) => !q.isValid())) return false;
+    if (!Array.isArray(this.inputs) || !!this.inputs.find((q) => !q.isValid())) return false;
+    if (!Array.isArray(this.outputs) || !!this.outputs.find((q) => !q.isValid())) return false;
     return true;
   }
 
@@ -53,7 +69,10 @@ export class FactoryDefinition extends SimulationDefinition {
    */
   toJson (): FactoryDefinitionJson {
     return _.assign(super.toJson(), {
-      stages: this.stages.map((l) => l.toJson())
+      labor: this.labor.map((q) => q.toJson()),
+      operations: this.operations.map((q) => q.toJson()),
+      inputs: this.inputs.map((q) => q.toJson()),
+      outputs: this.outputs.map((q) => q.toJson())
     });
   }
 }
