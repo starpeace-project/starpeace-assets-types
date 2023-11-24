@@ -7,6 +7,8 @@ export * from './building/simulation/civic/townhall-definition.js';
 export * from './building/simulation/civic/trade-center-definition.js';
 export * from './building/simulation/factory/factory-definition.js';
 export * from './building/simulation/factory/factory-stage.js';
+export * from './building/simulation/factory/farm-definition.js';
+export * from './building/simulation/factory/movie-studio-definition.js';
 export * from './building/simulation/headquarters/headquarters-definition.js';
 export * from './building/simulation/media/antenna-definition.js';
 export * from './building/simulation/media/media-station-definition.js';
