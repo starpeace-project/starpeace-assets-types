@@ -9,6 +9,8 @@ import { PortalDefinition } from './civic/portal-definition.js';
 import { TownhallDefinition } from './civic/townhall-definition.js';
 import { TradeCenterDefinition } from './civic/trade-center-definition.js';
 import { FactoryDefinition } from './factory/factory-definition.js';
+import { FarmDefinition } from './factory/farm-definition.js';
+import { MovieStudioDefinition } from './factory/movie-studio-definition.js';
 import { HeadquartersDefinition } from './headquarters/headquarters-definition.js';
 import { AntennaDefinition } from './media/antenna-definition.js';
 import { MediaStationDefinition } from './media/media-station-definition.js';
@@ -28,6 +30,8 @@ const DEFINITIONS_BY_TYPE: Record<string, typeof SimulationDefinition> = _.keyBy
   TownhallDefinition,
   TradeCenterDefinition,
   FactoryDefinition,
+  FarmDefinition,
+  MovieStudioDefinition,
   HeadquartersDefinition,
   AntennaDefinition,
   MediaStationDefinition,
