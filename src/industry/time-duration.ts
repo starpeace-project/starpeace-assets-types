@@ -1,9 +1,9 @@
 import _ from 'lodash';
 
 /**
- * Unit of time duration, currently DAY, MONTH, or YEAR
+ * Unit of time duration, currently HOUR, DAY, MONTH, or YEAR
  */
-export type TimeUnit = 'DAY' | 'MONTH' | 'YEAR';
+export type TimeUnit = 'HOUR' | 'DAY' | 'MONTH' | 'YEAR';
 
 /**
  * @property {string} unit - unit of time duration
