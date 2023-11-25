@@ -1,10 +1,10 @@
-import { assert } from "chai";
+import { assert, test } from 'vitest';
 
 import { BuildingImageDefinition } from '../../src/index.js';
 
-describe('BuildingImageDefinition', () => {
-  describe('#fromJson', () => {
-    it('should be able to create from json', async () => {
+test('BuildingImageDefinition', () => {
+  test('#fromJson', () => {
+    test('should be able to create from json', async () => {
       const JSON = {
         id: "generic.college",
         imagePath: "assets/buildings/generic/images/generic.college.gif",

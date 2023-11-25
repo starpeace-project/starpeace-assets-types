@@ -1,16 +1,16 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor } from '../simulation-definition.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
 
 /**
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.industry.ResourceQuantity~JSON[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted~JSON[]} labor - labor requirements for building
  * @property {number} capacity - capacity of resource for which building provides offices
  * @property {number} efficiency - base efficiency of building
  */
 export interface OfficeDefinitionJson extends SimulationDefinitionJson {
-  labor: ResourceQuantityJson[];
+  labor: ResourceVelocityWeightedJson[];
   capacity: number;
   efficiency: number;
 }
@@ -20,16 +20,16 @@ export interface OfficeDefinitionJson extends SimulationDefinitionJson {
  * @memberof STARPEACE.building.simulation.media
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.industry.ResourceQuantity[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} labor - labor requirements for building
  */
-export class OfficeDefinition extends SimulationDefinition {
+export class OfficeDefinition extends SimulationDefinition implements SimulationWithLabor {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string { return 'OFFICE'; }
 
-  labor: ResourceQuantity[];
+  labor: ResourceVelocityWeighted[];
   capacity: number;
   efficiency: number;
 
@@ -39,7 +39,7 @@ export class OfficeDefinition extends SimulationDefinition {
    */
   constructor (json: OfficeDefinitionJson) {
     super(json);
-    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
+    this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
     this.capacity = json.capacity ?? 0;
     this.efficiency = json.efficiency ?? 0;
   }

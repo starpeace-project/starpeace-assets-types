@@ -1,10 +1,10 @@
-import { assert } from "chai";
+import { assert, test } from 'vitest';
 
 import { CityZone } from '../../src/index.js';
 
-describe('CityZone', () => {
-  describe('#fromJson', () => {
-    it('should be able to create from json', async () => {
+test('CityZone', () => {
+  test('#fromJson', () => {
+    test('should be able to create from json', async () => {
       const JSON = {
         id: "COMMERCIAL",
         label: {

@@ -1,10 +1,10 @@
-import { assert } from "chai";
+import { assert, test } from 'vitest';
 
 import { ConcreteDefinition } from '../../src/index.js';
 
-describe('ConcreteDefinition', () => {
-  describe('#fromJson', () => {
-    it('should be able to create from json', async () => {
+test('ConcreteDefinition', () => {
+  test('#fromJson', () => {
+    test('should be able to create from json', async () => {
       const JSON = {
         id: 'id',
         image: 'image.gif'

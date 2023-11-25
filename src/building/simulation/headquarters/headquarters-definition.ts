@@ -1,17 +1,17 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor } from '../simulation-definition.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
 
 /**
  * @memberof STARPEACE.building.simulation.headquarters
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.industry.ResourceQuantity~JSON[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted~JSON[]} labor - labor requirements for building
  * @property {boolean} satellite - flag indicating whether building is satellite headquarters
  * @property {string} satelliteCategory - satellite category if building is flagged as satellite
  */
 export interface HeadquartersDefinitionJson extends SimulationDefinitionJson {
-  labor: ResourceQuantityJson[];
+  labor: ResourceVelocityWeightedJson[];
   satellite: boolean;
   satelliteCategory: string | null;
 }
@@ -21,18 +21,18 @@ export interface HeadquartersDefinitionJson extends SimulationDefinitionJson {
  * @memberof STARPEACE.building.simulation.factory
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
  * @property {boolean} satellite - flag indicating whether building is satellite headquarters
  * @property {string} satelliteCategory - satellite category if building is flagged as satellite
  */
-export class HeadquartersDefinition extends SimulationDefinition {
+export class HeadquartersDefinition extends SimulationDefinition implements SimulationWithLabor {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string { return 'HEADQUARTERS'; }
 
-  labor: ResourceQuantity[];
+  labor: ResourceVelocityWeighted[];
   satellite: boolean;
   satelliteCategory: string | null;
 
@@ -42,7 +42,7 @@ export class HeadquartersDefinition extends SimulationDefinition {
    */
   constructor (json: HeadquartersDefinitionJson) {
     super(json);
-    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
+    this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
     this.satellite = json.satellite ?? false;
     this.satelliteCategory = json.satelliteCategory ?? null;
   }

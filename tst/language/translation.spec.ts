@@ -1,10 +1,10 @@
-import { assert } from "chai";
+import { assert, test } from 'vitest';
 
 import { Translation } from '../../src/index.js';
 
-describe('Translation', () => {
-  describe('#fromJson', () => {
-    it('should be able to create from json', async () => {
+test('Translation', () => {
+  test('#fromJson', () => {
+    test('should be able to create from json', async () => {
       const JSON = {
         DE: 'de german',
         EN: 'en english',

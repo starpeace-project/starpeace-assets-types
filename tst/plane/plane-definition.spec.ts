@@ -1,10 +1,10 @@
-import { assert } from "chai";
+import { assert, test } from 'vitest';
 
 import { PlaneDefinition } from '../../src/index.js';
 
-describe('PlaneDefinition', () => {
-  describe('#fromJson', () => {
-    it('should be able to create from json', async () => {
+test('PlaneDefinition', () => {
+  test('#fromJson', () => {
+    test('should be able to create from json', async () => {
       const JSON = {
         id: 'id',
         image: 'image.png',

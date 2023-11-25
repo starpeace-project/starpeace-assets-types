@@ -1,10 +1,10 @@
-import { assert } from "chai";
+import { assert, test } from 'vitest';
 
 import { CompanySeal } from '../../src/index.js';
 
-describe('CompanySeal', () => {
-  describe('#fromJson', () => {
-    it('should be able to create from json', async () => {
+test('CompanySeal', () => {
+  test('#fromJson', () => {
+    test('should be able to create from json', async () => {
       const JSON = {
         id: 'id',
         nameShort: 'name',

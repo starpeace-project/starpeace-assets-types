@@ -2,12 +2,14 @@ import _ from 'lodash';
 
 /**
  * @property {string} resourceId - identifier of resource
+ * @property {number | undefined} minVelocity - minimum quantity of resource per hour
  * @property {number} maxVelocity - maximum quantity of resource per hour
  * @property {number} weightEfficiency - importance weight of efficiency on this quantity
  * @property {number} weightQuality - importance weight of quality on this quantity
  */
-export interface ResourceQuantityJson {
+export interface ResourceVelocityWeightedJson {
   resourceId: string;
+  minVelocity?: number | undefined;
   maxVelocity: number;
   weightEfficiency: number;
   weightQuality: number;
@@ -18,18 +20,21 @@ export interface ResourceQuantityJson {
  * @memberof STARPEACE.industry
  *
  * @property {string} resourceId - identifier of resource
+ * @property {number | undefined} minVelocity - minimum quantity of resource per hour
  * @property {number} maxVelocity - maximum quantity of resource per hour
  * @property {number} weightEfficiency - importance weight of efficiency on this quantity
  * @property {number} weightQuality - importance weight of qualityy on this quantity
  */
-export class ResourceQuantity {
+export class ResourceVelocityWeighted {
   resourceId: string;
+  minVelocity: number | undefined;
   maxVelocity: number;
   weightEfficiency: number;
   weightQuality: number;
 
-  constructor (resourceId: string, maxVelocity: number, weightEfficiency: number, weightQuality: number) {
+  constructor (resourceId: string, minVelocity: number | undefined, maxVelocity: number, weightEfficiency: number, weightQuality: number) {
     this.resourceId = resourceId;
+    this.minVelocity = minVelocity;
     this.maxVelocity = maxVelocity;
     this.weightEfficiency = weightEfficiency;
     this.weightQuality = weightQuality;
@@ -41,6 +46,7 @@ export class ResourceQuantity {
    */
   isValid (): boolean {
     if (!_.isString(this.resourceId) || !this.resourceId.length) return false;
+    if (!_.isNumber(this.minVelocity) || this.minVelocity < 0 || this.minVelocity > this.maxVelocity) return false;
     if (!_.isNumber(this.maxVelocity) || this.maxVelocity <= 0) return false;
     if (!_.isNumber(this.weightEfficiency) || this.weightEfficiency < 0) return false;
     if (!_.isNumber(this.weightQuality) || this.weightQuality < 0) return false;
@@ -49,11 +55,12 @@ export class ResourceQuantity {
 
   /**
    * Retrieve JSON representation of object
-   * @return {STARPEACE.industry.ResourceQuantityJson} JSON representation of ResourceQuantity
+   * @return {STARPEACE.industry.ResourceVelocityWeightedJson} JSON representation of ResourceVelocityWeighted
    */
-  toJson (): ResourceQuantityJson {
+  toJson (): ResourceVelocityWeightedJson {
     return {
       resourceId: this.resourceId,
+      minVelocity: this.minVelocity,
       maxVelocity: this.maxVelocity,
       weightEfficiency: this.weightEfficiency,
       weightQuality: this.weightQuality
@@ -61,11 +68,11 @@ export class ResourceQuantity {
   }
 
   /**
-   * Parse raw JSON into a ResourceQuantity object
-   * @params {STARPEACE.industry.ResourceQuantityJson} json - raw JSON object to parse into ResourceQuantity
-   * @return {STARPEACE.industry.ResourceQuantity} ResourceQuantity representation of parsed JSON
+   * Parse raw JSON into a ResourceVelocityWeighted object
+   * @params {STARPEACE.industry.ResourceVelocityJson} json - raw JSON object to parse into ResourceVelocityWeighted
+   * @return {STARPEACE.industry.ResourceVelocity} ResourceVelocityWeighted representation of parsed JSON
    */
-  static fromJson (json: ResourceQuantityJson): ResourceQuantity {
-    return new ResourceQuantity(json.resourceId, json.maxVelocity, json.weightEfficiency ?? 0, json.weightQuality ?? 0);
+  static fromJson (json: ResourceVelocityWeightedJson): ResourceVelocityWeighted {
+    return new ResourceVelocityWeighted(json.resourceId, json.minVelocity, json.maxVelocity, json.weightEfficiency ?? 0, json.weightQuality ?? 0);
   }
 }

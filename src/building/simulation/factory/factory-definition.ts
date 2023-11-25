@@ -1,21 +1,22 @@
 import _ from 'lodash';
 
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
-import { ResourceQuantity, ResourceQuantityJson } from '../../../index.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithInputs, SimulationWithLabor, SimulationWithOperations, SimulationWithOutputs } from '../simulation-definition.js';
+import { ResourceVelocity, ResourceVelocityJson } from '../../../industry/resource-velocity.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
 
 /**
  * @memberof STARPEACE.building.simulation.factory
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
- * @property {STARPEACE.industry.ResourceQuantityJson[]} operations - array of resource quantities required for building operations
- * @property {STARPEACE.industry.ResourceQuantityJson[]} inputs - array of input resource quantities
- * @property {STARPEACE.industry.ResourceQuantityJson[]} outputs - array of output resource quantities
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} operations - array of resource quantities required for building operations
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} inputs - array of input resource quantities
+ * @property {STARPEACE.industry.ResourceVelocityJson[]} outputs - array of output resource quantities
  */
 export interface FactoryDefinitionJson extends SimulationDefinitionJson {
-  labor: ResourceQuantityJson[];
-  operations: ResourceQuantityJson[];
-  inputs: ResourceQuantityJson[];
-  outputs: ResourceQuantityJson[];
+  labor: ResourceVelocityWeightedJson[];
+  operations: ResourceVelocityWeightedJson[];
+  inputs: ResourceVelocityWeightedJson[];
+  outputs: ResourceVelocityJson[];
 }
 
 /**
@@ -25,17 +26,17 @@ export interface FactoryDefinitionJson extends SimulationDefinitionJson {
  *
  * @property {STARPEACE.building.simulation.factory.FactoryStage[]} stages - each stage of factory production
  */
-export class FactoryDefinition extends SimulationDefinition {
+export class FactoryDefinition extends SimulationDefinition implements SimulationWithLabor, SimulationWithOperations, SimulationWithInputs, SimulationWithOutputs {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string { return 'FACTORY'; }
 
-  labor: ResourceQuantity[];
-  operations: ResourceQuantity[];
-  inputs: ResourceQuantity[];
-  outputs: ResourceQuantity[];
+  labor: ResourceVelocityWeighted[];
+  operations: ResourceVelocityWeighted[];
+  inputs: ResourceVelocityWeighted[];
+  outputs: ResourceVelocity[];
 
   /**
    * Create a FactoryDefinition object
@@ -44,10 +45,10 @@ export class FactoryDefinition extends SimulationDefinition {
   constructor (json: FactoryDefinitionJson) {
     super(json);
 
-    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
-    this.operations = (json.operations ?? []).map(ResourceQuantity.fromJson);
-    this.inputs = (json.inputs ?? []).map(ResourceQuantity.fromJson);
-    this.outputs = (json.outputs ?? []).map(ResourceQuantity.fromJson);
+    this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
+    this.operations = (json.operations ?? []).map(ResourceVelocityWeighted.fromJson);
+    this.inputs = (json.inputs ?? []).map(ResourceVelocityWeighted.fromJson);
+    this.outputs = (json.outputs ?? []).map(ResourceVelocity.fromJson);
   }
 
   /**

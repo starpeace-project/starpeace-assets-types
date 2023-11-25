@@ -1,15 +1,15 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor } from '../simulation-definition.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
 
 /**
  * @memberof STARPEACE.building.simulation.civic
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
  */
 export interface TownhallDefinitionJson extends SimulationDefinitionJson {
-  labor: ResourceQuantityJson[];
+  labor: ResourceVelocityWeightedJson[];
 }
 
 /**
@@ -17,16 +17,16 @@ export interface TownhallDefinitionJson extends SimulationDefinitionJson {
  * @memberof STARPEACE.building.simulation.civic
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.industry.ResourceQuantity[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} labor - labor requirements for building
  */
-export class TownhallDefinition extends SimulationDefinition {
+export class TownhallDefinition extends SimulationDefinition implements SimulationWithLabor {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string { return 'TOWNHALL'; }
 
-  labor: ResourceQuantity[];
+  labor: ResourceVelocityWeighted[];
 
   /**
    * Create a TownhallDefinition object
@@ -34,7 +34,7 @@ export class TownhallDefinition extends SimulationDefinition {
    */
   constructor (json: TownhallDefinitionJson) {
     super(json);
-    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
+    this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
   }
 
   /**

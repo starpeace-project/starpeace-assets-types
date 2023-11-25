@@ -1,12 +1,12 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor } from '../simulation-definition.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
 
 /**
  * @memberof STARPEACE.building.simulation.residence
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
  * @property {string} residentType - identifier of resource type for which residence provides housing
  * @property {number} capacity - capacity of resource for which building provides housing
  * @property {number} efficiency - base efficiency of building
@@ -14,7 +14,7 @@ import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-de
  * @property {number} pollutionResistence - base pollution resistence of building
  */
 export interface ResidenceDefinitionJson extends SimulationDefinitionJson {
-  labor: ResourceQuantityJson[];
+  labor: ResourceVelocityWeightedJson[];
   residentType: string;
   capacity: number;
   efficiency: number;
@@ -27,21 +27,21 @@ export interface ResidenceDefinitionJson extends SimulationDefinitionJson {
  * @memberof STARPEACE.building.simulation.residence
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
  * @property {string} residentType - identifier of resource type for which residence provides housing
  * @property {number} capacity - capacity of resource for which building provides housing
  * @property {number} efficiency - base efficiency of building
  * @property {number} crimeResistence - base crime resistence of building
  * @property {number} pollutionResistence - base pollution resistence of building
  */
-export class ResidenceDefinition extends SimulationDefinition {
+export class ResidenceDefinition extends SimulationDefinition implements SimulationWithLabor {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string { return 'RESIDENCE'; }
 
-  labor: ResourceQuantity[];
+  labor: ResourceVelocityWeighted[];
   residentType: string;
   capacity: number;
   efficiency: number;
@@ -54,7 +54,7 @@ export class ResidenceDefinition extends SimulationDefinition {
    */
   constructor (json: ResidenceDefinitionJson) {
     super(json);
-    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
+    this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
     this.residentType = json.residentType;
     this.capacity = json.capacity ?? 0;
     this.efficiency = json.efficiency ?? 0;

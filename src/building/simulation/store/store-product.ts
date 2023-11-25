@@ -1,30 +1,36 @@
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
-import { StoreProductOutput, StoreProductOutputJson } from './store-product-output.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
+import { ResourceVelocity, ResourceVelocityJson } from '../../../industry/resource-velocity.js';
+import { StoreProductCustomer, StoreProductCustomerJson } from './store-product-customer.js';
 
 /**
  * @memberof STARPEACE.building.simulation.storage
- * @property {STARPEACE.industry.ResourceQuantityJson[]} inputs - array of input resource quantities
- * @property {STARPEACE.building.simulation.store.StoreProductOutputJson[]} outputs - array of output resource quantities
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} inputs - array of input resource quantities
+ * @property {STARPEACE.building.simulation.store.ResourceVelocityJson[]} outputs - array of output resource quantities
+ * @property {STARPEACE.building.simulation.store.StoreProductCustomerJson[]} customers - array of store customer metadata
  */
 export interface StoreProductJson {
-  inputs: ResourceQuantityJson[];
-  outputs: StoreProductOutputJson[];
+  inputs: ResourceVelocityWeightedJson[];
+  outputs: ResourceVelocityJson[];
+  customers: StoreProductCustomerJson[];
 }
 
 /**
  * Class representing store building simulation product outputs
  * @memberof STARPEACE.building.simulation.store
  *
- * @property {STARPEACE.industry.ResourceQuantity[]} inputs - array of input resource quantities
- * @property {STARPEACE.building.simulation.store.StoreProductOutput[]} outputs - array of output resource quantities
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} inputs - array of input resource quantities
+ * @property {STARPEACE.building.simulation.store.ResourceVelocity[]} outputs - array of output resource quantities
+ * @property {STARPEACE.building.simulation.store.StoreProductCustomer[]} customers - array of store customer metadata
  */
 export class StoreProduct {
-  inputs: ResourceQuantity[];
-  outputs: StoreProductOutput[];
+  inputs: ResourceVelocityWeighted[];
+  outputs: ResourceVelocity[];
+  customers: StoreProductCustomer[];
 
-  constructor (inputs: ResourceQuantity[], outputs: StoreProductOutput[]) {
+  constructor (inputs: ResourceVelocityWeighted[], outputs: ResourceVelocity[], customers: StoreProductCustomer[]) {
     this.inputs = inputs;
     this.outputs = outputs;
+    this.customers = customers;
   }
 
   /**
@@ -44,7 +50,8 @@ export class StoreProduct {
   toJson (): StoreProductJson {
     return {
       inputs: this.inputs.map(i => i.toJson()),
-      outputs: this.outputs.map(i => i.toJson())
+      outputs: this.outputs.map(i => i.toJson()),
+      customers: this.customers.map(c => c.toJson())
     };
   }
 
@@ -54,6 +61,10 @@ export class StoreProduct {
    * @return {STARPEACE.building.simulation.store.StoreProduct} StoreProduct representation of parsed JSON
    */
   static fromJson (json: StoreProductJson): StoreProduct {
-    return new StoreProduct((json.inputs ?? []).map(ResourceQuantity.fromJson), (json.outputs ?? []).map(StoreProductOutput.fromJson));
+    return new StoreProduct(
+      (json.inputs ?? []).map(ResourceVelocityWeighted.fromJson),
+      (json.outputs ?? []).map(ResourceVelocity.fromJson),
+      (json.customers ?? []).map(StoreProductCustomer.fromJson)
+    );
   }
 }

@@ -1,15 +1,15 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor } from '../simulation-definition.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
 
 /**
  * @memberof STARPEACE.building.simulation.media
  * @extends STARPEACE.building.simulation.SimulationDefinition~JSON
- * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
  */
 export interface MediaStationDefinitionJson extends SimulationDefinitionJson {
-  labor: ResourceQuantityJson[];
+  labor: ResourceVelocityWeightedJson[];
 }
 
 /**
@@ -17,16 +17,16 @@ export interface MediaStationDefinitionJson extends SimulationDefinitionJson {
  * @memberof STARPEACE.building.simulation.media
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.industry.ResourceQuantity[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} labor - labor requirements for building
  */
-export class MediaStationDefinition extends SimulationDefinition {
+export class MediaStationDefinition extends SimulationDefinition implements SimulationWithLabor {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string { return 'MEDIA_STATION'; }
 
-  labor: ResourceQuantity[];
+  labor: ResourceVelocityWeighted[];
 
   /**
    * Create a MediaStationDefinition object
@@ -34,7 +34,7 @@ export class MediaStationDefinition extends SimulationDefinition {
    */
   constructor (json: MediaStationDefinitionJson) {
     super(json);
-    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
+    this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
   }
 
   /**

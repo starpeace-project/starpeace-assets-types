@@ -1,23 +1,23 @@
 import _ from 'lodash';
 
 import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
-import { FactoryStage, FactoryStageJson } from './factory-stage.js';
+import { FarmStage, FarmStageJson } from './farm-stage.js';
 
 /**
- * @memberof STARPEACE.building.simulation.factory
+ * @memberof STARPEACE.building.simulation.farm
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.building.simulation.factory.FactoryStageJson[]} stages - each stage of factory production
+ * @property {STARPEACE.building.simulation.farm.FarmStageJson[]} stages - each stage of farm production
  */
 export interface FarmDefinitionJson extends SimulationDefinitionJson {
-  stages: FactoryStageJson[];
+  stages: FarmStageJson[];
 }
 
 /**
  * Class representing farm building simulation definition
- * @memberof STARPEACE.building.simulation.factory
+ * @memberof STARPEACE.building.simulation.farm
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.building.simulation.factory.FactoryStage[]} stages - each stage of factory production
+ * @property {STARPEACE.building.simulation.farm.FarmStage[]} stages - each stage of farm production
  */
 export class FarmDefinition extends SimulationDefinition {
   /**
@@ -26,15 +26,15 @@ export class FarmDefinition extends SimulationDefinition {
    */
   static TYPE (): string { return 'FARM'; }
 
-  stages: FactoryStage[];
+  stages: FarmStage[];
 
   /**
-   * Create a FactoryDefinition object
+   * Create a FarmDefinition object
    * @param {STARPEACE.building.simulation.SimulationDefinition~JSON} json - raw JSON object to populate into simulation definition
    */
   constructor (json: FarmDefinitionJson) {
     super(json);
-    this.stages = (json.stages ?? []).map(FactoryStage.fromJson);
+    this.stages = (json.stages ?? []).map(FarmStage.fromJson);
   }
 
   /**

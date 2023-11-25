@@ -1,15 +1,15 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor } from '../simulation-definition.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
 
 /**
  * @memberof STARPEACE.building.simulation.civic
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
  */
 export interface MausoleumDefinitionJson extends SimulationDefinitionJson {
-  labor: ResourceQuantityJson[];
+  labor: ResourceVelocityWeightedJson[];
 }
 
 /**
@@ -17,16 +17,16 @@ export interface MausoleumDefinitionJson extends SimulationDefinitionJson {
  * @memberof STARPEACE.building.simulation.civic
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.industry.ResourceQuantity[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} labor - labor requirements for building
  */
-export class MausoleumDefinition extends SimulationDefinition {
+export class MausoleumDefinition extends SimulationDefinition implements SimulationWithLabor {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string { return 'MAUSOLEUM'; }
 
-  labor: ResourceQuantity[];
+  labor: ResourceVelocityWeighted[];
 
   /**
    * Create a MausoleumDefinition object
@@ -34,7 +34,7 @@ export class MausoleumDefinition extends SimulationDefinition {
    */
   constructor (json: MausoleumDefinitionJson) {
     super(json);
-    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
+    this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
   }
 
   /**

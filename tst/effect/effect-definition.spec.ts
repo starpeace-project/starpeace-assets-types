@@ -1,10 +1,10 @@
-import { assert } from "chai";
+import { assert, test } from 'vitest';
 
 import { EffectDefinition } from '../../src/index.js';
 
-describe('EffectDefinition', () => {
-  describe('#fromJson', () => {
-    it('should be able to create from json', async () => {
+test('EffectDefinition', () => {
+  test('#fromJson', () => {
+    test('should be able to create from json', async () => {
       const JSON = {
         id: 'id',
         image: 'image.gif',

@@ -1,17 +1,18 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor, SimulationWithOutputs } from '../simulation-definition.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
+import { ResourceVelocity, ResourceVelocityJson } from '../../../index.js';
 
 /**
  * @memberof STARPEACE.building.simulation.civic
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
- * @property {STARPEACE.industry.ResourceQuantityJson[]} products - products sold by this building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityJson[]} outputs - products sold by this building
  */
 export interface TradeCenterDefinitionJson extends SimulationDefinitionJson {
-  labor: ResourceQuantityJson[];
-  products: ResourceQuantityJson[];
+  labor: ResourceVelocityWeightedJson[];
+  outputs: ResourceVelocityJson[];
 }
 
 /**
@@ -19,18 +20,18 @@ export interface TradeCenterDefinitionJson extends SimulationDefinitionJson {
  * @memberof STARPEACE.building.simulation.civic
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.industry.ResourceQuantity[]} labor - labor requirements for building
- * @property {STARPEACE.industry.ResourceQuantity[]} products - products sold by this building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} outputs - products sold by this building
  */
-export class TradeCenterDefinition extends SimulationDefinition {
+export class TradeCenterDefinition extends SimulationDefinition implements SimulationWithLabor, SimulationWithOutputs {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string { return 'TRADECENTER'; }
 
-  labor: ResourceQuantity[];
-  products: ResourceQuantity[];
+  labor: ResourceVelocityWeighted[];
+  outputs: ResourceVelocity[];
 
   /**
    * Create a TradeCenterDefinition object
@@ -38,8 +39,8 @@ export class TradeCenterDefinition extends SimulationDefinition {
    */
   constructor (json: TradeCenterDefinitionJson) {
     super(json);
-    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
-    this.products = (json.products ?? []).map(ResourceQuantity.fromJson);
+    this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
+    this.outputs = (json.outputs ?? []).map(ResourceVelocity.fromJson);
   }
 
   /**
@@ -49,7 +50,7 @@ export class TradeCenterDefinition extends SimulationDefinition {
   isValid (): boolean {
     if (!super.isValid()) return false;
     if (!Array.isArray(this.labor) || !!this.labor.find((l) => !l.isValid())) return false;
-    if (!Array.isArray(this.products) || !this.products?.length || !!this.products.find((l) => !l.isValid())) return false;
+    if (!Array.isArray(this.outputs) || !this.outputs?.length || !!this.outputs.find((l) => !l.isValid())) return false;
     return true;
   }
 
@@ -60,7 +61,7 @@ export class TradeCenterDefinition extends SimulationDefinition {
   toJson (): TradeCenterDefinitionJson {
     return _.assign(super.toJson(), {
       labor: this.labor.map((l) => l.toJson()),
-      products: this.products.map((l) => l.toJson())
+      outputs: this.outputs.map((l) => l.toJson())
     });
   }
 }

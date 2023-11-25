@@ -1,32 +1,32 @@
 import _ from 'lodash';
 
 import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
-import { FactoryStage, FactoryStageJson } from './factory-stage.js';
+import { MovieStudioStage, MovieStudioStageJson } from '../movie-studio/movie-studio-stage.js';
 
 /**
- * @memberof STARPEACE.building.simulation.factory
+ * @memberof STARPEACE.building.simulation.moviestudio
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.building.simulation.factory.FactoryStageJson[]} stages - each stage of factory production
+ * @property {STARPEACE.building.simulation.moviestudio.MovieStudioStageJson[]} stages - each stage of movie studio production
  */
 export interface MovieStudioDefinitionJson extends SimulationDefinitionJson {
-  stages: FactoryStageJson[];
+  stages: MovieStudioStageJson[];
 }
 
 /**
  * Class representing movie studio building simulation definition
- * @memberof STARPEACE.building.simulation.factory
+ * @memberof STARPEACE.building.simulation.moviestudio
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.building.simulation.factory.FactoryStage[]} stages - each stage of factory production
+ * @property {STARPEACE.building.simulation.moviestudio.MovieStudioStage[]} stages - each stage of movie studio production
  */
 export class MovieStudioDefinition extends SimulationDefinition {
   /**
    * Type identifier for simulation definition
    * @static
    */
-  static TYPE (): string { return 'MOVIE_STUDIO'; }
+  static TYPE (): string { return 'MOVIESTUDIO'; }
 
-  stages: FactoryStage[];
+  stages: MovieStudioStage[];
 
   /**
    * Create a MovieStudio object
@@ -34,7 +34,7 @@ export class MovieStudioDefinition extends SimulationDefinition {
    */
   constructor (json: MovieStudioDefinitionJson) {
     super(json);
-    this.stages = (json.stages ?? []).map(FactoryStage.fromJson);
+    this.stages = (json.stages ?? []).map(MovieStudioStage.fromJson);
   }
 
   /**

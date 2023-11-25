@@ -1,10 +1,10 @@
-import { assert } from "chai";
+import { assert, test } from 'vitest';
 
 import { InventionDefinition } from '../../src/index.js';
 
-describe('InventionDefinition', () => {
-  describe('#fromJson', () => {
-    it('should be able to create from json', async () => {
+test('InventionDefinition', () => {
+  test('#fromJson', () => {
+    test('should be able to create from json', async () => {
       const JSON = {
         id: 'id',
         industryCategoryId: 'category',

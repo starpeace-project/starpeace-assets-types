@@ -1,17 +1,17 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor } from '../simulation-definition.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
 
 /**
  * @memberof STARPEACE.building.simulation.service
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
- * @property {STARPEACE.industry.ResourceQuantityJson[]} service - array of output service resource quantities provided by building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} service - array of output service resource quantities provided by building
  */
 export interface ServiceDefinitionJson extends SimulationDefinitionJson {
-  labor: ResourceQuantityJson[];
-  service: ResourceQuantityJson[];
+  labor: ResourceVelocityWeightedJson[];
+  outputs: ResourceVelocityWeightedJson[];
 }
 
 /**
@@ -19,18 +19,18 @@ export interface ServiceDefinitionJson extends SimulationDefinitionJson {
  * @memberof STARPEACE.building.simulation.service
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.industry.ResourceQuantity[]} labor - labor requirements for building
- * @property {STARPEACE.industry.ResourceQuantity[]} service - array of output service resource quantities provided by building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} service - array of output service resource quantities provided by building
  */
-export class ServiceDefinition extends SimulationDefinition {
+export class ServiceDefinition extends SimulationDefinition implements SimulationWithLabor {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string { return 'SERVICE'; }
 
-  labor: ResourceQuantity[];
-  service: ResourceQuantity[];
+  labor: ResourceVelocityWeighted[];
+  outputs: ResourceVelocityWeighted[];
 
   /**
    * Create a ServiceDefinition object
@@ -38,8 +38,8 @@ export class ServiceDefinition extends SimulationDefinition {
    */
   constructor (json: ServiceDefinitionJson) {
     super(json);
-    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
-    this.service = (json.service ?? []).map(ResourceQuantity.fromJson);
+    this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
+    this.outputs = (json.outputs ?? []).map(ResourceVelocityWeighted.fromJson);
   }
 
   /**
@@ -49,7 +49,7 @@ export class ServiceDefinition extends SimulationDefinition {
   isValid (): boolean {
     if (!super.isValid()) return false;
     if (!Array.isArray(this.labor) || !!this.labor.find((l) => !l.isValid())) return false;
-    if (!Array.isArray(this.service) || !this.service?.length || !!this.service.find((l) => !l.isValid())) return false;
+    if (!Array.isArray(this.outputs) || !this.outputs?.length || !!this.outputs.find((l) => !l.isValid())) return false;
     return true;
   }
 
@@ -60,7 +60,7 @@ export class ServiceDefinition extends SimulationDefinition {
   toJson (): ServiceDefinitionJson {
     return _.assign(super.toJson(), {
       labor: this.labor.map(l => l.toJson()),
-      service: this.service.map(l => l.toJson())
+      outputs: this.outputs.map(l => l.toJson())
     });
   }
 }

@@ -1,19 +1,20 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithInputs, SimulationWithLabor, SimulationWithOperations, SimulationWithOutputs } from '../simulation-definition.js';
 import { StoreProduct, StoreProductJson } from './store-product.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
+import { ResourceVelocity } from '../../../index.js';
 
 /**
  * @memberof STARPEACE.building.simulation.store
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
- * @property {STARPEACE.industry.ResourceQuantityJson[]} operations - array of resource quantities required for building operations
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} operations - array of resource quantities required for building operations
  * @property {STARPEACE.building.simulation.store.StoreProductJson[]} products - array of output resource products sold by building
  */
 export interface StoreDefinitionJson extends SimulationDefinitionJson {
-  labor: ResourceQuantityJson[];
-  operations: ResourceQuantityJson[];
+  labor: ResourceVelocityWeightedJson[];
+  operations: ResourceVelocityWeightedJson[];
   products: StoreProductJson[];
 }
 
@@ -22,19 +23,19 @@ export interface StoreDefinitionJson extends SimulationDefinitionJson {
  * @memberof STARPEACE.building.simulation.store
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.industry.ResourceQuantity[]} labor - labor requirements for building
- * @property {STARPEACE.industry.ResourceQuantity[]} operations - array of resource quantities required for building operations
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} operations - array of resource quantities required for building operations
  * @property {STARPEACE.building.simulation.store.StoreProduct[]} products - array of output resource products sold by building
  */
-export class StoreDefinition extends SimulationDefinition {
+export class StoreDefinition extends SimulationDefinition implements SimulationWithLabor, SimulationWithOperations, SimulationWithInputs, SimulationWithOutputs {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string { return 'STORE'; }
 
-  labor: ResourceQuantity[];
-  operations: ResourceQuantity[];
+  labor: ResourceVelocityWeighted[];
+  operations: ResourceVelocityWeighted[];
   products: StoreProduct[];
 
   /**
@@ -43,9 +44,17 @@ export class StoreDefinition extends SimulationDefinition {
    */
   constructor (json: StoreDefinitionJson) {
     super(json);
-    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
-    this.operations = (json.operations ?? []).map(ResourceQuantity.fromJson);
+    this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
+    this.operations = (json.operations ?? []).map(ResourceVelocityWeighted.fromJson);
     this.products = (json.products ?? []).map(StoreProduct.fromJson);
+  }
+
+  get inputs (): ResourceVelocityWeighted[] {
+    return this.products.map(p => p.inputs).flat();
+  }
+
+  get outputs (): ResourceVelocity[] {
+    return this.products.map(p => p.outputs).flat();
   }
 
   /**

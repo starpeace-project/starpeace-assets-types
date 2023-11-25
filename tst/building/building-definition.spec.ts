@@ -1,10 +1,10 @@
-import { assert } from "chai";
+import { assert, test } from 'vitest';
 
 import { BuildingDefinition } from '../../src/index.js';
 
-describe('BuildingDefinition', () => {
-  describe('#fromJson', () => {
-    it('should be able to create from json', async () => {
+test('BuildingDefinition', () => {
+  test('#fromJson', () => {
+    test('should be able to create from json', async () => {
       const JSON = {
         id: "generic.capitol",
         imageId: "generic.capitol",

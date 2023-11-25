@@ -1,16 +1,16 @@
 import _ from 'lodash';
 
-import { ResourceQuantity, ResourceQuantityJson } from '../../../industry/resource-quantity.js';
-import { SimulationDefinition, SimulationDefinitionJson } from '../simulation-definition.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor } from '../simulation-definition.js';
+import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
 
 /**
  * @memberof STARPEACE.building.simulation.media
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
- * @property {STARPEACE.industry.ResourceQuantityJson[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
  * @property {number} range - tile range building can reach
  */
 export interface AntennaDefinitionJson extends SimulationDefinitionJson {
-  labor: ResourceQuantityJson[];
+  labor: ResourceVelocityWeightedJson[];
   range: number;
 }
 
@@ -19,17 +19,17 @@ export interface AntennaDefinitionJson extends SimulationDefinitionJson {
  * @memberof STARPEACE.building.simulation.media
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.industry.ResourceQuantity[]} labor - labor requirements for building
+ * @property {STARPEACE.industry.ResourceVelocityWeighted[]} labor - labor requirements for building
  * @property {number} range - tile range building can reach
  */
-export class AntennaDefinition extends SimulationDefinition {
+export class AntennaDefinition extends SimulationDefinition implements SimulationWithLabor {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string { return 'ANTENNA'; }
 
-  labor: ResourceQuantity[];
+  labor: ResourceVelocityWeighted[];
   range: number;
 
   /**
@@ -38,7 +38,7 @@ export class AntennaDefinition extends SimulationDefinition {
    */
   constructor (json: AntennaDefinitionJson) {
     super(json);
-    this.labor = (json.labor ?? []).map(ResourceQuantity.fromJson);
+    this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
     this.range = json.range ?? 0;
   }
 

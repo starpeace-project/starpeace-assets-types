@@ -1,10 +1,10 @@
-import { assert } from "chai";
+import { assert, test } from 'vitest';
 
 import { Coordinate } from '../../src/index.js';
 
-describe('Coordinate', () => {
-  describe('#fromJson', () => {
-    it('should be able to create from json', async () => {
+test('Coordinate', () => {
+  test('#fromJson', () => {
+    test('should be able to create from json', async () => {
       const JSON = {
         x: 73,
         y: 52
