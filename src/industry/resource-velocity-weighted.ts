@@ -46,7 +46,7 @@ export class ResourceVelocityWeighted {
    */
   isValid (): boolean {
     if (!_.isString(this.resourceId) || !this.resourceId.length) return false;
-    if (!_.isNumber(this.minVelocity) || this.minVelocity < 0 || this.minVelocity > this.maxVelocity) return false;
+    if (this.minVelocity !== undefined && (this.minVelocity < 0 || this.minVelocity > this.maxVelocity)) return false;
     if (!_.isNumber(this.maxVelocity) || this.maxVelocity <= 0) return false;
     if (!_.isNumber(this.weightEfficiency) || this.weightEfficiency < 0) return false;
     if (!_.isNumber(this.weightQuality) || this.weightQuality < 0) return false;
