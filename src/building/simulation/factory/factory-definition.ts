@@ -24,7 +24,7 @@ export interface FactoryDefinitionJson extends SimulationDefinitionJson {
  * @memberof STARPEACE.building.simulation.factory
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
- * @property {STARPEACE.building.simulation.factory.FactoryStage[]} stages - each stage of factory production
+ *
  */
 export class FactoryDefinition extends SimulationDefinition implements SimulationWithLabor, SimulationWithOperations, SimulationWithInputs, SimulationWithOutputs {
   /**

@@ -49,7 +49,7 @@ export class FarmDefinition extends SimulationDefinition {
 
   /**
    * Retrieve JSON representation of object
-   * @return {STARPEACE.building.simulation.bank.FarmDefinitionJson} JSON representation of FarmDefinition
+   * @return {STARPEACE.building.simulation.farm.FarmDefinitionJson} JSON representation of FarmDefinition
    */
   toJson (): FarmDefinitionJson {
     return _.assign(super.toJson(), {
