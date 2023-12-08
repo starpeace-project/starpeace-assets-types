@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { ConstructionQuantity, ConstructionQuantityJson } from './construction-quantity.js';
 import { ResourceVelocityWeighted } from '../../industry/resource-velocity-weighted.js';
 import { ResourceVelocity } from '../../industry/resource-velocity.js';
+import { StorageQuantity } from './storage/storage-quantity.js';
 
 /**
  * @memberof STARPEACE.building.simulation
@@ -26,6 +27,13 @@ export interface SimulationDefinitionJson {
   pollution: number;
 }
 
+export interface SimulationWithInputs {
+  inputs: ResourceVelocityWeighted[];
+}
+export function isSimulationWithInputs (object: SimulationWithInputs | SimulationDefinition): object is SimulationWithInputs {
+  return (object as SimulationWithInputs).inputs !== undefined;
+}
+
 export interface SimulationWithLabor {
   labor: ResourceVelocityWeighted[];
 }
@@ -40,18 +48,18 @@ export function isSimulationWithOperations (object: SimulationWithOperations | S
   return (object as SimulationWithOperations).operations !== undefined;
 }
 
-export interface SimulationWithInputs {
-  inputs: ResourceVelocityWeighted[];
-}
-export function isSimulationWithInputs (object: SimulationWithInputs | SimulationDefinition): object is SimulationWithInputs {
-  return (object as SimulationWithInputs).inputs !== undefined;
-}
-
 export interface SimulationWithOutputs {
   outputs: ResourceVelocity[];
 }
 export function isSimulationWithOutputs (object: SimulationWithOutputs | SimulationDefinition): object is SimulationWithOutputs {
   return (object as SimulationWithOutputs).outputs !== undefined;
+}
+
+export interface SimulationWithStorage {
+  storage: StorageQuantity[];
+}
+export function isSimulationWithStorage (object: SimulationWithStorage | SimulationDefinition): object is SimulationWithStorage {
+  return (object as SimulationWithStorage).storage !== undefined;
 }
 
 /**

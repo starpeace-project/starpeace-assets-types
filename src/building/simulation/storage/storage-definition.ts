@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor, SimulationWithOperations } from '../simulation-definition.js';
+import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor, SimulationWithOperations, SimulationWithStorage } from '../simulation-definition.js';
 import { StorageQuantity, StorageQuantityJson } from './storage-quantity.js';
 import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
 
@@ -26,7 +26,7 @@ export interface StorageDefinitionJson extends SimulationDefinitionJson {
  * @property {STARPEACE.industry.ResourceVelocityWeighted[]} operations - array of resource quantities required for building operations
  * @property {STARPEACE.building.simulation.storage.StorageQuantity[]} storage - array of resource quantities stored by building
  */
-export class StorageDefinition extends SimulationDefinition implements SimulationWithLabor, SimulationWithOperations {
+export class StorageDefinition extends SimulationDefinition implements SimulationWithLabor, SimulationWithOperations, SimulationWithStorage {
   /**
    * Type identifier for simulation definition
    * @static
