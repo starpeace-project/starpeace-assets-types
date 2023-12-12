@@ -143,6 +143,15 @@ export class BuildingDefinition {
     this.allowedInventionIds = allowedInventionIds;
   }
 
+  getImageIdForLevel (level: number): string {
+    for (const image of this.levelImages) {
+      if (level >= image.minLevel && level <= image.maxLevel) {
+        return image.imageId;
+      }
+    }
+    return this.imageId;
+  }
+
   /**
    * Determine whether object and game configuration has valid attributes.
    * @return {boolean} true if object has valid configuration, false otherwise
