@@ -2,10 +2,24 @@ import _ from 'lodash';
 
 import { Translation, TranslationJson } from '../language/translation.js';
 
+
+/**
+ * @memberof STARPEACE.building
+ * @property {string} imageId - default building image definition identifier for this building
+ * @property {number} minLevel - minimum inclusive level applicable for image
+ * @property {number} maxLevel - maximum inclusive level applicable for image
+ */
+export interface BuildingDefinitionLevelImageJson {
+  imageId: string;
+  minLevel: number;
+  maxLevel: number;
+}
+
 /**
  * @memberof STARPEACE.building
  * @property {string} id - unique identifier for building definition
  * @property {string} imageId - default building image definition identifier for this building
+ * @property {BuildingDefinitionLevelImageJson[]} levelImages - array of images for different building levels
  * @property {string} signId - identifier for sign of this building
  * @property {string} constructionImageId - building image definition identifier to use during construction of this building
  * @property {STARPEACE.language.TranslationJson} name - translation object with name of building
@@ -21,7 +35,8 @@ import { Translation, TranslationJson } from '../language/translation.js';
 export interface BuildingDefinitionJson {
   id: string;
   imageId: string;
-  signId: string | undefined | null;
+  signId?: string | undefined;
+  levelImages?: BuildingDefinitionLevelImageJson[] | undefined;
   constructionImageId: string;
   name: TranslationJson;
   zoneId: string;
@@ -29,9 +44,47 @@ export interface BuildingDefinitionJson {
   industryTypeId: string;
   sealId: string;
   foundation: boolean;
-  restricted: boolean | undefined;
-  requiredInventionIds: string[] | undefined;
-  allowedInventionIds: string[] | undefined;
+  restricted?: boolean | undefined;
+  requiredInventionIds?: string[] | undefined;
+  allowedInventionIds?: string[] | undefined;
+}
+
+/**
+ * @memberof STARPEACE.building
+ * @property {string} imageId - default building image definition identifier for this building
+ * @property {number} minLevel - minimum inclusive level applicable for image
+ * @property {number} maxLevel - maximum inclusive level applicable for image
+ */
+export class BuildingDefinitionLevelImage {
+  imageId: string;
+  minLevel: number;
+  maxLevel: number;
+
+  constructor (imageId: string, minLevel: number, maxLevel: number) {
+    this.imageId = imageId;
+    this.minLevel = minLevel;
+    this.maxLevel = maxLevel;
+  }
+
+  isValid (): boolean {
+    if (!_.isString(this.imageId) || !this.imageId?.length) return false;
+    if (!_.isNumber(this.minLevel)) return false;
+    if (!_.isNumber(this.maxLevel)) return false;
+    if (this.minLevel < 1 || this.maxLevel < 1 || this.minLevel > this.maxLevel) return false;
+    return true;
+  }
+
+  toJson (): BuildingDefinitionLevelImageJson {
+    return {
+      imageId: this.imageId,
+      minLevel: this.minLevel,
+      maxLevel: this.maxLevel
+    };
+  }
+
+  static fromJson (json: BuildingDefinitionLevelImageJson): BuildingDefinitionLevelImage {
+    return new BuildingDefinitionLevelImage(json.imageId, json.minLevel, json.maxLevel);
+  }
 }
 
 /**
@@ -41,6 +94,7 @@ export interface BuildingDefinitionJson {
  * @property {string} id - unique identifier for building definition
  * @property {string} imageId - default building image definition identifier for this building
  * @property {string} signId - identifier for sign of this building
+ * @property {BuildingDefinitionLevelImage[]} levelImages - array of images for different building levels
  * @property {string} constructionImageId - building image definition identifier to use during construction of this building
  * @property {STARPEACE.language.Translation} name - translation object with name of building
  * @property {string} zoneId - identifier for city zone of this building
@@ -55,7 +109,8 @@ export interface BuildingDefinitionJson {
 export class BuildingDefinition {
   id: string;
   imageId: string;
-  signId: string | null;
+  signId: string | undefined;
+  levelImages: BuildingDefinitionLevelImage[];
   constructionImageId: string;
   name: Translation;
   zoneId: string;
@@ -71,10 +126,11 @@ export class BuildingDefinition {
   * Create a BuildingDefinition object
   * @param {STARPEACE.building.simulation.BuildingDefinitionJson} json - raw JSON object to populate into simulation definition
   */
-  constructor (id: string, imageId: string, signId: string | null, constructionImageId: string, name: Translation, zoneId: string, industryCategoryId: string, industryTypeId: string, sealId: string, foundation: boolean, restricted: boolean, requiredInventionIds: string[], allowedInventionIds: string[]) {
+  constructor (id: string, imageId: string, signId: string | undefined, levelImages: BuildingDefinitionLevelImage[], constructionImageId: string, name: Translation, zoneId: string, industryCategoryId: string, industryTypeId: string, sealId: string, foundation: boolean, restricted: boolean, requiredInventionIds: string[], allowedInventionIds: string[]) {
     this.id = id;
     this.imageId = imageId;
     this.signId = signId;
+    this.levelImages = levelImages;
     this.constructionImageId = constructionImageId;
     this.name = name;
     this.zoneId = zoneId;
@@ -94,6 +150,17 @@ export class BuildingDefinition {
   isValid (): boolean {
     if (!_.isString(this.id) || !this.id?.length) return false;
     if (!_.isString(this.imageId) || !this.imageId?.length) return false;
+    if (this.levelImages?.length) {
+      if (!this.levelImages.every(i => i.isValid())) {
+        return false;
+      }
+
+      let level = 0;
+      for (const image of this.levelImages) {
+        if (image.minLevel <= level || image.maxLevel <= level) return false;
+        level = image.maxLevel;
+      }
+    }
     if (!_.isString(this.constructionImageId) || !this.constructionImageId?.length) return false;
     if (!this.name.isValid()) return false;
     if (!_.isString(this.zoneId) || !this.zoneId?.length) return false;
@@ -112,6 +179,7 @@ export class BuildingDefinition {
       id: this.id,
       imageId: this.imageId,
       signId: this.signId,
+      levelImages: this.levelImages?.map(i => i.toJson()),
       constructionImageId: this.constructionImageId,
       name: this.name.toJson(),
       zoneId: this.zoneId,
@@ -134,7 +202,8 @@ export class BuildingDefinition {
     return new BuildingDefinition(
       json.id,
       json.imageId,
-      json.signId ?? null,
+      json.signId ?? undefined,
+      (json.levelImages ?? []).map(BuildingDefinitionLevelImage.fromJson),
       json.constructionImageId,
       Translation.fromJson(json.name),
       json.zoneId,

@@ -43,8 +43,10 @@ export class ResidenceDefinition extends SimulationDefinition implements Simulat
 
   labor: ResourceVelocityWeighted[];
   residentType: string;
+
   capacity: number;
   efficiency: number;
+
   crimeResistence: number;
   pollutionResistence: number;
 
