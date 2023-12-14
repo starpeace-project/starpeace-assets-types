@@ -3,11 +3,13 @@ import _ from 'lodash';
 /**
  * @memberof STARPEACE.building.simulation.storage
  * @property {string} resourceId - identifier of resource type of storage
- * @property {number} max - maximum amount of resource that can be stored
+ * @property {number} maxCapacity - maximum amount of resource that can be stored
+ * @property {number} maxVelocity - maximum quantity of resource per hour
  */
 export interface StorageQuantityJson {
   resourceId: string;
-  max: number;
+  maxCapacity: number;
+  maxVelocity: number;
 }
 
 /**
@@ -15,15 +17,18 @@ export interface StorageQuantityJson {
  * @memberof STARPEACE.building.simulation.storage
  *
  * @property {string} resourceId - identifier of resource type of storage
- * @property {number} max - maximum amount of resource that can be stored
+ * @property {number} maxCapacity - maximum amount of resource that can be stored
+ * @property {number} maxVelocity - maximum quantity of resource per hour
  */
 export class StorageQuantity {
   resourceId: string;
-  max: number;
+  maxCapacity: number;
+  maxVelocity: number;
 
-  constructor (resourceId: string, max: number) {
+  constructor (resourceId: string, maxCapacity: number, maxVelocity: number) {
     this.resourceId = resourceId;
-    this.max = max;
+    this.maxCapacity = maxCapacity;
+    this.maxVelocity = maxVelocity;
   }
 
   /**
@@ -32,7 +37,8 @@ export class StorageQuantity {
    */
   isValid (): boolean {
     if (!_.isString(this.resourceId) || !this.resourceId.length) return false;
-    if (!_.isNumber(this.max) || this.max <= 0) return false;
+    if (!_.isNumber(this.maxCapacity) || this.maxCapacity <= 0) return false;
+    if (!_.isNumber(this.maxVelocity) || this.maxVelocity <= 0) return false;
     return true;
   }
 
@@ -43,7 +49,8 @@ export class StorageQuantity {
   toJson (): StorageQuantityJson {
     return {
       resourceId: this.resourceId,
-      max: this.max
+      maxCapacity: this.maxCapacity,
+      maxVelocity: this.maxVelocity
     };
   }
 
@@ -53,6 +60,6 @@ export class StorageQuantity {
    * @return {STARPEACE.building.simulation.storage.StorageQuantity} StorageQuantity representation of parsed JSON
    */
   static fromJson (json: StorageQuantityJson): StorageQuantity {
-    return new StorageQuantity(json.resourceId, json.max);
+    return new StorageQuantity(json.resourceId, json.maxCapacity, json.maxVelocity);
   }
 }
