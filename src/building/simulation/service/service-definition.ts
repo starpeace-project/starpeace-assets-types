@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import { SimulationDefinition, SimulationDefinitionJson, SimulationWithLabor, SimulationWithOperations, SimulationWithOutputs } from '../simulation-definition.js';
 import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../../industry/resource-velocity-weighted.js';
-import { ResourceVelocity, ResourceVelocityJson } from '../../../index.js';
+import { ResourceVelocity, ResourceVelocityJson } from '../../../industry/resource-velocity.js';
 
 /**
  * @memberof STARPEACE.building.simulation.service
