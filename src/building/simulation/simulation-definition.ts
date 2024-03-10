@@ -14,6 +14,7 @@ import { StorageQuantity } from './storage/storage-quantity.js';
  * @property {number} prestige - prestige earned or lost per level of this building simulation
  * @property {number} maintenance - maintenance required per level of this building simulation per hour
  * @property {number} beauty - beauty earned or lost per level of this building simulation per hour
+ * @property {number} nature - nature earned or lost per level of this building simulation per hour
  * @property {number} pollution - pollution earned or lost per level of this building simulation per hour
  */
 export interface SimulationDefinitionJson {
@@ -21,10 +22,13 @@ export interface SimulationDefinitionJson {
   type: string;
   maxLevel: number;
   constructionInputs: ConstructionQuantityJson[];
-  prestige: number;
-  maintenance: number;
-  beauty: number;
-  pollution: number;
+
+  prestige?: number;
+  maintenance?: number;
+
+  beauty?: number;
+  nature?: number;
+  pollution?: number;
 }
 
 export interface SimulationWithInputs {
@@ -73,6 +77,7 @@ export function isSimulationWithStorage (object: SimulationWithStorage | Simulat
  * @property {number} prestige - prestige earned or lost per level of this building simulation
  * @property {number} maintenance - maintenance required per level of this building simulation per hour
  * @property {number} beauty - beauty earned or lost per level of this building simulation per hour
+ * @property {number} nature - nature earned or lost per level of this building simulation per hour
  * @property {number} pollution - pollution earned or lost per level of this building simulation per hour
  */
 export class SimulationDefinition {
@@ -83,10 +88,14 @@ export class SimulationDefinition {
 
   prestige: number;
   maintenance: number;
+
   beauty: number;
+  nature: number;
   pollution: number;
 
-  static TYPE (): string { return 'NONE'; }
+  static TYPE (): string {
+    return 'NONE';
+  }
 
   /**
   * Create a SimulationDefinition object
@@ -100,6 +109,7 @@ export class SimulationDefinition {
     this.prestige = json.prestige ?? 0;
     this.maintenance = json.maintenance ?? 0;
     this.beauty = json.beauty ?? 0;
+    this.nature = json.nature ?? 0;
     this.pollution = json.pollution ?? 0;
   }
 
@@ -108,16 +118,29 @@ export class SimulationDefinition {
    * @return {STARPEACE.building.simulation.SimulationDefinition~JSON} JSON representation of SimulationDefinition
    */
   toJson (): SimulationDefinitionJson {
-    return {
+    const json: SimulationDefinitionJson = {
       id: this.id,
       type: this.type,
       maxLevel: this.maxLevel,
-      constructionInputs: this.constructionInputs.map(ci => ci.toJson()),
-      prestige: this.prestige,
-      maintenance: this.maintenance,
-      beauty: this.beauty,
-      pollution: this.pollution
+      constructionInputs: this.constructionInputs.map(ci => ci.toJson())
     };
+
+    if (this.prestige !== 0) {
+      json.prestige = this.prestige;
+    }
+    if (this.maintenance !== 0) {
+      json.maintenance = this.maintenance;
+    }
+    if (this.beauty !== 0) {
+      json.beauty = this.beauty;
+    }
+    if (this.nature !== 0) {
+      json.nature = this.nature;
+    }
+    if (this.pollution !== 0) {
+      json.pollution = this.pollution;
+    }
+    return json;
   }
 
   /**
@@ -131,6 +154,7 @@ export class SimulationDefinition {
     if (!_.isNumber(this.prestige)) return false;
     if (!_.isNumber(this.maintenance)) return false;
     if (!_.isNumber(this.beauty)) return false;
+    if (!_.isNumber(this.nature)) return false;
     if (!_.isNumber(this.pollution)) return false;
     return true;
   }

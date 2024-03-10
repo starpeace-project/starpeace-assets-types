@@ -7,11 +7,9 @@ import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../..
  * @memberof STARPEACE.building.simulation.park
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
  * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
- * @property {number} sport - amount of sport provided by building per hour
  */
 export interface ParkDefinitionJson extends SimulationDefinitionJson {
   labor: ResourceVelocityWeightedJson[];
-  sport: number;
 }
 
 /**
@@ -20,7 +18,6 @@ export interface ParkDefinitionJson extends SimulationDefinitionJson {
  * @extends STARPEACE.building.simulation.SimulationDefinition
  *
  * @property {STARPEACE.industry.ResourceVelocityWeighted[]} labor - labor requirements for building
- * @property {number} sport - amount of sport provided by building per hour
  */
 export class ParkDefinition extends SimulationDefinition implements SimulationWithLabor {
   /**
@@ -30,7 +27,6 @@ export class ParkDefinition extends SimulationDefinition implements SimulationWi
   static TYPE (): string { return 'PARK'; }
 
   labor: ResourceVelocityWeighted[];
-  sport: number;
 
   /**
    * Create a ParkDefinition object
@@ -39,7 +35,6 @@ export class ParkDefinition extends SimulationDefinition implements SimulationWi
   constructor (json: ParkDefinitionJson) {
     super(json);
     this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
-    this.sport = json.sport ?? 0;
   }
 
   /**
@@ -49,7 +44,6 @@ export class ParkDefinition extends SimulationDefinition implements SimulationWi
   isValid (): boolean {
     if (!super.isValid()) return false;
     if (!Array.isArray(this.labor) || !!this.labor.find((l) => !l.isValid())) return false;
-    if (!_.isNumber(this.sport) || this.sport < 0) return false;
     return true;
   }
 
@@ -59,8 +53,7 @@ export class ParkDefinition extends SimulationDefinition implements SimulationWi
    */
   toJson (): ParkDefinitionJson {
     return _.assign(super.toJson(), {
-      labor: this.labor.map((l) => l.toJson()),
-      sport: this.sport
+      labor: this.labor.map((l) => l.toJson())
     });
   }
 }
