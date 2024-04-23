@@ -22,6 +22,7 @@ export * from './building/simulation/storage/storage-quantity.js';
 export * from './building/simulation/store/store-definition.js';
 export * from './building/simulation/store/store-product.js';
 export * from './building/simulation/store/store-product-customer.js';
+export * from './building/simulation/transport/terminal-definition.js';
 
 export * from './building/simulation/construction-quantity.js';
 export * from './building/simulation/simulation-definition.js';
