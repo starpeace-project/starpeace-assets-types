@@ -8,7 +8,7 @@ import { ResourceVelocityWeighted, ResourceVelocityWeightedJson } from '../../..
  * @extends STARPEACE.building.simulation.SimulationDefinitionJson
  * @property {STARPEACE.industry.ResourceVelocityWeightedJson[]} labor - labor requirements for building
  */
-export interface TerminalDefinitionJson extends SimulationDefinitionJson {
+export interface StationDefinitionJson extends SimulationDefinitionJson {
   labor: ResourceVelocityWeightedJson[];
 }
 
@@ -19,22 +19,22 @@ export interface TerminalDefinitionJson extends SimulationDefinitionJson {
  *
  * @property {STARPEACE.industry.ResourceVelocityWeighted[]} labor - labor requirements for building
  */
-export class TerminalDefinition extends SimulationDefinition implements SimulationWithLabor {
+export class StationDefinition extends SimulationDefinition implements SimulationWithLabor {
   /**
    * Type identifier for simulation definition
    * @static
    */
   static TYPE (): string {
-    return 'TRANSIT_TERMINAL';
+    return 'TRANSIT_STATION';
   }
 
   labor: ResourceVelocityWeighted[];
 
   /**
-   * Create a TerminalDefinition object
+   * Create a StationDefinition object
    * @param {STARPEACE.building.simulation.SimulationDefinitionJson} json - raw JSON object to populate into simulation definition
    */
-  constructor (json: TerminalDefinitionJson) {
+  constructor (json: StationDefinitionJson) {
     super(json);
     this.labor = (json.labor ?? []).map(ResourceVelocityWeighted.fromJson);
   }
@@ -51,9 +51,9 @@ export class TerminalDefinition extends SimulationDefinition implements Simulati
 
   /**
    * Retrieve JSON representation of object
-   * @return {STARPEACE.building.simulation.transport.SimulationDefinitionJson} JSON representation of TerminalDefinition
+   * @return {STARPEACE.building.simulation.transport.SimulationDefinitionJson} JSON representation of StationDefinition
    */
-  toJson (): TerminalDefinitionJson {
+  toJson (): StationDefinitionJson {
     return _.assign(super.toJson(), {
       labor: this.labor.map((l) => l.toJson())
     });
