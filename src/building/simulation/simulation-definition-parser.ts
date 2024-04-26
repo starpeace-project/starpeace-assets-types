@@ -20,6 +20,7 @@ import { ResidenceDefinition } from './residence/residence-definition.js';
 import { ServiceDefinition } from './service/service-definition.js';
 import { StorageDefinition } from './storage/storage-definition.js';
 import { StoreDefinition } from './store/store-definition.js';
+import { StationDefinition } from './transport/station-definition.js';
 import { TerminalDefinition } from './transport/terminal-definition.js';
 
 
@@ -42,6 +43,7 @@ const DEFINITIONS_BY_TYPE: Record<string, typeof SimulationDefinition> = _.keyBy
   ServiceDefinition,
   StorageDefinition,
   StoreDefinition,
+  StationDefinition,
   TerminalDefinition
 ], (def) => def.TYPE());
 
