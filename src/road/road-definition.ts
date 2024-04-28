@@ -1,13 +1,80 @@
 import _ from 'lodash';
 
+import { Translation, TranslationJson } from '../language/translation.js';
+
+export interface RoadImageCatalogJson {
+  bridge?: Record<string, string> | undefined;
+  light?: Record<string, string> | undefined;
+  urban?: Record<string, string> | undefined;
+  rural?: Record<string, string> | undefined;
+  transition?: Record<string, string> | undefined;
+  any?: Record<string, string> | undefined;
+}
+
 /**
  * @memberof STARPEACE.road
- * @property {string} id - identifier of asset
- * @property {string} image - image path of asset
+ * @property {string} id - identifier of definition
+ * @property {string} type - type of transport (ROAD, RAIL)
  */
 export interface RoadDefinitionJson {
   id: string;
-  image: string;
+  type: string;
+  tileWidth: number;
+  tileHeight: number;
+  name: TranslationJson;
+  imageCatalog: RoadImageCatalogJson;
+}
+
+export class RoadImageCatalog {
+  bridge: Record<string, string>;
+  light: Record<string, string>;
+  urban: Record<string, string>;
+  rural: Record<string, string>;
+  transition: Record<string, string>;
+  any: Record<string, string>;
+
+  constructor (bridge: Record<string, string>, light: Record<string, string>, urban: Record<string, string>, rural: Record<string, string>, transition: Record<string, string>, any: Record<string, string>) {
+    this.bridge = bridge;
+    this.light = light;
+    this.urban = urban;
+    this.rural = rural;
+    this.transition = transition;
+    this.any = any;
+  }
+
+  toJson (): RoadImageCatalogJson {
+    const json: RoadImageCatalogJson = {};
+    if (Object.keys(this.bridge).length > 0) {
+      json.bridge = this.bridge;
+    }
+    if (Object.keys(this.light).length > 0) {
+      json.light = this.light;
+    }
+    if (Object.keys(this.urban).length > 0) {
+      json.urban = this.urban;
+    }
+    if (Object.keys(this.rural).length > 0) {
+      json.rural = this.rural;
+    }
+    if (Object.keys(this.transition).length > 0) {
+      json.transition = this.transition;
+    }
+    if (Object.keys(this.any).length > 0) {
+      json.any = this.any;
+    }
+    return json;
+  }
+
+  static fromJson (json: RoadImageCatalogJson): RoadImageCatalog {
+    return new RoadImageCatalog(
+      json.bridge ?? {},
+      json.light ?? {},
+      json.urban ?? {},
+      json.rural ?? {},
+      json.transition ?? {},
+      json.any ?? {}
+    );
+  }
 }
 
 /**
@@ -19,11 +86,19 @@ export interface RoadDefinitionJson {
  */
 export class RoadDefinition {
   id: string;
-  image: string;
+  type: string;
+  tileWidth: number;
+  tileHeight: number;
+  name: Translation;
+  imageCatalog: RoadImageCatalog;
 
-  constructor (id: string, image: string) {
+  constructor (id: string, type: string, tileWidth: number, tileHeight: number, name: Translation, imageCatalog: RoadImageCatalog) {
     this.id = id;
-    this.image = image;
+    this.type = type;
+    this.tileWidth = tileWidth;
+    this.tileHeight = tileHeight;
+    this.name = name;
+    this.imageCatalog = imageCatalog;
   }
 
   /**
@@ -32,7 +107,10 @@ export class RoadDefinition {
    */
   isValid (): boolean {
     if (!_.isString(this.id) || !this.id.length) return false;
-    if (!_.isString(this.image) || !this.image.length) return false;
+    if (!_.isString(this.type) || !this.type.length) return false;
+    if (!_.isNumber(this.tileWidth) || this.tileWidth < 1) return false;
+    if (!_.isNumber(this.tileHeight) || this.tileHeight < 1) return false;
+    if (!this.name.isValid()) return false;
     return true;
   }
 
@@ -43,7 +121,11 @@ export class RoadDefinition {
   toJson (): RoadDefinitionJson {
     return {
       id: this.id,
-      image: this.image
+      type: this.type,
+      tileWidth: this.tileWidth,
+      tileHeight: this.tileHeight,
+      name: this.name.toJson(),
+      imageCatalog: this.imageCatalog.toJson()
     };
   }
 
@@ -53,6 +135,13 @@ export class RoadDefinition {
   * @return {STARPEACE.road.RoadDefinition} RoadDefinition representation of parsed JSON
    */
   static fromJson (json: RoadDefinitionJson): RoadDefinition {
-    return new RoadDefinition(json.id, json.image);
+    return new RoadDefinition(
+      json.id,
+      json.type,
+      json.tileWidth,
+      json.tileHeight,
+      Translation.fromJson(json.name),
+      RoadImageCatalog.fromJson(json.imageCatalog)
+    );
   }
 }

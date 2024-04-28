@@ -48,10 +48,12 @@ export * from './industry/resource-velocity.js';
 export * from './industry/resource-velocity-weighted.js';
 export * from './industry/time-duration.js';
 
+export * from './road/road-definition.js';
+export * from './road/road-image-definition.js';
+
 export * from './invention/invention-definition.js';
 export * from './language/translation.js';
 export * from './overlay/overlay-definition.js';
 export * from './plane/plane-definition.js';
-export * from './road/road-definition.js';
 export * from './seal/company-seal.js';
 export * from './sign/sign-definition.js';
