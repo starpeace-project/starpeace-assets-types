@@ -21,6 +21,7 @@ export interface RoadDefinitionJson {
   type: string;
   tileWidth: number;
   tileHeight: number;
+  laneCount: number;
   name: TranslationJson;
   imageCatalog: RoadImageCatalogJson;
 }
@@ -82,22 +83,24 @@ export class RoadImageCatalog {
  * @memberof STARPEACE.road
  *
  * @property {string} id - Unique identifier of road asset
- * @property {string} image - image path of asset
+ * @property {string} type - type of road
  */
 export class RoadDefinition {
   id: string;
   type: string;
+  name: Translation;
   tileWidth: number;
   tileHeight: number;
-  name: Translation;
+  laneCount: number;
   imageCatalog: RoadImageCatalog;
 
-  constructor (id: string, type: string, tileWidth: number, tileHeight: number, name: Translation, imageCatalog: RoadImageCatalog) {
+  constructor (id: string, type: string, name: Translation, tileWidth: number, tileHeight: number, laneCount: number, imageCatalog: RoadImageCatalog) {
     this.id = id;
     this.type = type;
+    this.name = name;
     this.tileWidth = tileWidth;
     this.tileHeight = tileHeight;
-    this.name = name;
+    this.laneCount = laneCount;
     this.imageCatalog = imageCatalog;
   }
 
@@ -108,9 +111,10 @@ export class RoadDefinition {
   isValid (): boolean {
     if (!_.isString(this.id) || !this.id.length) return false;
     if (!_.isString(this.type) || !this.type.length) return false;
+    if (!this.name.isValid()) return false;
     if (!_.isNumber(this.tileWidth) || this.tileWidth < 1) return false;
     if (!_.isNumber(this.tileHeight) || this.tileHeight < 1) return false;
-    if (!this.name.isValid()) return false;
+    if (!_.isNumber(this.laneCount) || this.laneCount < 1) return false;
     return true;
   }
 
@@ -122,9 +126,10 @@ export class RoadDefinition {
     return {
       id: this.id,
       type: this.type,
+      name: this.name.toJson(),
       tileWidth: this.tileWidth,
       tileHeight: this.tileHeight,
-      name: this.name.toJson(),
+      laneCount: this.laneCount,
       imageCatalog: this.imageCatalog.toJson()
     };
   }
@@ -138,9 +143,10 @@ export class RoadDefinition {
     return new RoadDefinition(
       json.id,
       json.type,
+      Translation.fromJson(json.name),
       json.tileWidth,
       json.tileHeight,
-      Translation.fromJson(json.name),
+      json.laneCount,
       RoadImageCatalog.fromJson(json.imageCatalog)
     );
   }
