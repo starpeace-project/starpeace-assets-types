@@ -16,6 +16,7 @@ test('RoadDefinition #fromJson should be able to create from json', async () => 
       'IT': 'n5',
       'PT': 'n6'
     },
+    cost: 2000000,
     tileWidth: 1,
     tileHeight: 1,
     laneCount: 1,
@@ -62,6 +63,7 @@ test('RoadDefinition #fromJson should be able to create from json without catalo
     type: 'RAIL',
     industryCategoryId: 'TRANSPORT',
     industryTypeId: 'RAIL_TRANSPORT',
+    cost: 1000000,
     tileWidth: 2,
     tileHeight: 2,
     laneCount: 2,

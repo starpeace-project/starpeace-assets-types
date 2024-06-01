@@ -21,6 +21,7 @@ export interface RoadDefinitionJson {
   type: string;
   industryCategoryId: string;
   industryTypeId: string;
+  cost: number;
   tileWidth: number;
   tileHeight: number;
   laneCount: number;
@@ -93,17 +94,19 @@ export class RoadDefinition {
   industryCategoryId: string;
   industryTypeId: string;
   name: Translation;
+  cost: number;
   tileWidth: number;
   tileHeight: number;
   laneCount: number;
   imageCatalog: RoadImageCatalog;
 
-  constructor (id: string, type: string, industryCategoryId: string, industryTypeId: string, name: Translation, tileWidth: number, tileHeight: number, laneCount: number, imageCatalog: RoadImageCatalog) {
+  constructor (id: string, type: string, industryCategoryId: string, industryTypeId: string, name: Translation, cost: number, tileWidth: number, tileHeight: number, laneCount: number, imageCatalog: RoadImageCatalog) {
     this.id = id;
     this.type = type;
     this.industryCategoryId = industryCategoryId;
     this.industryTypeId = industryTypeId;
     this.name = name;
+    this.cost = cost;
     this.tileWidth = tileWidth;
     this.tileHeight = tileHeight;
     this.laneCount = laneCount;
@@ -120,6 +123,7 @@ export class RoadDefinition {
     if (!_.isString(this.industryCategoryId) || !this.industryCategoryId.length) return false;
     if (!_.isString(this.industryTypeId) || !this.industryTypeId.length) return false;
     if (!this.name.isValid()) return false;
+    if (!_.isNumber(this.cost) || this.cost < 0) return false;
     if (!_.isNumber(this.tileWidth) || this.tileWidth < 1) return false;
     if (!_.isNumber(this.tileHeight) || this.tileHeight < 1) return false;
     if (!_.isNumber(this.laneCount) || this.laneCount < 1) return false;
@@ -137,6 +141,7 @@ export class RoadDefinition {
       industryCategoryId: this.industryCategoryId,
       industryTypeId: this.industryTypeId,
       name: this.name.toJson(),
+      cost: this.cost,
       tileWidth: this.tileWidth,
       tileHeight: this.tileHeight,
       laneCount: this.laneCount,
@@ -156,6 +161,7 @@ export class RoadDefinition {
       json.industryCategoryId,
       json.industryTypeId,
       Translation.fromJson(json.name),
+      json.cost,
       json.tileWidth,
       json.tileHeight,
       json.laneCount,
