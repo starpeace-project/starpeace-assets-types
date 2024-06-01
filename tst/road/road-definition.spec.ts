@@ -6,6 +6,8 @@ test('RoadDefinition #fromJson should be able to create from json', async () => 
   const JSON = {
     id: 'id',
     type: 'ROAD',
+    industryCategoryId: 'TRANSPORT',
+    industryTypeId: 'RAIL_TRANSPORT',
     name: {
       'DE': 'n1',
       'EN': 'n2',
@@ -43,6 +45,8 @@ test('RoadDefinition #fromJson should be able to create from json', async () => 
   assert.isOk(road);
   assert.strictEqual(road.id, JSON.id);
   assert.strictEqual(road.type, JSON.type);
+  assert.strictEqual(road.industryCategoryId, JSON.industryCategoryId);
+  assert.strictEqual(road.industryTypeId, JSON.industryTypeId);
   assert.deepStrictEqual(road.name.toJson(), JSON.name);
   assert.strictEqual(road.tileWidth, JSON.tileWidth);
   assert.strictEqual(road.tileHeight, JSON.tileHeight);
@@ -56,6 +60,8 @@ test('RoadDefinition #fromJson should be able to create from json without catalo
   const JSON = {
     id: 'id',
     type: 'RAIL',
+    industryCategoryId: 'TRANSPORT',
+    industryTypeId: 'RAIL_TRANSPORT',
     tileWidth: 2,
     tileHeight: 2,
     laneCount: 2,
@@ -74,6 +80,8 @@ test('RoadDefinition #fromJson should be able to create from json without catalo
   assert.isOk(road);
   assert.strictEqual(road.id, JSON.id);
   assert.strictEqual(road.type, JSON.type);
+  assert.strictEqual(road.industryCategoryId, JSON.industryCategoryId);
+  assert.strictEqual(road.industryTypeId, JSON.industryTypeId);
   assert.deepStrictEqual(road.name.toJson(), JSON.name);
   assert.strictEqual(road.tileWidth, JSON.tileWidth);
   assert.strictEqual(road.tileHeight, JSON.tileHeight);

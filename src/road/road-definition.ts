@@ -19,6 +19,8 @@ export interface RoadImageCatalogJson {
 export interface RoadDefinitionJson {
   id: string;
   type: string;
+  industryCategoryId: string;
+  industryTypeId: string;
   tileWidth: number;
   tileHeight: number;
   laneCount: number;
@@ -88,15 +90,19 @@ export class RoadImageCatalog {
 export class RoadDefinition {
   id: string;
   type: string;
+  industryCategoryId: string;
+  industryTypeId: string;
   name: Translation;
   tileWidth: number;
   tileHeight: number;
   laneCount: number;
   imageCatalog: RoadImageCatalog;
 
-  constructor (id: string, type: string, name: Translation, tileWidth: number, tileHeight: number, laneCount: number, imageCatalog: RoadImageCatalog) {
+  constructor (id: string, type: string, industryCategoryId: string, industryTypeId: string, name: Translation, tileWidth: number, tileHeight: number, laneCount: number, imageCatalog: RoadImageCatalog) {
     this.id = id;
     this.type = type;
+    this.industryCategoryId = industryCategoryId;
+    this.industryTypeId = industryTypeId;
     this.name = name;
     this.tileWidth = tileWidth;
     this.tileHeight = tileHeight;
@@ -111,6 +117,8 @@ export class RoadDefinition {
   isValid (): boolean {
     if (!_.isString(this.id) || !this.id.length) return false;
     if (!_.isString(this.type) || !this.type.length) return false;
+    if (!_.isString(this.industryCategoryId) || !this.industryCategoryId.length) return false;
+    if (!_.isString(this.industryTypeId) || !this.industryTypeId.length) return false;
     if (!this.name.isValid()) return false;
     if (!_.isNumber(this.tileWidth) || this.tileWidth < 1) return false;
     if (!_.isNumber(this.tileHeight) || this.tileHeight < 1) return false;
@@ -126,6 +134,8 @@ export class RoadDefinition {
     return {
       id: this.id,
       type: this.type,
+      industryCategoryId: this.industryCategoryId,
+      industryTypeId: this.industryTypeId,
       name: this.name.toJson(),
       tileWidth: this.tileWidth,
       tileHeight: this.tileHeight,
@@ -143,6 +153,8 @@ export class RoadDefinition {
     return new RoadDefinition(
       json.id,
       json.type,
+      json.industryCategoryId,
+      json.industryTypeId,
       Translation.fromJson(json.name),
       json.tileWidth,
       json.tileHeight,
