@@ -51,6 +51,8 @@ export * from './industry/time-duration.js';
 export * from './road/road-definition.js';
 export * from './road/road-image-definition.js';
 
+export * from './terrain/terrain-definition.js';
+
 export * from './invention/invention-definition.js';
 export * from './language/translation.js';
 export * from './overlay/overlay-definition.js';
