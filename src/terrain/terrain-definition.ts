@@ -98,6 +98,17 @@ export class TerrainDefinition {
     return true;
   }
 
+  get isWater (): boolean {
+    return this.zone === 'water';
+  }
+  get isCoast (): boolean {
+    return this.isWater && !this.isCenter;
+  }
+
+  get isCenter (): boolean {
+    return Object.values(this.textures).some((texture) => texture.type === 'center');
+  }
+
   /**
    * Retrieve JSON representation of object
    * @return {STARPEACE.concrete.ConcreteDefinitionJson} JSON representation of ConcreteDefinition
